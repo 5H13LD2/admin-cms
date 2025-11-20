@@ -1,0 +1,173 @@
+{
+  "collectionName": "courses",
+  "parentPath": "",
+  "documentCount": 4,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_101",
+        "java_1761620644252",
+        "python_101"
+      ]
+    },
+    "description": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Learn Java from basics to advanced with practical examples and projects.",
+        "sdadasasd",
+        "Master Python programming with our comprehensive course. Learn at your own pace through interactive modules and practical examples."
+      ]
+    },
+    "title": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Java Programming Mastery",
+        "java_course",
+        "Python Course"
+      ]
+    },
+    "enrolledUsers": {
+      "types": [
+        "array"
+      ],
+      "samples": [
+        [
+          "FrYMQ9DiEVOc9nrRmMbs5riPxJF3"
+        ],
+        []
+      ]
+    },
+    "courseId": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_1761620644252"
+      ]
+    },
+    "courseName": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_1761620644252"
+      ]
+    },
+    "difficulty": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Intermediate"
+      ]
+    },
+    "language": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Java"
+      ]
+    },
+    "duration": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        200
+      ]
+    },
+    "thumbnail": {
+      "types": [
+        "null"
+      ],
+      "samples": [
+        null
+      ]
+    },
+    "enrolledStudents": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0
+      ]
+    },
+    "rating": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0
+      ]
+    },
+    "status": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "active"
+      ]
+    },
+    "createdAt": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-10-28T03:04:07.763Z"
+      ]
+    },
+    "updatedAt": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-10-28T03:04:07.763Z"
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "java_101",
+      "description": "Learn Java from basics to advanced with practical examples and projects.",
+      "title": "Java Programming Mastery",
+      "enrolledUsers": [
+        "FrYMQ9DiEVOc9nrRmMbs5riPxJF3"
+      ]
+    },
+    {
+      "id": "java_1761620644252",
+      "courseId": "java_1761620644252",
+      "title": "java_course",
+      "courseName": "java_1761620644252",
+      "description": "sdadasasd",
+      "difficulty": "Intermediate",
+      "language": "Java",
+      "duration": 200,
+      "thumbnail": null,
+      "enrolledUsers": [],
+      "enrolledStudents": 0,
+      "rating": 0,
+      "status": "active",
+      "createdAt": "2025-10-28T03:04:07.763Z",
+      "updatedAt": "2025-10-28T03:04:07.763Z"
+    },
+    {
+      "id": "python_101",
+      "description": "Master Python programming with our comprehensive course. Learn at your own pace through interactive modules and practical examples.",
+      "title": "Python Course"
+    },
+    {
+      "id": "sql_101",
+      "description": "Master SQL from basics to advanced queries with hands-on practice.",
+      "title": "SQL Fundamentals"
+    }
+  ]
+}

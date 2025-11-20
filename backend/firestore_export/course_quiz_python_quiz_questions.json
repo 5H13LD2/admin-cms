@@ -1,0 +1,2894 @@
+{
+  "collectionName": "questions",
+  "parentPath": "course_quiz/python_quiz",
+  "documentCount": 200,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "python_q1",
+        "python_q10",
+        "python_q100"
+      ]
+    },
+    "question": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Which keyword is used to define a function in Python?",
+        "Which keyword is used to create a loop that iterates a fixed number of times?",
+        "Which statement provides a default block when no other conditions are True?"
+      ]
+    },
+    "options": {
+      "types": [
+        "array"
+      ],
+      "samples": [
+        [
+          "def",
+          "function",
+          "fun",
+          "define"
+        ],
+        [
+          "for",
+          "while",
+          "loop",
+          "repeat"
+        ],
+        [
+          "else",
+          "elif",
+          "if",
+          "try"
+        ]
+      ]
+    },
+    "correctOptionIndex": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0,
+        0,
+        0
+      ]
+    },
+    "explanation": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "The 'def' keyword is used to define a function in Python.",
+        "'for' loops iterate over sequences or ranges a fixed number of times.",
+        "The 'else' block executes when all previous conditions fail."
+      ]
+    },
+    "module_id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "python_module_1",
+        "python_module_1",
+        "python_module_2"
+      ]
+    },
+    "order": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        10,
+        100
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "python_q1",
+      "question": "Which keyword is used to define a function in Python?",
+      "options": [
+        "def",
+        "function",
+        "fun",
+        "define"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'def' keyword is used to define a function in Python.",
+      "module_id": "python_module_1",
+      "order": 1
+    },
+    {
+      "id": "python_q10",
+      "question": "Which keyword is used to create a loop that iterates a fixed number of times?",
+      "options": [
+        "for",
+        "while",
+        "loop",
+        "repeat"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'for' loops iterate over sequences or ranges a fixed number of times.",
+      "module_id": "python_module_1",
+      "order": 10
+    },
+    {
+      "id": "python_q100",
+      "question": "Which statement provides a default block when no other conditions are True?",
+      "options": [
+        "else",
+        "elif",
+        "if",
+        "try"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'else' block executes when all previous conditions fail.",
+      "module_id": "python_module_2",
+      "order": 100
+    },
+    {
+      "id": "python_q101",
+      "question": "What is a function in Python?",
+      "options": [
+        "A reusable block of code that performs a specific task",
+        "A data type used to store multiple values",
+        "A built-in module for calculations",
+        "A variable that holds user input"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Functions in Python are reusable blocks of code that help organize and execute specific operations efficiently.",
+      "module_id": "python_module_3",
+      "order": 101
+    },
+    {
+      "id": "python_q102",
+      "question": "What will happen if a function does not have a return statement?",
+      "options": [
+        "It will cause an error",
+        "It returns None by default",
+        "It returns 0",
+        "It returns an empty string"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "If a function has no return statement, it automatically returns None.",
+      "module_id": "python_module_3",
+      "order": 102
+    },
+    {
+      "id": "python_q103",
+      "question": "What is the correct syntax to call a function named greet?",
+      "options": [
+        "greet{}",
+        "call greet()",
+        "greet()",
+        "invoke greet"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Functions are called using parentheses, e.g., greet().",
+      "module_id": "python_module_3",
+      "order": 103
+    },
+    {
+      "id": "python_q104",
+      "question": "What keyword is used to exit a function and return a value?",
+      "options": [
+        "stop",
+        "end",
+        "return",
+        "break"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "The 'return' keyword is used to send a result back from a function.",
+      "module_id": "python_module_3",
+      "order": 104
+    },
+    {
+      "id": "python_q105",
+      "question": "Which statement about parameters is true?",
+      "options": [
+        "They must always have default values",
+        "They are variables used to pass data into functions",
+        "They are fixed and cannot change",
+        "They are only used for recursion"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Parameters act as variables for data passed into functions.",
+      "module_id": "python_module_3",
+      "order": 105
+    },
+    {
+      "id": "python_q106",
+      "question": "What will this code output: def add(a, b): return a + b; print(add(2, 3))?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "Error"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "The function returns 2 + 3 = 5.",
+      "module_id": "python_module_3",
+      "order": 106
+    },
+    {
+      "id": "python_q107",
+      "question": "Which keyword defines an anonymous function in Python?",
+      "options": [
+        "def",
+        "lambda",
+        "anon",
+        "func"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Anonymous functions are created using the 'lambda' keyword.",
+      "module_id": "python_module_3",
+      "order": 107
+    },
+    {
+      "id": "python_q108",
+      "question": "What is the output of: def f(): return 'Hi'; print(f)",
+      "options": [
+        "Hi",
+        "Error",
+        "The memory address of function f",
+        "None"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Without parentheses, f refers to the function object itself, not its result.",
+      "module_id": "python_module_3",
+      "order": 108
+    },
+    {
+      "id": "python_q109",
+      "question": "What is recursion?",
+      "options": [
+        "A loop inside a function",
+        "A function calling itself",
+        "A syntax error",
+        "A function that never returns"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Recursion occurs when a function calls itself until a base condition is met.",
+      "module_id": "python_module_3",
+      "order": 109
+    },
+    {
+      "id": "python_q11",
+      "question": "Which keyword is used to make a conditional decision in Python?",
+      "options": [
+        "if",
+        "switch",
+        "case",
+        "when"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'if' statements allow conditional execution of code blocks.",
+      "module_id": "python_module_1",
+      "order": 11
+    },
+    {
+      "id": "python_q110",
+      "question": "Which of these best describes a base case in recursion?",
+      "options": [
+        "The last function call",
+        "A condition that stops the recursion",
+        "A syntax error in recursion",
+        "The initial function call"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The base case prevents infinite recursion by defining when recursion should stop.",
+      "module_id": "python_module_3",
+      "order": 110
+    },
+    {
+      "id": "python_q111",
+      "question": "Which of the following defines a function correctly?",
+      "options": [
+        "def add(x, y) return x + y",
+        "def add(x, y): return x + y",
+        "function add(x, y): return x + y",
+        "define add(x, y) -> x + y"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "A colon (:) must follow the parameter list in a Python function definition.",
+      "module_id": "python_module_3",
+      "order": 111
+    },
+    {
+      "id": "python_q112",
+      "question": "Which statement about return values is true?",
+      "options": [
+        "A function can only return integers",
+        "A function can return any type of value",
+        "A function cannot return lists",
+        "A function must return a string"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Functions can return any data type, including lists, strings, and even other functions.",
+      "module_id": "python_module_3",
+      "order": 112
+    },
+    {
+      "id": "python_q113",
+      "question": "What will happen if a recursive function never reaches its base case?",
+      "options": [
+        "It stops automatically",
+        "It runs indefinitely",
+        "It causes a RecursionError",
+        "It returns None"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Python raises a RecursionError if recursion depth exceeds its limit.",
+      "module_id": "python_module_3",
+      "order": 113
+    },
+    {
+      "id": "python_q114",
+      "question": "What does a function return if no return statement is specified?",
+      "options": [
+        "0",
+        "None",
+        "False",
+        "''"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "By default, Python functions return None when no return statement is present.",
+      "module_id": "python_module_3",
+      "order": 114
+    },
+    {
+      "id": "python_q115",
+      "question": "Which of these is a correct lambda function to double a number?",
+      "options": [
+        "lambda x: x*2",
+        "lambda(x) {x*2}",
+        "function(x): return x*2",
+        "lambda(x): return x*2"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The correct syntax for a lambda function is: lambda arguments: expression.",
+      "module_id": "python_module_3",
+      "order": 115
+    },
+    {
+      "id": "python_q116",
+      "question": "What is the purpose of a return statement?",
+      "options": [
+        "To exit a loop",
+        "To define a variable",
+        "To send a value back to the caller",
+        "To stop recursion"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "The 'return' keyword exits a function and sends a value back to where it was called.",
+      "module_id": "python_module_3",
+      "order": 116
+    },
+    {
+      "id": "python_q117",
+      "question": "How can you specify a default parameter in a Python function?",
+      "options": [
+        "def add(a=5, b)",
+        "def add(a, b=5)",
+        "def add(a, b==5)",
+        "def add(a, b:5)"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Default parameter values are assigned using = after the parameter name.",
+      "module_id": "python_module_3",
+      "order": 117
+    },
+    {
+      "id": "python_q118",
+      "question": "Which keyword is used to define a recursive function?",
+      "options": [
+        "loop",
+        "rec",
+        "def",
+        "self"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Recursive functions are defined using the standard 'def' keyword.",
+      "module_id": "python_module_3",
+      "order": 118
+    },
+    {
+      "id": "python_q119",
+      "question": "What does this return: def f(a,b): print(a+b); return; print('Done')",
+      "options": [
+        "It prints a+b and Done",
+        "It prints only Done",
+        "It prints a+b",
+        "It causes an error"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "The function prints a+b and exits before reaching the last print statement.",
+      "module_id": "python_module_3",
+      "order": 119
+    },
+    {
+      "id": "python_q12",
+      "question": "What is the output of print(type(True))?",
+      "options": [
+        "bool",
+        "int",
+        "str",
+        "float"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "True and False are boolean values, so their type is 'bool'.",
+      "module_id": "python_module_1",
+      "order": 12
+    },
+    {
+      "id": "python_q120",
+      "question": "Which of the following will cause an error?",
+      "options": [
+        "def f(): pass",
+        "def f(): return 1",
+        "def f(): print('hi')",
+        "def f: return 1"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "A colon is required after the function parentheses; 'def f:' is invalid syntax.",
+      "module_id": "python_module_3",
+      "order": 120
+    },
+    {
+      "id": "python_q121",
+      "question": "Which keyword allows a function to call itself?",
+      "options": [
+        "recurse",
+        "self",
+        "its own name",
+        "loop"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "A function calls itself by referencing its own name inside the function body.",
+      "module_id": "python_module_3",
+      "order": 121
+    },
+    {
+      "id": "python_q122",
+      "question": "Which of the following is a valid recursive function example?",
+      "options": [
+        "def f(): print('Hello')",
+        "def f(x): return f(x)",
+        "def f(x): return x * f(x-1) if x > 0 else 1",
+        "def f(x): return None"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "This function calls itself with a smaller value and includes a base case.",
+      "module_id": "python_module_3",
+      "order": 122
+    },
+    {
+      "id": "python_q123",
+      "question": "Why should recursion have a base case?",
+      "options": [
+        "To make it faster",
+        "To avoid infinite recursion",
+        "To return 0",
+        "To define variables"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "A base case ensures that recursion stops at a certain condition.",
+      "module_id": "python_module_3",
+      "order": 123
+    },
+    {
+      "id": "python_q124",
+      "question": "Which built-in function returns the number of arguments passed to another function?",
+      "options": [
+        "count()",
+        "len()",
+        "args()",
+        "inspect.signature()"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "The inspect module allows you to examine function signatures and argument counts.",
+      "module_id": "python_module_3",
+      "order": 124
+    },
+    {
+      "id": "python_q125",
+      "question": "What is the output of: def f(x=1,y=2): return x+y; print(f())",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Error"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Default arguments are used when no values are provided, resulting in 1 + 2 = 3.",
+      "module_id": "python_module_3",
+      "order": 125
+    },
+    {
+      "id": "python_q126",
+      "question": "Which function type can return multiple values?",
+      "options": [
+        "All Python functions",
+        "Only recursive functions",
+        "Only lambda functions",
+        "None"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Any Python function can return multiple values using tuples.",
+      "module_id": "python_module_3",
+      "order": 126
+    },
+    {
+      "id": "python_q127",
+      "question": "What is the correct way to call a function with keyword arguments?",
+      "options": [
+        "add(a:5, b:10)",
+        "add(a=5, b=10)",
+        "add(=a5, =b10)",
+        "add(a==5, b==10)"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Keyword arguments use the syntax key=value when calling a function.",
+      "module_id": "python_module_3",
+      "order": 127
+    },
+    {
+      "id": "python_q128",
+      "question": "What does the 'pass' statement do in a function?",
+      "options": [
+        "Terminates the function",
+        "Skips execution without doing anything",
+        "Returns None",
+        "Raises an exception"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "'pass' acts as a placeholder statement that performs no action.",
+      "module_id": "python_module_3",
+      "order": 128
+    },
+    {
+      "id": "python_q129",
+      "question": "How do you define a function that takes an unknown number of arguments?",
+      "options": [
+        "def f(args)",
+        "def f(*args)",
+        "def f(@args)",
+        "def f(#args)"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The *args syntax allows a function to accept any number of positional arguments.",
+      "module_id": "python_module_3",
+      "order": 129
+    },
+    {
+      "id": "python_q13",
+      "question": "Which built-in function converts a string to an integer in Python?",
+      "options": [
+        "int()",
+        "str()",
+        "float()",
+        "char()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'int()' function converts a string representing a number into an integer.",
+      "module_id": "python_module_1",
+      "order": 13
+    },
+    {
+      "id": "python_q130",
+      "question": "What symbol is used for variable-length keyword arguments?",
+      "options": [
+        "*",
+        "**",
+        "&",
+        "%"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "**kwargs collects keyword arguments into a dictionary.",
+      "module_id": "python_module_3",
+      "order": 130
+    },
+    {
+      "id": "python_q131",
+      "question": "What is a function’s docstring used for?",
+      "options": [
+        "To store variable data",
+        "To document what the function does",
+        "To print automatically",
+        "To store imports"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Docstrings describe a function’s purpose and are enclosed in triple quotes.",
+      "module_id": "python_module_3",
+      "order": 131
+    },
+    {
+      "id": "python_q132",
+      "question": "What is the output of: def f(): return 1; print(f()+2)",
+      "options": [
+        "3",
+        "12",
+        "None",
+        "Error"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The return value 1 is added to 2, giving 3.",
+      "module_id": "python_module_3",
+      "order": 132
+    },
+    {
+      "id": "python_q133",
+      "question": "Which function returns the factorial of a number recursively?",
+      "options": [
+        "def fact(n): return n*fact(n)",
+        "def fact(n): return 1 if n==0 else n*fact(n-1)",
+        "def fact(n): return n+fact(n)",
+        "def fact(n): print(n)"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "A recursive factorial function calls itself with n-1 until n==0.",
+      "module_id": "python_module_3",
+      "order": 133
+    },
+    {
+      "id": "python_q134",
+      "question": "What will happen if you forget to include parentheses when calling a function?",
+      "options": [
+        "It causes a syntax error",
+        "The function object is returned",
+        "It executes automatically",
+        "It returns None"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Without parentheses, Python returns the function reference instead of executing it.",
+      "module_id": "python_module_3",
+      "order": 134
+    },
+    {
+      "id": "python_q135",
+      "question": "What is the purpose of function scope?",
+      "options": [
+        "It defines where variables can be accessed",
+        "It makes functions run faster",
+        "It prevents recursion",
+        "It controls import order"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Function scope limits the visibility of variables to inside the function.",
+      "module_id": "python_module_3",
+      "order": 135
+    },
+    {
+      "id": "python_q136",
+      "question": "How can you make a variable inside a function accessible globally?",
+      "options": [
+        "Use global keyword",
+        "Use public keyword",
+        "Use share keyword",
+        "Use all keyword"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Using the 'global' keyword allows a function to modify a global variable.",
+      "module_id": "python_module_3",
+      "order": 136
+    },
+    {
+      "id": "python_q137",
+      "question": "What does recursion require to avoid infinite loops?",
+      "options": [
+        "A loop statement",
+        "A counter",
+        "A base condition",
+        "A return keyword"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Recursion must have a base case or stopping condition to prevent infinite calls.",
+      "module_id": "python_module_3",
+      "order": 137
+    },
+    {
+      "id": "python_q138",
+      "question": "Which function can check if an object is callable?",
+      "options": [
+        "can_call()",
+        "callable()",
+        "is_func()",
+        "is_function()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The callable() function checks whether an object can be called as a function.",
+      "module_id": "python_module_3",
+      "order": 138
+    },
+    {
+      "id": "python_q139",
+      "question": "What is the main benefit of using functions?",
+      "options": [
+        "They slow down code",
+        "They help organize and reuse code",
+        "They prevent variables from working",
+        "They make code longer"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Functions promote code reusability and modular programming.",
+      "module_id": "python_module_3",
+      "order": 139
+    },
+    {
+      "id": "python_q14",
+      "question": "Which of the following is a Python keyword?",
+      "options": [
+        "break",
+        "switch",
+        "function",
+        "return_value"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'break' is a reserved keyword used to exit loops.",
+      "module_id": "python_module_1",
+      "order": 14
+    },
+    {
+      "id": "python_q140",
+      "question": "Which function name is invalid?",
+      "options": [
+        "_func",
+        "func1",
+        "1func",
+        "func_"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Function names cannot begin with digits.",
+      "module_id": "python_module_3",
+      "order": 140
+    },
+    {
+      "id": "python_q141",
+      "question": "What is a recursive function without a base case called?",
+      "options": [
+        "A generator",
+        "An infinite recursion",
+        "A decorator",
+        "A closure"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "A recursive function without a base case causes infinite recursion and a RecursionError.",
+      "module_id": "python_module_3",
+      "order": 141
+    },
+    {
+      "id": "python_q142",
+      "question": "What will print(len('function')) return?",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "6"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The word 'function' has 8 characters.",
+      "module_id": "python_module_3",
+      "order": 142
+    },
+    {
+      "id": "python_q143",
+      "question": "Which keyword allows you to return multiple values?",
+      "options": [
+        "return",
+        "yield",
+        "break",
+        "send"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "You can return multiple values using tuples with the 'return' keyword.",
+      "module_id": "python_module_3",
+      "order": 143
+    },
+    {
+      "id": "python_q144",
+      "question": "Which statement correctly calls a recursive function to count down from 5?",
+      "options": [
+        "def countdown(n): if n>0: print(n); countdown(n-1)",
+        "def countdown(n): while n>0: print(n)",
+        "def countdown(n): print(n); return n-1",
+        "def countdown(n): print(n); break"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The function calls itself with n-1 until n reaches 0.",
+      "module_id": "python_module_3",
+      "order": 144
+    },
+    {
+      "id": "python_q145",
+      "question": "How do you access a function’s documentation string?",
+      "options": [
+        "f.doc",
+        "f.__doc__",
+        "doc(f)",
+        "f.documentation"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "A function’s docstring can be accessed using f.__doc__.",
+      "module_id": "python_module_3",
+      "order": 145
+    },
+    {
+      "id": "python_q146",
+      "question": "What is tail recursion?",
+      "options": [
+        "Recursion at the start of the function",
+        "Recursion as the last operation in a function",
+        "A function with no recursion",
+        "Recursion that returns multiple values"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Tail recursion is when the recursive call is the final operation in the function.",
+      "module_id": "python_module_3",
+      "order": 146
+    },
+    {
+      "id": "python_q147",
+      "question": "What will print(type(lambda x: x)) output?",
+      "options": [
+        "<class 'function'>",
+        "<class 'lambda'>",
+        "<class 'method'>",
+        "<class 'object'>"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Lambda expressions are functions, so type() returns <class 'function'>.",
+      "module_id": "python_module_3",
+      "order": 147
+    },
+    {
+      "id": "python_q148",
+      "question": "How can you pass both *args and **kwargs to a function?",
+      "options": [
+        "def f(args, kwargs)",
+        "def f(*args, **kwargs)",
+        "def f(**args, *kwargs)",
+        "def f(@args, @kwargs)"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "*args collects positional arguments, **kwargs collects keyword arguments.",
+      "module_id": "python_module_3",
+      "order": 148
+    },
+    {
+      "id": "python_q149",
+      "question": "Which of these best describes recursion?",
+      "options": [
+        "A function calling another function",
+        "A function calling itself",
+        "A function repeating indefinitely",
+        "A loop with a counter"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Recursion means a function calls itself until a base condition stops it.",
+      "module_id": "python_module_3",
+      "order": 149
+    },
+    {
+      "id": "python_q15",
+      "question": "Which operator is used for floor division in Python?",
+      "options": [
+        "//",
+        "/",
+        "%",
+        "**"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '//' operator divides two numbers and returns the integer quotient.",
+      "module_id": "python_module_1",
+      "order": 15
+    },
+    {
+      "id": "python_q150",
+      "question": "Why are recursive functions sometimes less efficient?",
+      "options": [
+        "They use less memory",
+        "They require extra stack space",
+        "They skip loops",
+        "They are not allowed in Python"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Recursive calls consume stack memory, making them less efficient in some cases.",
+      "module_id": "python_module_3",
+      "order": 150
+    },
+    {
+      "id": "python_q151",
+      "question": "What is a list in Python?",
+      "options": [
+        "A collection of ordered and mutable elements",
+        "An immutable collection of key-value pairs",
+        "A function that stores multiple values",
+        "A data type for mathematical operations"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Lists in Python are ordered and mutable collections that can store different data types.",
+      "module_id": "python_module_4",
+      "order": 151
+    },
+    {
+      "id": "python_q152",
+      "question": "How do you create an empty list in Python?",
+      "options": [
+        "list = []",
+        "list = {}",
+        "list = ()",
+        "list = set()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "An empty list is created using square brackets [].",
+      "module_id": "python_module_4",
+      "order": 152
+    },
+    {
+      "id": "python_q153",
+      "question": "Which method is used to add an item to a list?",
+      "options": [
+        "add()",
+        "append()",
+        "insert()",
+        "extend()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The append() method adds an item to the end of a list.",
+      "module_id": "python_module_4",
+      "order": 153
+    },
+    {
+      "id": "python_q154",
+      "question": "What will list1[0] return?",
+      "options": [
+        "The first element of list1",
+        "The last element of list1",
+        "All elements in list1",
+        "An error message"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Index 0 in Python lists refers to the first element.",
+      "module_id": "python_module_4",
+      "order": 154
+    },
+    {
+      "id": "python_q155",
+      "question": "Which function returns the length of a list?",
+      "options": [
+        "count()",
+        "size()",
+        "len()",
+        "length()"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "The len() function is used to find the number of elements in a list.",
+      "module_id": "python_module_4",
+      "order": 155
+    },
+    {
+      "id": "python_q156",
+      "question": "How do you remove the last item from a list?",
+      "options": [
+        "delete()",
+        "pop()",
+        "remove()",
+        "discard()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The pop() method removes and returns the last item from a list.",
+      "module_id": "python_module_4",
+      "order": 156
+    },
+    {
+      "id": "python_q157",
+      "question": "Which method removes the first matching element from a list?",
+      "options": [
+        "remove()",
+        "pop()",
+        "del()",
+        "discard()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "remove() deletes the first occurrence of the specified value in a list.",
+      "module_id": "python_module_4",
+      "order": 157
+    },
+    {
+      "id": "python_q158",
+      "question": "How can you join two lists in Python?",
+      "options": [
+        "Using + operator",
+        "Using * operator",
+        "Using & operator",
+        "Using | operator"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The + operator concatenates two lists into one.",
+      "module_id": "python_module_4",
+      "order": 158
+    },
+    {
+      "id": "python_q159",
+      "question": "Which keyword checks if an element exists in a list?",
+      "options": [
+        "include",
+        "exists",
+        "in",
+        "has"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "The 'in' keyword checks if an element is present in a list.",
+      "module_id": "python_module_4",
+      "order": 159
+    },
+    {
+      "id": "python_q16",
+      "question": "Which of these data types can hold multiple values in Python?",
+      "options": [
+        "list",
+        "int",
+        "float",
+        "bool"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Lists can hold multiple values, unlike int, float, or bool.",
+      "module_id": "python_module_1",
+      "order": 16
+    },
+    {
+      "id": "python_q160",
+      "question": "What is a tuple in Python?",
+      "options": [
+        "An ordered, immutable collection",
+        "An unordered, mutable collection",
+        "A function",
+        "A key-value structure"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Tuples are ordered and immutable sequences of elements.",
+      "module_id": "python_module_4",
+      "order": 160
+    },
+    {
+      "id": "python_q161",
+      "question": "How do you define a tuple with one element?",
+      "options": [
+        "(1)",
+        "(1,)",
+        "[1]",
+        "{1}"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "A single-element tuple must include a trailing comma, like (1,).",
+      "module_id": "python_module_4",
+      "order": 161
+    },
+    {
+      "id": "python_q162",
+      "question": "Which operation is invalid for tuples?",
+      "options": [
+        "Concatenation",
+        "Reassignment",
+        "Indexing",
+        "Iteration"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Tuples are immutable; you cannot reassign or modify their elements.",
+      "module_id": "python_module_4",
+      "order": 162
+    },
+    {
+      "id": "python_q163",
+      "question": "What will happen if you try to modify a tuple?",
+      "options": [
+        "It will be updated",
+        "It will raise an error",
+        "It will ignore the change",
+        "It will duplicate the item"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Tuples cannot be modified; attempting to do so raises a TypeError.",
+      "module_id": "python_module_4",
+      "order": 163
+    },
+    {
+      "id": "python_q164",
+      "question": "What data type is returned by dict.keys()?",
+      "options": [
+        "List",
+        "Set",
+        "dict_keys",
+        "Tuple"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "dict.keys() returns a dict_keys object representing all keys in the dictionary.",
+      "module_id": "python_module_4",
+      "order": 164
+    },
+    {
+      "id": "python_q165",
+      "question": "How do you access a value in a dictionary?",
+      "options": [
+        "Using key name",
+        "Using index number",
+        "Using position",
+        "Using append()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "You access dictionary values by referencing their keys, e.g., my_dict['key'].",
+      "module_id": "python_module_4",
+      "order": 165
+    },
+    {
+      "id": "python_q166",
+      "question": "Which method removes a key-value pair from a dictionary?",
+      "options": [
+        "pop()",
+        "discard()",
+        "delete()",
+        "remove()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "pop() removes a key and returns its value from a dictionary.",
+      "module_id": "python_module_4",
+      "order": 166
+    },
+    {
+      "id": "python_q167",
+      "question": "Which of the following creates an empty dictionary?",
+      "options": [
+        "{}",
+        "[]",
+        "()",
+        "set()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "An empty dictionary is defined using curly braces {}.",
+      "module_id": "python_module_4",
+      "order": 167
+    },
+    {
+      "id": "python_q168",
+      "question": "What is a set in Python?",
+      "options": [
+        "An unordered collection of unique items",
+        "An ordered collection",
+        "A key-value pair",
+        "A sequence of characters"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Sets store unordered, unique elements in Python.",
+      "module_id": "python_module_4",
+      "order": 168
+    },
+    {
+      "id": "python_q169",
+      "question": "How do you add an element to a set?",
+      "options": [
+        "add()",
+        "append()",
+        "insert()",
+        "extend()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The add() method adds a single element to a set.",
+      "module_id": "python_module_4",
+      "order": 169
+    },
+    {
+      "id": "python_q17",
+      "question": "Which of the following is an immutable data type in Python?",
+      "options": [
+        "tuple",
+        "list",
+        "dict",
+        "set"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Tuples cannot be changed after creation, unlike lists, dicts, or sets.",
+      "module_id": "python_module_1",
+      "order": 17
+    },
+    {
+      "id": "python_q170",
+      "question": "Which method removes all items from a set?",
+      "options": [
+        "remove()",
+        "clear()",
+        "discard()",
+        "pop()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The clear() method empties a set completely.",
+      "module_id": "python_module_4",
+      "order": 170
+    },
+    {
+      "id": "python_q171",
+      "question": "Which operation finds elements common to two sets?",
+      "options": [
+        "union()",
+        "intersection()",
+        "difference()",
+        "symmetric_difference()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "intersection() returns elements that exist in both sets.",
+      "module_id": "python_module_4",
+      "order": 171
+    },
+    {
+      "id": "python_q172",
+      "question": "Which method returns all unique items from both sets?",
+      "options": [
+        "union()",
+        "intersection()",
+        "difference()",
+        "subset()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "union() combines all unique elements from both sets.",
+      "module_id": "python_module_4",
+      "order": 172
+    },
+    {
+      "id": "python_q173",
+      "question": "Which operation removes duplicates from a list easily?",
+      "options": [
+        "Using set()",
+        "Using list()",
+        "Using tuple()",
+        "Using dict()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Converting a list to a set removes duplicates because sets only store unique values.",
+      "module_id": "python_module_4",
+      "order": 173
+    },
+    {
+      "id": "python_q174",
+      "question": "What is the output of len({'a': 1, 'b': 2})?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Error"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "len() returns the number of key-value pairs in a dictionary.",
+      "module_id": "python_module_4",
+      "order": 174
+    },
+    {
+      "id": "python_q175",
+      "question": "What will {'x':10,'y':20}.get('z',0) return?",
+      "options": [
+        "10",
+        "20",
+        "0",
+        "Error"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "The get() method returns the specified default value (0) when a key does not exist.",
+      "module_id": "python_module_4",
+      "order": 175
+    },
+    {
+      "id": "python_q176",
+      "question": "Which method adds multiple elements to a list?",
+      "options": [
+        "append()",
+        "insert()",
+        "extend()",
+        "add()"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "extend() allows adding multiple elements or another iterable to a list.",
+      "module_id": "python_module_4",
+      "order": 176
+    },
+    {
+      "id": "python_q177",
+      "question": "What is returned by list(range(3))?",
+      "options": [
+        "[0, 1, 2]",
+        "[1, 2, 3]",
+        "(0, 1, 2)",
+        "{0,1,2}"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "range(3) generates numbers from 0 to 2, and list() converts it into [0, 1, 2].",
+      "module_id": "python_module_4",
+      "order": 177
+    },
+    {
+      "id": "python_q178",
+      "question": "How do you copy a list without linking it to the original?",
+      "options": [
+        "new_list = old_list",
+        "new_list = old_list.copy()",
+        "new_list = list(old_list)",
+        "Both 2 and 3"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "copy() or list() creates a shallow copy that doesn’t reference the original list.",
+      "module_id": "python_module_4",
+      "order": 178
+    },
+    {
+      "id": "python_q179",
+      "question": "Which data structure is best for storing unique unordered items?",
+      "options": [
+        "List",
+        "Tuple",
+        "Set",
+        "Dictionary"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Sets automatically remove duplicates and maintain no specific order.",
+      "module_id": "python_module_4",
+      "order": 179
+    },
+    {
+      "id": "python_q18",
+      "question": "Which method adds an item to the end of a Python list?",
+      "options": [
+        "append()",
+        "add()",
+        "insert()",
+        "extend()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'append()' adds a single element at the end of a list.",
+      "module_id": "python_module_1",
+      "order": 18
+    },
+    {
+      "id": "python_q180",
+      "question": "What will be the result of {1,2,3}.add(4)?",
+      "options": [
+        "Adds 4 to the set",
+        "Returns a new set",
+        "Raises an error",
+        "Removes 4 from set"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "add() adds the given element to the existing set.",
+      "module_id": "python_module_4",
+      "order": 180
+    },
+    {
+      "id": "python_q181",
+      "question": "Which of the following is NOT a valid dictionary key?",
+      "options": [
+        "String",
+        "Integer",
+        "Tuple",
+        "List"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "Lists are mutable and cannot be used as dictionary keys.",
+      "module_id": "python_module_4",
+      "order": 181
+    },
+    {
+      "id": "python_q182",
+      "question": "How do you get all values from a dictionary?",
+      "options": [
+        "dict.items()",
+        "dict.values()",
+        "dict.keys()",
+        "dict.get()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The values() method returns all values from a dictionary.",
+      "module_id": "python_module_4",
+      "order": 182
+    },
+    {
+      "id": "python_q183",
+      "question": "Which operation checks if one set is a subset of another?",
+      "options": [
+        "issubset()",
+        "subset()",
+        "isinside()",
+        "contained()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "issubset() returns True if all elements of one set exist in another.",
+      "module_id": "python_module_4",
+      "order": 183
+    },
+    {
+      "id": "python_q184",
+      "question": "What will len(set([1,1,2,2,3])) return?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Converting a list to a set removes duplicates, leaving 3 unique elements.",
+      "module_id": "python_module_4",
+      "order": 184
+    },
+    {
+      "id": "python_q185",
+      "question": "Which of the following can store mixed data types?",
+      "options": [
+        "List",
+        "Tuple",
+        "Dictionary",
+        "All of the above"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "All these data structures in Python can store mixed data types.",
+      "module_id": "python_module_4",
+      "order": 185
+    },
+    {
+      "id": "python_q186",
+      "question": "How can you iterate through both keys and values in a dictionary?",
+      "options": [
+        "for k,v in dict.items()",
+        "for k,v in dict.values()",
+        "for v in dict()",
+        "for each in dict.get()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "dict.items() returns pairs of keys and values for iteration.",
+      "module_id": "python_module_4",
+      "order": 186
+    },
+    {
+      "id": "python_q187",
+      "question": "What does set([1,2,3]) | set([3,4]) return?",
+      "options": [
+        "{3}",
+        "{1,2,3,4}",
+        "{1,2}",
+        "Error"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The | operator performs a union, returning all unique elements from both sets.",
+      "module_id": "python_module_4",
+      "order": 187
+    },
+    {
+      "id": "python_q188",
+      "question": "Which function sorts a list permanently?",
+      "options": [
+        "sort()",
+        "sorted()",
+        "order()",
+        "arrange()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "sort() modifies the list in place, sorting it permanently.",
+      "module_id": "python_module_4",
+      "order": 188
+    },
+    {
+      "id": "python_q189",
+      "question": "What does sorted([3,1,2]) return?",
+      "options": [
+        "[3,1,2]",
+        "[1,2,3]",
+        "[2,3,1]",
+        "Error"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "sorted() returns a new sorted list without modifying the original.",
+      "module_id": "python_module_4",
+      "order": 189
+    },
+    {
+      "id": "python_q19",
+      "question": "Which symbol is used for string concatenation in Python?",
+      "options": [
+        "+",
+        "-",
+        "*",
+        "&"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '+' operator joins strings together.",
+      "module_id": "python_module_1",
+      "order": 19
+    },
+    {
+      "id": "python_q190",
+      "question": "How do you remove a specific key from a dictionary safely?",
+      "options": [
+        "pop()",
+        "remove()",
+        "discard()",
+        "delete()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "pop() safely removes a specified key and returns its value.",
+      "module_id": "python_module_4",
+      "order": 190
+    },
+    {
+      "id": "python_q191",
+      "question": "What will happen if you access a non-existent key in a dictionary directly?",
+      "options": [
+        "Return None",
+        "Raise KeyError",
+        "Return False",
+        "Skip silently"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Accessing a missing key directly raises a KeyError.",
+      "module_id": "python_module_4",
+      "order": 191
+    },
+    {
+      "id": "python_q192",
+      "question": "What is the main difference between a list and a tuple?",
+      "options": [
+        "Lists are mutable; tuples are not",
+        "Tuples are mutable; lists are not",
+        "Both are immutable",
+        "Lists use (), tuples use []"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Lists can be modified after creation, while tuples cannot.",
+      "module_id": "python_module_4",
+      "order": 192
+    },
+    {
+      "id": "python_q193",
+      "question": "Which of the following data structures is unindexed?",
+      "options": [
+        "Set",
+        "List",
+        "Tuple",
+        "String"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Sets are unordered and unindexed in Python.",
+      "module_id": "python_module_4",
+      "order": 193
+    },
+    {
+      "id": "python_q194",
+      "question": "How do you convert a tuple to a list?",
+      "options": [
+        "list(tuple_name)",
+        "tuple(list_name)",
+        "convert(tuple_name)",
+        "set(tuple_name)"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "list() converts a tuple into a list type.",
+      "module_id": "python_module_4",
+      "order": 194
+    },
+    {
+      "id": "python_q195",
+      "question": "Which of the following supports key-value mapping?",
+      "options": [
+        "Set",
+        "Dictionary",
+        "List",
+        "Tuple"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Dictionaries store data as key-value pairs.",
+      "module_id": "python_module_4",
+      "order": 195
+    },
+    {
+      "id": "python_q196",
+      "question": "What is returned by {'a':1,'b':2}.keys()?",
+      "options": [
+        "['a','b']",
+        "dict_keys(['a','b'])",
+        "{'a','b'}",
+        "('a','b')"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The keys() method returns a dict_keys object that can be converted to a list if needed.",
+      "module_id": "python_module_4",
+      "order": 196
+    },
+    {
+      "id": "python_q197",
+      "question": "How can you check if a key exists in a dictionary?",
+      "options": [
+        "if key in dict:",
+        "if dict.has(key):",
+        "if key.exists():",
+        "if key.dict():"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'in' keyword checks for the presence of a key in a dictionary.",
+      "module_id": "python_module_4",
+      "order": 197
+    },
+    {
+      "id": "python_q198",
+      "question": "Which of the following methods combines two dictionaries?",
+      "options": [
+        "merge()",
+        "update()",
+        "combine()",
+        "union()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "update() merges one dictionary into another.",
+      "module_id": "python_module_4",
+      "order": 198
+    },
+    {
+      "id": "python_q199",
+      "question": "What is the output of list('abc')?",
+      "options": [
+        "['a','b','c']",
+        "('a','b','c')",
+        "{'a','b','c'}",
+        "Error"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The list() function splits a string into individual characters in a list.",
+      "module_id": "python_module_4",
+      "order": 199
+    },
+    {
+      "id": "python_q2",
+      "question": "Which symbol is used for comments in Python?",
+      "options": [
+        "#",
+        "//",
+        "/* */",
+        "<!-- -->"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The hash symbol (#) is used to add comments in Python.",
+      "module_id": "python_module_1",
+      "order": 2
+    },
+    {
+      "id": "python_q20",
+      "question": "Which function is used to display output in Python?",
+      "options": [
+        "print()",
+        "echo()",
+        "console()",
+        "display()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'print()' outputs data to the console.",
+      "module_id": "python_module_1",
+      "order": 20
+    },
+    {
+      "id": "python_q200",
+      "question": "Which of the following is the best use case for a tuple?",
+      "options": [
+        "Storing fixed configuration data",
+        "Modifying elements frequently",
+        "Holding unique unordered data",
+        "Mapping key-value pairs"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Tuples are ideal for storing constant data that shouldn’t change during execution.",
+      "module_id": "python_module_4",
+      "order": 200
+    },
+    {
+      "id": "python_q21",
+      "question": "Which function returns the absolute value of a number in Python?",
+      "options": [
+        "abs()",
+        "absolute()",
+        "val()",
+        "number()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'abs()' returns the absolute value of a number.",
+      "module_id": "python_module_1",
+      "order": 21
+    },
+    {
+      "id": "python_q22",
+      "question": "Which function generates a random number in Python?",
+      "options": [
+        "random.randint()",
+        "rand()",
+        "generate()",
+        "random.number()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'random.randint()' returns a random integer within a specified range.",
+      "module_id": "python_module_1",
+      "order": 22
+    },
+    {
+      "id": "python_q23",
+      "question": "Which statement is used to exit a loop prematurely in Python?",
+      "options": [
+        "break",
+        "exit",
+        "stop",
+        "end"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'break' exits the current loop immediately.",
+      "module_id": "python_module_1",
+      "order": 23
+    },
+    {
+      "id": "python_q24",
+      "question": "Which statement skips the current iteration in a loop in Python?",
+      "options": [
+        "continue",
+        "pass",
+        "skip",
+        "next"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'continue' skips the current iteration and moves to the next.",
+      "module_id": "python_module_1",
+      "order": 24
+    },
+    {
+      "id": "python_q25",
+      "question": "Which operator is used to check equality in Python?",
+      "options": [
+        "==",
+        "=",
+        "!=",
+        "<>"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'==' compares two values for equality.",
+      "module_id": "python_module_1",
+      "order": 25
+    },
+    {
+      "id": "python_q26",
+      "question": "Which of these is used to handle exceptions in Python?",
+      "options": [
+        "try-except",
+        "catch",
+        "throw",
+        "finally only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'try-except' blocks catch and handle exceptions in Python.",
+      "module_id": "python_module_1",
+      "order": 26
+    },
+    {
+      "id": "python_q27",
+      "question": "Which keyword is used to define a class in Python?",
+      "options": [
+        "class",
+        "def",
+        "object",
+        "type"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'class' is used to define a class in Python.",
+      "module_id": "python_module_1",
+      "order": 27
+    },
+    {
+      "id": "python_q28",
+      "question": "Which function converts an integer to a string in Python?",
+      "options": [
+        "str()",
+        "int()",
+        "float()",
+        "char()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'str()' converts a value to a string.",
+      "module_id": "python_module_1",
+      "order": 28
+    },
+    {
+      "id": "python_q29",
+      "question": "Which built-in data type represents an unordered collection of unique elements?",
+      "options": [
+        "set",
+        "list",
+        "tuple",
+        "dict"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A set stores unique elements without any particular order.",
+      "module_id": "python_module_1",
+      "order": 29
+    },
+    {
+      "id": "python_q3",
+      "question": "Which of the following is a valid Python variable name?",
+      "options": [
+        "my_var",
+        "2var",
+        "my-var",
+        "my var"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Variable names cannot start with a number or contain spaces or hyphens.",
+      "module_id": "python_module_1",
+      "order": 3
+    },
+    {
+      "id": "python_q30",
+      "question": "Which statement is used to do nothing in Python as a placeholder?",
+      "options": [
+        "pass",
+        "skip",
+        "continue",
+        "break"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'pass' acts as a placeholder statement that does nothing.",
+      "module_id": "python_module_1",
+      "order": 30
+    },
+    {
+      "id": "python_q31",
+      "question": "Which keyword is used to import external Python modules?",
+      "options": [
+        "import",
+        "include",
+        "require",
+        "using"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'import' allows you to use functions and classes from other Python modules.",
+      "module_id": "python_module_1",
+      "order": 31
+    },
+    {
+      "id": "python_q32",
+      "question": "Which method removes the last item from a Python list?",
+      "options": [
+        "pop()",
+        "remove()",
+        "delete()",
+        "discard()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'pop()' removes and returns the last item in a list.",
+      "module_id": "python_module_1",
+      "order": 32
+    },
+    {
+      "id": "python_q33",
+      "question": "Which function returns the largest value in a list?",
+      "options": [
+        "max()",
+        "min()",
+        "top()",
+        "highest()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'max()' returns the maximum value in a list.",
+      "module_id": "python_module_1",
+      "order": 33
+    },
+    {
+      "id": "python_q34",
+      "question": "Which function returns the smallest value in a list?",
+      "options": [
+        "min()",
+        "max()",
+        "lowest()",
+        "least()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'min()' returns the minimum value in a list.",
+      "module_id": "python_module_1",
+      "order": 34
+    },
+    {
+      "id": "python_q35",
+      "question": "Which operator is used to get the remainder of a division in Python?",
+      "options": [
+        "%",
+        "//",
+        "/",
+        "**"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '%' operator returns the remainder of a division operation.",
+      "module_id": "python_module_1",
+      "order": 35
+    },
+    {
+      "id": "python_q36",
+      "question": "Which method removes an element by value from a Python list?",
+      "options": [
+        "remove()",
+        "pop()",
+        "delete()",
+        "discard()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'remove()' deletes the first occurrence of the specified value.",
+      "module_id": "python_module_1",
+      "order": 36
+    },
+    {
+      "id": "python_q37",
+      "question": "Which of the following creates a tuple in Python?",
+      "options": [
+        "(1, 2, 3)",
+        "[1, 2, 3]",
+        "{1, 2, 3}",
+        "1, 2, 3"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Parentheses with comma-separated values create a tuple.",
+      "module_id": "python_module_1",
+      "order": 37
+    },
+    {
+      "id": "python_q38",
+      "question": "Which operator is used for logical AND in Python?",
+      "options": [
+        "and",
+        "&",
+        "&&",
+        "AND"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'and' keyword performs a logical AND operation.",
+      "module_id": "python_module_1",
+      "order": 38
+    },
+    {
+      "id": "python_q39",
+      "question": "Which operator is used for logical OR in Python?",
+      "options": [
+        "or",
+        "|",
+        "||",
+        "OR"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'or' keyword performs a logical OR operation.",
+      "module_id": "python_module_1",
+      "order": 39
+    },
+    {
+      "id": "python_q4",
+      "question": "What is the output of print(2 + 3 * 4)?",
+      "options": [
+        "14",
+        "20",
+        "24",
+        "10"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Python follows the order of operations: multiplication first, then addition.",
+      "module_id": "python_module_1",
+      "order": 4
+    },
+    {
+      "id": "python_q40",
+      "question": "Which function converts a string to lowercase in Python?",
+      "options": [
+        "lower()",
+        "upper()",
+        "capitalize()",
+        "casefold()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'lower()' converts all characters of a string to lowercase.",
+      "module_id": "python_module_1",
+      "order": 40
+    },
+    {
+      "id": "python_q41",
+      "question": "Which function converts a string to uppercase in Python?",
+      "options": [
+        "upper()",
+        "lower()",
+        "capitalize()",
+        "casefold()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'upper()' converts all characters of a string to uppercase.",
+      "module_id": "python_module_1",
+      "order": 41
+    },
+    {
+      "id": "python_q42",
+      "question": "Which method splits a string into a list of words in Python?",
+      "options": [
+        "split()",
+        "join()",
+        "divide()",
+        "break()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'split()' breaks a string into a list based on a separator.",
+      "module_id": "python_module_1",
+      "order": 42
+    },
+    {
+      "id": "python_q43",
+      "question": "Which method joins a list of strings into a single string in Python?",
+      "options": [
+        "join()",
+        "split()",
+        "concat()",
+        "merge()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'join()' combines list elements into a single string.",
+      "module_id": "python_module_1",
+      "order": 43
+    },
+    {
+      "id": "python_q44",
+      "question": "Which function rounds a number to the nearest integer in Python?",
+      "options": [
+        "round()",
+        "ceil()",
+        "floor()",
+        "truncate()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'round()' rounds a number to the nearest integer.",
+      "module_id": "python_module_1",
+      "order": 44
+    },
+    {
+      "id": "python_q45",
+      "question": "Which keyword is used to handle exceptions in Python?",
+      "options": [
+        "try",
+        "catch",
+        "throw",
+        "handle"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'try' is used to handle exceptions along with 'except' blocks.",
+      "module_id": "python_module_1",
+      "order": 45
+    },
+    {
+      "id": "python_q46",
+      "question": "Which method returns the index of the first occurrence of a value in a list?",
+      "options": [
+        "index()",
+        "find()",
+        "locate()",
+        "search()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'index()' returns the position of the first matching element in a list.",
+      "module_id": "python_module_1",
+      "order": 46
+    },
+    {
+      "id": "python_q47",
+      "question": "Which method removes all items from a Python list?",
+      "options": [
+        "clear()",
+        "delete()",
+        "remove_all()",
+        "reset()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'clear()' removes all elements from a list.",
+      "module_id": "python_module_1",
+      "order": 47
+    },
+    {
+      "id": "python_q48",
+      "question": "Which function converts a value to a floating-point number in Python?",
+      "options": [
+        "float()",
+        "int()",
+        "str()",
+        "decimal()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'float()' converts a number or string to a floating-point value.",
+      "module_id": "python_module_1",
+      "order": 48
+    },
+    {
+      "id": "python_q49",
+      "question": "Which function converts a value to a Boolean in Python?",
+      "options": [
+        "bool()",
+        "int()",
+        "str()",
+        "float()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'bool()' converts a value to True or False.",
+      "module_id": "python_module_1",
+      "order": 49
+    },
+    {
+      "id": "python_q5",
+      "question": "Which data type is used to store text in Python?",
+      "options": [
+        "str",
+        "int",
+        "float",
+        "bool"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'str' data type stores sequences of characters (text).",
+      "module_id": "python_module_1",
+      "order": 5
+    },
+    {
+      "id": "python_q50",
+      "question": "Which of the following is the correct way to start a Python program?",
+      "options": [
+        "No special start; Python executes from the top",
+        "main() keyword",
+        "start() function",
+        "begin() function"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Python starts executing code from the top of the script; no special start function is required.",
+      "module_id": "python_module_1",
+      "order": 50
+    },
+    {
+      "id": "python_q51",
+      "question": "Which Python statement is used for conditional execution?",
+      "options": [
+        "if",
+        "for",
+        "while",
+        "switch"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'if' statements are used to execute code conditionally.",
+      "module_id": "python_module_2",
+      "order": 51
+    },
+    {
+      "id": "python_q52",
+      "question": "Which keyword handles alternative conditions in Python?",
+      "options": [
+        "elif",
+        "else",
+        "elseif",
+        "otherwise"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'elif' handles additional conditions after an 'if' statement.",
+      "order": 52,
+      "module_id": "python_module_2"
+    },
+    {
+      "id": "python_q53",
+      "question": "Which keyword executes a block when all other conditions fail?",
+      "options": [
+        "else",
+        "elif",
+        "finally",
+        "default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'else' executes code when no preceding 'if' or 'elif' conditions are True.",
+      "module_id": "python_module_2",
+      "order": 53
+    },
+    {
+      "id": "python_q54",
+      "question": "Which loop is used to iterate over a sequence or range in Python?",
+      "options": [
+        "for",
+        "while",
+        "do-while",
+        "foreach"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'for' loops iterate over items of a sequence, list, or range.",
+      "module_id": "python_module_2",
+      "order": 54
+    },
+    {
+      "id": "python_q55",
+      "question": "Which loop continues executing while a condition is True?",
+      "options": [
+        "while",
+        "for",
+        "do-while",
+        "until"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'while' loops execute as long as the condition evaluates to True.",
+      "module_id": "python_module_2",
+      "order": 55
+    },
+    {
+      "id": "python_q56",
+      "question": "Which keyword skips the rest of the current iteration in a loop?",
+      "options": [
+        "continue",
+        "break",
+        "pass",
+        "skip"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'continue' skips the remaining code in the current iteration and moves to the next loop iteration.",
+      "module_id": "python_module_2",
+      "order": 56
+    },
+    {
+      "id": "python_q57",
+      "question": "Which keyword immediately exits a loop in Python?",
+      "options": [
+        "break",
+        "continue",
+        "pass",
+        "exit"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'break' exits the loop immediately, regardless of the loop condition.",
+      "module_id": "python_module_2",
+      "order": 57
+    },
+    {
+      "id": "python_q58",
+      "question": "Which operator is used to check equality in Python?",
+      "options": [
+        "==",
+        "=",
+        "!=",
+        "<>"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'==' checks if two values are equal.",
+      "module_id": "python_module_2",
+      "order": 58
+    },
+    {
+      "id": "python_q59",
+      "question": "Which operator checks inequality in Python?",
+      "options": [
+        "!=",
+        "==",
+        ">",
+        "<"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'!=' evaluates to True if two values are not equal.",
+      "module_id": "python_module_2",
+      "order": 59
+    },
+    {
+      "id": "python_q6",
+      "question": "Which operator is used for exponentiation in Python?",
+      "options": [
+        "**",
+        "^",
+        "*",
+        "exp()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '**' operator raises a number to the power of another number.",
+      "module_id": "python_module_1",
+      "order": 6
+    },
+    {
+      "id": "python_q60",
+      "question": "Which operator is used for logical AND in Python?",
+      "options": [
+        "and",
+        "&",
+        "&&",
+        "AND"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'and' evaluates True if both operands are True.",
+      "module_id": "python_module_2",
+      "order": 60
+    },
+    {
+      "id": "python_q61",
+      "question": "Which operator is used for logical OR in Python?",
+      "options": [
+        "or",
+        "|",
+        "||",
+        "OR"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'or' evaluates True if at least one operand is True.",
+      "module_id": "python_module_2",
+      "order": 61
+    },
+    {
+      "id": "python_q62",
+      "question": "Which operator negates a Boolean value in Python?",
+      "options": [
+        "not",
+        "!",
+        "~",
+        "neg"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'not' inverts a Boolean value (True becomes False, False becomes True).",
+      "module_id": "python_module_2",
+      "order": 62
+    },
+    {
+      "id": "python_q63",
+      "question": "Which function generates a sequence of numbers for iteration?",
+      "options": [
+        "range()",
+        "seq()",
+        "series()",
+        "loop()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'range()' returns a sequence of numbers used in 'for' loops.",
+      "module_id": "python_module_2",
+      "order": 63
+    },
+    {
+      "id": "python_q64",
+      "question": "Which statement does nothing and can be used as a placeholder?",
+      "options": [
+        "pass",
+        "skip",
+        "continue",
+        "break"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'pass' allows defining blocks with no action.",
+      "module_id": "python_module_2",
+      "order": 64
+    },
+    {
+      "id": "python_q65",
+      "question": "Which keyword terminates a function early in Python?",
+      "options": [
+        "return",
+        "exit",
+        "stop",
+        "break"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'return' exits the function and optionally returns a value.",
+      "module_id": "python_module_2",
+      "order": 65
+    },
+    {
+      "id": "python_q66",
+      "question": "Which of these loops can be used for indefinite iteration?",
+      "options": [
+        "while",
+        "for",
+        "do-while",
+        "foreach"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'while' loops are suitable when the number of iterations is unknown.",
+      "module_id": "python_module_2",
+      "order": 66
+    },
+    {
+      "id": "python_q67",
+      "question": "Which statement allows multiple conditions to be checked sequentially?",
+      "options": [
+        "if-elif-else",
+        "for-if-else",
+        "switch-case",
+        "try-except"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'if-elif-else' evaluates conditions in sequence until one is True.",
+      "module_id": "python_module_2",
+      "order": 67
+    },
+    {
+      "id": "python_q68",
+      "question": "Which method can be used to iterate over items in a dictionary?",
+      "options": [
+        "for key, value in dict.items()",
+        "for i in dict",
+        "for element in dict.keys()",
+        "while dict"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'dict.items()' allows iteration over key-value pairs.",
+      "module_id": "python_module_2",
+      "order": 68
+    },
+    {
+      "id": "python_q69",
+      "question": "Which built-in function stops a loop and continues with the next iteration of an outer loop?",
+      "options": [
+        "continue",
+        "break",
+        "pass",
+        "exit"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'continue' skips the rest of the current iteration.",
+      "module_id": "python_module_2",
+      "order": 69
+    },
+    {
+      "id": "python_q7",
+      "question": "What is the result of type(3.14)?",
+      "options": [
+        "float",
+        "int",
+        "str",
+        "double"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "3.14 is a floating-point number, so its type is 'float'.",
+      "module_id": "python_module_1",
+      "order": 7
+    },
+    {
+      "id": "python_q70",
+      "question": "Which comparison operator returns True if the left operand is greater than the right?",
+      "options": [
+        ">",
+        "<",
+        ">=",
+        "<="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'>' checks if the left-hand value is greater than the right-hand value.",
+      "module_id": "python_module_2",
+      "order": 70
+    },
+    {
+      "id": "python_q71",
+      "question": "Which comparison operator returns True if the left operand is less than the right?",
+      "options": [
+        "<",
+        ">",
+        "<=",
+        ">="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'<' checks if the left-hand value is less than the right-hand value.",
+      "module_id": "python_module_2",
+      "order": 71
+    },
+    {
+      "id": "python_q72",
+      "question": "Which function checks if all elements in a list are True?",
+      "options": [
+        "all()",
+        "any()",
+        "every()",
+        "check()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'all()' returns True if every element is truthy.",
+      "module_id": "python_module_2",
+      "order": 72
+    },
+    {
+      "id": "python_q73",
+      "question": "Which function checks if any element in a list is True?",
+      "options": [
+        "any()",
+        "all()",
+        "exists()",
+        "some()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'any()' returns True if at least one element is truthy.",
+      "module_id": "python_module_2",
+      "order": 73
+    },
+    {
+      "id": "python_q74",
+      "question": "Which function converts a number to a Boolean value?",
+      "options": [
+        "bool()",
+        "int()",
+        "float()",
+        "str()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'bool()' converts a value to True or False.",
+      "module_id": "python_module_2",
+      "order": 74
+    },
+    {
+      "id": "python_q75",
+      "question": "Which method helps avoid infinite loops by modifying the loop condition?",
+      "options": [
+        "Updating loop variables inside the loop",
+        "Using break only",
+        "Using continue only",
+        "Skipping increment"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Properly updating loop variables ensures loops terminate correctly.",
+      "module_id": "python_module_2",
+      "order": 75
+    },
+    {
+      "id": "python_q76",
+      "question": "Which loop can iterate over both lists and strings?",
+      "options": [
+        "for",
+        "while",
+        "do-while",
+        "repeat"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'for' loops iterate over sequences like lists, strings, or tuples.",
+      "module_id": "python_module_2",
+      "order": 76
+    },
+    {
+      "id": "python_q77",
+      "question": "Which operator checks if two objects are not the same in Python?",
+      "options": [
+        "is not",
+        "not",
+        "!=",
+        "<>"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'is not' checks object identity inequality.",
+      "module_id": "python_module_2",
+      "order": 77
+    },
+    {
+      "id": "python_q78",
+      "question": "Which operator checks object identity equality?",
+      "options": [
+        "is",
+        "==",
+        "equals",
+        "==="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'is' checks whether two variables point to the same object.",
+      "module_id": "python_module_2",
+      "order": 78
+    },
+    {
+      "id": "python_q79",
+      "question": "Which statement is executed if an 'if' condition is False and there are no 'elif' clauses?",
+      "options": [
+        "else block",
+        "next iteration",
+        "try block",
+        "finally block"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'else' block runs when 'if' and 'elif' conditions are all False.",
+      "module_id": "python_module_2",
+      "order": 79
+    },
+    {
+      "id": "python_q8",
+      "question": "Which of the following is a mutable data type in Python?",
+      "options": [
+        "list",
+        "tuple",
+        "str",
+        "int"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Lists can be changed after creation, whereas tuples, strings, and ints are immutable.",
+      "module_id": "python_module_1",
+      "order": 8
+    },
+    {
+      "id": "python_q80",
+      "question": "Which loop can be nested inside another loop in Python?",
+      "options": [
+        "Both for and while loops",
+        "Only for loops",
+        "Only while loops",
+        "Neither"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Python allows both 'for' and 'while' loops to be nested.",
+      "module_id": "python_module_2",
+      "order": 80
+    },
+    {
+      "id": "python_q81",
+      "question": "Which Python statement is used to exit a function from within a loop?",
+      "options": [
+        "return",
+        "break",
+        "continue",
+        "exit"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'return' exits the function immediately, even if inside a loop.",
+      "module_id": "python_module_2",
+      "order": 81
+    },
+    {
+      "id": "python_q82",
+      "question": "Which statement stops only the current iteration but continues the loop?",
+      "options": [
+        "continue",
+        "break",
+        "pass",
+        "exit"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'continue' skips the rest of the current iteration and continues the loop.",
+      "module_id": "python_module_2",
+      "order": 82
+    },
+    {
+      "id": "python_q83",
+      "question": "Which method helps execute code multiple times without writing it repeatedly?",
+      "options": [
+        "Loops",
+        "Functions",
+        "Classes",
+        "Modules"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Loops allow repeating code multiple times efficiently.",
+      "module_id": "python_module_2",
+      "order": 83
+    },
+    {
+      "id": "python_q84",
+      "question": "Which statement is used to check multiple conditions without nesting?",
+      "options": [
+        "elif",
+        "if",
+        "else",
+        "switch"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'elif' lets you check additional conditions without nested ifs.",
+      "module_id": "python_module_2",
+      "order": 84
+    },
+    {
+      "id": "python_q85",
+      "question": "Which loop is best when the number of iterations is known?",
+      "options": [
+        "for",
+        "while",
+        "do-while",
+        "infinite loop"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'for' loops are suitable for known iterations.",
+      "module_id": "python_module_2",
+      "order": 85
+    },
+    {
+      "id": "python_q86",
+      "question": "Which loop is best when the number of iterations is unknown?",
+      "options": [
+        "while",
+        "for",
+        "do-while",
+        "repeat"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'while' loops continue until a condition becomes False.",
+      "module_id": "python_module_2",
+      "order": 86
+    },
+    {
+      "id": "python_q87",
+      "question": "Which of these is used to iterate over keys in a dictionary?",
+      "options": [
+        "for key in dict",
+        "for value in dict",
+        "for item in dict.values()",
+        "for pair in dict.items()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'for key in dict' iterates through the dictionary's keys.",
+      "module_id": "python_module_2",
+      "order": 87
+    },
+    {
+      "id": "python_q88",
+      "question": "Which statement is true about nested loops in Python?",
+      "options": [
+        "Inner loops complete all iterations for each outer loop iteration",
+        "Inner loops run only once",
+        "Inner loops run before the outer loop",
+        "Inner loops cannot exist"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Nested loops execute the inner loop fully for each iteration of the outer loop.",
+      "module_id": "python_module_2",
+      "order": 88
+    },
+    {
+      "id": "python_q89",
+      "question": "Which statement executes if no 'elif' matches but an 'else' exists?",
+      "options": [
+        "else block",
+        "if block",
+        "loop continues",
+        "nothing happens"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'else' block executes when all previous conditions are False.",
+      "module_id": "python_module_2",
+      "order": 89
+    },
+    {
+      "id": "python_q9",
+      "question": "Which function returns the length of a string or list in Python?",
+      "options": [
+        "len()",
+        "length()",
+        "size()",
+        "count()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'len()' function returns the number of items in a list or characters in a string.",
+      "module_id": "python_module_1",
+      "order": 9
+    },
+    {
+      "id": "python_q90",
+      "question": "Which Python keyword handles multiple exclusive conditions sequentially?",
+      "options": [
+        "elif",
+        "if",
+        "else",
+        "switch"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'elif' allows checking multiple conditions one after another.",
+      "module_id": "python_module_2",
+      "order": 90
+    },
+    {
+      "id": "python_q91",
+      "question": "Which loop can iterate over a string character by character?",
+      "options": [
+        "for",
+        "while",
+        "do-while",
+        "repeat"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'for' loops can iterate over sequences, including strings.",
+      "module_id": "python_module_2",
+      "order": 91
+    },
+    {
+      "id": "python_q92",
+      "question": "Which statement exits a loop prematurely based on a condition?",
+      "options": [
+        "break",
+        "continue",
+        "pass",
+        "return"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'break' exits the loop immediately when the condition is met.",
+      "module_id": "python_module_2",
+      "order": 92
+    },
+    {
+      "id": "python_q93",
+      "question": "Which operator is used for membership testing in Python?",
+      "options": [
+        "in",
+        "contains",
+        "has",
+        "exists"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'in' checks whether a value exists in a sequence or collection.",
+      "module_id": "python_module_2",
+      "order": 93
+    },
+    {
+      "id": "python_q94",
+      "question": "Which statement stops the current iteration but continues looping?",
+      "options": [
+        "continue",
+        "break",
+        "pass",
+        "exit"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'continue' skips the rest of the current iteration.",
+      "module_id": "python_module_2",
+      "order": 94
+    },
+    {
+      "id": "python_q95",
+      "question": "Which Python loop allows iterating through a list with index?",
+      "options": [
+        "for i, item in enumerate(list)",
+        "for item in list",
+        "while i < len(list)",
+        "foreach"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'enumerate()' provides both index and value in a loop.",
+      "module_id": "python_module_2",
+      "order": 95
+    },
+    {
+      "id": "python_q96",
+      "question": "Which function can be used to stop an infinite loop manually?",
+      "options": [
+        "KeyboardInterrupt",
+        "exit()",
+        "break()",
+        "terminate()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A KeyboardInterrupt stops the execution of an infinite loop in Python.",
+      "module_id": "python_module_2",
+      "order": 96
+    },
+    {
+      "id": "python_q97",
+      "question": "Which Python construct allows executing code until a condition becomes False?",
+      "options": [
+        "while loop",
+        "for loop",
+        "if statement",
+        "try block"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'while' loops continue running until the condition evaluates to False.",
+      "module_id": "python_module_2",
+      "order": 97
+    },
+    {
+      "id": "python_q98",
+      "question": "Which loop is generally used for iterating over elements in a collection?",
+      "options": [
+        "for loop",
+        "while loop",
+        "do-while",
+        "repeat"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'for' loops are used to iterate over sequences or collections.",
+      "module_id": "python_module_2",
+      "order": 98
+    },
+    {
+      "id": "python_q99",
+      "question": "Which statement handles multiple alternative conditions efficiently?",
+      "options": [
+        "if-elif-else",
+        "nested if",
+        "switch-case",
+        "try-except"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'if-elif-else' is the preferred way to handle multiple alternatives in Python.",
+      "module_id": "python_module_2",
+      "order": 99
+    }
+  ]
+}

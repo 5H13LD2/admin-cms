@@ -1,0 +1,1230 @@
+{
+  "collectionName": "technical_assesment",
+  "parentPath": "",
+  "documentCount": 20,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_assess_1",
+        "java_assess_2",
+        "java_assess_3"
+      ]
+    },
+    "title": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Hello Java",
+        "Sum of Two Numbers",
+        "Even or Odd"
+      ]
+    },
+    "brokenCode": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "// Task: Print 'Hello Java' to the console\npublic class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello Java)\");\n  }\n}",
+        "// Task: Add two integers and print the sum\npublic class Main {\n  public static void main(String[] args) {\n    int a = 5, b = 3;\n    System.out.println(\"Sum: \" + a + b);\n  }\n}",
+        "// Task: Check if a number is even or odd\npublic class Main {\n  public static void main(String[] args) {\n    int num = 6;\n    if (num % 2 = 0) {\n      System.out.println(\"Even\");\n    } else {\n      System.out.println(\"Odd\");\n    }\n  }\n}"
+      ]
+    },
+    "correctOutput": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Hello Java",
+        "Sum: 8",
+        "Even"
+      ]
+    },
+    "courseId": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_101",
+        "java_101",
+        "java_101"
+      ]
+    },
+    "difficulty": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "easy",
+        "easy",
+        "medium"
+      ]
+    },
+    "hint": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Missing something to properly close the string.",
+        "Remember how Java concatenates strings and numbers — parentheses might help.",
+        "You can't assign values inside an if condition — use a comparison operator."
+      ]
+    },
+    "status": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "not_taken",
+        "not_taken",
+        "not_taken"
+      ]
+    },
+    "author": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Jerico Jimenez",
+        "Jerico Jimenez",
+        "Jerico Jimenez"
+      ]
+    },
+    "hints": {
+      "types": [
+        "array"
+      ],
+      "samples": [
+        [
+          "Use SELECT * to get all columns",
+          "Don't forget the FROM clause",
+          "End your query with a semicolon"
+        ],
+        [
+          "Use the WHERE clause to filter results",
+          "Use >= operator for greater than or equal to",
+          "Make sure to compare with the age column"
+        ],
+        [
+          "Specify the column name instead of using *",
+          "You only need to return the name column",
+          "Column names are case-sensitive in some databases"
+        ]
+      ]
+    },
+    "description": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Write an SQL query to display all students from the students table.",
+        "Write an SQL query to display students who are 21 years old or older.",
+        "Write an SQL query to display only the names of all students."
+      ]
+    },
+    "tags": {
+      "types": [
+        "array"
+      ],
+      "samples": [
+        [
+          "SELECT",
+          "basic",
+          "fundamentals"
+        ],
+        [
+          "WHERE",
+          "filtering",
+          "operators"
+        ],
+        [
+          "SELECT",
+          "columns",
+          "projection"
+        ]
+      ]
+    },
+    "createdAt": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-10-28T08:00:00Z",
+        "2025-10-28T08:05:00Z",
+        "2025-10-28T08:10:00Z"
+      ]
+    },
+    "sample_table": {
+      "types": [
+        "object"
+      ],
+      "samples": [
+        {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        }
+      ]
+    },
+    "expected_query": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "SELECT * FROM students;",
+        "SELECT * FROM students WHERE age >= 21;",
+        "SELECT name FROM students;"
+      ]
+    },
+    "topic": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "SELECT Basics",
+        "WHERE Clause",
+        "SELECT Basics"
+      ]
+    },
+    "category": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "SQL",
+        "SQL",
+        "SQL"
+      ]
+    },
+    "order": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        2,
+        3
+      ]
+    },
+    "updatedAt": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-10-28T08:00:00Z",
+        "2025-10-28T08:05:00Z",
+        "2025-10-28T08:10:00Z"
+      ]
+    },
+    "expected_result": {
+      "types": [
+        "object"
+      ],
+      "samples": [
+        {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "rows": [
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        {
+          "columns": [
+            "name"
+          ],
+          "rows": [
+            {
+              "name": "Jerico"
+            },
+            {
+              "name": "Maria"
+            },
+            {
+              "name": "John"
+            }
+          ]
+        }
+      ]
+    },
+    "additionalTables": {
+      "types": [
+        "array"
+      ],
+      "samples": [
+        [
+          {
+            "name": "enrollments",
+            "columns": [
+              "id",
+              "student_id",
+              "course_id"
+            ],
+            "rows": [
+              {
+                "id": 1,
+                "student_id": 1,
+                "course_id": 1
+              },
+              {
+                "id": 2,
+                "student_id": 2,
+                "course_id": 2
+              },
+              {
+                "id": 3,
+                "student_id": 3,
+                "course_id": 1
+              }
+            ]
+          },
+          {
+            "name": "courses",
+            "columns": [
+              "id",
+              "course_name"
+            ],
+            "rows": [
+              {
+                "id": 1,
+                "course_name": "SQL Fundamentals"
+              },
+              {
+                "id": 2,
+                "course_name": "Python Basics"
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "java_assess_1",
+      "title": "Hello Java",
+      "brokenCode": "// Task: Print 'Hello Java' to the console\npublic class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello Java)\");\n  }\n}",
+      "correctOutput": "Hello Java",
+      "courseId": "java_101",
+      "difficulty": "easy",
+      "hint": "Missing something to properly close the string.",
+      "status": "not_taken"
+    },
+    {
+      "id": "java_assess_2",
+      "title": "Sum of Two Numbers",
+      "brokenCode": "// Task: Add two integers and print the sum\npublic class Main {\n  public static void main(String[] args) {\n    int a = 5, b = 3;\n    System.out.println(\"Sum: \" + a + b);\n  }\n}",
+      "correctOutput": "Sum: 8",
+      "courseId": "java_101",
+      "difficulty": "easy",
+      "hint": "Remember how Java concatenates strings and numbers — parentheses might help.",
+      "status": "not_taken"
+    },
+    {
+      "id": "java_assess_3",
+      "title": "Even or Odd",
+      "brokenCode": "// Task: Check if a number is even or odd\npublic class Main {\n  public static void main(String[] args) {\n    int num = 6;\n    if (num % 2 = 0) {\n      System.out.println(\"Even\");\n    } else {\n      System.out.println(\"Odd\");\n    }\n  }\n}",
+      "correctOutput": "Even",
+      "courseId": "java_101",
+      "difficulty": "medium",
+      "hint": "You can't assign values inside an if condition — use a comparison operator.",
+      "status": "not_taken"
+    },
+    {
+      "id": "java_assess_4",
+      "title": "Loop Print Numbers",
+      "brokenCode": "// Task: Print numbers 1 to 5\npublic class Main {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++)\n      System.out.println(i)\n  }\n}",
+      "correctOutput": "1\n2\n3\n4\n5",
+      "courseId": "java_101",
+      "difficulty": "medium",
+      "hint": "The loop is almost correct — check for missing syntax after println().",
+      "status": "not_taken"
+    },
+    {
+      "id": "java_assess_5",
+      "title": "Array Total",
+      "brokenCode": "// Task: Calculate total of all elements in an array\npublic class Main {\n  public static void main(String[] args) {\n    int[] nums = {2, 4, 6, 8};\n    int sum = 0;\n    for (int i = 0; i <= nums.length; i++) {\n      sum += nums[i];\n    }\n    System.out.println(sum);\n  }\n}",
+      "correctOutput": "20",
+      "courseId": "java_101",
+      "difficulty": "hard",
+      "hint": "Array indexing in Java starts at 0 — be careful with your loop condition.",
+      "status": "not_taken"
+    },
+    {
+      "id": "python_assess_1",
+      "title": "Simple Print Loop",
+      "brokenCode": "# Task: Print numbers from 1 to 5\n# Bug: Missing colon and wrong indentation\nfor i in range(1,6)\nprint(i)",
+      "correctOutput": "1\n2\n3\n4\n5",
+      "courseId": "python_101",
+      "difficulty": "easy",
+      "hint": "Check the loop syntax — something might be missing after the range.",
+      "status": "not_taken"
+    },
+    {
+      "id": "python_assess_2",
+      "title": "Greet the World",
+      "brokenCode": "# Task: Combine two strings properly\ngreeting = 'Hello'\nname = 'World'\nprint(greeting + name)",
+      "correctOutput": "Hello World",
+      "courseId": "python_101",
+      "difficulty": "easy",
+      "hint": "Mind the spacing between words when concatenating.",
+      "status": "not_taken"
+    },
+    {
+      "id": "python_assess_3",
+      "title": "Sum of Numbers",
+      "brokenCode": "# Task: Print total sum of numbers in the list\nnums = [2,4,6,8]\nprint(sum(nums) + )",
+      "correctOutput": "20",
+      "courseId": "python_101",
+      "difficulty": "medium",
+      "hint": "There’s an extra operator causing an error.",
+      "status": "not_taken"
+    },
+    {
+      "id": "python_assess_4",
+      "title": "Function Fix",
+      "brokenCode": "# Task: Define a function that adds two numbers\ndef add(a, b)\n    return a + b\n\nprint(add(5,3))",
+      "correctOutput": "8",
+      "courseId": "python_101",
+      "difficulty": "medium",
+      "hint": "Check the function definition syntax — something is missing after parameters.",
+      "status": "not_taken"
+    },
+    {
+      "id": "python_assess_5",
+      "title": "Even or Odd",
+      "brokenCode": "# Task: Print if number is even or odd\nnum = 4\nif num % 2 = 0:\n    print('Even')\nelse:\n    print('Odd')",
+      "correctOutput": "Even",
+      "courseId": "python_101",
+      "difficulty": "medium",
+      "hint": "Look closely at the comparison operator in the condition.",
+      "status": "not_taken"
+    },
+    {
+      "id": "sql_challenge_01_select_all",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "Use SELECT * to get all columns",
+        "Don't forget the FROM clause",
+        "End your query with a semicolon"
+      ],
+      "description": "Write an SQL query to display all students from the students table.",
+      "title": "Select All Students",
+      "tags": [
+        "SELECT",
+        "basic",
+        "fundamentals"
+      ],
+      "difficulty": "Easy",
+      "createdAt": "2025-10-28T08:00:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "name": "students",
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      },
+      "expected_query": "SELECT * FROM students;",
+      "topic": "SELECT Basics",
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 1,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:00:00Z",
+      "expected_result": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      }
+    },
+    {
+      "id": "sql_challenge_02_where_filter",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "Use the WHERE clause to filter results",
+        "Use >= operator for greater than or equal to",
+        "Make sure to compare with the age column"
+      ],
+      "description": "Write an SQL query to display students who are 21 years old or older.",
+      "title": "Filter Students by Age",
+      "tags": [
+        "WHERE",
+        "filtering",
+        "operators"
+      ],
+      "difficulty": "Easy",
+      "createdAt": "2025-10-28T08:05:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "name": "students",
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      },
+      "expected_query": "SELECT * FROM students WHERE age >= 21;",
+      "topic": "WHERE Clause",
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 2,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:05:00Z",
+      "expected_result": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "rows": [
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      }
+    },
+    {
+      "id": "sql_challenge_03_select_columns",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "Specify the column name instead of using *",
+        "You only need to return the name column",
+        "Column names are case-sensitive in some databases"
+      ],
+      "description": "Write an SQL query to display only the names of all students.",
+      "title": "Select Specific Columns",
+      "tags": [
+        "SELECT",
+        "columns",
+        "projection"
+      ],
+      "difficulty": "Easy",
+      "createdAt": "2025-10-28T08:10:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "name": "students",
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      },
+      "expected_query": "SELECT name FROM students;",
+      "topic": "SELECT Basics",
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 3,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:10:00Z",
+      "expected_result": {
+        "columns": [
+          "name"
+        ],
+        "rows": [
+          {
+            "name": "Jerico"
+          },
+          {
+            "name": "Maria"
+          },
+          {
+            "name": "John"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sql_challenge_04_order_by",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "Use ORDER BY clause to sort results",
+        "Use DESC for descending order",
+        "Place ORDER BY at the end of your query"
+      ],
+      "description": "Write an SQL query to display all students sorted by age in descending order (oldest first).",
+      "title": "Sort Students by Age",
+      "tags": [
+        "ORDER BY",
+        "sorting",
+        "DESC"
+      ],
+      "difficulty": "Easy",
+      "createdAt": "2025-10-28T08:15:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "name": "students",
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      },
+      "expected_query": "SELECT * FROM students ORDER BY age DESC;",
+      "topic": "ORDER BY",
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 4,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:15:00Z",
+      "expected_result": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "rows": [
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          }
+        ]
+      }
+    },
+    {
+      "id": "sql_challenge_05_count",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "Use the COUNT() aggregate function",
+        "COUNT(*) counts all rows",
+        "Use AS to name the result column 'count'"
+      ],
+      "description": "Write an SQL query to count the total number of students in the students table.",
+      "title": "Count Total Students",
+      "tags": [
+        "COUNT",
+        "aggregates",
+        "functions"
+      ],
+      "difficulty": "Easy",
+      "createdAt": "2025-10-28T08:20:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "name": "students",
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      },
+      "expected_query": "SELECT COUNT(*) AS count FROM students;",
+      "topic": "Aggregate Functions",
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 5,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:20:00Z",
+      "expected_result": {
+        "columns": [
+          "count"
+        ],
+        "rows": [
+          {
+            "count": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "sql_challenge_06_avg",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "Use the AVG() aggregate function",
+        "Pass the age column to AVG()",
+        "Use AS to name the result 'average_age'"
+      ],
+      "description": "Write an SQL query to calculate the average age of all students.",
+      "title": "Calculate Average Age",
+      "tags": [
+        "AVG",
+        "aggregates",
+        "average"
+      ],
+      "difficulty": "Easy",
+      "createdAt": "2025-10-28T08:25:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "name": "students",
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      },
+      "expected_query": "SELECT AVG(age) AS average_age FROM students;",
+      "topic": "Aggregate Functions",
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 6,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:25:00Z",
+      "expected_result": {
+        "columns": [
+          "average_age"
+        ],
+        "rows": [
+          {
+            "average_age": 21
+          }
+        ]
+      }
+    },
+    {
+      "id": "sql_challenge_07_inner_join",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "You need to join three tables: students, enrollments, and courses",
+        "Use INNER JOIN to connect related tables",
+        "Use table aliases (s, e, c) for cleaner code",
+        "Match student_id in enrollments with id in students"
+      ],
+      "description": "Write an SQL query to display student names along with their enrolled course names using INNER JOIN.",
+      "title": "Join Students and Courses",
+      "tags": [
+        "JOIN",
+        "INNER JOIN",
+        "multiple tables"
+      ],
+      "difficulty": "Medium",
+      "createdAt": "2025-10-28T08:30:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "name": "students",
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      },
+      "expected_query": "SELECT s.name, c.course_name FROM students s INNER JOIN enrollments e ON s.id = e.student_id INNER JOIN courses c ON e.course_id = c.id;",
+      "topic": "JOINS",
+      "additionalTables": [
+        {
+          "name": "enrollments",
+          "columns": [
+            "id",
+            "student_id",
+            "course_id"
+          ],
+          "rows": [
+            {
+              "id": 1,
+              "student_id": 1,
+              "course_id": 1
+            },
+            {
+              "id": 2,
+              "student_id": 2,
+              "course_id": 2
+            },
+            {
+              "id": 3,
+              "student_id": 3,
+              "course_id": 1
+            }
+          ]
+        },
+        {
+          "name": "courses",
+          "columns": [
+            "id",
+            "course_name"
+          ],
+          "rows": [
+            {
+              "id": 1,
+              "course_name": "SQL Fundamentals"
+            },
+            {
+              "id": 2,
+              "course_name": "Python Basics"
+            }
+          ]
+        }
+      ],
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 7,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:30:00Z",
+      "expected_result": {
+        "columns": [
+          "name",
+          "course_name"
+        ],
+        "rows": [
+          {
+            "name": "Jerico",
+            "course_name": "SQL Fundamentals"
+          },
+          {
+            "name": "Maria",
+            "course_name": "Python Basics"
+          },
+          {
+            "name": "John",
+            "course_name": "SQL Fundamentals"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sql_challenge_08_group_by",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "Use GROUP BY to group rows with the same age",
+        "Use COUNT(*) to count students in each group",
+        "SELECT both the age and the count"
+      ],
+      "description": "Write an SQL query to count how many students have each age, grouped by age.",
+      "title": "Group Students by Age",
+      "tags": [
+        "GROUP BY",
+        "aggregates",
+        "COUNT"
+      ],
+      "difficulty": "Medium",
+      "createdAt": "2025-10-28T08:35:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "name": "students",
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      },
+      "expected_query": "SELECT age, COUNT(*) AS count FROM students GROUP BY age;",
+      "topic": "GROUP BY",
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 8,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:35:00Z",
+      "expected_result": {
+        "columns": [
+          "age",
+          "count"
+        ],
+        "rows": [
+          {
+            "age": 20,
+            "count": 1
+          },
+          {
+            "age": 21,
+            "count": 1
+          },
+          {
+            "age": 22,
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "sql_challenge_09_having",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "Use GROUP BY course_id to group enrollments",
+        "Use HAVING to filter groups after grouping",
+        "HAVING is like WHERE but for aggregated data",
+        "Count must be greater than 1"
+      ],
+      "description": "Write an SQL query to show course IDs that have more than 1 enrolled student.",
+      "title": "Filter Groups with HAVING",
+      "tags": [
+        "HAVING",
+        "GROUP BY",
+        "filtering groups"
+      ],
+      "difficulty": "Medium",
+      "createdAt": "2025-10-28T08:40:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "student_id",
+          "course_id"
+        ],
+        "name": "enrollments",
+        "rows": [
+          {
+            "id": 1,
+            "student_id": 1,
+            "course_id": 1
+          },
+          {
+            "id": 2,
+            "student_id": 2,
+            "course_id": 2
+          },
+          {
+            "id": 3,
+            "student_id": 3,
+            "course_id": 1
+          }
+        ]
+      },
+      "expected_query": "SELECT course_id, COUNT(*) AS student_count FROM enrollments GROUP BY course_id HAVING COUNT(*) > 1;",
+      "topic": "GROUP BY",
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 9,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:40:00Z",
+      "expected_result": {
+        "columns": [
+          "course_id",
+          "student_count"
+        ],
+        "rows": [
+          {
+            "course_id": 1,
+            "student_count": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "sql_challenge_10_subquery",
+      "author": "Jerico Jimenez",
+      "hints": [
+        "Use a subquery to calculate AVG(age)",
+        "The subquery goes inside parentheses",
+        "Compare age in the outer query with the subquery result",
+        "Average age is 21, so students older than 21 should appear"
+      ],
+      "description": "Write an SQL query to find students whose age is greater than the average age of all students (using a subquery).",
+      "title": "Find Students Older Than Average",
+      "tags": [
+        "subquery",
+        "AVG",
+        "advanced"
+      ],
+      "difficulty": "Hard",
+      "createdAt": "2025-10-28T08:45:00Z",
+      "sample_table": {
+        "columns": [
+          "id",
+          "name",
+          "age"
+        ],
+        "name": "students",
+        "rows": [
+          {
+            "id": 1,
+            "name": "Jerico",
+            "age": 20
+          },
+          {
+            "id": 2,
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "id": 3,
+            "name": "John",
+            "age": 22
+          }
+        ]
+      },
+      "expected_query": "SELECT name, age FROM students WHERE age > (SELECT AVG(age) FROM students);",
+      "topic": "Subqueries",
+      "category": "SQL",
+      "courseId": "sql_fundamentals",
+      "order": 10,
+      "status": "active",
+      "updatedAt": "2025-10-28T08:45:00Z",
+      "expected_result": {
+        "columns": [
+          "name",
+          "age"
+        ],
+        "rows": [
+          {
+            "name": "Maria",
+            "age": 21
+          },
+          {
+            "name": "John",
+            "age": 22
+          }
+        ]
+      }
+    }
+  ]
+}

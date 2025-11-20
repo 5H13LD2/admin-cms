@@ -1,0 +1,20 @@
+{
+  "collectionName": "courses",
+  "parentPath": "user_progress/utOfg4eJtzD9aDNXXluG",
+  "documentCount": 1,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Lx9GtcJa49qg6NAPZN6M"
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "Lx9GtcJa49qg6NAPZN6M"
+    }
+  ]
+}

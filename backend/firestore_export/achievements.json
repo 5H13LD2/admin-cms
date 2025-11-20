@@ -1,0 +1,133 @@
+{
+  "collectionName": "achievements",
+  "parentPath": "",
+  "documentCount": 3,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "code_master",
+        "first_lesson",
+        "week_streak"
+      ]
+    },
+    "title": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Code Master",
+        "First Step",
+        "Week Warrior"
+      ]
+    },
+    "description": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Solve 50 coding exercises",
+        "Complete your first lesson",
+        "Study for 7 consecutive days"
+      ]
+    },
+    "icon": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "💻",
+        "🎯",
+        "🔥"
+      ]
+    },
+    "points": {
+      "types": [
+        "string",
+        "number"
+      ],
+      "samples": [
+        "500",
+        50,
+        "200"
+      ]
+    },
+    "category": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "skill",
+        "milestone",
+        "consistency"
+      ]
+    },
+    "rarity": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "rare",
+        "common",
+        "uncommon\""
+      ]
+    },
+    "requirements": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "{\n    type: \"exercise_completion\",\n    count: 50\n  }",
+        "{\n    type: \"lesson_completion\",\n    count: 1\n  }\n",
+        " {\n    type: \"daily_streak\",\n    count: 7\n  }\n"
+      ]
+    },
+    "isActive": {
+      "types": [
+        "boolean"
+      ],
+      "samples": [
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "code_master",
+      "title": "Code Master",
+      "description": "Solve 50 coding exercises",
+      "icon": "💻",
+      "points": "500",
+      "category": "skill",
+      "rarity": "rare",
+      "requirements": "{\n    type: \"exercise_completion\",\n    count: 50\n  }",
+      "isActive": true
+    },
+    {
+      "id": "first_lesson",
+      "title": "First Step",
+      "description": "Complete your first lesson",
+      "icon": "🎯",
+      "points": 50,
+      "category": "milestone",
+      "rarity": "common",
+      "requirements": "{\n    type: \"lesson_completion\",\n    count: 1\n  }\n",
+      "isActive": true
+    },
+    {
+      "id": "week_streak",
+      "title": "Week Warrior",
+      "description": "Study for 7 consecutive days",
+      "icon": "🔥",
+      "points": "200",
+      "category": "consistency",
+      "rarity": "uncommon\"",
+      "requirements": " {\n    type: \"daily_streak\",\n    count: 7\n  }\n",
+      "isActive": true
+    }
+  ]
+}

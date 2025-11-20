@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, BookOpen, FileText, Award } from "lucide-react";
+import { LayoutDashboard, BookOpen, FileText, Award, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+  { to: "/courses", icon: GraduationCap, label: "Courses" },
   { to: "/modules", icon: BookOpen, label: "Modules" },
   { to: "/lessons", icon: FileText, label: "My Lessons" },
   { to: "/quizzes", icon: Award, label: "Quizzes" },

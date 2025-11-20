@@ -1,0 +1,313 @@
+{
+  "collectionName": "quiz_scores",
+  "parentPath": "users/sNhQtL7dHSM3McSzF9BvtDJ9GtF3",
+  "documentCount": 4,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_module_1",
+        "java_module_2",
+        "sql_module_1"
+      ]
+    },
+    "latestTimestamp": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1761589240861,
+        1761590292321,
+        1761587109608
+      ]
+    },
+    "quizId": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_module_1",
+        "java_module_2",
+        "sql_module_1"
+      ]
+    },
+    "totalAttempts": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        1,
+        3
+      ]
+    },
+    "latestTotal": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        20,
+        20,
+        20
+      ]
+    },
+    "highestScore": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        0,
+        16
+      ]
+    },
+    "highestPercentage": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        5,
+        0,
+        80
+      ]
+    },
+    "latestPercentage": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        5,
+        0,
+        80
+      ]
+    },
+    "latestDifficulty": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "NORMAL",
+        "NORMAL",
+        "NORMAL"
+      ]
+    },
+    "latestScore": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        0,
+        16
+      ]
+    },
+    "lastAttemptTimestamp": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1761589240861,
+        1761590292321,
+        1761587109608
+      ]
+    },
+    "averageScore": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        0,
+        6.333333333333333
+      ]
+    },
+    "averagePercentage": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        5,
+        0,
+        31.666666666666668
+      ]
+    },
+    "courseName": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Module 1: Java Basics",
+        "Module 2: if-else Statements",
+        "Module 1: Introduction to SQL"
+      ]
+    },
+    "firstAttemptTimestamp": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1761589240861,
+        1761590292321,
+        1761586787197
+      ]
+    },
+    "latestPassed": {
+      "types": [
+        "boolean"
+      ],
+      "samples": [
+        false,
+        false,
+        true
+      ]
+    },
+    "courseId": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_module_1",
+        "java_module_2",
+        "sql_module_1"
+      ]
+    },
+    "difficulty": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "NORMAL"
+      ]
+    },
+    "score": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0
+      ]
+    },
+    "total": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        20
+      ]
+    },
+    "module_id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "sql_module_2"
+      ]
+    },
+    "percentage": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0
+      ]
+    },
+    "passed": {
+      "types": [
+        "boolean"
+      ],
+      "samples": [
+        false
+      ]
+    },
+    "timestamp": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1761592334449
+      ]
+    },
+    "attempts": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "java_module_1",
+      "latestTimestamp": 1761589240861,
+      "quizId": "java_module_1",
+      "totalAttempts": 1,
+      "latestTotal": 20,
+      "highestScore": 1,
+      "highestPercentage": 5,
+      "latestPercentage": 5,
+      "latestDifficulty": "NORMAL",
+      "latestScore": 1,
+      "lastAttemptTimestamp": 1761589240861,
+      "averageScore": 1,
+      "averagePercentage": 5,
+      "courseName": "Module 1: Java Basics",
+      "firstAttemptTimestamp": 1761589240861,
+      "latestPassed": false,
+      "courseId": "java_module_1"
+    },
+    {
+      "id": "java_module_2",
+      "latestTimestamp": 1761590292321,
+      "quizId": "java_module_2",
+      "totalAttempts": 1,
+      "latestTotal": 20,
+      "highestScore": 0,
+      "highestPercentage": 0,
+      "latestPercentage": 0,
+      "latestDifficulty": "NORMAL",
+      "latestScore": 0,
+      "lastAttemptTimestamp": 1761590292321,
+      "averageScore": 0,
+      "averagePercentage": 0,
+      "courseName": "Module 2: if-else Statements",
+      "firstAttemptTimestamp": 1761590292321,
+      "latestPassed": false,
+      "courseId": "java_module_2"
+    },
+    {
+      "id": "sql_module_1",
+      "latestTimestamp": 1761587109608,
+      "quizId": "sql_module_1",
+      "totalAttempts": 3,
+      "latestTotal": 20,
+      "highestScore": 16,
+      "highestPercentage": 80,
+      "latestPercentage": 80,
+      "latestDifficulty": "NORMAL",
+      "latestScore": 16,
+      "lastAttemptTimestamp": 1761587109608,
+      "averageScore": 6.333333333333333,
+      "averagePercentage": 31.666666666666668,
+      "courseName": "Module 1: Introduction to SQL",
+      "firstAttemptTimestamp": 1761586787197,
+      "latestPassed": true,
+      "courseId": "sql_module_1"
+    },
+    {
+      "id": "sql_module_2",
+      "difficulty": "NORMAL",
+      "score": 0,
+      "total": 20,
+      "courseName": "Module 2: SQL Operations",
+      "module_id": "sql_module_2",
+      "percentage": 0,
+      "passed": false,
+      "courseId": "sql_module_2",
+      "timestamp": 1761592334449,
+      "attempts": 1
+    }
+  ]
+}

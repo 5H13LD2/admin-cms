@@ -1,0 +1,20 @@
+{
+  "collectionName": "user_progress",
+  "parentPath": "",
+  "documentCount": 1,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "utOfg4eJtzD9aDNXXluG"
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "utOfg4eJtzD9aDNXXluG"
+    }
+  ]
+}

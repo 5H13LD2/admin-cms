@@ -1,0 +1,20 @@
+{
+  "collectionName": "profile_photos",
+  "parentPath": "",
+  "documentCount": 1,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "5Oputi1onRQBrhrgdOxU"
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "5Oputi1onRQBrhrgdOxU"
+    }
+  ]
+}

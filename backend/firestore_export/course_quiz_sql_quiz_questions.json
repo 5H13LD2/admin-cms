@@ -1,0 +1,3594 @@
+{
+  "collectionName": "questions",
+  "parentPath": "course_quiz/sql_quiz",
+  "documentCount": 250,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "sql_q1",
+        "sql_q10",
+        "sql_q100"
+      ]
+    },
+    "question": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "What does SQL stand for?",
+        "What does the wildcard % represent in a SQL LIKE statement?",
+        "Which statement safely removes only test data without dropping the table?"
+      ]
+    },
+    "options": {
+      "types": [
+        "array"
+      ],
+      "samples": [
+        [
+          "Standard Query Language",
+          "Structured Query Language",
+          "Simple Question Language",
+          "Sequential Query Language"
+        ],
+        [
+          "A single character",
+          "Any number of characters",
+          "An empty string",
+          "A numeric value"
+        ],
+        [
+          "DELETE WHERE condition",
+          "TRUNCATE",
+          "DROP TABLE",
+          "CLEAR DATABASE"
+        ]
+      ]
+    },
+    "correctOptionIndex": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        1,
+        0
+      ]
+    },
+    "explanation": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "SQL stands for Structured Query Language, used to manage and manipulate relational databases.",
+        "The % wildcard matches any number of characters in a LIKE condition.",
+        "DELETE WHERE condition allows selective deletion of data."
+      ]
+    },
+    "module_id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "sql_module_1",
+        "sql_module_1",
+        "sql_module_2"
+      ]
+    },
+    "order": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        10,
+        100
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "sql_q1",
+      "question": "What does SQL stand for?",
+      "options": [
+        "Standard Query Language",
+        "Structured Query Language",
+        "Simple Question Language",
+        "Sequential Query Language"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "SQL stands for Structured Query Language, used to manage and manipulate relational databases.",
+      "module_id": "sql_module_1",
+      "order": 1
+    },
+    {
+      "id": "sql_q10",
+      "question": "What does the wildcard % represent in a SQL LIKE statement?",
+      "options": [
+        "A single character",
+        "Any number of characters",
+        "An empty string",
+        "A numeric value"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The % wildcard matches any number of characters in a LIKE condition.",
+      "module_id": "sql_module_1",
+      "order": 10
+    },
+    {
+      "id": "sql_q100",
+      "question": "Which statement safely removes only test data without dropping the table?",
+      "options": [
+        "DELETE WHERE condition",
+        "TRUNCATE",
+        "DROP TABLE",
+        "CLEAR DATABASE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DELETE WHERE condition allows selective deletion of data.",
+      "module_id": "sql_module_2",
+      "order": 100
+    },
+    {
+      "id": "sql_q101",
+      "question": "Which SQL statement is used to retrieve data from a database?",
+      "options": [
+        "SELECT",
+        "GET",
+        "FETCH",
+        "QUERY"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SELECT is the standard SQL command to retrieve data from one or more tables.",
+      "module_id": "sql_module_3",
+      "order": 101
+    },
+    {
+      "id": "sql_q102",
+      "question": "What keyword specifies which table to get data from?",
+      "options": [
+        "WHERE",
+        "FROM",
+        "TABLE",
+        "INTO"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The FROM clause specifies the table to query data from.",
+      "module_id": "sql_module_3",
+      "order": 102
+    },
+    {
+      "id": "sql_q103",
+      "question": "Which clause is used to filter rows based on a condition?",
+      "options": [
+        "FILTER",
+        "WHERE",
+        "ORDER BY",
+        "LIMIT"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The WHERE clause filters rows according to a specified condition.",
+      "module_id": "sql_module_3",
+      "order": 103
+    },
+    {
+      "id": "sql_q104",
+      "question": "Which SQL keyword is used to sort query results?",
+      "options": [
+        "SORT",
+        "ORDER BY",
+        "ARRANGE",
+        "GROUP BY"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "ORDER BY sorts query results in ascending or descending order.",
+      "module_id": "sql_module_3",
+      "order": 104
+    },
+    {
+      "id": "sql_q105",
+      "question": "Which keyword ensures only unique values are returned?",
+      "options": [
+        "DISTINCT",
+        "UNIQUE",
+        "ONLY",
+        "FILTER"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DISTINCT removes duplicate records from query results.",
+      "module_id": "sql_module_3",
+      "order": 105
+    },
+    {
+      "id": "sql_q106",
+      "question": "Which clause limits the number of records returned?",
+      "options": [
+        "LIMIT",
+        "TOP",
+        "RESTRICT",
+        "ROWCOUNT"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LIMIT restricts the number of rows returned in a query result.",
+      "module_id": "sql_module_3",
+      "order": 106
+    },
+    {
+      "id": "sql_q107",
+      "question": "How do you sort query results in descending order?",
+      "options": [
+        "ORDER DESC",
+        "ORDER BY DESC",
+        "ORDER BY column DESC",
+        "SORT DESCENDING"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "ORDER BY column DESC sorts results in descending order by that column.",
+      "module_id": "sql_module_3",
+      "order": 107
+    },
+    {
+      "id": "sql_q108",
+      "question": "Which operator is used to find values within a range?",
+      "options": [
+        "WITHIN",
+        "BETWEEN",
+        "IN",
+        "RANGE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "BETWEEN specifies a range of values in SQL conditions.",
+      "module_id": "sql_module_3",
+      "order": 108
+    },
+    {
+      "id": "sql_q109",
+      "question": "Which operator checks for specific values in a list?",
+      "options": [
+        "IN",
+        "LIST",
+        "MATCH",
+        "ANY"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "IN tests whether a value matches any value in a list.",
+      "module_id": "sql_module_3",
+      "order": 109
+    },
+    {
+      "id": "sql_q11",
+      "question": "Which operator is used to combine multiple conditions in SQL?",
+      "options": [
+        "AND/OR",
+        "IF/ELSE",
+        "JOIN/ON",
+        "ADD/REMOVE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "AND and OR operators combine multiple conditions in SQL queries.",
+      "module_id": "sql_module_1",
+      "order": 11
+    },
+    {
+      "id": "sql_q110",
+      "question": "What operator is used to find patterns in text?",
+      "options": [
+        "LIKE",
+        "MATCH",
+        "PATTERN",
+        "SEARCH"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LIKE is used with wildcards to search for patterns in text columns.",
+      "module_id": "sql_module_3",
+      "order": 110
+    },
+    {
+      "id": "sql_q111",
+      "question": "What wildcard represents any sequence of characters in SQL?",
+      "options": [
+        "?",
+        "%",
+        "*",
+        "_"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "The % wildcard matches any number of characters in a LIKE clause.",
+      "module_id": "sql_module_3",
+      "order": 111
+    },
+    {
+      "id": "sql_q112",
+      "question": "What wildcard represents a single character?",
+      "options": [
+        "_",
+        "%",
+        "?",
+        "#"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The underscore (_) wildcard matches exactly one character in a pattern.",
+      "module_id": "sql_module_3",
+      "order": 112
+    },
+    {
+      "id": "sql_q113",
+      "question": "How do you rename a column in query results?",
+      "options": [
+        "AS",
+        "RENAME",
+        "ALIAS",
+        "CHANGE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The AS keyword assigns a new alias name to a column in a SELECT statement.",
+      "module_id": "sql_module_3",
+      "order": 113
+    },
+    {
+      "id": "sql_q114",
+      "question": "Which function returns the number of rows?",
+      "options": [
+        "COUNT()",
+        "SUM()",
+        "TOTAL()",
+        "ROWS()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "COUNT() returns the total number of rows in a result set.",
+      "module_id": "sql_module_3",
+      "order": 114
+    },
+    {
+      "id": "sql_q115",
+      "question": "Which function calculates the total of numeric values?",
+      "options": [
+        "SUM()",
+        "TOTAL()",
+        "ADD()",
+        "CALC()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SUM() adds up all numeric values in a specified column.",
+      "module_id": "sql_module_3",
+      "order": 115
+    },
+    {
+      "id": "sql_q116",
+      "question": "Which function returns the average value of a column?",
+      "options": [
+        "AVG()",
+        "MEAN()",
+        "AVERAGE()",
+        "SUM()/COUNT()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "AVG() computes the mean value of a numeric column.",
+      "module_id": "sql_module_3",
+      "order": 116
+    },
+    {
+      "id": "sql_q117",
+      "question": "Which SQL clause groups rows that have the same values?",
+      "options": [
+        "ORDER BY",
+        "GROUP BY",
+        "SORT BY",
+        "CLUSTER BY"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "GROUP BY groups rows with identical values for summary functions.",
+      "module_id": "sql_module_3",
+      "order": 117
+    },
+    {
+      "id": "sql_q118",
+      "question": "Which clause filters grouped records after aggregation?",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "FILTER",
+        "GROUP FILTER"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "HAVING filters aggregated results, similar to WHERE for non-aggregated rows.",
+      "module_id": "sql_module_3",
+      "order": 118
+    },
+    {
+      "id": "sql_q119",
+      "question": "Which keyword combines two query results removing duplicates?",
+      "options": [
+        "UNION",
+        "JOIN",
+        "COMBINE",
+        "MERGE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "UNION merges two SELECT results and removes duplicates.",
+      "module_id": "sql_module_3",
+      "order": 119
+    },
+    {
+      "id": "sql_q12",
+      "question": "What is the purpose of the PRIMARY KEY constraint?",
+      "options": [
+        "To link two tables",
+        "To uniquely identify each record",
+        "To allow duplicate values",
+        "To define foreign keys"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "A PRIMARY KEY uniquely identifies each record in a table.",
+      "module_id": "sql_module_1",
+      "order": 12
+    },
+    {
+      "id": "sql_q120",
+      "question": "Which keyword keeps duplicates when combining queries?",
+      "options": [
+        "UNION ALL",
+        "JOIN ALL",
+        "MERGE ALL",
+        "APPEND"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "UNION ALL includes all records from both queries, including duplicates.",
+      "module_id": "sql_module_3",
+      "order": 120
+    },
+    {
+      "id": "sql_q121",
+      "question": "How do you sort results by multiple columns?",
+      "options": [
+        "ORDER BY column1, column2",
+        "SORT column1 AND column2",
+        "ORDER TOGETHER",
+        "ORDER GROUP"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Multiple columns can be listed in ORDER BY separated by commas.",
+      "module_id": "sql_module_3",
+      "order": 121
+    },
+    {
+      "id": "sql_q122",
+      "question": "Which operator checks for NULL values?",
+      "options": [
+        "IS NULL",
+        "EQUAL NULL",
+        "= NULL",
+        "CHECK NULL"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The IS NULL operator tests if a column contains NULL values.",
+      "module_id": "sql_module_3",
+      "order": 122
+    },
+    {
+      "id": "sql_q123",
+      "question": "Which operator checks for non-NULL values?",
+      "options": [
+        "IS NOT NULL",
+        "NOT NULL",
+        "EXISTS",
+        "!= NULL"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "IS NOT NULL checks if a column contains a value that isn’t NULL.",
+      "module_id": "sql_module_3",
+      "order": 123
+    },
+    {
+      "id": "sql_q124",
+      "question": "What keyword is used to alias a table name?",
+      "options": [
+        "AS",
+        "RENAME",
+        "ALIAS",
+        "TABLE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "AS assigns a temporary alias to a table for easier reference.",
+      "module_id": "sql_module_3",
+      "order": 124
+    },
+    {
+      "id": "sql_q125",
+      "question": "What is the default sort order in SQL?",
+      "options": [
+        "Ascending",
+        "Descending",
+        "Random",
+        "None"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ORDER BY defaults to ascending order (ASC).",
+      "module_id": "sql_module_3",
+      "order": 125
+    },
+    {
+      "id": "sql_q126",
+      "question": "Which clause restricts query results to a specific number of rows in MySQL?",
+      "options": [
+        "LIMIT",
+        "TOP",
+        "ROWNUM",
+        "FIRST"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LIMIT restricts the number of records returned in MySQL queries.",
+      "module_id": "sql_module_3",
+      "order": 126
+    },
+    {
+      "id": "sql_q127",
+      "question": "Which SQL statement counts the total number of unique departments?",
+      "options": [
+        "SELECT COUNT(DISTINCT department)",
+        "SELECT COUNT(department)",
+        "SELECT UNIQUE(department)",
+        "SELECT department COUNT()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "COUNT(DISTINCT column) returns the number of unique values.",
+      "module_id": "sql_module_3",
+      "order": 127
+    },
+    {
+      "id": "sql_q128",
+      "question": "Which SQL function returns the maximum value in a column?",
+      "options": [
+        "MAX()",
+        "HIGHEST()",
+        "TOP()",
+        "LIMIT(1)"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "MAX() retrieves the highest value from a column.",
+      "module_id": "sql_module_3",
+      "order": 128
+    },
+    {
+      "id": "sql_q129",
+      "question": "Which SQL function returns the minimum value in a column?",
+      "options": [
+        "MIN()",
+        "LOWEST()",
+        "BOTTOM()",
+        "FIRST()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "MIN() retrieves the smallest value from a column.",
+      "module_id": "sql_module_3",
+      "order": 129
+    },
+    {
+      "id": "sql_q13",
+      "question": "What does the FOREIGN KEY constraint do?",
+      "options": [
+        "Links records in different tables",
+        "Prevents null values",
+        "Defines column data types",
+        "Creates a unique index"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A FOREIGN KEY links a column in one table to a PRIMARY KEY in another.",
+      "module_id": "sql_module_1",
+      "order": 13
+    },
+    {
+      "id": "sql_q130",
+      "question": "Which clause can filter rows before grouping?",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "GROUP BY",
+        "ORDER BY"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "WHERE filters rows before GROUP BY is applied.",
+      "module_id": "sql_module_3",
+      "order": 130
+    },
+    {
+      "id": "sql_q131",
+      "question": "Which clause filters after grouping?",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "ORDER BY",
+        "FILTER"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "HAVING filters the results of grouped data after aggregation.",
+      "module_id": "sql_module_3",
+      "order": 131
+    },
+    {
+      "id": "sql_q132",
+      "question": "Which function can be used to round numeric results?",
+      "options": [
+        "ROUND()",
+        "TRIM()",
+        "FORMAT()",
+        "CUT()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ROUND() rounds numeric values to a specified number of decimal places.",
+      "module_id": "sql_module_3",
+      "order": 132
+    },
+    {
+      "id": "sql_q133",
+      "question": "Which keyword can remove duplicates from aggregate queries?",
+      "options": [
+        "DISTINCT",
+        "UNIQUE",
+        "FILTER",
+        "ONLY"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DISTINCT ensures aggregation only counts unique values.",
+      "module_id": "sql_module_3",
+      "order": 133
+    },
+    {
+      "id": "sql_q134",
+      "question": "Which function concatenates strings in SQL?",
+      "options": [
+        "CONCAT()",
+        "MERGE()",
+        "JOIN()",
+        "ADD()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CONCAT() combines multiple strings into one.",
+      "module_id": "sql_module_3",
+      "order": 134
+    },
+    {
+      "id": "sql_q135",
+      "question": "Which SQL keyword allows sorting of NULLs at the end?",
+      "options": [
+        "NULLS LAST",
+        "ORDER END",
+        "NULL SORT",
+        "LAST NULL"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "NULLS LAST specifies that NULL values appear at the end of sorted results.",
+      "module_id": "sql_module_3",
+      "order": 135
+    },
+    {
+      "id": "sql_q136",
+      "question": "Which operator checks for multiple OR conditions?",
+      "options": [
+        "IN",
+        "ANY",
+        "EITHER",
+        "BETWEEN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "IN acts as multiple OR conditions for matching list values.",
+      "module_id": "sql_module_3",
+      "order": 136
+    },
+    {
+      "id": "sql_q137",
+      "question": "Which operator is used for combining conditions with AND logic?",
+      "options": [
+        "AND",
+        "BOTH",
+        "WITH",
+        "ALL"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "AND combines multiple conditions that must all be true.",
+      "module_id": "sql_module_3",
+      "order": 137
+    },
+    {
+      "id": "sql_q138",
+      "question": "Which operator combines conditions where only one must be true?",
+      "options": [
+        "OR",
+        "ANY",
+        "XOR",
+        "EITHER"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "OR combines multiple conditions, returning true if any is true.",
+      "module_id": "sql_module_3",
+      "order": 138
+    },
+    {
+      "id": "sql_q139",
+      "question": "Which function returns the number of characters in a string?",
+      "options": [
+        "LENGTH()",
+        "COUNT()",
+        "SIZE()",
+        "CHARCOUNT()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LENGTH() returns the number of characters in a string column.",
+      "module_id": "sql_module_3",
+      "order": 139
+    },
+    {
+      "id": "sql_q14",
+      "question": "Which keyword is used to remove an existing table in SQL?",
+      "options": [
+        "DELETE TABLE",
+        "REMOVE TABLE",
+        "DROP TABLE",
+        "CLEAR TABLE"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "DROP TABLE permanently deletes a table and its structure.",
+      "module_id": "sql_module_1",
+      "order": 14
+    },
+    {
+      "id": "sql_q140",
+      "question": "Which keyword retrieves only rows meeting a condition?",
+      "options": [
+        "WHERE",
+        "FILTER",
+        "HAVING",
+        "LIMIT"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "WHERE filters rows before they are grouped or aggregated.",
+      "module_id": "sql_module_3",
+      "order": 140
+    },
+    {
+      "id": "sql_q141",
+      "question": "Which function returns the current date?",
+      "options": [
+        "CURDATE()",
+        "NOW()",
+        "GETDATE()",
+        "DATE()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CURDATE() retrieves the current date in MySQL.",
+      "module_id": "sql_module_3",
+      "order": 141
+    },
+    {
+      "id": "sql_q142",
+      "question": "Which function returns the current date and time?",
+      "options": [
+        "NOW()",
+        "TIME()",
+        "CURRENT()",
+        "DATETIME()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "NOW() retrieves the current system date and time.",
+      "module_id": "sql_module_3",
+      "order": 142
+    },
+    {
+      "id": "sql_q143",
+      "question": "Which clause can combine multiple conditions for filtering?",
+      "options": [
+        "WHERE",
+        "ORDER BY",
+        "GROUP BY",
+        "FROM"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "WHERE allows multiple logical conditions to be applied using AND/OR.",
+      "module_id": "sql_module_3",
+      "order": 143
+    },
+    {
+      "id": "sql_q144",
+      "question": "Which aggregate function counts rows ignoring NULLs?",
+      "options": [
+        "COUNT(column)",
+        "COUNT(*)",
+        "SUM()",
+        "LENGTH()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "COUNT(column) ignores NULL values when counting rows.",
+      "module_id": "sql_module_3",
+      "order": 144
+    },
+    {
+      "id": "sql_q145",
+      "question": "Which SQL statement counts all rows including NULLs?",
+      "options": [
+        "COUNT(*)",
+        "COUNT(ALL)",
+        "TOTAL()",
+        "COUNT(NULLS)"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "COUNT(*) counts every row, including those with NULLs.",
+      "module_id": "sql_module_3",
+      "order": 145
+    },
+    {
+      "id": "sql_q146",
+      "question": "Which SQL clause defines the order of grouping?",
+      "options": [
+        "GROUP BY",
+        "ORDER BY",
+        "SORT GROUP",
+        "AGGREGATE BY"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "GROUP BY determines how rows are aggregated in groups.",
+      "module_id": "sql_module_3",
+      "order": 146
+    },
+    {
+      "id": "sql_q147",
+      "question": "Which operator is used for pattern matching with wildcards?",
+      "options": [
+        "LIKE",
+        "MATCH",
+        "EQUALS",
+        "PATTERN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LIKE is used for pattern-based text searches.",
+      "module_id": "sql_module_3",
+      "order": 147
+    },
+    {
+      "id": "sql_q148",
+      "question": "Which SQL function returns a substring from text?",
+      "options": [
+        "SUBSTRING()",
+        "EXTRACT()",
+        "PART()",
+        "SECTION()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SUBSTRING() extracts a portion of a text string.",
+      "module_id": "sql_module_3",
+      "order": 148
+    },
+    {
+      "id": "sql_q149",
+      "question": "Which SQL keyword eliminates duplicates from query output?",
+      "options": [
+        "DISTINCT",
+        "FILTER",
+        "GROUP",
+        "UNIQUE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DISTINCT ensures only unique records appear in the results.",
+      "module_id": "sql_module_3",
+      "order": 149
+    },
+    {
+      "id": "sql_q15",
+      "question": "Which SQL clause is used to rename a column or table in the result?",
+      "options": [
+        "RENAME",
+        "ALIAS",
+        "AS",
+        "SET"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "The AS keyword creates an alias to rename a column or table temporarily.",
+      "module_id": "sql_module_1",
+      "order": 15
+    },
+    {
+      "id": "sql_q150",
+      "question": "Which clause specifies how to order grouped results?",
+      "options": [
+        "ORDER BY",
+        "GROUP ORDER",
+        "SORT BY",
+        "HAVING"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ORDER BY can be used after GROUP BY to sort the grouped results.",
+      "module_id": "sql_module_3",
+      "order": 150
+    },
+    {
+      "id": "sql_q151",
+      "question": "Which SQL join returns only rows with matching values in both tables?",
+      "options": [
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "INNER JOIN returns only the rows where there is a match in both tables.",
+      "module_id": "sql_module_4",
+      "order": 151
+    },
+    {
+      "id": "sql_q152",
+      "question": "Which join returns all rows from the left table and matched rows from the right table?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN returns all rows from the left table and matching rows from the right.",
+      "module_id": "sql_module_4",
+      "order": 152
+    },
+    {
+      "id": "sql_q153",
+      "question": "Which join returns all rows from the right table and matched rows from the left table?",
+      "options": [
+        "RIGHT JOIN",
+        "LEFT JOIN",
+        "INNER JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "RIGHT JOIN returns all rows from the right table and matching rows from the left table.",
+      "module_id": "sql_module_4",
+      "order": 153
+    },
+    {
+      "id": "sql_q154",
+      "question": "Which join returns all rows from both tables, with NULLs for unmatched rows?",
+      "options": [
+        "FULL OUTER JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "FULL OUTER JOIN returns all rows from both tables, filling in NULLs where there’s no match.",
+      "module_id": "sql_module_4",
+      "order": 154
+    },
+    {
+      "id": "sql_q155",
+      "question": "Which join returns the Cartesian product of two tables?",
+      "options": [
+        "CROSS JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CROSS JOIN combines each row of the first table with every row of the second table.",
+      "module_id": "sql_module_4",
+      "order": 155
+    },
+    {
+      "id": "sql_q156",
+      "question": "Which type of join can reference the same table twice?",
+      "options": [
+        "SELF JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SELF JOIN is a join of a table to itself to compare rows within the same table.",
+      "module_id": "sql_module_4",
+      "order": 156
+    },
+    {
+      "id": "sql_q157",
+      "question": "What column in a child table usually references a parent table?",
+      "options": [
+        "Foreign Key",
+        "Primary Key",
+        "Unique Key",
+        "Index"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A foreign key in the child table references the primary key of the parent table.",
+      "module_id": "sql_module_4",
+      "order": 157
+    },
+    {
+      "id": "sql_q158",
+      "question": "What column uniquely identifies each row in a table?",
+      "options": [
+        "Primary Key",
+        "Foreign Key",
+        "Unique Key",
+        "Index"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A primary key uniquely identifies every record in a table.",
+      "module_id": "sql_module_4",
+      "order": 158
+    },
+    {
+      "id": "sql_q159",
+      "question": "Which join requires specifying the ON condition?",
+      "options": [
+        "INNER JOIN",
+        "CROSS JOIN",
+        "SELF JOIN",
+        "All JOINs except CROSS JOIN"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "All joins except CROSS JOIN require an ON clause to specify the matching condition.",
+      "module_id": "sql_module_4",
+      "order": 159
+    },
+    {
+      "id": "sql_q16",
+      "question": "Which function returns the highest value in a numeric column?",
+      "options": [
+        "MAX()",
+        "HIGH()",
+        "LARGEST()",
+        "TOP()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "MAX() returns the maximum value in a numeric column.",
+      "module_id": "sql_module_1",
+      "order": 16
+    },
+    {
+      "id": "sql_q160",
+      "question": "Which keyword is used to rename a table in a query?",
+      "options": [
+        "AS",
+        "RENAME",
+        "ALIAS",
+        "TABLE AS"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "AS allows assigning an alias to a table for easier reference in a query.",
+      "module_id": "sql_module_4",
+      "order": 160
+    },
+    {
+      "id": "sql_q161",
+      "question": "Which join returns rows that exist in the left table but not in the right table?",
+      "options": [
+        "LEFT JOIN with NULL filter",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Filtering LEFT JOIN results where right table columns are NULL gives rows only in the left table.",
+      "module_id": "sql_module_4",
+      "order": 161
+    },
+    {
+      "id": "sql_q162",
+      "question": "Which join returns rows that exist in the right table but not in the left table?",
+      "options": [
+        "RIGHT JOIN with NULL filter",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Filtering RIGHT JOIN results where left table columns are NULL gives rows only in the right table.",
+      "module_id": "sql_module_4",
+      "order": 162
+    },
+    {
+      "id": "sql_q163",
+      "question": "Which SQL clause is used to combine multiple tables?",
+      "options": [
+        "JOIN",
+        "UNION",
+        "COMBINE",
+        "MERGE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "JOIN is used to combine rows from two or more tables based on a related column.",
+      "module_id": "sql_module_4",
+      "order": 163
+    },
+    {
+      "id": "sql_q164",
+      "question": "Which join type is used to find unmatched rows from both tables?",
+      "options": [
+        "FULL OUTER JOIN with NULL filter",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "FULL OUTER JOIN combined with filtering NULLs identifies rows unmatched in either table.",
+      "module_id": "sql_module_4",
+      "order": 164
+    },
+    {
+      "id": "sql_q165",
+      "question": "Which join is used when only matching records from both tables are required?",
+      "options": [
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "CROSS JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "INNER JOIN returns only rows with matching values in both tables.",
+      "module_id": "sql_module_4",
+      "order": 165
+    },
+    {
+      "id": "sql_q166",
+      "question": "What happens if a JOIN condition is omitted?",
+      "options": [
+        "Creates a Cartesian product",
+        "Returns an error",
+        "Returns only left table",
+        "Returns only right table"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Omitting the ON condition in a join (except CROSS JOIN) may result in a Cartesian product of tables.",
+      "module_id": "sql_module_4",
+      "order": 166
+    },
+    {
+      "id": "sql_q167",
+      "question": "Which join type is typically used to combine tables with parent-child relationships?",
+      "options": [
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "INNER JOIN is commonly used to match related rows in parent-child tables.",
+      "module_id": "sql_module_4",
+      "order": 167
+    },
+    {
+      "id": "sql_q168",
+      "question": "Which join returns NULL for unmatched columns in the right table?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN returns NULLs in the right table when there is no matching row.",
+      "module_id": "sql_module_4",
+      "order": 168
+    },
+    {
+      "id": "sql_q169",
+      "question": "Which join is often used in reporting to ensure all main records appear?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "CROSS JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN ensures all rows from the main (left) table appear even if there’s no match.",
+      "module_id": "sql_module_4",
+      "order": 169
+    },
+    {
+      "id": "sql_q17",
+      "question": "Which function returns the lowest value in a numeric column?",
+      "options": [
+        "LOW()",
+        "MIN()",
+        "BOTTOM()",
+        "LEAST()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "MIN() returns the minimum value in a numeric column.",
+      "module_id": "sql_module_1",
+      "order": 17
+    },
+    {
+      "id": "sql_q170",
+      "question": "Which join type combines every row from two tables without a condition?",
+      "options": [
+        "CROSS JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CROSS JOIN produces all combinations of rows from two tables.",
+      "module_id": "sql_module_4",
+      "order": 170
+    },
+    {
+      "id": "sql_q171",
+      "question": "Which join can be used multiple times in a query for the same table?",
+      "options": [
+        "SELF JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SELF JOIN allows a table to be joined with itself for comparison or hierarchical data.",
+      "module_id": "sql_module_4",
+      "order": 171
+    },
+    {
+      "id": "sql_q172",
+      "question": "Which SQL keyword allows filtering joined results based on a column?",
+      "options": [
+        "ON",
+        "WHERE",
+        "HAVING",
+        "FILTER"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "WHERE filters the combined result set after joins according to a condition.",
+      "module_id": "sql_module_4",
+      "order": 172
+    },
+    {
+      "id": "sql_q173",
+      "question": "Which clause allows filtering grouped joined data?",
+      "options": [
+        "HAVING",
+        "WHERE",
+        "ON",
+        "GROUP BY"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "HAVING filters grouped data after aggregation or join results.",
+      "module_id": "sql_module_4",
+      "order": 173
+    },
+    {
+      "id": "sql_q174",
+      "question": "Which join allows optional matching from the left table?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN keeps all rows from the left table and matches rows from the right.",
+      "module_id": "sql_module_4",
+      "order": 174
+    },
+    {
+      "id": "sql_q175",
+      "question": "Which join allows optional matching from the right table?",
+      "options": [
+        "RIGHT JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "RIGHT JOIN keeps all rows from the right table and matches rows from the left.",
+      "module_id": "sql_module_4",
+      "order": 175
+    },
+    {
+      "id": "sql_q176",
+      "question": "Which operator specifies the join condition between two tables?",
+      "options": [
+        "ON",
+        "WHERE",
+        "USING",
+        "MATCH"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ON defines the condition to join rows from two tables.",
+      "module_id": "sql_module_4",
+      "order": 176
+    },
+    {
+      "id": "sql_q177",
+      "question": "Which clause can replace the ON condition if columns have the same name?",
+      "options": [
+        "USING",
+        "WHERE",
+        "MATCH",
+        "IDENTIFY"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "USING specifies columns with the same name to match rows during a join.",
+      "module_id": "sql_module_4",
+      "order": 177
+    },
+    {
+      "id": "sql_q178",
+      "question": "Which join type shows all unmatched rows from both tables?",
+      "options": [
+        "FULL OUTER JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "FULL OUTER JOIN returns all rows from both tables, filling NULLs where there is no match.",
+      "module_id": "sql_module_4",
+      "order": 178
+    },
+    {
+      "id": "sql_q179",
+      "question": "Which join type is safest for ensuring no duplicate rows are returned unintentionally?",
+      "options": [
+        "INNER JOIN with ON condition",
+        "CROSS JOIN",
+        "LEFT JOIN without ON",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "INNER JOIN with a proper ON condition ensures only intended matches are returned.",
+      "module_id": "sql_module_4",
+      "order": 179
+    },
+    {
+      "id": "sql_q18",
+      "question": "What does the AVG() function return?",
+      "options": [
+        "The sum of all values",
+        "The average value",
+        "The highest value",
+        "The count of rows"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "AVG() calculates the average value of a numeric column.",
+      "module_id": "sql_module_1",
+      "order": 18
+    },
+    {
+      "id": "sql_q180",
+      "question": "Which join can help identify orphaned child records?",
+      "options": [
+        "LEFT JOIN with NULL filter",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN with a NULL check on the right table identifies child records without a match.",
+      "module_id": "sql_module_4",
+      "order": 180
+    },
+    {
+      "id": "sql_q181",
+      "question": "Which join can be used to list all employees and their manager details from the same table?",
+      "options": [
+        "SELF JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SELF JOIN allows joining a table to itself to compare employee and manager relationships.",
+      "module_id": "sql_module_4",
+      "order": 181
+    },
+    {
+      "id": "sql_q182",
+      "question": "Which join is typically used in hierarchical data queries?",
+      "options": [
+        "SELF JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SELF JOIN is used to query hierarchical relationships like parent-child within the same table.",
+      "module_id": "sql_module_4",
+      "order": 182
+    },
+    {
+      "id": "sql_q183",
+      "question": "Which join type is used when you want all combinations of two small lookup tables?",
+      "options": [
+        "CROSS JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CROSS JOIN returns the Cartesian product, useful for small lookup tables.",
+      "module_id": "sql_module_4",
+      "order": 183
+    },
+    {
+      "id": "sql_q184",
+      "question": "Which join type is best for combining optional supplementary data?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN includes all main table rows and optional supplementary data if available.",
+      "module_id": "sql_module_4",
+      "order": 184
+    },
+    {
+      "id": "sql_q185",
+      "question": "Which join type requires careful use of NULL handling?",
+      "options": [
+        "FULL OUTER JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "FULL OUTER JOIN returns NULLs for unmatched rows, so proper handling is required in queries.",
+      "module_id": "sql_module_4",
+      "order": 185
+    },
+    {
+      "id": "sql_q186",
+      "question": "Which join type is used in reporting to include all main entities even if related data is missing?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN ensures the primary data is included even if related tables have no match.",
+      "module_id": "sql_module_4",
+      "order": 186
+    },
+    {
+      "id": "sql_q187",
+      "question": "Which SQL keyword is used to merge results from two similar tables while keeping duplicates?",
+      "options": [
+        "UNION ALL",
+        "JOIN",
+        "UNION",
+        "MERGE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "UNION ALL combines two SELECT statements including all duplicates.",
+      "module_id": "sql_module_4",
+      "order": 187
+    },
+    {
+      "id": "sql_q188",
+      "question": "Which join type requires specifying both tables explicitly?",
+      "options": [
+        "All JOINs except CROSS JOIN",
+        "CROSS JOIN",
+        "SELF JOIN",
+        "NATURAL JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "All JOIN types require specifying the tables being joined and the condition, except CROSS JOIN may omit ON.",
+      "module_id": "sql_module_4",
+      "order": 188
+    },
+    {
+      "id": "sql_q189",
+      "question": "Which join allows filtering on either table after combining rows?",
+      "options": [
+        "WHERE clause",
+        "ON clause",
+        "HAVING clause",
+        "USING clause"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "WHERE filters the combined result set based on conditions on any table.",
+      "module_id": "sql_module_4",
+      "order": 189
+    },
+    {
+      "id": "sql_q19",
+      "question": "Which SQL statement creates a new table?",
+      "options": [
+        "MAKE TABLE",
+        "INSERT TABLE",
+        "CREATE TABLE",
+        "DEFINE TABLE"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "CREATE TABLE is used to define a new table structure.",
+      "module_id": "sql_module_1",
+      "order": 19
+    },
+    {
+      "id": "sql_q190",
+      "question": "Which join type can result in duplicate rows if multiple matches exist?",
+      "options": [
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "INNER JOIN may return duplicate rows if multiple matching rows exist in the joined table.",
+      "module_id": "sql_module_4",
+      "order": 190
+    },
+    {
+      "id": "sql_q191",
+      "question": "Which join type is commonly used for combining customer and order data?",
+      "options": [
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "INNER JOIN is often used to combine customer and order tables where orders exist.",
+      "module_id": "sql_module_4",
+      "order": 191
+    },
+    {
+      "id": "sql_q192",
+      "question": "Which join type can be combined with GROUP BY for aggregated reports?",
+      "options": [
+        "Any join with aggregate functions",
+        "INNER JOIN only",
+        "LEFT JOIN only",
+        "CROSS JOIN only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Any join can be aggregated using GROUP BY after combining tables.",
+      "module_id": "sql_module_4",
+      "order": 192
+    },
+    {
+      "id": "sql_q193",
+      "question": "Which join type is useful to check for orphaned records in a child table?",
+      "options": [
+        "LEFT JOIN with NULL filter",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN with NULL check identifies child table records without a parent match.",
+      "module_id": "sql_module_4",
+      "order": 193
+    },
+    {
+      "id": "sql_q194",
+      "question": "Which join type is often used in hierarchical employee-manager queries?",
+      "options": [
+        "SELF JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SELF JOIN allows joining a table to itself to find relationships such as employee-manager.",
+      "module_id": "sql_module_4",
+      "order": 194
+    },
+    {
+      "id": "sql_q195",
+      "question": "Which join type should be used when combining optional supplementary data?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN ensures all main table rows are included even if supplementary data is missing.",
+      "module_id": "sql_module_4",
+      "order": 195
+    },
+    {
+      "id": "sql_q196",
+      "question": "Which join type returns rows from both tables that don’t have a match?",
+      "options": [
+        "FULL OUTER JOIN with NULL check",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "FULL OUTER JOIN combined with NULL filtering can identify unmatched rows from both tables.",
+      "module_id": "sql_module_4",
+      "order": 196
+    },
+    {
+      "id": "sql_q197",
+      "question": "Which join type can produce very large result sets if tables are large?",
+      "options": [
+        "CROSS JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CROSS JOIN creates a Cartesian product, which can be very large for big tables.",
+      "module_id": "sql_module_4",
+      "order": 197
+    },
+    {
+      "id": "sql_q198",
+      "question": "Which join type is best for listing all main records regardless of related table matches?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LEFT JOIN ensures that all rows from the main table are included even if the joined table has no match.",
+      "module_id": "sql_module_4",
+      "order": 198
+    },
+    {
+      "id": "sql_q199",
+      "question": "Which join type is used to combine tables and include all matches and non-matches?",
+      "options": [
+        "FULL OUTER JOIN",
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "FULL OUTER JOIN includes matched rows and fills NULLs for non-matches from both tables.",
+      "module_id": "sql_module_4",
+      "order": 199
+    },
+    {
+      "id": "sql_q2",
+      "question": "Which of the following best describes a relational database?",
+      "options": [
+        "A database that stores data as key-value pairs",
+        "A database that organizes data into related tables",
+        "A database that stores data as JSON documents",
+        "A hierarchical data storage system"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "A relational database organizes data into related tables using rows and columns.",
+      "module_id": "sql_module_1",
+      "order": 2
+    },
+    {
+      "id": "sql_q20",
+      "question": "Which SQL statement removes all rows from a table but not the table itself?",
+      "options": [
+        "DELETE",
+        "TRUNCATE",
+        "DROP",
+        "CLEAR"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "TRUNCATE deletes all records but keeps the table structure intact.",
+      "module_id": "sql_module_1",
+      "order": 20
+    },
+    {
+      "id": "sql_q200",
+      "question": "Which join type is used when only matching records are relevant to the result?",
+      "options": [
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "FULL OUTER JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "INNER JOIN returns only the rows that have matching values in both tables.",
+      "module_id": "sql_module_4",
+      "order": 200
+    },
+    {
+      "id": "sql_q201",
+      "question": "What is a subquery in SQL?",
+      "options": [
+        "A query inside another query",
+        "A temporary table",
+        "A stored procedure",
+        "An alias for a table"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A subquery is a query nested inside another SQL query to provide intermediate results.",
+      "module_id": "sql_module_5",
+      "order": 201
+    },
+    {
+      "id": "sql_q202",
+      "question": "Which type of subquery depends on the outer query for its values?",
+      "options": [
+        "Correlated subquery",
+        "Non-correlated subquery",
+        "Inline subquery",
+        "Derived table"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A correlated subquery references columns from the outer query and is evaluated for each row.",
+      "module_id": "sql_module_5",
+      "order": 202
+    },
+    {
+      "id": "sql_q203",
+      "question": "Which type of subquery can be executed independently of the outer query?",
+      "options": [
+        "Non-correlated subquery",
+        "Correlated subquery",
+        "Inline subquery",
+        "Nested transaction"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Non-correlated subqueries do not reference the outer query and can be executed independently.",
+      "module_id": "sql_module_5",
+      "order": 203
+    },
+    {
+      "id": "sql_q204",
+      "question": "Which keyword can be used to optimize subquery performance?",
+      "options": [
+        "EXISTS",
+        "INTO",
+        "GROUP BY",
+        "HAVING"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "EXISTS can improve performance by returning true as soon as a match is found.",
+      "module_id": "sql_module_5",
+      "order": 204
+    },
+    {
+      "id": "sql_q205",
+      "question": "What is the purpose of an index in SQL?",
+      "options": [
+        "Improve query performance",
+        "Store additional data",
+        "Enforce foreign keys",
+        "Generate reports"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Indexes allow faster retrieval of rows from a table by creating a data structure for quick search.",
+      "module_id": "sql_module_5",
+      "order": 205
+    },
+    {
+      "id": "sql_q206",
+      "question": "Which type of index ensures column values are unique?",
+      "options": [
+        "Unique index",
+        "Non-unique index",
+        "Primary key index",
+        "Foreign key index"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Unique indexes prevent duplicate values in the indexed column(s).",
+      "module_id": "sql_module_5",
+      "order": 206
+    },
+    {
+      "id": "sql_q207",
+      "question": "Which statement starts a transaction in SQL?",
+      "options": [
+        "BEGIN",
+        "START TRANSACTION",
+        "INITIATE",
+        "BEGIN TRANSACTION"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "START TRANSACTION begins a new transaction block in SQL.",
+      "module_id": "sql_module_5",
+      "order": 207
+    },
+    {
+      "id": "sql_q208",
+      "question": "Which command saves all changes made during a transaction?",
+      "options": [
+        "COMMIT",
+        "ROLLBACK",
+        "SAVEPOINT",
+        "CHECKPOINT"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "COMMIT makes all changes in the transaction permanent in the database.",
+      "module_id": "sql_module_5",
+      "order": 208
+    },
+    {
+      "id": "sql_q209",
+      "question": "Which command undoes all changes made during a transaction?",
+      "options": [
+        "ROLLBACK",
+        "COMMIT",
+        "SAVEPOINT",
+        "ABORT"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ROLLBACK reverses all changes made in the current transaction.",
+      "module_id": "sql_module_5",
+      "order": 209
+    },
+    {
+      "id": "sql_q21",
+      "question": "Which SQL constraint ensures values fall within a specific range?",
+      "options": [
+        "CHECK",
+        "LIMIT",
+        "DEFAULT",
+        "UNIQUE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CHECK validates data by enforcing a specified condition.",
+      "module_id": "sql_module_1",
+      "order": 21
+    },
+    {
+      "id": "sql_q210",
+      "question": "Which SQL property ensures that transactions are completed fully or not at all?",
+      "options": [
+        "Atomicity",
+        "Consistency",
+        "Isolation",
+        "Durability"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Atomicity ensures that a transaction is fully completed or fully undone if any part fails.",
+      "module_id": "sql_module_5",
+      "order": 210
+    },
+    {
+      "id": "sql_q211",
+      "question": "Which SQL property ensures data remains correct after a transaction?",
+      "options": [
+        "Consistency",
+        "Atomicity",
+        "Isolation",
+        "Durability"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Consistency ensures the database remains in a valid state after a transaction.",
+      "module_id": "sql_module_5",
+      "order": 211
+    },
+    {
+      "id": "sql_q212",
+      "question": "Which SQL property prevents transactions from interfering with each other?",
+      "options": [
+        "Isolation",
+        "Atomicity",
+        "Consistency",
+        "Durability"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Isolation ensures concurrent transactions do not affect each other’s operations.",
+      "module_id": "sql_module_5",
+      "order": 212
+    },
+    {
+      "id": "sql_q213",
+      "question": "Which SQL property ensures committed data is not lost even after a crash?",
+      "options": [
+        "Durability",
+        "Atomicity",
+        "Consistency",
+        "Isolation"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Durability guarantees that committed transactions are permanent, even in system failures.",
+      "module_id": "sql_module_5",
+      "order": 213
+    },
+    {
+      "id": "sql_q214",
+      "question": "Which clause can be used to create an index for a table column?",
+      "options": [
+        "CREATE INDEX",
+        "TEMP INDEX",
+        "INDEX ON",
+        "ALTER INDEX"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CREATE INDEX creates an index on a table column to speed up query retrieval.",
+      "module_id": "sql_module_5",
+      "order": 214
+    },
+    {
+      "id": "sql_q215",
+      "question": "Which type of subquery returns a single value?",
+      "options": [
+        "Scalar subquery",
+        "Correlated subquery",
+        "Inline subquery",
+        "Multiple-row subquery"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Scalar subqueries return exactly one value, used in comparisons or assignments.",
+      "module_id": "sql_module_5",
+      "order": 215
+    },
+    {
+      "id": "sql_q216",
+      "question": "Which type of subquery returns multiple rows but one column?",
+      "options": [
+        "Single-column subquery",
+        "Scalar subquery",
+        "Correlated subquery",
+        "Multi-column subquery"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A single-column subquery returns multiple values for one column, often used with IN.",
+      "module_id": "sql_module_5",
+      "order": 216
+    },
+    {
+      "id": "sql_q217",
+      "question": "Which SQL keyword can be used to compare subquery results with outer query values?",
+      "options": [
+        "IN",
+        "EXISTS",
+        "ANY",
+        "All of the above"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "IN, EXISTS, and ANY can all combine subquery results with the outer query depending on context.",
+      "module_id": "sql_module_5",
+      "order": 217
+    },
+    {
+      "id": "sql_q218",
+      "question": "Which index type allows faster retrieval but slower inserts and updates?",
+      "options": [
+        "B-Tree Index",
+        "Hash Index",
+        "No Index",
+        "Bitmap Index"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "B-Tree indexes speed up queries but can slow down modifications because the index must be maintained.",
+      "module_id": "sql_module_5",
+      "order": 218
+    },
+    {
+      "id": "sql_q219",
+      "question": "Which SQL command sets a point within a transaction for partial rollback?",
+      "options": [
+        "SAVEPOINT",
+        "COMMIT",
+        "ROLLBACK",
+        "CHECKPOINT"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SAVEPOINT allows rolling back part of a transaction to the saved point without affecting prior steps.",
+      "module_id": "sql_module_5",
+      "order": 219
+    },
+    {
+      "id": "sql_q22",
+      "question": "Which SQL constraint prevents duplicate values in a column?",
+      "options": [
+        "DEFAULT",
+        "UNIQUE",
+        "FOREIGN KEY",
+        "CHECK"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "UNIQUE ensures all values in a column are distinct.",
+      "module_id": "sql_module_1",
+      "order": 22
+    },
+    {
+      "id": "sql_q220",
+      "question": "Which SQL operation should be used carefully in large tables to avoid performance issues?",
+      "options": [
+        "Subqueries",
+        "Simple SELECT",
+        "UPDATE with WHERE",
+        "DELETE with primary key"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Subqueries can be slow in large datasets if not optimized with indexes or rewritten.",
+      "module_id": "sql_module_5",
+      "order": 220
+    },
+    {
+      "id": "sql_q221",
+      "question": "Which type of transaction ensures all operations succeed or none at all?",
+      "options": [
+        "Atomic transaction",
+        "Partial transaction",
+        "Read-only transaction",
+        "Batch transaction"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Atomic transactions guarantee that all operations complete successfully or none are applied.",
+      "module_id": "sql_module_5",
+      "order": 221
+    },
+    {
+      "id": "sql_q222",
+      "question": "Which index type is suitable for columns with a low number of unique values?",
+      "options": [
+        "Bitmap Index",
+        "B-Tree Index",
+        "Hash Index",
+        "Full-text Index"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Bitmap indexes are efficient for columns with low cardinality (few unique values).",
+      "module_id": "sql_module_5",
+      "order": 222
+    },
+    {
+      "id": "sql_q223",
+      "question": "Which SQL keyword allows a query to reference an alias in a subquery?",
+      "options": [
+        "AS",
+        "WITH",
+        "USING",
+        "ON"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "AS allows you to create an alias for a subquery or table to reference it in the outer query.",
+      "module_id": "sql_module_5",
+      "order": 223
+    },
+    {
+      "id": "sql_q224",
+      "question": "Which type of subquery is evaluated for each row of the outer query?",
+      "options": [
+        "Correlated subquery",
+        "Non-correlated subquery",
+        "Scalar subquery",
+        "Inline view"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Correlated subqueries depend on the outer query and are evaluated for each row.",
+      "module_id": "sql_module_5",
+      "order": 224
+    },
+    {
+      "id": "sql_q225",
+      "question": "Which SQL command ends a transaction and makes changes permanent?",
+      "options": [
+        "COMMIT",
+        "ROLLBACK",
+        "SAVEPOINT",
+        "BEGIN TRANSACTION"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "COMMIT saves all changes made during the transaction permanently.",
+      "module_id": "sql_module_5",
+      "order": 225
+    },
+    {
+      "id": "sql_q226",
+      "question": "Which SQL feature helps improve performance for frequent searches?",
+      "options": [
+        "Indexing",
+        "Triggers",
+        "Views",
+        "Stored procedures"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Indexes speed up retrieval for frequent queries.",
+      "module_id": "sql_module_5",
+      "order": 226
+    },
+    {
+      "id": "sql_q227",
+      "question": "Which transaction command reverts to a specific savepoint without affecting prior steps?",
+      "options": [
+        "ROLLBACK TO SAVEPOINT",
+        "COMMIT",
+        "SAVEPOINT",
+        "ROLLBACK ALL"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ROLLBACK TO SAVEPOINT undoes changes only after the specified savepoint.",
+      "module_id": "sql_module_5",
+      "order": 227
+    },
+    {
+      "id": "sql_q228",
+      "question": "Which SQL command can remove an index if it is no longer needed?",
+      "options": [
+        "DROP INDEX",
+        "DELETE INDEX",
+        "ALTER INDEX",
+        "REMOVE INDEX"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DROP INDEX removes an existing index from a table.",
+      "module_id": "sql_module_5",
+      "order": 228
+    },
+    {
+      "id": "sql_q229",
+      "question": "Which subquery type is used in the FROM clause to act as a temporary table?",
+      "options": [
+        "Inline view",
+        "Correlated subquery",
+        "Scalar subquery",
+        "Nested transaction"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Inline views are subqueries in the FROM clause, treated as temporary tables.",
+      "module_id": "sql_module_5",
+      "order": 229
+    },
+    {
+      "id": "sql_q23",
+      "question": "What does the DEFAULT constraint do?",
+      "options": [
+        "Applies a condition to values",
+        "Provides a fallback value if none is given",
+        "Prevents NULL values",
+        "Ensures data uniqueness"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DEFAULT assigns a value automatically when none is provided.",
+      "module_id": "sql_module_1",
+      "order": 23
+    },
+    {
+      "id": "sql_q230",
+      "question": "Which SQL command ensures that all operations in a transaction are executed safely even with system failures?",
+      "options": [
+        "COMMIT",
+        "ROLLBACK",
+        "START TRANSACTION",
+        "ACID compliance"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "ACID properties (Atomicity, Consistency, Isolation, Durability) ensure safe transaction execution.",
+      "module_id": "sql_module_5",
+      "order": 230
+    },
+    {
+      "id": "sql_q231",
+      "question": "Which SQL statement can help detect duplicates efficiently?",
+      "options": [
+        "Using UNIQUE index",
+        "Using subquery",
+        "Using transaction",
+        "Using savepoint"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A UNIQUE index prevents duplicate values and helps detect duplicates efficiently.",
+      "module_id": "sql_module_5",
+      "order": 231
+    },
+    {
+      "id": "sql_q232",
+      "question": "Which index type uses a hash table for quick equality searches?",
+      "options": [
+        "Hash Index",
+        "B-Tree Index",
+        "Bitmap Index",
+        "Full-text Index"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Hash indexes allow fast equality comparisons using a hash table.",
+      "module_id": "sql_module_5",
+      "order": 232
+    },
+    {
+      "id": "sql_q233",
+      "question": "Which clause is used to refer to multiple tables in a subquery?",
+      "options": [
+        "FROM",
+        "WHERE",
+        "JOIN",
+        "USING"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The FROM clause lists the tables involved in a subquery.",
+      "module_id": "sql_module_5",
+      "order": 233
+    },
+    {
+      "id": "sql_q234",
+      "question": "Which type of index can optimize queries with boolean or low-cardinality columns?",
+      "options": [
+        "Bitmap Index",
+        "B-Tree Index",
+        "Hash Index",
+        "Full-text Index"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Bitmap indexes are efficient for low-cardinality columns.",
+      "module_id": "sql_module_5",
+      "order": 234
+    },
+    {
+      "id": "sql_q235",
+      "question": "Which subquery type is typically used with EXISTS to check row existence?",
+      "options": [
+        "Correlated subquery",
+        "Scalar subquery",
+        "Inline view",
+        "Multi-column subquery"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Correlated subqueries with EXISTS check for the presence of rows matching conditions.",
+      "module_id": "sql_module_5",
+      "order": 235
+    },
+    {
+      "id": "sql_q236",
+      "question": "Which transaction command can partially undo a set of operations?",
+      "options": [
+        "ROLLBACK TO SAVEPOINT",
+        "COMMIT",
+        "ROLLBACK ALL",
+        "START TRANSACTION"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ROLLBACK TO SAVEPOINT allows partial rollback to a specific savepoint.",
+      "module_id": "sql_module_5",
+      "order": 236
+    },
+    {
+      "id": "sql_q237",
+      "question": "Which SQL feature speeds up SELECT queries but requires additional storage?",
+      "options": [
+        "Indexing",
+        "Trigger",
+        "View",
+        "Stored procedure"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Indexes improve SELECT performance at the cost of extra storage and maintenance.",
+      "module_id": "sql_module_5",
+      "order": 237
+    },
+    {
+      "id": "sql_q238",
+      "question": "Which subquery type is used in the SELECT clause to calculate a single value?",
+      "options": [
+        "Scalar subquery",
+        "Correlated subquery",
+        "Inline view",
+        "Multi-row subquery"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Scalar subqueries return a single value that can be used directly in SELECT or WHERE.",
+      "module_id": "sql_module_5",
+      "order": 238
+    },
+    {
+      "id": "sql_q239",
+      "question": "Which SQL property ensures the database stays valid after failed transactions?",
+      "options": [
+        "Consistency",
+        "Atomicity",
+        "Isolation",
+        "Durability"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Consistency maintains database rules and constraints even if a transaction fails.",
+      "module_id": "sql_module_5",
+      "order": 239
+    },
+    {
+      "id": "sql_q24",
+      "question": "Which command changes a table’s structure, such as adding a column?",
+      "options": [
+        "CHANGE TABLE",
+        "ALTER TABLE",
+        "UPDATE TABLE",
+        "MODIFY TABLE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "ALTER TABLE modifies the structure of an existing table.",
+      "module_id": "sql_module_1",
+      "order": 24
+    },
+    {
+      "id": "sql_q240",
+      "question": "Which type of subquery is used to filter rows based on aggregated data?",
+      "options": [
+        "Aggregate subquery",
+        "Scalar subquery",
+        "Correlated subquery",
+        "Inline view"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Aggregate subqueries compute values like SUM or COUNT and filter outer query rows accordingly.",
+      "module_id": "sql_module_5",
+      "order": 240
+    },
+    {
+      "id": "sql_q241",
+      "question": "Which index type is optimal for full-text searches?",
+      "options": [
+        "Full-text Index",
+        "B-Tree Index",
+        "Hash Index",
+        "Bitmap Index"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Full-text indexes optimize searching large text fields efficiently.",
+      "module_id": "sql_module_5",
+      "order": 241
+    },
+    {
+      "id": "sql_q242",
+      "question": "Which SQL clause can improve performance by limiting rows returned from a subquery?",
+      "options": [
+        "LIMIT",
+        "ORDER BY",
+        "GROUP BY",
+        "HAVING"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LIMIT restricts the number of rows returned, improving performance.",
+      "module_id": "sql_module_5",
+      "order": 242
+    },
+    {
+      "id": "sql_q243",
+      "question": "Which transaction isolation level prevents dirty reads?",
+      "options": [
+        "READ COMMITTED",
+        "READ UNCOMMITTED",
+        "REPEATABLE READ",
+        "SERIALIZABLE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "READ COMMITTED ensures a transaction sees only committed data, preventing dirty reads.",
+      "module_id": "sql_module_5",
+      "order": 243
+    },
+    {
+      "id": "sql_q244",
+      "question": "Which transaction isolation level prevents non-repeatable reads?",
+      "options": [
+        "REPEATABLE READ",
+        "READ COMMITTED",
+        "READ UNCOMMITTED",
+        "SERIALIZABLE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "REPEATABLE READ ensures that data read once cannot change during the transaction.",
+      "module_id": "sql_module_5",
+      "order": 244
+    },
+    {
+      "id": "sql_q245",
+      "question": "Which SQL feature allows temporary tables inside queries?",
+      "options": [
+        "CTE (WITH clause)",
+        "Index",
+        "Trigger",
+        "View"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Common Table Expressions (CTEs) allow creating temporary tables within queries.",
+      "module_id": "sql_module_5",
+      "order": 245
+    },
+    {
+      "id": "sql_q246",
+      "question": "Which command removes all changes in a transaction if a condition fails?",
+      "options": [
+        "ROLLBACK",
+        "COMMIT",
+        "SAVEPOINT",
+        "CHECKPOINT"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ROLLBACK cancels all operations in the transaction if needed.",
+      "module_id": "sql_module_5",
+      "order": 246
+    },
+    {
+      "id": "sql_q247",
+      "question": "Which subquery type is executed once and used by the outer query multiple times?",
+      "options": [
+        "Non-correlated subquery",
+        "Correlated subquery",
+        "Scalar subquery",
+        "Inline view"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Non-correlated subqueries execute once and their result is reused.",
+      "module_id": "sql_module_5",
+      "order": 247
+    },
+    {
+      "id": "sql_q248",
+      "question": "Which SQL command adds a new index to a table column?",
+      "options": [
+        "CREATE INDEX",
+        "ADD INDEX",
+        "INSERT INDEX",
+        "ALTER TABLE INDEX"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CREATE INDEX adds a new index to a table column to improve query performance.",
+      "module_id": "sql_module_5",
+      "order": 248
+    },
+    {
+      "id": "sql_q249",
+      "question": "Which transaction property ensures no other transaction can see intermediate changes?",
+      "options": [
+        "Isolation",
+        "Consistency",
+        "Atomicity",
+        "Durability"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Isolation prevents other transactions from reading uncommitted changes.",
+      "module_id": "sql_module_5",
+      "order": 249
+    },
+    {
+      "id": "sql_q25",
+      "question": "Which SQL statement retrieves only unique records?",
+      "options": [
+        "UNIQUE SELECT",
+        "SELECT DISTINCT",
+        "SELECT UNIQUE",
+        "DISTINCT SELECT"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "SELECT DISTINCT removes duplicate rows from the result set.",
+      "module_id": "sql_module_1",
+      "order": 25
+    },
+    {
+      "id": "sql_q250",
+      "question": "Which SQL statement can be used to optimize frequently queried columns?",
+      "options": [
+        "CREATE INDEX",
+        "CREATE VIEW",
+        "CREATE TRIGGER",
+        "CREATE TABLE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Indexes optimize queries on columns accessed frequently.",
+      "module_id": "sql_module_5",
+      "order": 250
+    },
+    {
+      "id": "sql_q26",
+      "question": "Which SQL clause groups rows that share the same values?",
+      "options": [
+        "GROUP BY",
+        "ORDER BY",
+        "SORT BY",
+        "JOIN"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "GROUP BY groups rows with the same values for aggregate calculations.",
+      "module_id": "sql_module_1",
+      "order": 26
+    },
+    {
+      "id": "sql_q27",
+      "question": "Which aggregate function counts rows?",
+      "options": [
+        "SUM()",
+        "COUNT()",
+        "AVG()",
+        "MAX()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "COUNT() returns the number of rows matching a condition.",
+      "module_id": "sql_module_1",
+      "order": 27
+    },
+    {
+      "id": "sql_q28",
+      "question": "What is the purpose of the HAVING clause?",
+      "options": [
+        "Filters grouped results",
+        "Sorts data",
+        "Creates new columns",
+        "Filters raw rows"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "HAVING filters results after grouping, similar to WHERE but for aggregates.",
+      "module_id": "sql_module_1",
+      "order": 28
+    },
+    {
+      "id": "sql_q29",
+      "question": "Which SQL keyword joins two tables based on related columns?",
+      "options": [
+        "LINK",
+        "CONNECT",
+        "JOIN",
+        "MERGE"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "JOIN combines rows from two tables using related columns.",
+      "module_id": "sql_module_1",
+      "order": 29
+    },
+    {
+      "id": "sql_q3",
+      "question": "Which SQL statement is used to retrieve data from a database?",
+      "options": [
+        "SELECT",
+        "GET",
+        "FETCH",
+        "EXTRACT"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SELECT is used to retrieve data from a database table.",
+      "module_id": "sql_module_1",
+      "order": 3
+    },
+    {
+      "id": "sql_q30",
+      "question": "What is the difference between INNER JOIN and LEFT JOIN?",
+      "options": [
+        "INNER JOIN includes all rows; LEFT JOIN only matches",
+        "LEFT JOIN includes unmatched rows from the left table",
+        "They are identical",
+        "LEFT JOIN only returns unique rows"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "LEFT JOIN includes all rows from the left table, even if there are no matches in the right table.",
+      "module_id": "sql_module_1",
+      "order": 30
+    },
+    {
+      "id": "sql_q31",
+      "question": "Which SQL keyword combines the result of two SELECT statements?",
+      "options": [
+        "MERGE",
+        "UNION",
+        "JOIN",
+        "COMBINE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "UNION combines the results of multiple SELECT queries into one result set.",
+      "module_id": "sql_module_1",
+      "order": 31
+    },
+    {
+      "id": "sql_q32",
+      "question": "Which SQL function is used to find the average value?",
+      "options": [
+        "COUNT()",
+        "AVG()",
+        "SUM()",
+        "MEDIAN()"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "AVG() calculates the average of numeric values.",
+      "module_id": "sql_module_1",
+      "order": 32
+    },
+    {
+      "id": "sql_q33",
+      "question": "Which keyword sorts data in descending order?",
+      "options": [
+        "DESC",
+        "DOWN",
+        "REVERSE",
+        "BACK"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DESC sorts query results in descending order.",
+      "module_id": "sql_module_1",
+      "order": 33
+    },
+    {
+      "id": "sql_q34",
+      "question": "Which SQL keyword is used to rename a result column?",
+      "options": [
+        "CHANGE",
+        "AS",
+        "RENAME",
+        "SET"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "AS assigns a temporary alias name to columns or tables.",
+      "module_id": "sql_module_1",
+      "order": 34
+    },
+    {
+      "id": "sql_q35",
+      "question": "Which clause limits the number of records returned?",
+      "options": [
+        "TOP",
+        "LIMIT",
+        "COUNT",
+        "MAX"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "LIMIT restricts the number of rows returned by a SELECT statement.",
+      "module_id": "sql_module_1",
+      "order": 35
+    },
+    {
+      "id": "sql_q36",
+      "question": "What does NULL represent in SQL?",
+      "options": [
+        "Zero",
+        "Empty string",
+        "Unknown or missing value",
+        "False"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "NULL indicates an unknown or missing value, not zero or empty.",
+      "module_id": "sql_module_1",
+      "order": 36
+    },
+    {
+      "id": "sql_q37",
+      "question": "Which operator checks for NULL values?",
+      "options": [
+        "IS NULL",
+        "EQUAL NULL",
+        "== NULL",
+        "CHECK NULL"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "IS NULL tests if a value is NULL in a condition.",
+      "module_id": "sql_module_1",
+      "order": 37
+    },
+    {
+      "id": "sql_q38",
+      "question": "Which statement creates a new database?",
+      "options": [
+        "CREATE DATABASE",
+        "NEW DATABASE",
+        "INIT DATABASE",
+        "MAKE DATABASE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CREATE DATABASE defines a new database in SQL.",
+      "module_id": "sql_module_1",
+      "order": 38
+    },
+    {
+      "id": "sql_q39",
+      "question": "Which SQL keyword deletes an entire database?",
+      "options": [
+        "DELETE DATABASE",
+        "DROP DATABASE",
+        "REMOVE DATABASE",
+        "ERASE DATABASE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DROP DATABASE deletes a database and all its data.",
+      "module_id": "sql_module_1",
+      "order": 39
+    },
+    {
+      "id": "sql_q4",
+      "question": "What is a table in SQL?",
+      "options": [
+        "A collection of columns only",
+        "A single row of data",
+        "A collection of related data stored in rows and columns",
+        "A temporary data file"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "A table in SQL is a collection of related data organized in rows and columns.",
+      "module_id": "sql_module_1",
+      "order": 4
+    },
+    {
+      "id": "sql_q40",
+      "question": "Which SQL statement creates a new user-defined view?",
+      "options": [
+        "CREATE VIEW",
+        "DEFINE VIEW",
+        "NEW VIEW",
+        "INSERT VIEW"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "CREATE VIEW defines a virtual table based on a query.",
+      "module_id": "sql_module_1",
+      "order": 40
+    },
+    {
+      "id": "sql_q41",
+      "question": "Which SQL keyword removes a view?",
+      "options": [
+        "DELETE VIEW",
+        "DROP VIEW",
+        "REMOVE VIEW",
+        "CLEAR VIEW"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DROP VIEW permanently deletes a view from the database.",
+      "module_id": "sql_module_1",
+      "order": 41
+    },
+    {
+      "id": "sql_q42",
+      "question": "What does the BETWEEN operator do?",
+      "options": [
+        "Filters by multiple conditions",
+        "Matches a range of values",
+        "Combines two tables",
+        "Sorts values alphabetically"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "BETWEEN filters results within a specified range of values.",
+      "module_id": "sql_module_1",
+      "order": 42
+    },
+    {
+      "id": "sql_q43",
+      "question": "Which operator tests if a value matches any in a list?",
+      "options": [
+        "IN",
+        "ANY",
+        "MATCH",
+        "LIST"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "IN checks if a value appears in a specified list.",
+      "module_id": "sql_module_1",
+      "order": 43
+    },
+    {
+      "id": "sql_q44",
+      "question": "Which SQL clause is used to return only rows that meet a condition?",
+      "options": [
+        "SELECT",
+        "WHERE",
+        "FILTER",
+        "HAVING"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "WHERE filters rows that satisfy a specific condition.",
+      "module_id": "sql_module_1",
+      "order": 44
+    },
+    {
+      "id": "sql_q45",
+      "question": "Which statement is used to remove specific rows from a table?",
+      "options": [
+        "REMOVE",
+        "DELETE",
+        "DROP",
+        "CLEAR"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DELETE removes selected rows that meet a condition.",
+      "module_id": "sql_module_1",
+      "order": 45
+    },
+    {
+      "id": "sql_q46",
+      "question": "Which command permanently deletes a table and its structure?",
+      "options": [
+        "DELETE",
+        "TRUNCATE",
+        "DROP",
+        "REMOVE"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "DROP removes a table and its schema completely from the database.",
+      "module_id": "sql_module_1",
+      "order": 46
+    },
+    {
+      "id": "sql_q47",
+      "question": "What does the keyword ASC do?",
+      "options": [
+        "Sorts results ascending",
+        "Sorts descending",
+        "Removes duplicates",
+        "Groups rows"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ASC sorts query results in ascending order.",
+      "module_id": "sql_module_1",
+      "order": 47
+    },
+    {
+      "id": "sql_q48",
+      "question": "Which SQL statement changes an existing table name?",
+      "options": [
+        "ALTER TABLE RENAME TO",
+        "UPDATE TABLE NAME",
+        "RENAME TABLE",
+        "CHANGE TABLE NAME"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ALTER TABLE ... RENAME TO renames an existing table.",
+      "module_id": "sql_module_1",
+      "order": 48
+    },
+    {
+      "id": "sql_q49",
+      "question": "Which SQL command removes duplicate rows automatically?",
+      "options": [
+        "REMOVE DUPLICATES",
+        "DISTINCT",
+        "GROUP BY",
+        "FILTER UNIQUE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DISTINCT ensures only unique rows are returned.",
+      "module_id": "sql_module_1",
+      "order": 49
+    },
+    {
+      "id": "sql_q5",
+      "question": "Which SQL keyword is used to insert new data into a table?",
+      "options": [
+        "ADD",
+        "INSERT INTO",
+        "UPDATE",
+        "CREATE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "INSERT INTO is used to add new records to a table.",
+      "module_id": "sql_module_1",
+      "order": 5
+    },
+    {
+      "id": "sql_q50",
+      "question": "Which SQL function returns the total sum of a numeric column?",
+      "options": [
+        "SUM()",
+        "TOTAL()",
+        "ADD()",
+        "COUNT()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SUM() calculates the total of a numeric column’s values.",
+      "module_id": "sql_module_1",
+      "order": 50
+    },
+    {
+      "id": "sql_q51",
+      "question": "Which SQL statement is used to add new records to a table?",
+      "options": [
+        "ADD",
+        "INSERT INTO",
+        "UPDATE",
+        "CREATE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "INSERT INTO is used to add new rows of data into a table.",
+      "module_id": "sql_module_2",
+      "order": 51
+    },
+    {
+      "id": "sql_q52",
+      "question": "Which SQL command modifies existing data in a table?",
+      "options": [
+        "EDIT",
+        "UPDATE",
+        "CHANGE",
+        "ALTER"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "UPDATE changes existing records in a table based on a condition.",
+      "module_id": "sql_module_2",
+      "order": 52
+    },
+    {
+      "id": "sql_q53",
+      "question": "Which SQL command removes rows from a table?",
+      "options": [
+        "DELETE",
+        "DROP",
+        "REMOVE",
+        "CLEAR"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DELETE removes rows that meet a specified condition.",
+      "module_id": "sql_module_2",
+      "order": 53
+    },
+    {
+      "id": "sql_q54",
+      "question": "Which SQL statement is used to delete all rows but keep the table structure?",
+      "options": [
+        "DELETE ALL",
+        "TRUNCATE TABLE",
+        "DROP TABLE",
+        "REMOVE TABLE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "TRUNCATE TABLE removes all rows but keeps the table schema intact.",
+      "module_id": "sql_module_2",
+      "order": 54
+    },
+    {
+      "id": "sql_q55",
+      "question": "Which command permanently removes a table from the database?",
+      "options": [
+        "DELETE TABLE",
+        "DROP TABLE",
+        "REMOVE TABLE",
+        "CLEAR TABLE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DROP TABLE permanently deletes the table and its data.",
+      "module_id": "sql_module_2",
+      "order": 55
+    },
+    {
+      "id": "sql_q56",
+      "question": "Which SQL clause specifies which records to modify in an UPDATE statement?",
+      "options": [
+        "FROM",
+        "WHERE",
+        "SET",
+        "HAVING"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "WHERE is used to identify which records should be updated.",
+      "module_id": "sql_module_2",
+      "order": 56
+    },
+    {
+      "id": "sql_q57",
+      "question": "In SQL, what does the SET keyword do in an UPDATE statement?",
+      "options": [
+        "Deletes data",
+        "Defines columns to modify",
+        "Specifies the target table",
+        "Creates a condition"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "SET assigns new values to columns during an UPDATE operation.",
+      "module_id": "sql_module_2",
+      "order": 57
+    },
+    {
+      "id": "sql_q58",
+      "question": "What happens if you omit the WHERE clause in a DELETE statement?",
+      "options": [
+        "Only the first record is deleted",
+        "All records in the table are deleted",
+        "No records are deleted",
+        "An error occurs"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "Without WHERE, DELETE removes all rows in the table.",
+      "module_id": "sql_module_2",
+      "order": 58
+    },
+    {
+      "id": "sql_q59",
+      "question": "Which SQL command adds a new column to an existing table?",
+      "options": [
+        "UPDATE TABLE",
+        "ALTER TABLE ADD",
+        "INSERT COLUMN",
+        "CREATE COLUMN"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "ALTER TABLE ADD adds a new column to a table.",
+      "module_id": "sql_module_2",
+      "order": 59
+    },
+    {
+      "id": "sql_q6",
+      "question": "Which command is used to modify existing data in SQL?",
+      "options": [
+        "CHANGE",
+        "EDIT",
+        "UPDATE",
+        "MODIFY"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "UPDATE is used to change existing records in a table.",
+      "module_id": "sql_module_1",
+      "order": 6
+    },
+    {
+      "id": "sql_q60",
+      "question": "Which keyword removes a column from a table?",
+      "options": [
+        "DELETE COLUMN",
+        "ALTER TABLE DROP COLUMN",
+        "REMOVE COLUMN",
+        "DROP COLUMN FROM"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "ALTER TABLE DROP COLUMN removes a specific column from a table.",
+      "module_id": "sql_module_2",
+      "order": 60
+    },
+    {
+      "id": "sql_q61",
+      "question": "What is the correct syntax to insert data into all columns of a table?",
+      "options": [
+        "INSERT VALUES (...)",
+        "INSERT INTO table_name VALUES (...)",
+        "ADD RECORD (...)",
+        "CREATE INTO table_name (...)"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "INSERT INTO table_name VALUES (...) inserts a complete row of data.",
+      "module_id": "sql_module_2",
+      "order": 61
+    },
+    {
+      "id": "sql_q62",
+      "question": "What does the keyword VALUES indicate in an INSERT statement?",
+      "options": [
+        "Specifies column names",
+        "Specifies the data to insert",
+        "Specifies table name",
+        "Specifies condition"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "VALUES defines the actual data being inserted into a table.",
+      "module_id": "sql_module_2",
+      "order": 62
+    },
+    {
+      "id": "sql_q63",
+      "question": "Which clause limits the number of rows updated in a query?",
+      "options": [
+        "LIMIT",
+        "TOP",
+        "MAX",
+        "RANGE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "LIMIT can restrict how many rows are affected in some databases.",
+      "module_id": "sql_module_2",
+      "order": 63
+    },
+    {
+      "id": "sql_q64",
+      "question": "Which SQL statement copies data from one table to another?",
+      "options": [
+        "COPY INTO",
+        "INSERT INTO ... SELECT",
+        "DUPLICATE TABLE",
+        "CLONE TABLE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "INSERT INTO ... SELECT copies data from one table into another.",
+      "module_id": "sql_module_2",
+      "order": 64
+    },
+    {
+      "id": "sql_q65",
+      "question": "What is the purpose of the COMMIT command?",
+      "options": [
+        "Save all changes made during a transaction",
+        "Undo changes",
+        "Lock tables",
+        "Terminate session"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "COMMIT saves changes permanently to the database.",
+      "module_id": "sql_module_2",
+      "order": 65
+    },
+    {
+      "id": "sql_q66",
+      "question": "Which command undoes changes made in the current transaction?",
+      "options": [
+        "UNDO",
+        "REVERT",
+        "ROLLBACK",
+        "CANCEL"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "ROLLBACK undoes changes since the last COMMIT.",
+      "module_id": "sql_module_2",
+      "order": 66
+    },
+    {
+      "id": "sql_q67",
+      "question": "What is a transaction in SQL?",
+      "options": [
+        "A set of operations performed as a single unit",
+        "A single SELECT query",
+        "A new table creation",
+        "An error message"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A transaction is a sequence of operations executed as one logical unit of work.",
+      "module_id": "sql_module_2",
+      "order": 67
+    },
+    {
+      "id": "sql_q68",
+      "question": "Which keyword temporarily disables autocommit mode?",
+      "options": [
+        "SET AUTOCOMMIT OFF",
+        "BEGIN TRANSACTION",
+        "START TRANSACTION",
+        "DISABLE COMMIT"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "START TRANSACTION begins a block of operations without committing automatically.",
+      "module_id": "sql_module_2",
+      "order": 68
+    },
+    {
+      "id": "sql_q69",
+      "question": "Which SQL statement modifies the definition of an existing column?",
+      "options": [
+        "CHANGE COLUMN",
+        "ALTER TABLE MODIFY",
+        "UPDATE COLUMN",
+        "RENAME COLUMN"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "ALTER TABLE MODIFY changes the data type or size of a column.",
+      "module_id": "sql_module_2",
+      "order": 69
+    },
+    {
+      "id": "sql_q7",
+      "question": "Which SQL command removes a record from a table?",
+      "options": [
+        "REMOVE",
+        "DELETE",
+        "DROP",
+        "ERASE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DELETE is used to remove records from a table.",
+      "module_id": "sql_module_1",
+      "order": 7
+    },
+    {
+      "id": "sql_q70",
+      "question": "Which SQL statement clears all rows and resets identity counters?",
+      "options": [
+        "TRUNCATE TABLE",
+        "DELETE ALL",
+        "CLEAR TABLE",
+        "DROP TABLE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "TRUNCATE removes all rows quickly and resets identity values.",
+      "module_id": "sql_module_2",
+      "order": 70
+    },
+    {
+      "id": "sql_q71",
+      "question": "What does the WHERE clause do in an UPDATE statement?",
+      "options": [
+        "Specifies columns to update",
+        "Specifies which rows to update",
+        "Specifies new table name",
+        "Specifies database name"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "WHERE determines which rows should be updated.",
+      "module_id": "sql_module_2",
+      "order": 71
+    },
+    {
+      "id": "sql_q72",
+      "question": "What happens when TRUNCATE is used without a WHERE clause?",
+      "options": [
+        "Deletes selected rows",
+        "Deletes all rows",
+        "Does nothing",
+        "Causes syntax error"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "TRUNCATE always deletes all rows from the table.",
+      "module_id": "sql_module_2",
+      "order": 72
+    },
+    {
+      "id": "sql_q73",
+      "question": "Which SQL keyword can restore data after accidental deletion?",
+      "options": [
+        "ROLLBACK",
+        "UNDO",
+        "RETURN",
+        "RESTORE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ROLLBACK reverts changes before a COMMIT is issued.",
+      "module_id": "sql_module_2",
+      "order": 73
+    },
+    {
+      "id": "sql_q74",
+      "question": "Which SQL command removes duplicate rows after inserting data?",
+      "options": [
+        "CLEAN",
+        "REMOVE DUPLICATES",
+        "DELETE DISTINCT",
+        "DELETE USING ROWID"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "DELETE USING ROWID can remove duplicate records manually.",
+      "module_id": "sql_module_2",
+      "order": 74
+    },
+    {
+      "id": "sql_q75",
+      "question": "Which constraint ensures that a column cannot store NULL values?",
+      "options": [
+        "NOT NULL",
+        "UNIQUE",
+        "DEFAULT",
+        "CHECK"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "NOT NULL ensures a column always has a value.",
+      "module_id": "sql_module_2",
+      "order": 75
+    },
+    {
+      "id": "sql_q76",
+      "question": "What is the correct way to rename a table?",
+      "options": [
+        "RENAME TABLE old_name TO new_name",
+        "ALTER TABLE old_name RENAME TO new_name",
+        "CHANGE TABLE",
+        "UPDATE TABLE NAME"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "ALTER TABLE RENAME TO renames an existing table.",
+      "module_id": "sql_module_2",
+      "order": 76
+    },
+    {
+      "id": "sql_q77",
+      "question": "Which keyword is used to change a table name permanently?",
+      "options": [
+        "CHANGE",
+        "ALTER",
+        "RENAME",
+        "UPDATE"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "RENAME changes the name of a database object permanently.",
+      "module_id": "sql_module_2",
+      "order": 77
+    },
+    {
+      "id": "sql_q78",
+      "question": "Which SQL command deletes both the structure and the data of a table?",
+      "options": [
+        "DELETE",
+        "TRUNCATE",
+        "DROP",
+        "REMOVE"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "DROP removes both table data and its structure from the database.",
+      "module_id": "sql_module_2",
+      "order": 78
+    },
+    {
+      "id": "sql_q79",
+      "question": "Which of the following statements adds multiple rows at once?",
+      "options": [
+        "INSERT INTO table VALUES (...), (...)",
+        "ADD MULTIPLE ROWS",
+        "INSERT MANY",
+        "CREATE BATCH"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "INSERT INTO table VALUES allows multiple row insertions using commas.",
+      "module_id": "sql_module_2",
+      "order": 79
+    },
+    {
+      "id": "sql_q8",
+      "question": "Which clause in SQL filters the result set?",
+      "options": [
+        "WHERE",
+        "FROM",
+        "ORDER BY",
+        "SELECT"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "WHERE is used to filter records based on a condition.",
+      "module_id": "sql_module_1",
+      "order": 8
+    },
+    {
+      "id": "sql_q80",
+      "question": "Which SQL keyword checks whether data exists before inserting?",
+      "options": [
+        "IF NOT EXISTS",
+        "CHECK FIRST",
+        "VERIFY",
+        "WHERE NOT EXISTS"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "WHERE NOT EXISTS prevents inserting duplicates by checking existing data.",
+      "module_id": "sql_module_2",
+      "order": 80
+    },
+    {
+      "id": "sql_q81",
+      "question": "Which SQL command removes a database user permanently?",
+      "options": [
+        "DELETE USER",
+        "DROP USER",
+        "REMOVE USER",
+        "CLEAR USER"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DROP USER deletes a user account from the database.",
+      "module_id": "sql_module_2",
+      "order": 81
+    },
+    {
+      "id": "sql_q82",
+      "question": "Which SQL keyword defines a default value for a column?",
+      "options": [
+        "DEFAULT",
+        "SET",
+        "VALUE",
+        "BASE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DEFAULT specifies a fallback value when no data is provided.",
+      "module_id": "sql_module_2",
+      "order": 82
+    },
+    {
+      "id": "sql_q83",
+      "question": "Which command can reset an auto-increment value?",
+      "options": [
+        "ALTER TABLE AUTO_INCREMENT = value",
+        "RESET SEQUENCE",
+        "SET IDENTITY",
+        "UPDATE ID"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ALTER TABLE AUTO_INCREMENT resets the counter for new records.",
+      "module_id": "sql_module_2",
+      "order": 83
+    },
+    {
+      "id": "sql_q84",
+      "question": "Which statement can restore data deleted with DELETE?",
+      "options": [
+        "ROLLBACK",
+        "UNDO DELETE",
+        "RECOVER",
+        "RESTORE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ROLLBACK restores data deleted before COMMIT.",
+      "module_id": "sql_module_2",
+      "order": 84
+    },
+    {
+      "id": "sql_q85",
+      "question": "Which SQL operation is fastest for clearing a large table?",
+      "options": [
+        "DELETE",
+        "TRUNCATE",
+        "DROP",
+        "REMOVE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "TRUNCATE is faster than DELETE because it doesn’t log individual row deletions.",
+      "module_id": "sql_module_2",
+      "order": 85
+    },
+    {
+      "id": "sql_q86",
+      "question": "Which statement adds a foreign key to an existing table?",
+      "options": [
+        "ALTER TABLE ADD FOREIGN KEY",
+        "INSERT FOREIGN KEY",
+        "SET FOREIGN",
+        "CREATE FOREIGN LINK"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ALTER TABLE ADD FOREIGN KEY links a column to another table’s key.",
+      "module_id": "sql_module_2",
+      "order": 86
+    },
+    {
+      "id": "sql_q87",
+      "question": "What is the result of using DELETE without a WHERE clause?",
+      "options": [
+        "All rows deleted",
+        "First row deleted",
+        "Syntax error",
+        "Nothing happens"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DELETE without WHERE removes all rows from the table.",
+      "module_id": "sql_module_2",
+      "order": 87
+    },
+    {
+      "id": "sql_q88",
+      "question": "Which SQL keyword is used to temporarily stop a transaction?",
+      "options": [
+        "SAVEPOINT",
+        "PAUSE",
+        "STOP",
+        "BREAK"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "SAVEPOINT allows partial rollback within a transaction.",
+      "module_id": "sql_module_2",
+      "order": 88
+    },
+    {
+      "id": "sql_q89",
+      "question": "Which command removes a table and its dependent objects?",
+      "options": [
+        "DROP TABLE CASCADE",
+        "DELETE TABLE",
+        "TRUNCATE CASCADE",
+        "REMOVE TABLE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "DROP TABLE CASCADE deletes a table along with its dependencies.",
+      "module_id": "sql_module_2",
+      "order": 89
+    },
+    {
+      "id": "sql_q9",
+      "question": "Which SQL clause is used to sort results?",
+      "options": [
+        "SORT BY",
+        "ORDER BY",
+        "ARRANGE BY",
+        "GROUP BY"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "ORDER BY sorts the result set in ascending or descending order.",
+      "module_id": "sql_module_1",
+      "order": 9
+    },
+    {
+      "id": "sql_q90",
+      "question": "Which SQL operation is used to change table storage engine?",
+      "options": [
+        "ALTER TABLE ENGINE",
+        "SET STORAGE",
+        "CHANGE ENGINE",
+        "UPDATE ENGINE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ALTER TABLE ENGINE changes the underlying table engine in databases like MySQL.",
+      "module_id": "sql_module_2",
+      "order": 90
+    },
+    {
+      "id": "sql_q91",
+      "question": "Which SQL command is used to rename a column?",
+      "options": [
+        "ALTER TABLE RENAME COLUMN",
+        "CHANGE COLUMN NAME",
+        "RENAME TO",
+        "UPDATE COLUMN NAME"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ALTER TABLE RENAME COLUMN changes a column’s name.",
+      "module_id": "sql_module_2",
+      "order": 91
+    },
+    {
+      "id": "sql_q92",
+      "question": "Which statement can remove all data from multiple tables at once?",
+      "options": [
+        "TRUNCATE MULTIPLE",
+        "DROP TABLE table1, table2",
+        "DELETE FROM multiple",
+        "CLEAR TABLES"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DROP TABLE table1, table2 removes multiple tables simultaneously.",
+      "module_id": "sql_module_2",
+      "order": 92
+    },
+    {
+      "id": "sql_q93",
+      "question": "Which SQL keyword defines a temporary table?",
+      "options": [
+        "TEMPORARY",
+        "VOLATILE",
+        "SESSION",
+        "TRANSIENT"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "TEMPORARY creates a table that exists only during the session.",
+      "module_id": "sql_module_2",
+      "order": 93
+    },
+    {
+      "id": "sql_q94",
+      "question": "Which statement clears only specific rows from a table?",
+      "options": [
+        "TRUNCATE",
+        "DELETE WHERE",
+        "DROP",
+        "REMOVE"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "DELETE WHERE removes rows that match a specific condition.",
+      "module_id": "sql_module_2",
+      "order": 94
+    },
+    {
+      "id": "sql_q95",
+      "question": "Which SQL keyword ensures that an operation is executed successfully or not at all?",
+      "options": [
+        "TRANSACTION",
+        "ROLLBACK",
+        "COMMIT",
+        "ATOMIC"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "ATOMIC ensures a set of operations succeed together or fail together.",
+      "module_id": "sql_module_2",
+      "order": 95
+    },
+    {
+      "id": "sql_q96",
+      "question": "Which command allows you to undo part of a transaction?",
+      "options": [
+        "ROLLBACK TO SAVEPOINT",
+        "UNDO PARTIAL",
+        "CANCEL SECTION",
+        "RESTORE SAVE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ROLLBACK TO SAVEPOINT reverts to a specific point in the transaction.",
+      "module_id": "sql_module_2",
+      "order": 96
+    },
+    {
+      "id": "sql_q97",
+      "question": "Which SQL clause specifies the column names when inserting data?",
+      "options": [
+        "FIELDS",
+        "COLUMNS",
+        "INTO",
+        "AFTER INTO"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "INTO is followed by column names in an INSERT statement.",
+      "module_id": "sql_module_2",
+      "order": 97
+    },
+    {
+      "id": "sql_q98",
+      "question": "Which command can be used to change the datatype of a column?",
+      "options": [
+        "ALTER TABLE MODIFY",
+        "CHANGE DATATYPE",
+        "UPDATE TYPE",
+        "SET TYPE"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ALTER TABLE MODIFY changes the column’s datatype or constraints.",
+      "module_id": "sql_module_2",
+      "order": 98
+    },
+    {
+      "id": "sql_q99",
+      "question": "Which command permanently saves all database changes?",
+      "options": [
+        "SAVE",
+        "COMMIT",
+        "STORE",
+        "APPLY"
+      ],
+      "correctOptionIndex": 1,
+      "explanation": "COMMIT confirms and saves all operations made during the transaction.",
+      "module_id": "sql_module_2",
+      "order": 99
+    }
+  ]
+}

@@ -1,0 +1,4980 @@
+{
+  "collectionName": "questions",
+  "parentPath": "course_quiz/java_quiz",
+  "documentCount": 349,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_q1",
+        "java_q10",
+        "java_q100"
+      ]
+    },
+    "question": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "What does JVM stand for?",
+        "Which loop checks the condition after executing the loop body at least once?",
+        "Which statement executes after evaluating all if-else-if conditions as false?"
+      ]
+    },
+    "options": {
+      "types": [
+        "array"
+      ],
+      "samples": [
+        [
+          "Java Virtual Machine",
+          "Java Verified Method",
+          "Java Variable Module",
+          "Just Virtual Machine"
+        ],
+        [
+          "do-while",
+          "for",
+          "while",
+          "foreach"
+        ],
+        [
+          "else",
+          "switch",
+          "default",
+          "finally"
+        ]
+      ]
+    },
+    "correctOptionIndex": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0,
+        0,
+        0
+      ]
+    },
+    "explanation": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "JVM stands for Java Virtual Machine, which runs Java bytecode.",
+        "The 'do-while' loop executes the body first and then checks the condition.",
+        "The else block executes if all conditions are false."
+      ]
+    },
+    "module_id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_module_1",
+        "java_module_1",
+        "java_module_2"
+      ]
+    },
+    "order": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        10,
+        100
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "java_q1",
+      "question": "What does JVM stand for?",
+      "options": [
+        "Java Virtual Machine",
+        "Java Verified Method",
+        "Java Variable Module",
+        "Just Virtual Machine"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "JVM stands for Java Virtual Machine, which runs Java bytecode.",
+      "module_id": "java_module_1",
+      "order": 1
+    },
+    {
+      "id": "java_q10",
+      "question": "Which loop checks the condition after executing the loop body at least once?",
+      "options": [
+        "do-while",
+        "for",
+        "while",
+        "foreach"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'do-while' loop executes the body first and then checks the condition.",
+      "module_id": "java_module_1",
+      "order": 10
+    },
+    {
+      "id": "java_q100",
+      "question": "Which statement executes after evaluating all if-else-if conditions as false?",
+      "options": [
+        "else",
+        "switch",
+        "default",
+        "finally"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The else block executes if all conditions are false.",
+      "module_id": "java_module_2",
+      "order": 100
+    },
+    {
+      "id": "java_q101",
+      "question": "Which keyword is used to define a method in Java?",
+      "options": [
+        "void",
+        "method",
+        "func",
+        "define"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'void' keyword defines a method that does not return a value.",
+      "module_id": "java_module_3",
+      "order": 101
+    },
+    {
+      "id": "java_q102",
+      "question": "Which part of a method specifies the type of value it returns?",
+      "options": [
+        "Return type",
+        "Method name",
+        "Parameters",
+        "Body"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The return type defines the type of value a method returns.",
+      "module_id": "java_module_3",
+      "order": 102
+    },
+    {
+      "id": "java_q103",
+      "question": "Which is the correct way to call a method named 'display'?",
+      "options": [
+        "display();",
+        "call display;",
+        "run display()",
+        "invoke display;"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Methods are called using their name followed by parentheses.",
+      "module_id": "java_module_3",
+      "order": 103
+    },
+    {
+      "id": "java_q104",
+      "question": "Which term represents the values passed to a method when calling it?",
+      "options": [
+        "Arguments",
+        "Parameters",
+        "Variables",
+        "Constants"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Arguments are values passed to a method during the call.",
+      "module_id": "java_module_3",
+      "order": 104
+    },
+    {
+      "id": "java_q105",
+      "question": "Which term represents the variables declared in the method signature?",
+      "options": [
+        "Parameters",
+        "Arguments",
+        "Fields",
+        "Locals"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Parameters are variables declared in the method definition to accept arguments.",
+      "module_id": "java_module_3",
+      "order": 105
+    },
+    {
+      "id": "java_q106",
+      "question": "Which keyword is used for a method that belongs to the class rather than an instance?",
+      "options": [
+        "static",
+        "final",
+        "public",
+        "void"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'static' keyword declares a method that can be called without creating an object.",
+      "module_id": "java_module_3",
+      "order": 106
+    },
+    {
+      "id": "java_q107",
+      "question": "Which method type does not return any value?",
+      "options": [
+        "void method",
+        "int method",
+        "String method",
+        "boolean method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A method with return type 'void' does not return any value.",
+      "module_id": "java_module_3",
+      "order": 107
+    },
+    {
+      "id": "java_q108",
+      "question": "Which statement correctly defines a method with parameters?",
+      "options": [
+        "void sum(int a, int b) { }",
+        "void sum(a, b) { }",
+        "function sum(int a, int b) { }",
+        "sum(int a, int b) { }"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Parameters must include their data type in Java method declarations.",
+      "module_id": "java_module_3",
+      "order": 108
+    },
+    {
+      "id": "java_q109",
+      "question": "Which operator is used to return a value from a method?",
+      "options": [
+        "return",
+        "yield",
+        "exit",
+        "break"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'return' statement exits a method and optionally returns a value.",
+      "module_id": "java_module_3",
+      "order": 109
+    },
+    {
+      "id": "java_q11",
+      "question": "Which keyword is used to implement an interface in Java?",
+      "options": [
+        "implements",
+        "extends",
+        "interface",
+        "uses"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'implements' keyword is used for a class to implement an interface.",
+      "module_id": "java_module_1",
+      "order": 11
+    },
+    {
+      "id": "java_q110",
+      "question": "Which method can be called without creating an object?",
+      "options": [
+        "Static method",
+        "Instance method",
+        "Abstract method",
+        "Private method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Static methods belong to the class and can be called directly using the class name.",
+      "module_id": "java_module_3",
+      "order": 110
+    },
+    {
+      "id": "java_q111",
+      "question": "Which statement is true about instance methods?",
+      "options": [
+        "Require an object to be called",
+        "Can be called without an object",
+        "Are always void",
+        "Cannot have parameters"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Instance methods are tied to an object and require an instance of the class to be invoked.",
+      "module_id": "java_module_3",
+      "order": 111
+    },
+    {
+      "id": "java_q112",
+      "question": "Which method allows multiple definitions with different parameters?",
+      "options": [
+        "Method overloading",
+        "Method overriding",
+        "Abstract method",
+        "Static method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Method overloading allows multiple methods with the same name but different parameter lists.",
+      "module_id": "java_module_3",
+      "order": 112
+    },
+    {
+      "id": "java_q113",
+      "question": "Which method overrides a superclass method in a subclass?",
+      "options": [
+        "Method overriding",
+        "Method overloading",
+        "Static method",
+        "Private method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Method overriding replaces the implementation of a superclass method in a subclass.",
+      "module_id": "java_module_3",
+      "order": 113
+    },
+    {
+      "id": "java_q114",
+      "question": "Which statement is true about local variables?",
+      "options": [
+        "Declared inside methods and accessible only there",
+        "Declared outside methods and accessible everywhere",
+        "Always static",
+        "Cannot be primitive types"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Local variables exist only within the method they are declared in.",
+      "module_id": "java_module_3",
+      "order": 114
+    },
+    {
+      "id": "java_q115",
+      "question": "Which statement is true about parameters?",
+      "options": [
+        "Parameters are local variables in the method scope",
+        "Parameters are global",
+        "Parameters cannot have types",
+        "Parameters are static by default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Parameters are local variables that receive values passed to the method.",
+      "module_id": "java_module_3",
+      "order": 115
+    },
+    {
+      "id": "java_q116",
+      "question": "Which statement is true about return types?",
+      "options": [
+        "Methods must declare the return type",
+        "Methods never need return type",
+        "Methods only return int",
+        "Return type is optional"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Every method must declare the type of value it returns, or void if none.",
+      "module_id": "java_module_3",
+      "order": 116
+    },
+    {
+      "id": "java_q117",
+      "question": "Which method can be declared inside another method?",
+      "options": [
+        "Java does not allow methods inside methods",
+        "Yes, always",
+        "Only static methods",
+        "Only private methods"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Java does not support method definitions inside other methods.",
+      "module_id": "java_module_3",
+      "order": 117
+    },
+    {
+      "id": "java_q118",
+      "question": "Which statement correctly calls a method with arguments?",
+      "options": [
+        "sum(5, 10);",
+        "sum;",
+        "sum = 5,10;",
+        "call sum(5, 10);"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Methods are called with parentheses and arguments inside.",
+      "module_id": "java_module_3",
+      "order": 118
+    },
+    {
+      "id": "java_q119",
+      "question": "Which keyword is used to declare a method that can be overridden?",
+      "options": [
+        "public",
+        "private",
+        "static",
+        "final"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Public or protected methods can be overridden; final methods cannot.",
+      "module_id": "java_module_3",
+      "order": 119
+    },
+    {
+      "id": "java_q12",
+      "question": "Which of the following is used to handle exceptions in Java?",
+      "options": [
+        "try-catch",
+        "if-else",
+        "switch",
+        "for loop"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Exceptions are handled using try-catch blocks.",
+      "module_id": "java_module_1",
+      "order": 12
+    },
+    {
+      "id": "java_q120",
+      "question": "Which statement about void methods is correct?",
+      "options": [
+        "They do not return a value",
+        "They return int by default",
+        "They return boolean by default",
+        "They return null"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Void methods do not return any value.",
+      "module_id": "java_module_3",
+      "order": 120
+    },
+    {
+      "id": "java_q121",
+      "question": "Which statement about static methods is correct?",
+      "options": [
+        "Belong to the class, can be called without object",
+        "Belong to the object, require an instance",
+        "Cannot have parameters",
+        "Cannot return values"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Static methods belong to the class and do not require an object to be called.",
+      "module_id": "java_module_3",
+      "order": 121
+    },
+    {
+      "id": "java_q122",
+      "question": "Which statement about instance methods is correct?",
+      "options": [
+        "Belong to objects, require object to be called",
+        "Belong to class, do not require object",
+        "Cannot have return type",
+        "Cannot take parameters"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Instance methods belong to objects and require an object to invoke.",
+      "module_id": "java_module_3",
+      "order": 122
+    },
+    {
+      "id": "java_q123",
+      "question": "Which type of method can access instance variables directly?",
+      "options": [
+        "Instance methods",
+        "Static methods",
+        "Private methods",
+        "Final methods"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Instance methods can access instance variables of the object directly.",
+      "module_id": "java_module_3",
+      "order": 123
+    },
+    {
+      "id": "java_q124",
+      "question": "Which method allows code reuse across multiple calls?",
+      "options": [
+        "Any method",
+        "Only static methods",
+        "Only void methods",
+        "Only private methods"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Methods encapsulate code that can be reused multiple times by calling them.",
+      "module_id": "java_module_3",
+      "order": 124
+    },
+    {
+      "id": "java_q125",
+      "question": "Which method overloading requires different parameter types or count?",
+      "options": [
+        "Method overloading",
+        "Method overriding",
+        "Static methods",
+        "Void methods"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Overloaded methods must differ in number or types of parameters.",
+      "module_id": "java_module_3",
+      "order": 125
+    },
+    {
+      "id": "java_q126",
+      "question": "Which method call returns a value to the caller?",
+      "options": [
+        "Method with non-void return type",
+        "Void method",
+        "Static method",
+        "Private method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Methods with a return type return a value to the caller.",
+      "module_id": "java_module_3",
+      "order": 126
+    },
+    {
+      "id": "java_q127",
+      "question": "Which method cannot be overridden in a subclass?",
+      "options": [
+        "Final method",
+        "Static method",
+        "Private method",
+        "All of the above"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "Final, static, and private methods cannot be overridden.",
+      "module_id": "java_module_3",
+      "order": 127
+    },
+    {
+      "id": "java_q128",
+      "question": "Which method executes automatically when an object is created?",
+      "options": [
+        "Constructor",
+        "Static method",
+        "Main method",
+        "Void method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Constructors initialize objects and have the same name as the class.",
+      "module_id": "java_module_3",
+      "order": 128
+    },
+    {
+      "id": "java_q129",
+      "question": "Which constructor has no parameters?",
+      "options": [
+        "Default constructor",
+        "Parameterized constructor",
+        "Copy constructor",
+        "Static constructor"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A default constructor has no parameters and initializes default values.",
+      "module_id": "java_module_3",
+      "order": 129
+    },
+    {
+      "id": "java_q13",
+      "question": "Which method is used to print output in Java?",
+      "options": [
+        "System.out.println()",
+        "print()",
+        "Console.write()",
+        "output()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "System.out.println() prints output to the console.",
+      "module_id": "java_module_1",
+      "order": 13
+    },
+    {
+      "id": "java_q130",
+      "question": "Which keyword is used to call another constructor from a constructor?",
+      "options": [
+        "this",
+        "super",
+        "return",
+        "new"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'this()' calls another constructor in the same class.",
+      "module_id": "java_module_3",
+      "order": 130
+    },
+    {
+      "id": "java_q131",
+      "question": "Which method allows multiple ways to perform the same operation with different parameters?",
+      "options": [
+        "Method overloading",
+        "Method overriding",
+        "Static method",
+        "Private method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Method overloading allows a method to have multiple definitions with different parameters.",
+      "module_id": "java_module_3",
+      "order": 131
+    },
+    {
+      "id": "java_q132",
+      "question": "Which statement is true about calling a static method?",
+      "options": [
+        "Can be called using the class name",
+        "Requires an object",
+        "Cannot take parameters",
+        "Must be private"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Static methods belong to the class and can be called using the class name without creating an object.",
+      "module_id": "java_module_3",
+      "order": 132
+    },
+    {
+      "id": "java_q133",
+      "question": "Which statement about instance methods is correct?",
+      "options": [
+        "Require an object to be called",
+        "Can be called without an object",
+        "Are always static",
+        "Cannot return values"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Instance methods belong to objects and require an instance of the class to invoke.",
+      "module_id": "java_module_3",
+      "order": 133
+    },
+    {
+      "id": "java_q134",
+      "question": "Which keyword is used inside a method to refer to the current object?",
+      "options": [
+        "this",
+        "super",
+        "self",
+        "current"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'this' refers to the current instance of the class.",
+      "module_id": "java_module_3",
+      "order": 134
+    },
+    {
+      "id": "java_q135",
+      "question": "Which statement correctly declares a method that returns an int?",
+      "options": [
+        "int sum(int a, int b) { return a+b; }",
+        "void sum(int a, int b) { return a+b; }",
+        "sum(int a, int b) { return a+b; }",
+        "int sum(a,b) { a+b; }"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The method return type must match the type of value returned by the return statement.",
+      "module_id": "java_module_3",
+      "order": 135
+    },
+    {
+      "id": "java_q136",
+      "question": "Which method can access static variables directly?",
+      "options": [
+        "Static method",
+        "Instance method",
+        "Constructor",
+        "Private method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Static methods can directly access other static variables and methods.",
+      "module_id": "java_module_3",
+      "order": 136
+    },
+    {
+      "id": "java_q137",
+      "question": "Which type of method is used to perform initialization of objects?",
+      "options": [
+        "Constructor",
+        "Static method",
+        "Void method",
+        "Private method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Constructors initialize the state of objects when they are created.",
+      "module_id": "java_module_3",
+      "order": 137
+    },
+    {
+      "id": "java_q138",
+      "question": "Which statement is true about private methods?",
+      "options": [
+        "Accessible only within the same class",
+        "Accessible from any class",
+        "Always static",
+        "Cannot return values"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Private methods are only accessible inside the class where they are defined.",
+      "module_id": "java_module_3",
+      "order": 138
+    },
+    {
+      "id": "java_q139",
+      "question": "Which method is mandatory in every Java program for execution?",
+      "options": [
+        "main method",
+        "Constructor",
+        "Static method",
+        "Void method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The main method serves as the entry point for Java programs.",
+      "module_id": "java_module_3",
+      "order": 139
+    },
+    {
+      "id": "java_q14",
+      "question": "Which keyword is used to create an object in Java?",
+      "options": [
+        "new",
+        "object",
+        "create",
+        "instance"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'new' keyword creates a new object instance.",
+      "module_id": "java_module_1",
+      "order": 14
+    },
+    {
+      "id": "java_q140",
+      "question": "Which statement about return statements is correct?",
+      "options": [
+        "Ends method execution and optionally returns a value",
+        "Only ends method without returning value",
+        "Must be used in every method",
+        "Can only return void"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The return statement ends method execution and returns a value if the method is non-void.",
+      "module_id": "java_module_3",
+      "order": 140
+    },
+    {
+      "id": "java_q141",
+      "question": "Which method call uses the correct syntax to pass arguments?",
+      "options": [
+        "calculate(10, 20);",
+        "calculate 10, 20;",
+        "calculate{10,20};",
+        "call calculate(10,20);"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Arguments are passed inside parentheses when calling a method.",
+      "module_id": "java_module_3",
+      "order": 141
+    },
+    {
+      "id": "java_q142",
+      "question": "Which statement is true about a method that returns a value?",
+      "options": [
+        "Must use a return statement",
+        "Cannot have parameters",
+        "Must be static",
+        "Always private"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Methods with a non-void return type must include a return statement with a value.",
+      "module_id": "java_module_3",
+      "order": 142
+    },
+    {
+      "id": "java_q143",
+      "question": "Which statement about the 'this' keyword is correct?",
+      "options": [
+        "Refers to the current object",
+        "Refers to the superclass",
+        "Refers to a static variable",
+        "Refers to the main method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'this' is used to refer to the current instance of the class.",
+      "module_id": "java_module_3",
+      "order": 143
+    },
+    {
+      "id": "java_q144",
+      "question": "Which statement about method overloading is correct?",
+      "options": [
+        "Methods have the same name but different parameters",
+        "Methods must have the same signature",
+        "Methods must be static",
+        "Methods must be private"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Overloaded methods share the same name but differ in parameter types or count.",
+      "module_id": "java_module_3",
+      "order": 144
+    },
+    {
+      "id": "java_q145",
+      "question": "Which statement about constructors is correct?",
+      "options": [
+        "Have the same name as the class and no return type",
+        "Can have any name and return type",
+        "Must be static",
+        "Must return void"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Constructors initialize objects, have the same name as the class, and no return type.",
+      "module_id": "java_module_3",
+      "order": 145
+    },
+    {
+      "id": "java_q146",
+      "question": "Which statement about method overriding is correct?",
+      "options": [
+        "A subclass can provide a new implementation of a superclass method",
+        "Overridden methods must be static",
+        "Overridden methods must be private",
+        "Overridden methods must return void"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Method overriding allows a subclass to define a method with the same signature as its superclass.",
+      "module_id": "java_module_3",
+      "order": 146
+    },
+    {
+      "id": "java_q147",
+      "question": "Which statement about method visibility is correct?",
+      "options": [
+        "Private methods are accessible only within the class",
+        "Public methods are accessible only within the class",
+        "Protected methods are accessible only outside the package",
+        "Static methods are always private"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Private methods are accessible only inside the class they are defined in.",
+      "module_id": "java_module_3",
+      "order": 147
+    },
+    {
+      "id": "java_q148",
+      "question": "Which statement about static methods is correct?",
+      "options": [
+        "Can be called without creating an object",
+        "Cannot access static variables",
+        "Cannot take parameters",
+        "Always private"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Static methods can be invoked without creating an instance of the class.",
+      "module_id": "java_module_3",
+      "order": 148
+    },
+    {
+      "id": "java_q149",
+      "question": "Which statement about the main method is correct?",
+      "options": [
+        "It is the entry point of the Java program",
+        "It must be private",
+        "It cannot take arguments",
+        "It must return int"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The main method serves as the starting point of execution for a Java program.",
+      "module_id": "java_module_3",
+      "order": 149
+    },
+    {
+      "id": "java_q15",
+      "question": "Which data type is used to store true or false values in Java?",
+      "options": [
+        "boolean",
+        "int",
+        "char",
+        "String"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'boolean' type stores either true or false.",
+      "module_id": "java_module_1",
+      "order": 15
+    },
+    {
+      "id": "java_q150",
+      "question": "Which statement about return statements is correct?",
+      "options": [
+        "Ends method execution and optionally returns a value",
+        "Only ends method without returning value",
+        "Must be used in every method",
+        "Can only return void"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The return statement ends method execution and returns a value if the method is non-void.",
+      "module_id": "java_module_3",
+      "order": 150
+    },
+    {
+      "id": "java_q151",
+      "question": "Which data structure stores multiple elements of the same type?",
+      "options": [
+        "Array",
+        "String",
+        "Integer",
+        "Boolean"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Arrays store multiple elements of the same data type in contiguous memory locations.",
+      "module_id": "java_module_4",
+      "order": 151
+    },
+    {
+      "id": "java_q152",
+      "question": "Which index does a Java array start with?",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "Depends on declaration"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Java arrays are zero-indexed, meaning the first element is at index 0.",
+      "module_id": "java_module_4",
+      "order": 152
+    },
+    {
+      "id": "java_q153",
+      "question": "Which is the correct way to declare an integer array of size 5?",
+      "options": [
+        "int[] numbers = new int[5];",
+        "int numbers[5];",
+        "array numbers = int[5];",
+        "int numbers = new array(5);"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Arrays in Java are declared with type[], name, and size using 'new'.",
+      "module_id": "java_module_4",
+      "order": 153
+    },
+    {
+      "id": "java_q154",
+      "question": "Which method returns the length of an array in Java?",
+      "options": [
+        "array.length",
+        "array.size()",
+        "array.count",
+        "array.getLength()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The length property provides the number of elements in the array.",
+      "module_id": "java_module_4",
+      "order": 154
+    },
+    {
+      "id": "java_q155",
+      "question": "Which keyword is used to create a new array object?",
+      "options": [
+        "new",
+        "create",
+        "array",
+        "init"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'new' keyword is used to allocate memory for a new array object.",
+      "module_id": "java_module_4",
+      "order": 155
+    },
+    {
+      "id": "java_q156",
+      "question": "Which statement correctly initializes an array with values?",
+      "options": [
+        "int[] numbers = {1,2,3,4,5};",
+        "int[] numbers = new int[];",
+        "int[] numbers = array(1,2,3);",
+        "int numbers[] = 1,2,3,4,5;"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "An array can be directly initialized with values using curly braces {}.",
+      "module_id": "java_module_4",
+      "order": 156
+    },
+    {
+      "id": "java_q157",
+      "question": "Which loop is commonly used to traverse all elements in an array?",
+      "options": [
+        "for loop",
+        "while loop",
+        "do-while loop",
+        "foreach loop"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A for loop is commonly used to iterate over arrays using indices.",
+      "module_id": "java_module_4",
+      "order": 157
+    },
+    {
+      "id": "java_q158",
+      "question": "Which class is used to store sequences of characters in Java?",
+      "options": [
+        "String",
+        "Array",
+        "Character",
+        "CharSequence"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The String class is used to store and manipulate sequences of characters.",
+      "module_id": "java_module_4",
+      "order": 158
+    },
+    {
+      "id": "java_q159",
+      "question": "Which method returns the length of a String?",
+      "options": [
+        "length()",
+        "size()",
+        "count()",
+        "getLength()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The length() method returns the number of characters in a String.",
+      "module_id": "java_module_4",
+      "order": 159
+    },
+    {
+      "id": "java_q16",
+      "question": "Which operator is used to compare equality in Java?",
+      "options": [
+        "==",
+        "=",
+        "equals",
+        "!="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '==' operator is used to check equality of primitive values.",
+      "module_id": "java_module_1",
+      "order": 16
+    },
+    {
+      "id": "java_q160",
+      "question": "Which operator is used to concatenate two strings in Java?",
+      "options": [
+        "+",
+        "&",
+        ".",
+        "concat"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '+' operator can be used to join two strings.",
+      "module_id": "java_module_4",
+      "order": 160
+    },
+    {
+      "id": "java_q161",
+      "question": "Which statement is true about arrays in Java?",
+      "options": [
+        "Fixed size",
+        "Dynamic size",
+        "Can hold different types",
+        "Must be Strings"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Java arrays have a fixed size that must be defined at creation.",
+      "module_id": "java_module_4",
+      "order": 161
+    },
+    {
+      "id": "java_q162",
+      "question": "Which method converts a string to uppercase?",
+      "options": [
+        "toUpperCase()",
+        "upper()",
+        "uppercase()",
+        "toUpper()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The toUpperCase() method converts all characters in a string to uppercase.",
+      "module_id": "java_module_4",
+      "order": 162
+    },
+    {
+      "id": "java_q163",
+      "question": "Which method converts a string to lowercase?",
+      "options": [
+        "toLowerCase()",
+        "lower()",
+        "tolower()",
+        "toLower()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The toLowerCase() method converts all characters in a string to lowercase.",
+      "module_id": "java_module_4",
+      "order": 163
+    },
+    {
+      "id": "java_q164",
+      "question": "Which method is used to find the length of an array?",
+      "options": [
+        "array.length",
+        "array.size()",
+        "array.count",
+        "array.getLength()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'length' property returns the number of elements in an array.",
+      "module_id": "java_module_4",
+      "order": 164
+    },
+    {
+      "id": "java_q165",
+      "question": "Which method returns a character at a specific index in a String?",
+      "options": [
+        "charAt()",
+        "get()",
+        "char()",
+        "getChar()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The charAt(index) method returns the character at the specified index.",
+      "module_id": "java_module_4",
+      "order": 165
+    },
+    {
+      "id": "java_q166",
+      "question": "Which method checks if a string starts with a specified prefix?",
+      "options": [
+        "startsWith()",
+        "beginsWith()",
+        "prefix()",
+        "checkStart()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "startsWith() returns true if the string begins with the specified prefix.",
+      "module_id": "java_module_4",
+      "order": 166
+    },
+    {
+      "id": "java_q167",
+      "question": "Which method checks if a string ends with a specified suffix?",
+      "options": [
+        "endsWith()",
+        "finishWith()",
+        "suffix()",
+        "checkEnd()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "endsWith() returns true if the string ends with the specified suffix.",
+      "module_id": "java_module_4",
+      "order": 167
+    },
+    {
+      "id": "java_q168",
+      "question": "Which method returns a substring of a string?",
+      "options": [
+        "substring()",
+        "sub()",
+        "getSubstring()",
+        "slice()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "substring(startIndex, endIndex) returns part of the string from startIndex to endIndex - 1.",
+      "module_id": "java_module_4",
+      "order": 168
+    },
+    {
+      "id": "java_q169",
+      "question": "Which method compares two strings for equality?",
+      "options": [
+        "equals()",
+        "==",
+        "compareTo()",
+        "match()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "equals() checks if two strings have the same content.",
+      "module_id": "java_module_4",
+      "order": 169
+    },
+    {
+      "id": "java_q17",
+      "question": "Which loop is best when the number of iterations is known beforehand?",
+      "options": [
+        "for",
+        "while",
+        "do-while",
+        "foreach"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'for' loop is ideal when the number of iterations is predetermined.",
+      "module_id": "java_module_1",
+      "order": 17
+    },
+    {
+      "id": "java_q170",
+      "question": "Which method compares two strings ignoring case?",
+      "options": [
+        "equalsIgnoreCase()",
+        "equals()",
+        "compare()",
+        "compareToIgnoreCase()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "equalsIgnoreCase() checks equality without considering case.",
+      "module_id": "java_module_4",
+      "order": 170
+    },
+    {
+      "id": "java_q171",
+      "question": "Which method trims leading and trailing whitespace from a string?",
+      "options": [
+        "trim()",
+        "strip()",
+        "clean()",
+        "removeSpaces()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "trim() removes whitespace from the beginning and end of a string.",
+      "module_id": "java_module_4",
+      "order": 171
+    },
+    {
+      "id": "java_q172",
+      "question": "Which statement is true about multidimensional arrays?",
+      "options": [
+        "Array of arrays",
+        "Array of integers only",
+        "Array of strings only",
+        "Array of characters only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Multidimensional arrays are arrays whose elements are arrays.",
+      "module_id": "java_module_4",
+      "order": 172
+    },
+    {
+      "id": "java_q173",
+      "question": "Which syntax correctly declares a 2D integer array?",
+      "options": [
+        "int[][] matrix = new int[3][3];",
+        "int matrix[3][3];",
+        "int[][] matrix = array(3,3);",
+        "array matrix = int[3][3];"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A 2D array in Java is declared as type[][] name = new type[rows][cols].",
+      "module_id": "java_module_4",
+      "order": 173
+    },
+    {
+      "id": "java_q174",
+      "question": "Which method returns the index of the first occurrence of a character in a string?",
+      "options": [
+        "indexOf()",
+        "find()",
+        "search()",
+        "position()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "indexOf(char) returns the position of the first occurrence of a character.",
+      "module_id": "java_module_4",
+      "order": 174
+    },
+    {
+      "id": "java_q175",
+      "question": "Which method returns the index of the last occurrence of a character?",
+      "options": [
+        "lastIndexOf()",
+        "indexOf()",
+        "findLast()",
+        "position()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "lastIndexOf(char) returns the index of the last occurrence of a character in the string.",
+      "module_id": "java_module_4",
+      "order": 175
+    },
+    {
+      "id": "java_q176",
+      "question": "Which method checks if a string contains a sequence of characters?",
+      "options": [
+        "contains()",
+        "includes()",
+        "find()",
+        "has()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "contains() returns true if the string contains the specified sequence.",
+      "module_id": "java_module_4",
+      "order": 176
+    },
+    {
+      "id": "java_q177",
+      "question": "Which statement correctly accesses the first element of an array 'arr'?",
+      "options": [
+        "arr[0]",
+        "arr[1]",
+        "arr[first]",
+        "arr.get(0)"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The first element of a zero-indexed array is at index 0.",
+      "module_id": "java_module_4",
+      "order": 177
+    },
+    {
+      "id": "java_q178",
+      "question": "Which statement correctly changes the value of the second element in an array 'arr'?",
+      "options": [
+        "arr[1] = 10;",
+        "arr[2] = 10;",
+        "arr.set(1,10);",
+        "arr.put(1,10);"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Array elements can be updated by assigning a value to a specific index.",
+      "module_id": "java_module_4",
+      "order": 178
+    },
+    {
+      "id": "java_q179",
+      "question": "Which method splits a string into an array based on a delimiter?",
+      "options": [
+        "split()",
+        "divide()",
+        "break()",
+        "separate()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "split(delimiter) splits a string into an array of substrings using the delimiter.",
+      "module_id": "java_module_4",
+      "order": 179
+    },
+    {
+      "id": "java_q18",
+      "question": "Which keyword prevents a method from being overridden in a subclass?",
+      "options": [
+        "final",
+        "static",
+        "private",
+        "abstract"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'final' keyword prevents method overriding.",
+      "module_id": "java_module_1",
+      "order": 18
+    },
+    {
+      "id": "java_q180",
+      "question": "Which method converts an array of characters into a String?",
+      "options": [
+        "new String(charArray)",
+        "String.valueOf(charArray)",
+        "Both A and B",
+        "toString(charArray)"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Both 'new String(charArray)' and 'String.valueOf(charArray)' can convert char arrays to strings.",
+      "module_id": "java_module_4",
+      "order": 180
+    },
+    {
+      "id": "java_q181",
+      "question": "Which method checks if a string is empty?",
+      "options": [
+        "isEmpty()",
+        "length()==0",
+        "Both A and B",
+        "None of the above"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Both isEmpty() and checking length()==0 can determine if a string is empty.",
+      "module_id": "java_module_4",
+      "order": 181
+    },
+    {
+      "id": "java_q182",
+      "question": "Which method removes a part of a string from startIndex to endIndex?",
+      "options": [
+        "substring()",
+        "subStringRemove()",
+        "slice()",
+        "trim()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "substring(startIndex, endIndex) extracts a portion of a string.",
+      "module_id": "java_module_4",
+      "order": 182
+    },
+    {
+      "id": "java_q183",
+      "question": "Which method checks if a string equals another string ignoring case?",
+      "options": [
+        "equalsIgnoreCase()",
+        "compareToIgnoreCase()",
+        "equals()",
+        "matches()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "equalsIgnoreCase() compares two strings without considering case.",
+      "module_id": "java_module_4",
+      "order": 183
+    },
+    {
+      "id": "java_q184",
+      "question": "Which statement correctly reverses a character array 'arr'?",
+      "options": [
+        "Use a loop to swap elements from ends",
+        "arr.reverse()",
+        "Arrays.reverse(arr)",
+        "Collections.reverse(arr)"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Java arrays have no built-in reverse method; you need to use a loop or convert to a list.",
+      "module_id": "java_module_4",
+      "order": 184
+    },
+    {
+      "id": "java_q185",
+      "question": "Which statement correctly declares a String array with 3 elements?",
+      "options": [
+        "String[] arr = {\"a\",\"b\",\"c\"};",
+        "String arr[3] = {\"a\",\"b\",\"c\"};",
+        "String[] arr = new String[3] = {\"a\",\"b\",\"c\"};",
+        "array<String> arr = {\"a\",\"b\",\"c\"};"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "String arrays can be declared and initialized directly with values using curly braces.",
+      "module_id": "java_module_4",
+      "order": 185
+    },
+    {
+      "id": "java_q186",
+      "question": "Which method converts a string to a char array?",
+      "options": [
+        "toCharArray()",
+        "getChars()",
+        "charAt()",
+        "convertToCharArray()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "toCharArray() converts a string into a character array.",
+      "module_id": "java_module_4",
+      "order": 186
+    },
+    {
+      "id": "java_q187",
+      "question": "Which statement correctly finds the length of a 2D array 'matrix'?",
+      "options": [
+        "matrix.length",
+        "matrix.size()",
+        "matrix.getLength()",
+        "matrix.count()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The length property of the array gives the number of rows in a 2D array.",
+      "module_id": "java_module_4",
+      "order": 187
+    },
+    {
+      "id": "java_q188",
+      "question": "Which method concatenates two strings and returns a new string?",
+      "options": [
+        "concat()",
+        "+ operator",
+        "Both A and B",
+        "join()"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Both concat() and the '+' operator can join strings to create a new string.",
+      "module_id": "java_module_4",
+      "order": 188
+    },
+    {
+      "id": "java_q189",
+      "question": "Which statement correctly copies a string into another string variable?",
+      "options": [
+        "String copy = original;",
+        "String copy = new String(original);",
+        "Both A and B",
+        "String copy = original.copy();"
+      ],
+      "correctOptionIndex": 2,
+      "explanation": "Both assignment and creating a new String object copy the string value.",
+      "module_id": "java_module_4",
+      "order": 189
+    },
+    {
+      "id": "java_q19",
+      "question": "Which keyword is used to refer to the current object inside a method?",
+      "options": [
+        "this",
+        "self",
+        "current",
+        "object"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'this' refers to the current instance of the class.",
+      "module_id": "java_module_1",
+      "order": 19
+    },
+    {
+      "id": "java_q190",
+      "question": "Which method returns true if a string matches a regular expression?",
+      "options": [
+        "matches()",
+        "equals()",
+        "contains()",
+        "compareTo()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "matches() checks if the entire string matches the specified regex pattern.",
+      "module_id": "java_module_4",
+      "order": 190
+    },
+    {
+      "id": "java_q191",
+      "question": "Which method removes all leading and trailing spaces from a string?",
+      "options": [
+        "trim()",
+        "strip()",
+        "removeSpaces()",
+        "clean()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "trim() removes whitespace from both ends of the string.",
+      "module_id": "java_module_4",
+      "order": 191
+    },
+    {
+      "id": "java_q192",
+      "question": "Which loop is best for iterating through all elements in an array without using indices?",
+      "options": [
+        "Enhanced for loop",
+        "Standard for loop",
+        "While loop",
+        "Do-while loop"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The enhanced for loop iterates through elements directly without needing indices.",
+      "module_id": "java_module_4",
+      "order": 192
+    },
+    {
+      "id": "java_q193",
+      "question": "Which method compares two strings lexicographically?",
+      "options": [
+        "compareTo()",
+        "equals()",
+        "matches()",
+        "equalsIgnoreCase()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "compareTo() compares strings based on Unicode values of characters.",
+      "module_id": "java_module_4",
+      "order": 193
+    },
+    {
+      "id": "java_q194",
+      "question": "Which statement is true about immutable strings?",
+      "options": [
+        "Strings cannot be changed after creation",
+        "Strings can be modified directly",
+        "Strings can grow dynamically",
+        "Strings are always empty"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Java Strings are immutable; once created, their values cannot be changed.",
+      "module_id": "java_module_4",
+      "order": 194
+    },
+    {
+      "id": "java_q195",
+      "question": "Which statement correctly declares a character array from a string 'text'?",
+      "options": [
+        "char[] chars = text.toCharArray();",
+        "char[] chars = new char[text];",
+        "char[] chars = text.getChars();",
+        "char[] chars = text.array();"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "toCharArray() converts a string into a character array.",
+      "module_id": "java_module_4",
+      "order": 195
+    },
+    {
+      "id": "java_q196",
+      "question": "Which statement is true about StringBuilder?",
+      "options": [
+        "Mutable strings for efficient concatenation",
+        "Immutable strings",
+        "Cannot append text",
+        "Only stores arrays"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "StringBuilder allows modification of strings without creating new objects each time.",
+      "module_id": "java_module_4",
+      "order": 196
+    },
+    {
+      "id": "java_q197",
+      "question": "Which method appends a string to a StringBuilder object?",
+      "options": [
+        "append()",
+        "concat()",
+        "add()",
+        "push()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "append() adds text to the end of a StringBuilder object.",
+      "module_id": "java_module_4",
+      "order": 197
+    },
+    {
+      "id": "java_q198",
+      "question": "Which method converts a StringBuilder back to a String?",
+      "options": [
+        "toString()",
+        "String()",
+        "convert()",
+        "build()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "toString() returns the string representation of the StringBuilder object.",
+      "module_id": "java_module_4",
+      "order": 198
+    },
+    {
+      "id": "java_q199",
+      "question": "Which statement correctly accesses the last element of an array 'arr'?",
+      "options": [
+        "arr[arr.length - 1]",
+        "arr[arr.length]",
+        "arr[last]",
+        "arr.get(arr.length - 1)"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The last element index is length - 1 in a zero-indexed array.",
+      "module_id": "java_module_4",
+      "order": 199
+    },
+    {
+      "id": "java_q2",
+      "question": "Which keyword is used to define a class in Java?",
+      "options": [
+        "class",
+        "ClassName",
+        "object",
+        "define"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'class' keyword is used to declare a class in Java.",
+      "module_id": "java_module_1",
+      "order": 2
+    },
+    {
+      "id": "java_q20",
+      "question": "Which data type is used to store decimal numbers in Java?",
+      "options": [
+        "double",
+        "int",
+        "float",
+        "long"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'double' type stores double-precision floating-point numbers.",
+      "module_id": "java_module_1",
+      "order": 20
+    },
+    {
+      "id": "java_q200",
+      "question": "Which statement is true about multidimensional arrays?",
+      "options": [
+        "Each element of the array can itself be an array",
+        "All elements must be strings",
+        "All elements must be integers",
+        "Cannot store arrays inside arrays"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Multidimensional arrays are arrays of arrays, allowing nested structures.",
+      "module_id": "java_module_4",
+      "order": 200
+    },
+    {
+      "id": "java_q201",
+      "question": "What is an exception in Java?",
+      "options": [
+        "An event that disrupts normal program execution",
+        "A type of loop",
+        "A method",
+        "A variable"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "An exception is an event that occurs during the execution of a program and disrupts normal flow.",
+      "module_id": "java_module_5",
+      "order": 201
+    },
+    {
+      "id": "java_q202",
+      "question": "Which keyword is used to handle exceptions?",
+      "options": [
+        "try",
+        "catch",
+        "throw",
+        "All of the above"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "try, catch, and throw are all used for exception handling in Java.",
+      "module_id": "java_module_5",
+      "order": 202
+    },
+    {
+      "id": "java_q203",
+      "question": "Which block is used to catch an exception?",
+      "options": [
+        "catch",
+        "try",
+        "finally",
+        "throw"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The catch block is used to handle exceptions thrown in the try block.",
+      "module_id": "java_module_5",
+      "order": 203
+    },
+    {
+      "id": "java_q204",
+      "question": "Which block is used to execute code regardless of an exception?",
+      "options": [
+        "finally",
+        "catch",
+        "try",
+        "throw"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The finally block executes whether or not an exception occurs, usually for cleanup.",
+      "module_id": "java_module_5",
+      "order": 204
+    },
+    {
+      "id": "java_q205",
+      "question": "Which keyword is used to explicitly throw an exception?",
+      "options": [
+        "throw",
+        "throws",
+        "try",
+        "catch"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The throw keyword is used to explicitly throw an exception object.",
+      "module_id": "java_module_5",
+      "order": 205
+    },
+    {
+      "id": "java_q206",
+      "question": "Which keyword is used in method declaration to indicate exceptions may be thrown?",
+      "options": [
+        "throws",
+        "throw",
+        "try",
+        "catch"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The throws keyword declares which exceptions a method can throw.",
+      "module_id": "java_module_5",
+      "order": 206
+    },
+    {
+      "id": "java_q207",
+      "question": "Which of these is a checked exception?",
+      "options": [
+        "IOException",
+        "NullPointerException",
+        "ArithmeticException",
+        "ArrayIndexOutOfBoundsException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Checked exceptions must be handled or declared in the method signature.",
+      "module_id": "java_module_5",
+      "order": 207
+    },
+    {
+      "id": "java_q208",
+      "question": "Which of these is an unchecked exception?",
+      "options": [
+        "NullPointerException",
+        "IOException",
+        "FileNotFoundException",
+        "SQLException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Unchecked exceptions are subclasses of RuntimeException and do not need to be declared or caught.",
+      "module_id": "java_module_5",
+      "order": 208
+    },
+    {
+      "id": "java_q209",
+      "question": "Which method retrieves the error message from an exception?",
+      "options": [
+        "getMessage()",
+        "printStackTrace()",
+        "toString()",
+        "fillInStackTrace()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "getMessage() returns the detailed message string of the exception.",
+      "module_id": "java_module_5",
+      "order": 209
+    },
+    {
+      "id": "java_q21",
+      "question": "Which keyword is used to prevent a class from being inherited?",
+      "options": [
+        "final",
+        "abstract",
+        "static",
+        "private"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'final' keyword prevents a class from being subclassed.",
+      "module_id": "java_module_1",
+      "order": 21
+    },
+    {
+      "id": "java_q210",
+      "question": "Which method prints the stack trace of an exception?",
+      "options": [
+        "printStackTrace()",
+        "getMessage()",
+        "toString()",
+        "fillInStackTrace()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "printStackTrace() prints the call stack at the point the exception occurred.",
+      "module_id": "java_module_5",
+      "order": 210
+    },
+    {
+      "id": "java_q211",
+      "question": "Which exception occurs when you divide by zero?",
+      "options": [
+        "ArithmeticException",
+        "NullPointerException",
+        "IOException",
+        "ArrayIndexOutOfBoundsException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Dividing by zero triggers an ArithmeticException at runtime.",
+      "module_id": "java_module_5",
+      "order": 211
+    },
+    {
+      "id": "java_q212",
+      "question": "Which exception occurs when trying to access an invalid array index?",
+      "options": [
+        "ArrayIndexOutOfBoundsException",
+        "ArithmeticException",
+        "NullPointerException",
+        "IOException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Accessing an array outside its bounds triggers ArrayIndexOutOfBoundsException.",
+      "module_id": "java_module_5",
+      "order": 212
+    },
+    {
+      "id": "java_q213",
+      "question": "Which exception occurs when calling a method on a null object?",
+      "options": [
+        "NullPointerException",
+        "ArrayIndexOutOfBoundsException",
+        "IOException",
+        "ArithmeticException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "NullPointerException occurs when dereferencing a null object reference.",
+      "module_id": "java_module_5",
+      "order": 213
+    },
+    {
+      "id": "java_q214",
+      "question": "Which exception occurs when a file is not found?",
+      "options": [
+        "FileNotFoundException",
+        "IOException",
+        "NullPointerException",
+        "RuntimeException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "FileNotFoundException is a checked exception that occurs when a file is not found.",
+      "module_id": "java_module_5",
+      "order": 214
+    },
+    {
+      "id": "java_q215",
+      "question": "Which statement is true about finally block?",
+      "options": [
+        "Executes always",
+        "Executes only if exception occurs",
+        "Executes only if no exception",
+        "Executes never"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The finally block always executes after try/catch blocks, even if an exception occurs.",
+      "module_id": "java_module_5",
+      "order": 215
+    },
+    {
+      "id": "java_q216",
+      "question": "Which statement is correct about multiple catch blocks?",
+      "options": [
+        "More specific exceptions should be caught first",
+        "More general exceptions should be caught first",
+        "Order does not matter",
+        "Only one catch block is allowed"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Catch blocks should be ordered from most specific to most general to avoid unreachable code.",
+      "module_id": "java_module_5",
+      "order": 216
+    },
+    {
+      "id": "java_q217",
+      "question": "Which exception occurs when converting a string to number incorrectly?",
+      "options": [
+        "NumberFormatException",
+        "ClassNotFoundException",
+        "IOException",
+        "ArithmeticException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "NumberFormatException occurs when parsing an invalid string to a numeric type.",
+      "module_id": "java_module_5",
+      "order": 217
+    },
+    {
+      "id": "java_q218",
+      "question": "Which type of exception must be either caught or declared?",
+      "options": [
+        "Checked exception",
+        "Unchecked exception",
+        "Runtime exception",
+        "Error"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Checked exceptions must be handled with try/catch or declared in the method signature.",
+      "module_id": "java_module_5",
+      "order": 218
+    },
+    {
+      "id": "java_q219",
+      "question": "Which type of exception does not need to be declared or caught?",
+      "options": [
+        "Unchecked exception",
+        "Checked exception",
+        "IOException",
+        "SQLException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Unchecked exceptions inherit from RuntimeException and do not require explicit handling.",
+      "module_id": "java_module_5",
+      "order": 219
+    },
+    {
+      "id": "java_q22",
+      "question": "Which keyword declares a method without a body in Java?",
+      "options": [
+        "abstract",
+        "final",
+        "static",
+        "native"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'abstract' methods have no body and must be implemented in subclasses.",
+      "module_id": "java_module_1",
+      "order": 22
+    },
+    {
+      "id": "java_q220",
+      "question": "Which statement is true about throw and throws?",
+      "options": [
+        "throw throws an exception, throws declares exceptions",
+        "throw declares exceptions, throws throws",
+        "Both are the same",
+        "Neither is used for exceptions"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'throw' is used to throw an exception object; 'throws' declares the exceptions a method may throw.",
+      "module_id": "java_module_5",
+      "order": 220
+    },
+    {
+      "id": "java_q221",
+      "question": "Which method is inherited from Throwable class?",
+      "options": [
+        "getMessage()",
+        "toString()",
+        "printStackTrace()",
+        "All of the above"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "All listed methods are inherited from Throwable.",
+      "module_id": "java_module_5",
+      "order": 221
+    },
+    {
+      "id": "java_q222",
+      "question": "Which statement is correct about custom exceptions?",
+      "options": [
+        "Can extend Exception or RuntimeException",
+        "Cannot be created",
+        "Must be checked exception",
+        "Must be runtime exception"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Custom exceptions are created by extending Exception (checked) or RuntimeException (unchecked).",
+      "module_id": "java_module_5",
+      "order": 222
+    },
+    {
+      "id": "java_q223",
+      "question": "Which statement about try-with-resources is correct?",
+      "options": [
+        "Automatically closes resources",
+        "Only works with integers",
+        "Must be followed by finally",
+        "Cannot handle exceptions"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Try-with-resources ensures that resources are closed automatically when done.",
+      "module_id": "java_module_5",
+      "order": 223
+    },
+    {
+      "id": "java_q224",
+      "question": "Which statement is true about nested try-catch?",
+      "options": [
+        "A try block can contain another try-catch",
+        "Nested try is invalid",
+        "Only one catch per try",
+        "Finally cannot be used in nested try"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Try blocks can be nested to handle exceptions at different levels.",
+      "module_id": "java_module_5",
+      "order": 224
+    },
+    {
+      "id": "java_q225",
+      "question": "Which exception occurs when the class definition is not found at runtime?",
+      "options": [
+        "ClassNotFoundException",
+        "IOException",
+        "NullPointerException",
+        "RuntimeException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ClassNotFoundException occurs when the Java Virtual Machine cannot find the class at runtime.",
+      "module_id": "java_module_5",
+      "order": 225
+    },
+    {
+      "id": "java_q226",
+      "question": "Which exception occurs when performing I/O operations incorrectly?",
+      "options": [
+        "IOException",
+        "NullPointerException",
+        "ArithmeticException",
+        "NumberFormatException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "IOException is thrown when an input/output operation fails.",
+      "module_id": "java_module_5",
+      "order": 226
+    },
+    {
+      "id": "java_q227",
+      "question": "Which statement is true about exception hierarchy?",
+      "options": [
+        "All exceptions inherit from Throwable",
+        "All exceptions inherit from Object",
+        "Exceptions are not related",
+        "Exceptions inherit from String"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "All exception classes in Java are subclasses of Throwable.",
+      "module_id": "java_module_5",
+      "order": 227
+    },
+    {
+      "id": "java_q228",
+      "question": "Which exception occurs when an illegal cast is performed?",
+      "options": [
+        "ClassCastException",
+        "IOException",
+        "ArithmeticException",
+        "ArrayIndexOutOfBoundsException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ClassCastException occurs when trying to cast an object to an incompatible type.",
+      "module_id": "java_module_5",
+      "order": 228
+    },
+    {
+      "id": "java_q229",
+      "question": "Which exception occurs when array operations exceed the allocated size?",
+      "options": [
+        "ArrayIndexOutOfBoundsException",
+        "IOException",
+        "NullPointerException",
+        "RuntimeException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Accessing an array index outside its bounds triggers this exception.",
+      "module_id": "java_module_5",
+      "order": 229
+    },
+    {
+      "id": "java_q23",
+      "question": "Which operator is used for string concatenation in Java?",
+      "options": [
+        "+",
+        "-",
+        "*",
+        "&"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '+' operator concatenates strings in Java.",
+      "module_id": "java_module_1",
+      "order": 23
+    },
+    {
+      "id": "java_q230",
+      "question": "Which statement is correct about multiple exceptions in one catch?",
+      "options": [
+        "Use '|' to catch multiple exceptions",
+        "List exceptions separated by commas",
+        "Cannot catch multiple exceptions",
+        "Use && operator"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Java 7+ allows catching multiple exceptions in a single catch block using '|'.",
+      "module_id": "java_module_5",
+      "order": 230
+    },
+    {
+      "id": "java_q231",
+      "question": "Which statement is true about error handling?",
+      "options": [
+        "Errors are usually unrecoverable",
+        "Errors are always caught with try-catch",
+        "Errors are the same as exceptions",
+        "Errors can be ignored safely"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Errors are serious problems that applications should not try to handle.",
+      "module_id": "java_module_5",
+      "order": 231
+    },
+    {
+      "id": "java_q232",
+      "question": "Which exception occurs when arithmetic overflow happens in integer calculations?",
+      "options": [
+        "ArithmeticException",
+        "IOException",
+        "ClassNotFoundException",
+        "NullPointerException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ArithmeticException is thrown for illegal arithmetic operations such as division by zero.",
+      "module_id": "java_module_5",
+      "order": 232
+    },
+    {
+      "id": "java_q233",
+      "question": "Which statement is true about RuntimeException?",
+      "options": [
+        "Unchecked exception",
+        "Checked exception",
+        "Cannot be thrown",
+        "Always requires catch block"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "RuntimeException is an unchecked exception and does not require explicit handling.",
+      "module_id": "java_module_5",
+      "order": 233
+    },
+    {
+      "id": "java_q234",
+      "question": "Which statement about exception chaining is correct?",
+      "options": [
+        "An exception can refer to another as its cause",
+        "Exceptions cannot be chained",
+        "Only runtime exceptions can be chained",
+        "Only checked exceptions can be chained"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Chaining allows one exception to reference another exception as its cause.",
+      "module_id": "java_module_5",
+      "order": 234
+    },
+    {
+      "id": "java_q235",
+      "question": "Which statement correctly logs an exception?",
+      "options": [
+        "e.printStackTrace()",
+        "System.out.println(e)",
+        "logger.log(e)",
+        "All of the above"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "All listed methods can be used to log or print exception information.",
+      "module_id": "java_module_5",
+      "order": 235
+    },
+    {
+      "id": "java_q236",
+      "question": "Which exception occurs when trying to access a null array?",
+      "options": [
+        "NullPointerException",
+        "ArrayIndexOutOfBoundsException",
+        "IOException",
+        "ArithmeticException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Accessing or modifying a null array reference triggers a NullPointerException.",
+      "module_id": "java_module_5",
+      "order": 236
+    },
+    {
+      "id": "java_q237",
+      "question": "Which method in Throwable provides stack trace as an array?",
+      "options": [
+        "getStackTrace()",
+        "printStackTrace()",
+        "toString()",
+        "fillInStackTrace()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "getStackTrace() returns an array of stack trace elements.",
+      "module_id": "java_module_5",
+      "order": 237
+    },
+    {
+      "id": "java_q238",
+      "question": "Which statement about exception propagation is correct?",
+      "options": [
+        "Exceptions propagate up the call stack until caught",
+        "Exceptions propagate down the call stack",
+        "Exceptions stop the program immediately",
+        "Exceptions never propagate automatically"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "If an exception is not caught, it moves up the call stack to find a handler.",
+      "module_id": "java_module_5",
+      "order": 238
+    },
+    {
+      "id": "java_q239",
+      "question": "Which exception occurs when thread sleep is interrupted?",
+      "options": [
+        "InterruptedException",
+        "IOException",
+        "NullPointerException",
+        "RuntimeException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "InterruptedException is thrown when a thread is interrupted during sleep or wait.",
+      "module_id": "java_module_5",
+      "order": 239
+    },
+    {
+      "id": "java_q24",
+      "question": "Which keyword is used to define a method in Java?",
+      "options": [
+        "void",
+        "function",
+        "method",
+        "procedure"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'void' is used to define a method that does not return a value.",
+      "module_id": "java_module_1",
+      "order": 24
+    },
+    {
+      "id": "java_q240",
+      "question": "Which exception occurs when accessing a missing key in a map?",
+      "options": [
+        "NoSuchElementException",
+        "IOException",
+        "NullPointerException",
+        "ClassCastException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "NoSuchElementException is thrown when requesting an element that does not exist.",
+      "module_id": "java_module_5",
+      "order": 240
+    },
+    {
+      "id": "java_q241",
+      "question": "Which statement about exception handling best practice is correct?",
+      "options": [
+        "Handle specific exceptions first",
+        "Catch Exception directly always",
+        "Ignore exceptions",
+        "Use empty catch blocks"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Catching specific exceptions is better than catching the generic Exception class.",
+      "module_id": "java_module_5",
+      "order": 241
+    },
+    {
+      "id": "java_q242",
+      "question": "Which method fills in the current stack trace for an exception?",
+      "options": [
+        "fillInStackTrace()",
+        "getMessage()",
+        "printStackTrace()",
+        "toString()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "fillInStackTrace() updates the stack trace to reflect the current point in execution.",
+      "module_id": "java_module_5",
+      "order": 242
+    },
+    {
+      "id": "java_q243",
+      "question": "Which exception occurs when input from Scanner is not of the expected type?",
+      "options": [
+        "InputMismatchException",
+        "IOException",
+        "NullPointerException",
+        "NumberFormatException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "InputMismatchException is thrown when Scanner receives a different type than expected.",
+      "module_id": "java_module_5",
+      "order": 243
+    },
+    {
+      "id": "java_q244",
+      "question": "Which statement about try-catch-finally is true?",
+      "options": [
+        "finally block executes even if catch returns",
+        "finally never executes",
+        "finally only executes on exceptions",
+        "finally only executes if try has no exception"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Finally executes regardless of whether an exception occurs or a return statement is executed.",
+      "module_id": "java_module_5",
+      "order": 244
+    },
+    {
+      "id": "java_q245",
+      "question": "Which exception occurs when accessing invalid array elements using negative index?",
+      "options": [
+        "ArrayIndexOutOfBoundsException",
+        "IOException",
+        "NullPointerException",
+        "RuntimeException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Negative indices are invalid and cause ArrayIndexOutOfBoundsException.",
+      "module_id": "java_module_5",
+      "order": 245
+    },
+    {
+      "id": "java_q246",
+      "question": "Which statement is true about multiple exceptions in Java?",
+      "options": [
+        "They can be caught in separate catch blocks",
+        "Only one exception can occur per try",
+        "Exceptions cannot be caught",
+        "All exceptions are runtime only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Java allows multiple catch blocks to handle different exception types separately.",
+      "module_id": "java_module_5",
+      "order": 246
+    },
+    {
+      "id": "java_q247",
+      "question": "Which exception occurs when the thread is trying to access an object it doesn't own?",
+      "options": [
+        "IllegalMonitorStateException",
+        "IOException",
+        "NullPointerException",
+        "RuntimeException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "IllegalMonitorStateException occurs when a thread violates synchronization rules.",
+      "module_id": "java_module_5",
+      "order": 247
+    },
+    {
+      "id": "java_q248",
+      "question": "Which statement about checked vs unchecked exceptions is correct?",
+      "options": [
+        "Checked must be declared/caught, unchecked do not",
+        "Both must always be declared",
+        "Unchecked must be declared, checked do not",
+        "Neither need to be declared"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Checked exceptions require explicit handling, while unchecked exceptions do not.",
+      "module_id": "java_module_5",
+      "order": 248
+    },
+    {
+      "id": "java_q249",
+      "question": "Which statement is correct about throwable classes?",
+      "options": [
+        "Throwable is the superclass of all errors and exceptions",
+        "Throwable is only for errors",
+        "Throwable is only for exceptions",
+        "Throwable cannot be extended"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Throwable is the root class for all errors and exceptions in Java.",
+      "module_id": "java_module_5",
+      "order": 249
+    },
+    {
+      "id": "java_q25",
+      "question": "Which access modifier allows visibility only within the same class?",
+      "options": [
+        "private",
+        "public",
+        "protected",
+        "default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'private' members are accessible only within the same class.",
+      "module_id": "java_module_1",
+      "order": 25
+    },
+    {
+      "id": "java_q250",
+      "question": "Which statement is true about catching generic Exception?",
+      "options": [
+        "Catches all exceptions but should be avoided if possible",
+        "Catches only runtime exceptions",
+        "Cannot be used",
+        "Only catches checked exceptions"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Catching Exception will catch all exceptions, but catching specific exceptions is better practice.",
+      "module_id": "java_module_5",
+      "order": 250
+    },
+    {
+      "id": "java_q251",
+      "question": "What is the primary purpose of Object-Oriented Programming (OOP)?",
+      "options": [
+        "Organize code into objects for modularity and reuse",
+        "Write procedural code",
+        "Avoid using classes",
+        "Use only global variables"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "OOP organizes code into objects to improve modularity, maintainability, and reuse.",
+      "module_id": "java_module_6",
+      "order": 251
+    },
+    {
+      "id": "java_q252",
+      "question": "Which keyword is used to create a class in Java?",
+      "options": [
+        "class",
+        "object",
+        "new",
+        "struct"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'class' keyword declares a new class in Java.",
+      "module_id": "java_module_6",
+      "order": 252
+    },
+    {
+      "id": "java_q253",
+      "question": "Which keyword is used to create an object from a class?",
+      "options": [
+        "new",
+        "class",
+        "object",
+        "this"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'new' keyword creates an instance of a class (an object).",
+      "module_id": "java_module_6",
+      "order": 253
+    },
+    {
+      "id": "java_q254",
+      "question": "Which OOP concept restricts direct access to an object's data?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Encapsulation hides internal data and provides controlled access via methods.",
+      "module_id": "java_module_6",
+      "order": 254
+    },
+    {
+      "id": "java_q255",
+      "question": "Which OOP concept allows one class to acquire properties of another class?",
+      "options": [
+        "Inheritance",
+        "Encapsulation",
+        "Polymorphism",
+        "Abstraction"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Inheritance enables a class to inherit fields and methods from another class.",
+      "module_id": "java_module_6",
+      "order": 255
+    },
+    {
+      "id": "java_q256",
+      "question": "Which OOP concept allows objects to take multiple forms?",
+      "options": [
+        "Polymorphism",
+        "Encapsulation",
+        "Inheritance",
+        "Abstraction"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Polymorphism allows objects to behave differently based on their type or context.",
+      "module_id": "java_module_6",
+      "order": 256
+    },
+    {
+      "id": "java_q257",
+      "question": "Which OOP concept hides implementation details while exposing essential features?",
+      "options": [
+        "Abstraction",
+        "Polymorphism",
+        "Encapsulation",
+        "Inheritance"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Abstraction shows only relevant information and hides complex implementation details.",
+      "module_id": "java_module_6",
+      "order": 257
+    },
+    {
+      "id": "java_q258",
+      "question": "Which keyword indicates that a class inherits from another class?",
+      "options": [
+        "extends",
+        "implements",
+        "inherits",
+        "super"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'extends' keyword is used for class inheritance in Java.",
+      "module_id": "java_module_6",
+      "order": 258
+    },
+    {
+      "id": "java_q259",
+      "question": "Which keyword is used by a class to implement an interface?",
+      "options": [
+        "implements",
+        "extends",
+        "inherits",
+        "interface"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'implements' keyword allows a class to provide concrete behavior for an interface.",
+      "module_id": "java_module_6",
+      "order": 259
+    },
+    {
+      "id": "java_q26",
+      "question": "Which access modifier allows visibility within the same package?",
+      "options": [
+        "default",
+        "private",
+        "protected",
+        "public"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Default (no keyword) provides package-level visibility.",
+      "module_id": "java_module_1",
+      "order": 26
+    },
+    {
+      "id": "java_q260",
+      "question": "Which keyword refers to the parent class object in Java?",
+      "options": [
+        "super",
+        "this",
+        "parent",
+        "base"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'super' refers to the immediate parent class and can access its methods or constructors.",
+      "module_id": "java_module_6",
+      "order": 260
+    },
+    {
+      "id": "java_q261",
+      "question": "Which keyword refers to the current object in Java?",
+      "options": [
+        "this",
+        "super",
+        "self",
+        "current"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'this' refers to the current object instance within the class.",
+      "module_id": "java_module_6",
+      "order": 261
+    },
+    {
+      "id": "java_q262",
+      "question": "What is method overloading?",
+      "options": [
+        "Having multiple methods with the same name but different parameters",
+        "Having multiple methods with different names",
+        "Creating a new class",
+        "Overriding a method in subclass"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Method overloading allows multiple methods with the same name but different parameter lists.",
+      "module_id": "java_module_6",
+      "order": 262
+    },
+    {
+      "id": "java_q263",
+      "question": "What is method overriding?",
+      "options": [
+        "Providing a new implementation of a method in a subclass",
+        "Having multiple methods with the same name but different parameters",
+        "Creating an abstract class",
+        "Defining private methods"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Overriding allows a subclass to provide a specific implementation of a method defined in its parent class.",
+      "module_id": "java_module_6",
+      "order": 263
+    },
+    {
+      "id": "java_q264",
+      "question": "Which type of class cannot be instantiated directly?",
+      "options": [
+        "Abstract class",
+        "Concrete class",
+        "Final class",
+        "Static class"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Abstract classes cannot be instantiated; they are designed to be subclassed.",
+      "module_id": "java_module_6",
+      "order": 264
+    },
+    {
+      "id": "java_q265",
+      "question": "Which keyword prevents a class from being subclassed?",
+      "options": [
+        "final",
+        "abstract",
+        "static",
+        "private"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A final class cannot be extended or subclassed.",
+      "module_id": "java_module_6",
+      "order": 265
+    },
+    {
+      "id": "java_q266",
+      "question": "Which keyword prevents a method from being overridden?",
+      "options": [
+        "final",
+        "abstract",
+        "static",
+        "private"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A final method cannot be overridden by subclasses.",
+      "module_id": "java_module_6",
+      "order": 266
+    },
+    {
+      "id": "java_q267",
+      "question": "Which access modifier allows visibility only within the same class?",
+      "options": [
+        "private",
+        "public",
+        "protected",
+        "default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Private members are accessible only within the class they are declared.",
+      "module_id": "java_module_6",
+      "order": 267
+    },
+    {
+      "id": "java_q268",
+      "question": "Which access modifier allows visibility within the package and subclasses?",
+      "options": [
+        "protected",
+        "private",
+        "public",
+        "default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Protected members are visible within the package and to subclasses.",
+      "module_id": "java_module_6",
+      "order": 268
+    },
+    {
+      "id": "java_q269",
+      "question": "Which access modifier allows visibility from any class?",
+      "options": [
+        "public",
+        "private",
+        "protected",
+        "default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Public members can be accessed from any class.",
+      "module_id": "java_module_6",
+      "order": 269
+    },
+    {
+      "id": "java_q27",
+      "question": "Which access modifier allows visibility to subclasses even in different packages?",
+      "options": [
+        "protected",
+        "private",
+        "public",
+        "default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'protected' allows subclass access across packages.",
+      "module_id": "java_module_1",
+      "order": 27
+    },
+    {
+      "id": "java_q270",
+      "question": "Which access modifier allows visibility only within the same package?",
+      "options": [
+        "default (no modifier)",
+        "public",
+        "protected",
+        "private"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Default (no explicit modifier) allows access within the same package.",
+      "module_id": "java_module_6",
+      "order": 270
+    },
+    {
+      "id": "java_q271",
+      "question": "Which type of method belongs to the class rather than an object?",
+      "options": [
+        "Static method",
+        "Instance method",
+        "Abstract method",
+        "Final method"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Static methods belong to the class and can be called without creating an object.",
+      "module_id": "java_module_6",
+      "order": 271
+    },
+    {
+      "id": "java_q272",
+      "question": "Which type of variable belongs to an instance of a class?",
+      "options": [
+        "Instance variable",
+        "Static variable",
+        "Local variable",
+        "Constant variable"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Instance variables are tied to objects and each object has its own copy.",
+      "module_id": "java_module_6",
+      "order": 272
+    },
+    {
+      "id": "java_q273",
+      "question": "Which type of variable belongs to the class rather than any object?",
+      "options": [
+        "Static variable",
+        "Instance variable",
+        "Local variable",
+        "Final variable"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Static variables are shared across all instances of a class.",
+      "module_id": "java_module_6",
+      "order": 273
+    },
+    {
+      "id": "java_q274",
+      "question": "Which statement about constructors is correct?",
+      "options": [
+        "They initialize objects when created",
+        "They can have any name",
+        "They return a value",
+        "They cannot take parameters"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Constructors have the same name as the class and initialize new objects.",
+      "module_id": "java_module_6",
+      "order": 274
+    },
+    {
+      "id": "java_q275",
+      "question": "Which keyword is used to call the parent class constructor?",
+      "options": [
+        "super",
+        "this",
+        "parent",
+        "base"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'super()' calls the constructor of the parent class.",
+      "module_id": "java_module_6",
+      "order": 275
+    },
+    {
+      "id": "java_q276",
+      "question": "Which statement about interfaces is correct?",
+      "options": [
+        "Interfaces declare methods without implementations",
+        "Interfaces can have constructors",
+        "Interfaces cannot be implemented",
+        "Interfaces are objects"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Interfaces define method signatures without implementation and are implemented by classes.",
+      "module_id": "java_module_6",
+      "order": 276
+    },
+    {
+      "id": "java_q277",
+      "question": "Which keyword is used to declare an interface?",
+      "options": [
+        "interface",
+        "class",
+        "implements",
+        "abstract"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'interface' keyword declares an interface in Java.",
+      "module_id": "java_module_6",
+      "order": 277
+    },
+    {
+      "id": "java_q278",
+      "question": "Which statement about multiple inheritance in Java is correct?",
+      "options": [
+        "Java supports multiple inheritance through interfaces",
+        "Java supports multiple inheritance through classes",
+        "Java does not support multiple inheritance",
+        "Java supports it only for static methods"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Multiple inheritance of behavior is achieved using interfaces, not classes.",
+      "module_id": "java_module_6",
+      "order": 278
+    },
+    {
+      "id": "java_q279",
+      "question": "Which statement about abstract methods is correct?",
+      "options": [
+        "They are declared without a body and must be implemented by subclasses",
+        "They can be instantiated",
+        "They have a method body",
+        "They cannot be overridden"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Abstract methods define behavior without implementation and must be overridden.",
+      "module_id": "java_module_6",
+      "order": 279
+    },
+    {
+      "id": "java_q28",
+      "question": "Which access modifier allows visibility everywhere?",
+      "options": [
+        "public",
+        "private",
+        "protected",
+        "default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'public' members are accessible from any class.",
+      "module_id": "java_module_1",
+      "order": 28
+    },
+    {
+      "id": "java_q280",
+      "question": "Which statement about object class is correct?",
+      "options": [
+        "All classes implicitly inherit from java.lang.Object",
+        "Object class cannot be inherited",
+        "Only abstract classes inherit from Object",
+        "Interfaces inherit from Object"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Every class in Java implicitly extends the Object class if no other parent is specified.",
+      "module_id": "java_module_6",
+      "order": 280
+    },
+    {
+      "id": "java_q281",
+      "question": "Which statement about toString() is correct?",
+      "options": [
+        "Returns string representation of an object",
+        "Initializes an object",
+        "Overrides equals() method",
+        "Compares two objects"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "toString() returns a human-readable string representation of an object.",
+      "module_id": "java_module_6",
+      "order": 281
+    },
+    {
+      "id": "java_q282",
+      "question": "Which statement about equals() method is correct?",
+      "options": [
+        "Compares content of two objects",
+        "Compares memory addresses only",
+        "Creates a new object",
+        "Overrides toString() automatically"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "equals() is used to compare objects for equality based on content rather than reference.",
+      "module_id": "java_module_6",
+      "order": 282
+    },
+    {
+      "id": "java_q283",
+      "question": "Which statement about hashCode() is correct?",
+      "options": [
+        "Provides a hash value for an object",
+        "Overrides equals() automatically",
+        "Prevents inheritance",
+        "Compares two objects"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "hashCode() returns an integer hash value representing the object for hash-based collections.",
+      "module_id": "java_module_6",
+      "order": 283
+    },
+    {
+      "id": "java_q284",
+      "question": "Which statement about encapsulation is correct?",
+      "options": [
+        "Private fields with public getters/setters improve data security",
+        "All fields must be public",
+        "Methods cannot access private fields",
+        "Encapsulation prevents object creation"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Encapsulation uses private fields and public methods to protect object data.",
+      "module_id": "java_module_6",
+      "order": 284
+    },
+    {
+      "id": "java_q285",
+      "question": "Which principle states that objects should depend on abstractions rather than concrete implementations?",
+      "options": [
+        "Dependency Inversion Principle",
+        "Open/Closed Principle",
+        "Liskov Substitution Principle",
+        "Single Responsibility Principle"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Dependency Inversion Principle advocates using abstract classes or interfaces to reduce coupling.",
+      "module_id": "java_module_6",
+      "order": 285
+    },
+    {
+      "id": "java_q286",
+      "question": "Which OOP principle ensures a class has only one responsibility?",
+      "options": [
+        "Single Responsibility Principle",
+        "Open/Closed Principle",
+        "Liskov Substitution Principle",
+        "Dependency Inversion Principle"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The Single Responsibility Principle states that a class should have one, and only one, reason to change.",
+      "module_id": "java_module_6",
+      "order": 286
+    },
+    {
+      "id": "java_q287",
+      "question": "Which principle allows classes to be open for extension but closed for modification?",
+      "options": [
+        "Open/Closed Principle",
+        "Single Responsibility Principle",
+        "Liskov Substitution Principle",
+        "Dependency Inversion Principle"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Open/Closed Principle states that classes should be extendable without modifying existing code.",
+      "module_id": "java_module_6",
+      "order": 287
+    },
+    {
+      "id": "java_q288",
+      "question": "Which principle allows objects of a subclass to replace objects of a parent class?",
+      "options": [
+        "Liskov Substitution Principle",
+        "Open/Closed Principle",
+        "Single Responsibility Principle",
+        "Dependency Inversion Principle"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Liskov Substitution Principle ensures that subclasses can substitute parent classes without affecting correctness.",
+      "module_id": "java_module_6",
+      "order": 288
+    },
+    {
+      "id": "java_q289",
+      "question": "Which OOP principle promotes code reuse through inheritance and interfaces?",
+      "options": [
+        "Polymorphism",
+        "Encapsulation",
+        "Abstraction",
+        "Dependency Inversion"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Polymorphism allows multiple classes to be used interchangeably through common interfaces.",
+      "module_id": "java_module_6",
+      "order": 289
+    },
+    {
+      "id": "java_q29",
+      "question": "Which keyword is used to call a superclass constructor?",
+      "options": [
+        "super",
+        "this",
+        "parent",
+        "base"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'super' calls the constructor of the parent class.",
+      "module_id": "java_module_1",
+      "order": 29
+    },
+    {
+      "id": "java_q290",
+      "question": "Which statement about constructor overloading is correct?",
+      "options": [
+        "A class can have multiple constructors with different parameters",
+        "A class can only have one constructor",
+        "Constructors cannot take parameters",
+        "Constructors must be static"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Constructor overloading allows creating multiple constructors with different parameter lists.",
+      "module_id": "java_module_6",
+      "order": 290
+    },
+    {
+      "id": "java_q291",
+      "question": "Which statement about inner classes is correct?",
+      "options": [
+        "Inner classes are defined within another class",
+        "Inner classes are always static",
+        "Inner classes cannot access outer class members",
+        "Inner classes cannot have methods"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Inner classes are defined within another class and can access its members.",
+      "module_id": "java_module_6",
+      "order": 291
+    },
+    {
+      "id": "java_q292",
+      "question": "Which statement about static nested classes is correct?",
+      "options": [
+        "Static nested classes do not require an instance of outer class",
+        "Static nested classes cannot exist",
+        "Static nested classes are always abstract",
+        "Static nested classes cannot have fields"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Static nested classes exist independently of the outer class instance.",
+      "module_id": "java_module_6",
+      "order": 292
+    },
+    {
+      "id": "java_q293",
+      "question": "Which statement about final classes and methods is correct?",
+      "options": [
+        "Final classes cannot be subclassed, final methods cannot be overridden",
+        "Final classes can be subclassed",
+        "Final methods can be overridden",
+        "Final classes are abstract by default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Final prevents inheritance for classes and prevents overriding for methods.",
+      "module_id": "java_module_6",
+      "order": 293
+    },
+    {
+      "id": "java_q294",
+      "question": "Which statement about immutable objects is correct?",
+      "options": [
+        "Their state cannot change after creation",
+        "They can be modified anytime",
+        "They must be abstract",
+        "They cannot have methods"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Immutable objects cannot have their fields modified after construction.",
+      "module_id": "java_module_6",
+      "order": 294
+    },
+    {
+      "id": "java_q295",
+      "question": "Which statement about aggregation is correct?",
+      "options": [
+        "Represents a 'has-a' relationship without ownership",
+        "Represents inheritance",
+        "Represents polymorphism",
+        "Represents abstraction"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Aggregation represents a relationship where the child can exist independently of the parent.",
+      "module_id": "java_module_6",
+      "order": 295
+    },
+    {
+      "id": "java_q296",
+      "question": "Which statement about composition is correct?",
+      "options": [
+        "Represents a 'has-a' relationship with ownership",
+        "Represents inheritance",
+        "Represents polymorphism",
+        "Represents abstraction"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Composition implies strong ownership where the child cannot exist independently of the parent.",
+      "module_id": "java_module_6",
+      "order": 296
+    },
+    {
+      "id": "java_q297",
+      "question": "Which statement about OOP benefits is correct?",
+      "options": [
+        "Improves code reuse, maintainability, and modularity",
+        "Reduces readability",
+        "Eliminates encapsulation",
+        "Prevents inheritance"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "OOP improves code reuse, modularity, and maintainability through objects and classes.",
+      "module_id": "java_module_6",
+      "order": 297
+    },
+    {
+      "id": "java_q298",
+      "question": "Which statement about abstract classes and interfaces is correct?",
+      "options": [
+        "Abstract classes can have fields, interfaces cannot (except constants)",
+        "Interfaces can have constructors",
+        "Abstract classes cannot have methods",
+        "Interfaces are instantiated directly"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Abstract classes can have instance fields; interfaces cannot have instance fields, only constants.",
+      "module_id": "java_module_6",
+      "order": 298
+    },
+    {
+      "id": "java_q299",
+      "question": "Which statement about overriding equals() and hashCode() is correct?",
+      "options": [
+        "Both should be overridden together to maintain contract",
+        "Only equals() needs to be overridden",
+        "Only hashCode() needs to be overridden",
+        "Neither needs to be overridden"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Overriding equals() requires overriding hashCode() to maintain the contract for collections.",
+      "module_id": "java_module_6",
+      "order": 299
+    },
+    {
+      "id": "java_q3",
+      "question": "Which method is the entry point of a Java program?",
+      "options": [
+        "main",
+        "start",
+        "init",
+        "run"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The main method (`public static void main(String[] args)`) is the entry point of a Java program.",
+      "module_id": "java_module_1",
+      "order": 3
+    },
+    {
+      "id": "java_q30",
+      "question": "Which loop continues as long as the condition is true?",
+      "options": [
+        "while",
+        "do-while",
+        "for",
+        "foreach"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'while' loop checks the condition before executing the loop body.",
+      "module_id": "java_module_1",
+      "order": 30
+    },
+    {
+      "id": "java_q300",
+      "question": "Which OOP concept allows hiding internal details and only showing functionality?",
+      "options": [
+        "Abstraction",
+        "Encapsulation",
+        "Polymorphism",
+        "Inheritance"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Abstraction hides the implementation details and exposes only necessary functionalities.",
+      "module_id": "java_module_6",
+      "order": 300
+    },
+    {
+      "id": "java_q301",
+      "question": "What is the primary purpose of mini projects in learning Java?",
+      "options": [
+        "Apply learned concepts to real-world scenarios",
+        "Memorize syntax only",
+        "Create theoretical models",
+        "Avoid writing code"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Mini projects allow learners to apply Java concepts in practical situations.",
+      "module_id": "java_module_7",
+      "order": 301
+    },
+    {
+      "id": "java_q302",
+      "question": "Which is a good first mini project for Java beginners?",
+      "options": [
+        "Calculator",
+        "Operating System",
+        "Database Server",
+        "Web Browser"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A simple calculator project is ideal for beginners to practice variables, operators, and methods.",
+      "module_id": "java_module_7",
+      "order": 302
+    },
+    {
+      "id": "java_q303",
+      "question": "Which Java concept is commonly used in mini projects for data storage?",
+      "options": [
+        "Arrays and ArrayLists",
+        "Interfaces",
+        "Abstract Classes",
+        "Polymorphism"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Arrays and ArrayLists are often used to store and manipulate collections of data in projects.",
+      "module_id": "java_module_7",
+      "order": 303
+    },
+    {
+      "id": "java_q304",
+      "question": "Which concept is important for dividing mini project tasks into manageable parts?",
+      "options": [
+        "Methods",
+        "Static blocks",
+        "Interfaces",
+        "Final classes"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Methods allow breaking code into smaller, reusable, and manageable units.",
+      "module_id": "java_module_7",
+      "order": 304
+    },
+    {
+      "id": "java_q305",
+      "question": "Which OOP principle is essential in designing project classes?",
+      "options": [
+        "Encapsulation",
+        "Static methods only",
+        "Procedural programming",
+        "Global variables"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Encapsulation helps design classes with controlled access to data and behavior.",
+      "module_id": "java_module_7",
+      "order": 305
+    },
+    {
+      "id": "java_q306",
+      "question": "Which data structure is suitable for managing a list of tasks in a project?",
+      "options": [
+        "ArrayList",
+        "String",
+        "int",
+        "double"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "ArrayList allows dynamic storage and management of objects like tasks.",
+      "module_id": "java_module_7",
+      "order": 306
+    },
+    {
+      "id": "java_q307",
+      "question": "Which type of loop is commonly used for iterating through project data?",
+      "options": [
+        "for loop",
+        "do-nothing loop",
+        "switch statement",
+        "try-catch block"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "For loops are frequently used to iterate through arrays or lists in projects.",
+      "module_id": "java_module_7",
+      "order": 307
+    },
+    {
+      "id": "java_q308",
+      "question": "Which exception handling mechanism is essential in mini projects?",
+      "options": [
+        "try-catch",
+        "goto",
+        "throws clause only",
+        "while loop"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "try-catch blocks handle runtime errors gracefully and prevent program crashes.",
+      "module_id": "java_module_7",
+      "order": 308
+    },
+    {
+      "id": "java_q309",
+      "question": "Which method can be used to accept user input in mini projects?",
+      "options": [
+        "Scanner",
+        "System.exit",
+        "Math.random",
+        "Thread.sleep"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Scanner class is used to accept input from the user via console.",
+      "module_id": "java_module_7",
+      "order": 309
+    },
+    {
+      "id": "java_q31",
+      "question": "Which keyword is used to stop a loop prematurely?",
+      "options": [
+        "break",
+        "continue",
+        "exit",
+        "stop"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'break' exits the loop immediately.",
+      "module_id": "java_module_1",
+      "order": 31
+    },
+    {
+      "id": "java_q310",
+      "question": "Which type of project encourages object interaction?",
+      "options": [
+        "Object-oriented project",
+        "Procedural project",
+        "Static project",
+        "Functional project"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "OOP projects involve objects interacting, showcasing classes, methods, and encapsulation.",
+      "module_id": "java_module_7",
+      "order": 310
+    },
+    {
+      "id": "java_q311",
+      "question": "Which project is suitable to practice inheritance and polymorphism?",
+      "options": [
+        "Bank Management System",
+        "Basic Calculator",
+        "Hello World App",
+        "Static Math Library"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "A bank management system can have different account types using inheritance and polymorphism.",
+      "module_id": "java_module_7",
+      "order": 311
+    },
+    {
+      "id": "java_q312",
+      "question": "Which approach helps in testing mini projects incrementally?",
+      "options": [
+        "Unit testing",
+        "Skipping testing",
+        "Only final testing",
+        "Manual print statements only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Unit testing allows testing individual components or methods separately.",
+      "module_id": "java_module_7",
+      "order": 312
+    },
+    {
+      "id": "java_q313",
+      "question": "Which is a good practice for naming variables and methods in projects?",
+      "options": [
+        "Use descriptive names",
+        "Use single letters only",
+        "Random names",
+        "Numbers only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Descriptive names improve readability and maintainability of code.",
+      "module_id": "java_module_7",
+      "order": 313
+    },
+    {
+      "id": "java_q314",
+      "question": "Which technique helps organize related methods and variables?",
+      "options": [
+        "Classes",
+        "Global variables",
+        "Random functions",
+        "Static blocks"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Classes group related data and behavior together in an organized manner.",
+      "module_id": "java_module_7",
+      "order": 314
+    },
+    {
+      "id": "java_q315",
+      "question": "Which method ensures user input is valid in mini projects?",
+      "options": [
+        "Input validation using conditions",
+        "Ignoring input errors",
+        "Assuming input is correct",
+        "Using random input"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Input validation checks ensure correct data is entered before processing.",
+      "module_id": "java_module_7",
+      "order": 315
+    },
+    {
+      "id": "java_q316",
+      "question": "Which file type is commonly used to save project output?",
+      "options": [
+        "Text files (.txt)",
+        "Executable files only",
+        "Image files",
+        "Audio files"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Text files are often used to store output data from Java projects.",
+      "module_id": "java_module_7",
+      "order": 316
+    },
+    {
+      "id": "java_q317",
+      "question": "Which project type allows multiple users to interact simultaneously?",
+      "options": [
+        "Multi-user projects",
+        "Single method projects",
+        "Static projects",
+        "Console-only projects"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Multi-user projects involve managing user sessions and concurrent access.",
+      "module_id": "java_module_7",
+      "order": 317
+    },
+    {
+      "id": "java_q318",
+      "question": "Which concept helps reuse project code across multiple programs?",
+      "options": [
+        "Modularity through classes and methods",
+        "Copy-pasting code",
+        "Ignoring reuse",
+        "Global variables only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Modular code with reusable classes and methods promotes maintainability and reuse.",
+      "module_id": "java_module_7",
+      "order": 318
+    },
+    {
+      "id": "java_q319",
+      "question": "Which Java concept allows project data to be hidden from outside access?",
+      "options": [
+        "Encapsulation",
+        "Polymorphism",
+        "Inheritance",
+        "Abstract class"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Encapsulation hides data and allows controlled access through getters and setters.",
+      "module_id": "java_module_7",
+      "order": 319
+    },
+    {
+      "id": "java_q32",
+      "question": "Which keyword skips the current iteration of a loop?",
+      "options": [
+        "continue",
+        "break",
+        "skip",
+        "next"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'continue' skips the current iteration and moves to the next.",
+      "module_id": "java_module_1",
+      "order": 32
+    },
+    {
+      "id": "java_q320",
+      "question": "Which is a good method to handle exceptions in mini projects?",
+      "options": [
+        "try-catch-finally blocks",
+        "Ignoring errors",
+        "Using global variables",
+        "Static methods only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Try-catch-finally allows graceful handling of runtime errors.",
+      "module_id": "java_module_7",
+      "order": 320
+    },
+    {
+      "id": "java_q321",
+      "question": "Which data structure is suitable for managing key-value pairs in projects?",
+      "options": [
+        "HashMap",
+        "Array",
+        "int",
+        "String"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "HashMap stores key-value pairs efficiently and allows quick access to data.",
+      "module_id": "java_module_7",
+      "order": 321
+    },
+    {
+      "id": "java_q322",
+      "question": "Which loop type is suitable for iterating over collections in Java projects?",
+      "options": [
+        "Enhanced for loop",
+        "do-nothing loop",
+        "if-else",
+        "switch"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Enhanced for loops simplify iterating over arrays and collections.",
+      "module_id": "java_module_7",
+      "order": 322
+    },
+    {
+      "id": "java_q323",
+      "question": "Which technique improves project readability and maintainability?",
+      "options": [
+        "Commenting code and documentation",
+        "No comments",
+        "Random naming",
+        "Using only static methods"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Comments and documentation make code understandable and easier to maintain.",
+      "module_id": "java_module_7",
+      "order": 323
+    },
+    {
+      "id": "java_q324",
+      "question": "Which approach is ideal for dividing a large project into smaller tasks?",
+      "options": [
+        "Modular programming using classes and methods",
+        "Writing everything in main",
+        "Global variables everywhere",
+        "Ignoring structure"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Modular programming helps manage complexity by breaking the project into smaller components.",
+      "module_id": "java_module_7",
+      "order": 324
+    },
+    {
+      "id": "java_q325",
+      "question": "Which project encourages practicing debugging skills?",
+      "options": [
+        "Mini projects with intentional errors",
+        "Code without errors",
+        "Copy-paste projects",
+        "Only theoretical projects"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Debugging real projects helps improve problem-solving and debugging skills.",
+      "module_id": "java_module_7",
+      "order": 325
+    },
+    {
+      "id": "java_q326",
+      "question": "Which type of project is suitable to practice file handling in Java?",
+      "options": [
+        "Project that reads/writes files",
+        "Static console project",
+        "Random number project",
+        "No output project"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Projects that read/write files help learners practice input/output operations.",
+      "module_id": "java_module_7",
+      "order": 326
+    },
+    {
+      "id": "java_q327",
+      "question": "Which type of project allows practice of GUI design in Java?",
+      "options": [
+        "Swing or JavaFX projects",
+        "Console-only projects",
+        "Static math projects",
+        "Abstract class projects"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Java Swing or JavaFX projects allow designing graphical user interfaces.",
+      "module_id": "java_module_7",
+      "order": 327
+    },
+    {
+      "id": "java_q328",
+      "question": "Which method ensures project code is organized into reusable units?",
+      "options": [
+        "Methods/functions",
+        "Static blocks only",
+        "Global variables only",
+        "Random code blocks"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Methods allow encapsulating functionality for reuse and clarity.",
+      "module_id": "java_module_7",
+      "order": 328
+    },
+    {
+      "id": "java_q329",
+      "question": "Which technique helps ensure project output is correct?",
+      "options": [
+        "Testing and verification",
+        "Ignoring errors",
+        "Assuming code is correct",
+        "Printing random data"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Testing ensures the code behaves as expected and produces correct results.",
+      "module_id": "java_module_7",
+      "order": 329
+    },
+    {
+      "id": "java_q33",
+      "question": "Which method converts a string to an integer in Java?",
+      "options": [
+        "Integer.parseInt()",
+        "parseInt()",
+        "String.toInt()",
+        "Integer.convert()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Integer.parseInt() converts a string to an int.",
+      "module_id": "java_module_1",
+      "order": 33
+    },
+    {
+      "id": "java_q330",
+      "question": "Which concept is essential for projects involving multiple types of objects?",
+      "options": [
+        "Polymorphism",
+        "Global variables",
+        "Procedural code",
+        "Static methods only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Polymorphism allows objects of different classes to be treated uniformly.",
+      "module_id": "java_module_7",
+      "order": 330
+    },
+    {
+      "id": "java_q331",
+      "question": "Which type of mini project is suitable to practice arrays and collections?",
+      "options": [
+        "Inventory management system",
+        "Hello World app",
+        "Static calculator",
+        "Random number generator"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Inventory management projects involve storing and manipulating multiple items, ideal for practicing arrays and collections.",
+      "module_id": "java_module_7",
+      "order": 331
+    },
+    {
+      "id": "java_q332",
+      "question": "Which technique ensures modular and maintainable project structure?",
+      "options": [
+        "Object-oriented design",
+        "Procedural coding only",
+        "Copy-paste everything",
+        "Global variables only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "OOP principles allow modular, maintainable, and reusable project structure.",
+      "module_id": "java_module_7",
+      "order": 332
+    },
+    {
+      "id": "java_q333",
+      "question": "Which is an example of a project output verification technique?",
+      "options": [
+        "Unit tests and assertions",
+        "Ignoring outputs",
+        "Random printing",
+        "No testing"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Unit tests verify individual parts of the project for correctness.",
+      "module_id": "java_module_7",
+      "order": 333
+    },
+    {
+      "id": "java_q334",
+      "question": "Which Java concept is helpful to model real-world entities in mini projects?",
+      "options": [
+        "Classes and objects",
+        "Static variables only",
+        "Global variables only",
+        "Procedural functions only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Classes and objects allow modeling real-world entities with attributes and behavior.",
+      "module_id": "java_module_7",
+      "order": 334
+    },
+    {
+      "id": "java_q335",
+      "question": "Which practice helps ensure project code can be extended in the future?",
+      "options": [
+        "Writing modular and flexible code",
+        "Hardcoding everything",
+        "Using only static methods",
+        "Ignoring structure"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Modular, flexible code can be maintained and extended easily.",
+      "module_id": "java_module_7",
+      "order": 335
+    },
+    {
+      "id": "java_q336",
+      "question": "Which type of project output can be used to showcase project results?",
+      "options": [
+        "Reports, GUI, or console output",
+        "Hidden variables",
+        "Internal memory only",
+        "Random files only"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Outputs like reports or GUIs make the results visible to users and stakeholders.",
+      "module_id": "java_module_7",
+      "order": 336
+    },
+    {
+      "id": "java_q337",
+      "question": "Which technique is essential for collaborative mini projects?",
+      "options": [
+        "Version control (e.g., Git)",
+        "Single user only",
+        "Copy-paste sharing",
+        "Ignoring updates"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Version control allows multiple developers to collaborate effectively.",
+      "module_id": "java_module_7",
+      "order": 337
+    },
+    {
+      "id": "java_q338",
+      "question": "Which approach helps manage complexity in mini projects?",
+      "options": [
+        "Using classes, methods, and modularity",
+        "Writing everything in main method",
+        "Global variables only",
+        "Skipping OOP principles"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Using OOP principles and modularity keeps project code organized and manageable.",
+      "module_id": "java_module_7",
+      "order": 338
+    },
+    {
+      "id": "java_q339",
+      "question": "Which type of project helps practice exception handling with multiple inputs?",
+      "options": [
+        "Data processing projects",
+        "Hello World project",
+        "Static calculator",
+        "Random generator"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Data processing projects handle multiple inputs and require robust exception handling.",
+      "module_id": "java_module_7",
+      "order": 339
+    },
+    {
+      "id": "java_q34",
+      "question": "Which method converts an integer to a string in Java?",
+      "options": [
+        "String.valueOf()",
+        "toString()",
+        "Integer.toString()",
+        "All of the above"
+      ],
+      "correctOptionIndex": 3,
+      "explanation": "All listed methods can convert integers to strings.",
+      "module_id": "java_module_1",
+      "order": 34
+    },
+    {
+      "id": "java_q340",
+      "question": "Which project practice ensures code maintainability over time?",
+      "options": [
+        "Consistent naming, comments, and modularity",
+        "No comments, random names",
+        "Hardcoding values",
+        "Static-only approach"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Consistent naming, comments, and modularity improve long-term maintainability.",
+      "module_id": "java_module_7",
+      "order": 340
+    },
+    {
+      "id": "java_q341",
+      "question": "Which type of mini project encourages GUI, input/output, and logic integration?",
+      "options": [
+        "Interactive application projects",
+        "Static math calculation",
+        "Random print statements",
+        "Console-only output"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Interactive applications combine GUI, I/O, and logic, giving comprehensive practice.",
+      "module_id": "java_module_7",
+      "order": 341
+    },
+    {
+      "id": "java_q342",
+      "question": "Which technique ensures project code is reusable in other projects?",
+      "options": [
+        "Designing modular classes and methods",
+        "Writing everything in one block",
+        "Ignoring OOP",
+        "Using only global variables"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Modular and reusable code can be integrated into future projects easily.",
+      "module_id": "java_module_7",
+      "order": 342
+    },
+    {
+      "id": "java_q343",
+      "question": "Which concept ensures safe manipulation of project data?",
+      "options": [
+        "Encapsulation and input validation",
+        "Global variables only",
+        "Static blocks only",
+        "Ignoring user input"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Encapsulation and input validation prevent unauthorized or incorrect data access.",
+      "module_id": "java_module_7",
+      "order": 343
+    },
+    {
+      "id": "java_q344",
+      "question": "Which approach helps debug projects efficiently?",
+      "options": [
+        "Incremental testing and debugging",
+        "Skipping tests",
+        "Random print statements only",
+        "Ignoring errors"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Incremental testing allows finding and fixing bugs efficiently during development.",
+      "module_id": "java_module_7",
+      "order": 344
+    },
+    {
+      "id": "java_q345",
+      "question": "Which project type is suitable to practice file I/O and data storage?",
+      "options": [
+        "Mini database projects",
+        "Hello World project",
+        "Static calculator",
+        "Random generator"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Mini database projects involve reading/writing files to store data.",
+      "module_id": "java_module_7",
+      "order": 345
+    },
+    {
+      "id": "java_q346",
+      "question": "Which approach encourages collaboration and tracking changes in projects?",
+      "options": [
+        "Version control systems",
+        "Single developer only",
+        "Manual copying",
+        "Ignoring code history"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Version control allows collaboration, tracking changes, and managing project versions.",
+      "module_id": "java_module_7",
+      "order": 346
+    },
+    {
+      "id": "java_q347",
+      "question": "Which practice helps ensure mini project performance?",
+      "options": [
+        "Optimized algorithms and data structures",
+        "Random loops",
+        "No optimization",
+        "Static-only approach"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Using efficient algorithms and structures improves performance and scalability.",
+      "module_id": "java_module_7",
+      "order": 347
+    },
+    {
+      "id": "java_q348",
+      "question": "Which mini project concept helps simulate real-world business logic?",
+      "options": [
+        "Classes, objects, and methods interaction",
+        "Random static variables",
+        "Single function only",
+        "Ignoring OOP"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Simulating real-world scenarios involves modeling entities and interactions using OOP principles.",
+      "module_id": "java_module_7",
+      "order": 348
+    },
+    {
+      "id": "java_q349",
+      "question": "Which approach ensures mini project code is easy to read and maintain?",
+      "options": [
+        "Consistent formatting and naming",
+        "Random naming",
+        "No indentation",
+        "Skipping comments"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Consistent formatting and descriptive naming improve readability and maintainability.",
+      "module_id": "java_module_7",
+      "order": 349
+    },
+    {
+      "id": "java_q35",
+      "question": "Which operator is used for modulus division in Java?",
+      "options": [
+        "%",
+        "/",
+        "*",
+        "&"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '%' operator returns the remainder of a division.",
+      "module_id": "java_module_1",
+      "order": 35
+    },
+    {
+      "id": "java_q36",
+      "question": "Which keyword declares a variable that cannot change its value?",
+      "options": [
+        "final",
+        "const",
+        "immutable",
+        "static"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'final' keyword declares constants in Java.",
+      "module_id": "java_module_1",
+      "order": 36
+    },
+    {
+      "id": "java_q37",
+      "question": "Which keyword is used to define a package in Java?",
+      "options": [
+        "package",
+        "import",
+        "namespace",
+        "module"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'package' keyword defines a namespace for classes.",
+      "module_id": "java_module_1",
+      "order": 37
+    },
+    {
+      "id": "java_q38",
+      "question": "Which keyword is used to import other classes or packages?",
+      "options": [
+        "import",
+        "package",
+        "include",
+        "use"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'import' keyword is used to bring other classes or packages into scope.",
+      "module_id": "java_module_1",
+      "order": 38
+    },
+    {
+      "id": "java_q39",
+      "question": "Which keyword is used to declare a static method or variable?",
+      "options": [
+        "static",
+        "final",
+        "public",
+        "const"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'static' keyword declares members that belong to the class rather than instances.",
+      "module_id": "java_module_1",
+      "order": 39
+    },
+    {
+      "id": "java_q4",
+      "question": "Which of the following is a primitive data type in Java?",
+      "options": [
+        "int",
+        "String",
+        "Scanner",
+        "ArrayList"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "int is a primitive data type, whereas String, Scanner, and ArrayList are objects.",
+      "module_id": "java_module_1",
+      "order": 4
+    },
+    {
+      "id": "java_q40",
+      "question": "Which type of error occurs during compilation?",
+      "options": [
+        "Syntax error",
+        "Runtime error",
+        "Logical error",
+        "Exception"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Syntax errors occur when the code violates Java syntax rules.",
+      "module_id": "java_module_1",
+      "order": 40
+    },
+    {
+      "id": "java_q41",
+      "question": "Which type of error occurs while the program is running?",
+      "options": [
+        "Runtime error",
+        "Syntax error",
+        "Logical error",
+        "Compile-time error"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Runtime errors occur during execution, e.g., division by zero.",
+      "module_id": "java_module_1",
+      "order": 41
+    },
+    {
+      "id": "java_q42",
+      "question": "Which type of error produces unexpected results but no crash?",
+      "options": [
+        "Logical error",
+        "Runtime error",
+        "Syntax error",
+        "Exception"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Logical errors are bugs in logic producing wrong results.",
+      "module_id": "java_module_1",
+      "order": 42
+    },
+    {
+      "id": "java_q43",
+      "question": "Which exception is thrown when dividing by zero in Java?",
+      "options": [
+        "ArithmeticException",
+        "NullPointerException",
+        "ArrayIndexOutOfBoundsException",
+        "IOException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Dividing by zero throws ArithmeticException.",
+      "module_id": "java_module_1",
+      "order": 43
+    },
+    {
+      "id": "java_q44",
+      "question": "Which exception occurs when accessing an invalid array index?",
+      "options": [
+        "ArrayIndexOutOfBoundsException",
+        "ArithmeticException",
+        "NullPointerException",
+        "IllegalArgumentException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Accessing an invalid index throws ArrayIndexOutOfBoundsException.",
+      "module_id": "java_module_1",
+      "order": 44
+    },
+    {
+      "id": "java_q45",
+      "question": "Which exception occurs when calling a method on a null object?",
+      "options": [
+        "NullPointerException",
+        "ArithmeticException",
+        "ArrayIndexOutOfBoundsException",
+        "IOException"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "NullPointerException occurs when a method is invoked on a null reference.",
+      "module_id": "java_module_1",
+      "order": 45
+    },
+    {
+      "id": "java_q46",
+      "question": "Which method is used to get the length of a string in Java?",
+      "options": [
+        "length()",
+        "size()",
+        "count()",
+        "getLength()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "length() returns the number of characters in a string.",
+      "module_id": "java_module_1",
+      "order": 46
+    },
+    {
+      "id": "java_q47",
+      "question": "Which method is used to convert a string to uppercase?",
+      "options": [
+        "toUpperCase()",
+        "upper()",
+        "capitalize()",
+        "toUpper()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "toUpperCase() converts all characters in a string to uppercase.",
+      "module_id": "java_module_1",
+      "order": 47
+    },
+    {
+      "id": "java_q48",
+      "question": "Which method is used to convert a string to lowercase?",
+      "options": [
+        "toLowerCase()",
+        "lower()",
+        "decapitalize()",
+        "toLower()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "toLowerCase() converts all characters in a string to lowercase.",
+      "module_id": "java_module_1",
+      "order": 48
+    },
+    {
+      "id": "java_q49",
+      "question": "Which method compares two strings for equality?",
+      "options": [
+        "equals()",
+        "==",
+        "compare()",
+        "equalsIgnoreCase()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "equals() compares the actual content of strings.",
+      "module_id": "java_module_1",
+      "order": 49
+    },
+    {
+      "id": "java_q5",
+      "question": "Which operator is used for addition in Java?",
+      "options": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '+' operator is used for addition in Java.",
+      "module_id": "java_module_1",
+      "order": 5
+    },
+    {
+      "id": "java_q50",
+      "question": "Which method compares two strings ignoring case differences?",
+      "options": [
+        "equalsIgnoreCase()",
+        "equals()",
+        "compareTo()",
+        "compareToIgnoreCase()"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "equalsIgnoreCase() compares string content ignoring case.",
+      "module_id": "java_module_1",
+      "order": 50
+    },
+    {
+      "id": "java_q51",
+      "question": "Which keyword is used for a conditional statement in Java?",
+      "options": [
+        "if",
+        "switch",
+        "for",
+        "while"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'if' keyword is used to execute a block of code when a condition is true.",
+      "module_id": "java_module_2",
+      "order": 51
+    },
+    {
+      "id": "java_q52",
+      "question": "Which keyword is used to provide an alternative block if the 'if' condition is false?",
+      "options": [
+        "else",
+        "elseif",
+        "switch",
+        "default"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'else' executes a block when the 'if' condition is false.",
+      "module_id": "java_module_2",
+      "order": 52
+    },
+    {
+      "id": "java_q53",
+      "question": "Which keyword allows multiple conditions to be checked sequentially?",
+      "options": [
+        "else if",
+        "elif",
+        "switch",
+        "case"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'else if' allows chaining multiple conditions in order.",
+      "module_id": "java_module_2",
+      "order": 53
+    },
+    {
+      "id": "java_q54",
+      "question": "Which operator checks equality between two values?",
+      "options": [
+        "==",
+        "=",
+        "!=",
+        ">"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'==' checks if two values are equal, while '=' is assignment.",
+      "module_id": "java_module_2",
+      "order": 54
+    },
+    {
+      "id": "java_q55",
+      "question": "Which operator checks inequality between two values?",
+      "options": [
+        "!=",
+        "==",
+        ">",
+        "<"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'!=' checks if two values are not equal.",
+      "module_id": "java_module_2",
+      "order": 55
+    },
+    {
+      "id": "java_q56",
+      "question": "Which logical operator represents AND in Java?",
+      "options": [
+        "&&",
+        "||",
+        "!",
+        "&"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'&&' is the logical AND operator used to combine boolean conditions.",
+      "module_id": "java_module_2",
+      "order": 56
+    },
+    {
+      "id": "java_q57",
+      "question": "Which logical operator represents OR in Java?",
+      "options": [
+        "||",
+        "&&",
+        "!",
+        "|"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'||' is the logical OR operator used to combine boolean conditions.",
+      "module_id": "java_module_2",
+      "order": 57
+    },
+    {
+      "id": "java_q58",
+      "question": "Which logical operator negates a boolean expression?",
+      "options": [
+        "!",
+        "&&",
+        "||",
+        "~"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'!' negates a boolean expression.",
+      "module_id": "java_module_2",
+      "order": 58
+    },
+    {
+      "id": "java_q59",
+      "question": "Which keyword is used for multiple-choice conditions?",
+      "options": [
+        "switch",
+        "if",
+        "for",
+        "while"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'switch' evaluates an expression and matches it with 'case' labels.",
+      "module_id": "java_module_2",
+      "order": 59
+    },
+    {
+      "id": "java_q6",
+      "question": "Which symbol is used to denote a single-line comment in Java?",
+      "options": [
+        "//",
+        "/*",
+        "#",
+        "<!--"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Single-line comments in Java start with `//`.",
+      "module_id": "java_module_1",
+      "order": 6
+    },
+    {
+      "id": "java_q60",
+      "question": "Which keyword provides a default action in a switch statement?",
+      "options": [
+        "default",
+        "else",
+        "case",
+        "finally"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'default' case runs if none of the 'case' labels match.",
+      "module_id": "java_module_2",
+      "order": 60
+    },
+    {
+      "id": "java_q61",
+      "question": "Which statement allows nesting conditions within conditions?",
+      "options": [
+        "Nested if",
+        "switch",
+        "for",
+        "while"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "You can place 'if' statements inside other 'if' statements to create nested conditions.",
+      "module_id": "java_module_2",
+      "order": 61
+    },
+    {
+      "id": "java_q62",
+      "question": "Which of the following is a correct if-else syntax in Java?",
+      "options": [
+        "if(condition) { } else { }",
+        "if condition { } else { }",
+        "if(condition) : else { }",
+        "if(condition) then { } else { }"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Curly braces '{}' are used to enclose blocks in Java syntax.",
+      "module_id": "java_module_2",
+      "order": 62
+    },
+    {
+      "id": "java_q63",
+      "question": "Which statement evaluates a boolean variable?",
+      "options": [
+        "if(isTrue) { }",
+        "if(isTrue == 1) { }",
+        "if(isTrue = true) { }",
+        "if(isTrue != 0) { }"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Boolean variables can be evaluated directly in an if statement.",
+      "module_id": "java_module_2",
+      "order": 63
+    },
+    {
+      "id": "java_q64",
+      "question": "Which value can a boolean variable hold?",
+      "options": [
+        "true or false",
+        "0 or 1",
+        "'Y' or 'N'",
+        "yes or no"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Boolean variables hold true or false values.",
+      "module_id": "java_module_2",
+      "order": 64
+    },
+    {
+      "id": "java_q65",
+      "question": "Which operator compares if one value is greater than another?",
+      "options": [
+        ">",
+        "<",
+        ">=",
+        "<="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '>' operator checks if the left value is greater than the right value.",
+      "module_id": "java_module_2",
+      "order": 65
+    },
+    {
+      "id": "java_q66",
+      "question": "Which operator compares if one value is less than another?",
+      "options": [
+        "<",
+        ">",
+        "<=",
+        ">="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '<' operator checks if the left value is less than the right value.",
+      "module_id": "java_module_2",
+      "order": 66
+    },
+    {
+      "id": "java_q67",
+      "question": "Which operator checks if one value is greater than or equal to another?",
+      "options": [
+        ">=",
+        ">",
+        "<",
+        "<="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '>=' operator checks if the left value is greater than or equal to the right value.",
+      "module_id": "java_module_2",
+      "order": 67
+    },
+    {
+      "id": "java_q68",
+      "question": "Which operator checks if one value is less than or equal to another?",
+      "options": [
+        "<=",
+        "<",
+        ">",
+        ">="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '<=' operator checks if the left value is less than or equal to the right value.",
+      "module_id": "java_module_2",
+      "order": 68
+    },
+    {
+      "id": "java_q69",
+      "question": "Which block executes when all previous if and else-if conditions are false?",
+      "options": [
+        "else",
+        "default",
+        "finally",
+        "switch"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'else' block executes when no previous conditions are true.",
+      "module_id": "java_module_2",
+      "order": 69
+    },
+    {
+      "id": "java_q7",
+      "question": "Which keyword is used to declare a constant in Java?",
+      "options": [
+        "final",
+        "const",
+        "immutable",
+        "static"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'final' keyword is used to declare constants in Java.",
+      "module_id": "java_module_1",
+      "order": 7
+    },
+    {
+      "id": "java_q70",
+      "question": "Which type of expression can be used in if conditions?",
+      "options": [
+        "Boolean expression",
+        "String",
+        "int",
+        "char"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "If conditions require boolean expressions (true/false).",
+      "module_id": "java_module_2",
+      "order": 70
+    },
+    {
+      "id": "java_q71",
+      "question": "Which statement is used when comparing multiple discrete values?",
+      "options": [
+        "switch",
+        "if-else",
+        "for",
+        "while"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'switch' is convenient for multiple discrete values.",
+      "module_id": "java_module_2",
+      "order": 71
+    },
+    {
+      "id": "java_q72",
+      "question": "Which statement executes one or more statements based on a single condition?",
+      "options": [
+        "if",
+        "switch",
+        "for",
+        "while"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'if' executes code based on a boolean condition.",
+      "module_id": "java_module_2",
+      "order": 72
+    },
+    {
+      "id": "java_q73",
+      "question": "Which statement must follow an if statement without braces?",
+      "options": [
+        "the next single statement only",
+        "any number of statements",
+        "another if",
+        "a for loop"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Without braces, only the next statement is controlled by the if.",
+      "module_id": "java_module_2",
+      "order": 73
+    },
+    {
+      "id": "java_q74",
+      "question": "Which keyword can be used in switch statements to exit a case?",
+      "options": [
+        "break",
+        "continue",
+        "exit",
+        "stop"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'break' statement exits the switch case immediately.",
+      "module_id": "java_module_2",
+      "order": 74
+    },
+    {
+      "id": "java_q75",
+      "question": "Which value type is allowed in switch statements in Java?",
+      "options": [
+        "int, byte, short, char, String, enum",
+        "double, float",
+        "boolean",
+        "long"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Switch supports int, byte, short, char, String, and enum types.",
+      "module_id": "java_module_2",
+      "order": 75
+    },
+    {
+      "id": "java_q76",
+      "question": "Which block in switch runs if no case matches?",
+      "options": [
+        "default",
+        "else",
+        "finally",
+        "break"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'default' block runs when no case matches the switch expression.",
+      "module_id": "java_module_2",
+      "order": 76
+    },
+    {
+      "id": "java_q77",
+      "question": "Which statement allows combining multiple boolean expressions?",
+      "options": [
+        "Logical operators (&&, ||)",
+        "Arithmetic operators (+, -)",
+        "Comparison operators (>, <)",
+        "Assignment operator (=)"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Logical operators combine multiple boolean expressions.",
+      "module_id": "java_module_2",
+      "order": 77
+    },
+    {
+      "id": "java_q78",
+      "question": "Which operator has higher precedence: && or ||?",
+      "options": [
+        "&&",
+        "||",
+        "==",
+        "!="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'&&' has higher precedence than '||'.",
+      "module_id": "java_module_2",
+      "order": 78
+    },
+    {
+      "id": "java_q79",
+      "question": "Which statement allows checking the opposite of a condition?",
+      "options": [
+        "if(!condition)",
+        "if(condition)",
+        "if(condition==false)",
+        "if(0)"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The '!' operator negates a boolean condition.",
+      "module_id": "java_module_2",
+      "order": 79
+    },
+    {
+      "id": "java_q8",
+      "question": "Which data type is used to store a single character in Java?",
+      "options": [
+        "char",
+        "String",
+        "int",
+        "boolean"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'char' data type stores a single 16-bit Unicode character.",
+      "module_id": "java_module_1",
+      "order": 8
+    },
+    {
+      "id": "java_q80",
+      "question": "Which statement is correct to check if a > 10?",
+      "options": [
+        "if(a > 10) { }",
+        "if(a > 10)",
+        "if a > 10 { }",
+        "if a > 10:"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Curly braces are required for blocks; the condition must be in parentheses.",
+      "module_id": "java_module_2",
+      "order": 80
+    },
+    {
+      "id": "java_q81",
+      "question": "Which statement can be nested inside another if statement?",
+      "options": [
+        "Another if or else block",
+        "Only loops",
+        "Switch statements only",
+        "Nothing"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "You can nest if or else blocks inside other if statements.",
+      "module_id": "java_module_2",
+      "order": 81
+    },
+    {
+      "id": "java_q82",
+      "question": "Which logical expression is true if both conditions are true?",
+      "options": [
+        "condition1 && condition2",
+        "condition1 || condition2",
+        "!condition1",
+        "condition1 != condition2"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'&&' evaluates to true only if both operands are true.",
+      "module_id": "java_module_2",
+      "order": 82
+    },
+    {
+      "id": "java_q83",
+      "question": "Which logical expression is true if at least one condition is true?",
+      "options": [
+        "condition1 || condition2",
+        "condition1 && condition2",
+        "!condition1",
+        "condition1 != condition2"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'||' evaluates to true if either operand is true.",
+      "module_id": "java_module_2",
+      "order": 83
+    },
+    {
+      "id": "java_q84",
+      "question": "Which boolean expression is false when both operands are false?",
+      "options": [
+        "condition1 || condition2",
+        "condition1 && condition2",
+        "!condition1",
+        "condition1 != condition2"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'||' is false only if both operands are false.",
+      "module_id": "java_module_2",
+      "order": 84
+    },
+    {
+      "id": "java_q85",
+      "question": "Which boolean expression is true only if both operands are true?",
+      "options": [
+        "condition1 && condition2",
+        "condition1 || condition2",
+        "!condition1",
+        "condition1 != condition2"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "'&&' evaluates to true only when both operands are true.",
+      "module_id": "java_module_2",
+      "order": 85
+    },
+    {
+      "id": "java_q86",
+      "question": "Which if statement executes when the condition evaluates to false?",
+      "options": [
+        "else",
+        "if",
+        "else if",
+        "switch"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The else block runs when the if condition is false.",
+      "module_id": "java_module_2",
+      "order": 86
+    },
+    {
+      "id": "java_q87",
+      "question": "Which block allows multiple statements after else if condition?",
+      "options": [
+        "Curly braces {}",
+        "Parentheses ()",
+        "Square brackets []",
+        "None"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Curly braces {} group multiple statements into a block.",
+      "module_id": "java_module_2",
+      "order": 87
+    },
+    {
+      "id": "java_q88",
+      "question": "Which switch-case requires constant values for cases?",
+      "options": [
+        "case labels",
+        "if conditions",
+        "while loops",
+        "for loops"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Case labels must be compile-time constants.",
+      "module_id": "java_module_2",
+      "order": 88
+    },
+    {
+      "id": "java_q89",
+      "question": "Which block ensures some code runs after multiple if-else conditions?",
+      "options": [
+        "else",
+        "finally",
+        "default",
+        "switch"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The else block runs when all previous conditions are false.",
+      "module_id": "java_module_2",
+      "order": 89
+    },
+    {
+      "id": "java_q9",
+      "question": "Which keyword is used to inherit a class in Java?",
+      "options": [
+        "extends",
+        "implements",
+        "inherits",
+        "super"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The 'extends' keyword is used for class inheritance.",
+      "module_id": "java_module_1",
+      "order": 9
+    },
+    {
+      "id": "java_q90",
+      "question": "Which type of expression cannot be directly used in an if statement?",
+      "options": [
+        "int without comparison",
+        "boolean",
+        "comparisons",
+        "logical expressions"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "If statements require boolean expressions, not raw integers.",
+      "module_id": "java_module_2",
+      "order": 90
+    },
+    {
+      "id": "java_q91",
+      "question": "Which switch statement evaluates variable types?",
+      "options": [
+        "int, byte, short, char, String, enum",
+        "float, double, long",
+        "boolean",
+        "object"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Switch supports int, byte, short, char, String, and enum types.",
+      "module_id": "java_module_2",
+      "order": 91
+    },
+    {
+      "id": "java_q92",
+      "question": "Which statement is true about nested if statements?",
+      "options": [
+        "They allow complex conditional logic",
+        "They are illegal",
+        "They are replaced by loops",
+        "They cannot contain else"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Nested if statements allow complex decision-making.",
+      "module_id": "java_module_2",
+      "order": 92
+    },
+    {
+      "id": "java_q93",
+      "question": "Which boolean operator is evaluated first in Java?",
+      "options": [
+        "&&",
+        "||",
+        "==",
+        "!="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Logical AND (&&) has higher precedence than OR (||).",
+      "module_id": "java_module_2",
+      "order": 93
+    },
+    {
+      "id": "java_q94",
+      "question": "Which if-else-if chain executes only one block?",
+      "options": [
+        "The first condition that is true",
+        "All true conditions",
+        "The last condition",
+        "None"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Only the first true condition block executes in an if-else-if chain.",
+      "module_id": "java_module_2",
+      "order": 94
+    },
+    {
+      "id": "java_q95",
+      "question": "Which operator can be combined with if statements for multiple conditions?",
+      "options": [
+        "&& or ||",
+        "+ or -",
+        "* or /",
+        "== or !="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Logical operators '&&' and '||' combine multiple boolean conditions.",
+      "module_id": "java_module_2",
+      "order": 95
+    },
+    {
+      "id": "java_q96",
+      "question": "Which switch statement executes when no case matches?",
+      "options": [
+        "default",
+        "else",
+        "finally",
+        "break"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The default block executes when no case matches.",
+      "module_id": "java_module_2",
+      "order": 96
+    },
+    {
+      "id": "java_q97",
+      "question": "Which if statement executes a block only if a condition is true?",
+      "options": [
+        "if",
+        "else",
+        "switch",
+        "for"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "The if statement executes only when the condition is true.",
+      "module_id": "java_module_2",
+      "order": 97
+    },
+    {
+      "id": "java_q98",
+      "question": "Which type of operator checks multiple boolean conditions simultaneously?",
+      "options": [
+        "Logical operators",
+        "Arithmetic operators",
+        "Assignment operators",
+        "Comparison operators"
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Logical operators (&&, ||, !) check multiple boolean conditions.",
+      "module_id": "java_module_2",
+      "order": 98
+    },
+    {
+      "id": "java_q99",
+      "question": "Which boolean operator has the lowest precedence?",
+      "options": [
+        "||",
+        "&&",
+        "==",
+        "!="
+      ],
+      "correctOptionIndex": 0,
+      "explanation": "Logical OR '||' has lower precedence than '&&'.",
+      "module_id": "java_module_2",
+      "order": 99
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "collectionName": "modules",
+  "parentPath": "courses/sql_101",
+  "documentCount": 5,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "sql_module_1",
+        "sql_module_2",
+        "sql_module_3"
+      ]
+    },
+    "description": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Learn the basics of SQL and relational databases",
+        "Learn how to insert, update, and delete records",
+        "Learn how to query and sort data effectively"
+      ]
+    },
+    "title": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Module 1: Introduction to SQL",
+        "Module 2: SQL Operations",
+        "Module 3: Querying Data"
+      ]
+    },
+    "updated_at": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-09-20T16:43:14.285Z",
+        "2025-09-20T16:43:14.337Z",
+        "2025-09-20T16:43:14.366Z"
+      ]
+    },
+    "quiz_prefix": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "sql_1",
+        "sql_2",
+        "sql_3"
+      ]
+    },
+    "quiz_collection": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "course_quiz/sql_quiz/questions",
+        "course_quiz/sql_quiz/questions",
+        "course_quiz/sql_quiz/questions"
+      ]
+    },
+    "has_quiz": {
+      "types": [
+        "boolean"
+      ],
+      "samples": [
+        true,
+        true,
+        true
+      ]
+    },
+    "quiz_count": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        40,
+        40,
+        40
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "sql_module_1",
+      "description": "Learn the basics of SQL and relational databases",
+      "title": "Module 1: Introduction to SQL",
+      "updated_at": "2025-09-20T16:43:14.285Z",
+      "quiz_prefix": "sql_1",
+      "quiz_collection": "course_quiz/sql_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "sql_module_2",
+      "description": "Learn how to insert, update, and delete records",
+      "title": "Module 2: SQL Operations",
+      "updated_at": "2025-09-20T16:43:14.337Z",
+      "quiz_prefix": "sql_2",
+      "quiz_collection": "course_quiz/sql_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "sql_module_3",
+      "description": "Learn how to query and sort data effectively",
+      "title": "Module 3: Querying Data",
+      "updated_at": "2025-09-20T16:43:14.366Z",
+      "quiz_prefix": "sql_3",
+      "quiz_collection": "course_quiz/sql_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "sql_module_4",
+      "description": "Learn how to combine data from multiple tables using joins",
+      "title": "Module 4: Joins & Relationships",
+      "updated_at": "2025-09-20T16:43:14.463Z",
+      "quiz_prefix": "sql_4",
+      "quiz_collection": "course_quiz/sql_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "sql_module_5",
+      "description": "Dive into subqueries, indexes, and transactions",
+      "title": "Module 5: Advanced SQL",
+      "updated_at": "2025-09-20T16:43:14.859Z",
+      "quiz_prefix": "sql_5",
+      "quiz_collection": "course_quiz/sql_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    }
+  ]
+}

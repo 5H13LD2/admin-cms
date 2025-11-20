@@ -1,0 +1,20 @@
+{
+  "collectionName": "quizResults",
+  "parentPath": "users/BfdzJnwj2TAgsfRiQFDn",
+  "documentCount": 1,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "YKVSKb0MZWooeP6EWy5k"
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "YKVSKb0MZWooeP6EWy5k"
+    }
+  ]
+}

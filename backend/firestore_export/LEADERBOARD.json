@@ -1,0 +1,164 @@
+{
+  "collectionName": "LEADERBOARD",
+  "parentPath": "",
+  "documentCount": 4,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "global",
+        "UID ng user (same sa Auth at users collection)",
+        "python_course"
+      ]
+    },
+    "type": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "global",
+        "course",
+        "global"
+      ]
+    },
+    "period": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "all_time",
+        "all_time",
+        "weekly"
+      ]
+    },
+    "rankings": {
+      "types": [
+        "array"
+      ],
+      "samples": [
+        [
+          "{\n      userId: \"user123\",\n      username: \"jerico_dev\",\n      displayName: \"Jerico Jimenez\",\n      totalScore: 2850,\n      rank: 1,\n      coursesCompleted: 2,\n      streak: 21,\n      lastActivity: Timestamp\n    }",
+          "{\n      userId: \"user456\",\n      username: \"jane_doe\",\n      displayName: \"Jane Doe\", \n      totalScore: 2640,\n      rank: 2,\n      coursesCompleted: 1,\n      streak: 15,\n      lastActivity: Timestamp\n    }\n"
+        ],
+        [
+          ""
+        ],
+        [
+          ""
+        ]
+      ]
+    },
+    "updatedAt": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-06-08T16:00:00.564Z",
+        "",
+        "2025-06-08T16:00:00.391Z"
+      ]
+    },
+    "totalParticipants": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0,
+        0,
+        0
+      ]
+    },
+    "username": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Display name sa leaderboard (kukunin mo from\nusers)"
+      ]
+    },
+    "totalExp": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0
+      ]
+    },
+    "lastUpdated": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-06-03T16:00:00.693Z"
+      ]
+    },
+    "courseId": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "python_course"
+      ]
+    },
+    "weekStart": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-06-08T16:00:00.764Z"
+      ]
+    },
+    "weekEnd": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-06-08T16:00:00.987Z"
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "global",
+      "type": "global",
+      "period": "all_time",
+      "rankings": [
+        "{\n      userId: \"user123\",\n      username: \"jerico_dev\",\n      displayName: \"Jerico Jimenez\",\n      totalScore: 2850,\n      rank: 1,\n      coursesCompleted: 2,\n      streak: 21,\n      lastActivity: Timestamp\n    }",
+        "{\n      userId: \"user456\",\n      username: \"jane_doe\",\n      displayName: \"Jane Doe\", \n      totalScore: 2640,\n      rank: 2,\n      coursesCompleted: 1,\n      streak: 15,\n      lastActivity: Timestamp\n    }\n"
+      ],
+      "updatedAt": "2025-06-08T16:00:00.564Z",
+      "totalParticipants": 0
+    },
+    {
+      "id": "UID ng user (same sa Auth at users collection)",
+      "username": "Display name sa leaderboard (kukunin mo from\nusers)",
+      "totalExp": 0,
+      "lastUpdated": "2025-06-03T16:00:00.693Z"
+    },
+    {
+      "id": "python_course",
+      "type": "course",
+      "courseId": "python_course",
+      "period": "all_time",
+      "rankings": [
+        ""
+      ],
+      "updatedAt": "",
+      "totalParticipants": 0
+    },
+    {
+      "id": "weekly",
+      "type": "global",
+      "period": "weekly",
+      "weekStart": "2025-06-08T16:00:00.764Z",
+      "weekEnd": "2025-06-08T16:00:00.987Z",
+      "rankings": [
+        ""
+      ],
+      "updatedAt": "2025-06-08T16:00:00.391Z",
+      "totalParticipants": 0
+    }
+  ]
+}

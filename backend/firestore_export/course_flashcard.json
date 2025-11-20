@@ -1,0 +1,28 @@
+{
+  "collectionName": "course_flashcard",
+  "parentPath": "",
+  "documentCount": 3,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_101",
+        "python_101",
+        "sql_101"
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "java_101"
+    },
+    {
+      "id": "python_101"
+    },
+    {
+      "id": "sql_101"
+    }
+  ]
+}

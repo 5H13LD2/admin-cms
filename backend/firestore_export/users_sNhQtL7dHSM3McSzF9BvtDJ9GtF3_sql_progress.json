@@ -1,0 +1,196 @@
+{
+  "collectionName": "sql_progress",
+  "parentPath": "users/sNhQtL7dHSM3McSzF9BvtDJ9GtF3",
+  "documentCount": 8,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "ZbVCsLpH2YkHESMfRJme",
+        "sql_challenge_02_where_filter",
+        "sql_challenge_03_select_columns"
+      ]
+    },
+    "timeTaken": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        15,
+        1122,
+        126
+      ]
+    },
+    "bestScore": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        100,
+        0,
+        0
+      ]
+    },
+    "formattedTimeTaken": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "15s",
+        "18m 42s",
+        "2m 6s"
+      ]
+    },
+    "statusText": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Completed",
+        "In Progress",
+        "In Progress"
+      ]
+    },
+    "lastAttemptDate": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-10-29T08:08:50Z",
+        "2025-10-29T08:33:28Z",
+        "2025-10-29T09:28:21Z"
+      ]
+    },
+    "userQuery": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "SELECT * FROM students WHERE age >= 21;",
+        "select * from students\nWHERE age <= 20",
+        "SELECT * FROM students\nAVG (age) as 'average_age';"
+      ]
+    },
+    "passed": {
+      "types": [
+        "boolean"
+      ],
+      "samples": [
+        true,
+        false,
+        false
+      ]
+    },
+    "attempts": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        8,
+        3
+      ]
+    },
+    "status": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "completed",
+        "in_progress",
+        "in_progress"
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "ZbVCsLpH2YkHESMfRJme"
+    },
+    {
+      "id": "sql_challenge_02_where_filter",
+      "timeTaken": 15,
+      "bestScore": 100,
+      "formattedTimeTaken": "15s",
+      "statusText": "Completed",
+      "lastAttemptDate": "2025-10-29T08:08:50Z",
+      "userQuery": "SELECT * FROM students WHERE age >= 21;",
+      "passed": true,
+      "attempts": 1,
+      "status": "completed"
+    },
+    {
+      "id": "sql_challenge_03_select_columns",
+      "timeTaken": 1122,
+      "bestScore": 0,
+      "formattedTimeTaken": "18m 42s",
+      "statusText": "In Progress",
+      "lastAttemptDate": "2025-10-29T08:33:28Z",
+      "userQuery": "select * from students\nWHERE age <= 20",
+      "passed": false,
+      "attempts": 8,
+      "status": "in_progress"
+    },
+    {
+      "id": "sql_challenge_06_avg",
+      "timeTaken": 126,
+      "bestScore": 0,
+      "formattedTimeTaken": "2m 6s",
+      "statusText": "In Progress",
+      "lastAttemptDate": "2025-10-29T09:28:21Z",
+      "userQuery": "SELECT * FROM students\nAVG (age) as 'average_age';",
+      "passed": false,
+      "attempts": 3,
+      "status": "in_progress"
+    },
+    {
+      "id": "sql_challenge_07_inner_join",
+      "timeTaken": 156,
+      "bestScore": 100,
+      "formattedTimeTaken": "2m 36s",
+      "statusText": "In Progress",
+      "lastAttemptDate": "2025-10-30T06:54:12Z",
+      "userQuery": "SELECT * from enrollments group by 1 order by 2",
+      "passed": false,
+      "attempts": 16,
+      "status": "in_progress"
+    },
+    {
+      "id": "sql_challenge_08_group_by",
+      "timeTaken": 177,
+      "bestScore": 0,
+      "formattedTimeTaken": "2m 57s",
+      "statusText": "In Progress",
+      "lastAttemptDate": "2025-10-29T08:36:48Z",
+      "userQuery": "SELECT * FROM students \nCOUNT * GROUP BY age;",
+      "passed": false,
+      "attempts": 8,
+      "status": "in_progress"
+    },
+    {
+      "id": "sql_challenge_09_having",
+      "timeTaken": 16,
+      "bestScore": 100,
+      "formattedTimeTaken": "16s",
+      "statusText": "Completed",
+      "lastAttemptDate": "2025-10-29T08:41:39Z",
+      "userQuery": "SELECT course_id, COUNT(*) \nAS student_count FROM enrollments GROUP BY course_id HAVING COUNT(*) > 1;",
+      "passed": true,
+      "attempts": 1,
+      "status": "completed"
+    },
+    {
+      "id": "sql_challenge_10_subquery",
+      "timeTaken": 139,
+      "bestScore": 0,
+      "formattedTimeTaken": "2m 19s",
+      "statusText": "In Progress",
+      "lastAttemptDate": "2025-10-29T08:40:41Z",
+      "userQuery": "SELECT name, age FROM students \nWHERE age > \n(\nSELECT AVG(age) \nFROM students);",
+      "passed": false,
+      "attempts": 8,
+      "status": "in_progress"
+    }
+  ]
+}

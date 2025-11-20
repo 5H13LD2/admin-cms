@@ -1,0 +1,266 @@
+{
+  "collectionName": "modules",
+  "parentPath": "courses/java_101",
+  "documentCount": 9,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_module_1",
+        "java_module_2",
+        "java_module_3"
+      ]
+    },
+    "description": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Introduction to Java programming language",
+        "Learn how to control the flow of your Java programs",
+        "Create reusable blocks of code with methods"
+      ]
+    },
+    "title": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Module 1: Java Basics",
+        "Module 2: if-else Statements",
+        "Module 3: Methods and Functions"
+      ]
+    },
+    "updated_at": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-09-20T16:33:13.995Z",
+        "2025-09-20T16:33:14.035Z",
+        "2025-09-20T16:33:14.057Z"
+      ]
+    },
+    "quiz_prefix": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_1",
+        "java_2",
+        "java_3"
+      ]
+    },
+    "quiz_collection": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "course_quiz/java_quiz/questions",
+        "course_quiz/java_quiz/questions",
+        "course_quiz/java_quiz/questions"
+      ]
+    },
+    "has_quiz": {
+      "types": [
+        "boolean"
+      ],
+      "samples": [
+        true,
+        true,
+        true
+      ]
+    },
+    "quiz_count": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        40,
+        40,
+        40
+      ]
+    },
+    "progress": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        25
+      ]
+    },
+    "moduleId": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "adasd",
+        "adsasadsadaskalbo-hahaha"
+      ]
+    },
+    "courseId": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "java_101",
+        "java_101"
+      ]
+    },
+    "order": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        0
+      ]
+    },
+    "estimatedMinutes": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0,
+        0
+      ]
+    },
+    "totalLessons": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        0,
+        0
+      ]
+    },
+    "isUnlocked": {
+      "types": [
+        "boolean"
+      ],
+      "samples": [
+        false,
+        false
+      ]
+    },
+    "createdAt": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-09-18T16:27:12.367Z",
+        "2025-09-18T16:28:16.108Z"
+      ]
+    },
+    "updatedAt": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-09-18T16:27:12.367Z",
+        "2025-09-18T16:28:16.108Z"
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "java_module_1",
+      "description": "Introduction to Java programming language",
+      "title": "Module 1: Java Basics",
+      "updated_at": "2025-09-20T16:33:13.995Z",
+      "quiz_prefix": "java_1",
+      "quiz_collection": "course_quiz/java_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40,
+      "progress": 25
+    },
+    {
+      "id": "java_module_2",
+      "description": "Learn how to control the flow of your Java programs",
+      "title": "Module 2: if-else Statements",
+      "updated_at": "2025-09-20T16:33:14.035Z",
+      "quiz_prefix": "java_2",
+      "quiz_collection": "course_quiz/java_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "java_module_3",
+      "description": "Create reusable blocks of code with methods",
+      "title": "Module 3: Methods and Functions",
+      "updated_at": "2025-09-20T16:33:14.057Z",
+      "quiz_prefix": "java_3",
+      "quiz_collection": "course_quiz/java_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "java_module_4",
+      "description": "Store and manipulate collections of data",
+      "title": "Module 4: Arrays and Strings",
+      "updated_at": "2025-09-20T16:33:14.109Z",
+      "quiz_prefix": "java_4",
+      "quiz_collection": "course_quiz/java_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "java_module_5",
+      "description": "Handle runtime errors gracefully",
+      "title": "Module 5: Exception Handling",
+      "updated_at": "2025-09-20T16:33:14.160Z",
+      "quiz_prefix": "java_5",
+      "quiz_collection": "course_quiz/java_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "java_module_6",
+      "description": "Master the core concepts of OOP in Java",
+      "title": "Module 6: Object-Oriented Programming",
+      "updated_at": "2025-09-20T16:33:14.194Z",
+      "quiz_prefix": "java_6",
+      "quiz_collection": "course_quiz/java_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "java_module_7",
+      "description": "Apply everything you've learned in real-world projects",
+      "title": "Module 7: Mini Projects",
+      "updated_at": "2025-09-20T16:33:14.387Z",
+      "quiz_prefix": "java_7",
+      "quiz_collection": "course_quiz/java_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "joRtPvQz2T8g5rWkPFnS",
+      "moduleId": "adasd",
+      "courseId": "java_101",
+      "title": "adasd",
+      "description": "asdada",
+      "order": 1,
+      "estimatedMinutes": 0,
+      "totalLessons": 0,
+      "isUnlocked": false,
+      "createdAt": "2025-09-18T16:27:12.367Z",
+      "updatedAt": "2025-09-18T16:27:12.367Z"
+    },
+    {
+      "id": "k8OGuG1PCuS7vwTodUV4",
+      "moduleId": "adsasadsadaskalbo-hahaha",
+      "courseId": "java_101",
+      "title": "adsasadsadaskalbo hahaha",
+      "description": "sadasd",
+      "order": 0,
+      "estimatedMinutes": 0,
+      "totalLessons": 0,
+      "isUnlocked": false,
+      "createdAt": "2025-09-18T16:28:16.108Z",
+      "updatedAt": "2025-09-18T16:28:16.108Z"
+    }
+  ]
+}

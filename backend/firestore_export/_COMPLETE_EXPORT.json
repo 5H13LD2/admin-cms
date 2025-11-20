@@ -1,0 +1,2029 @@
+{
+  "LEADERBOARD": {
+    "collectionName": "LEADERBOARD",
+    "parentPath": "",
+    "documentCount": 4,
+    "schema": {
+      "id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "global",
+          "UID ng user (same sa Auth at users collection)",
+          "python_course"
+        ]
+      },
+      "type": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "global",
+          "course",
+          "global"
+        ]
+      },
+      "period": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "all_time",
+          "all_time",
+          "weekly"
+        ]
+      },
+      "rankings": {
+        "types": [
+          "array"
+        ],
+        "samples": [
+          [
+            "{\n      userId: \"user123\",\n      username: \"jerico_dev\",\n      displayName: \"Jerico Jimenez\",\n      totalScore: 2850,\n      rank: 1,\n      coursesCompleted: 2,\n      streak: 21,\n      lastActivity: Timestamp\n    }",
+            "{\n      userId: \"user456\",\n      username: \"jane_doe\",\n      displayName: \"Jane Doe\", \n      totalScore: 2640,\n      rank: 2,\n      coursesCompleted: 1,\n      streak: 15,\n      lastActivity: Timestamp\n    }\n"
+          ],
+          [
+            ""
+          ],
+          [
+            ""
+          ]
+        ]
+      },
+      "updatedAt": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-06-08T16:00:00.564Z",
+          "",
+          "2025-06-08T16:00:00.391Z"
+        ]
+      },
+      "totalParticipants": {
+        "types": [
+          "number"
+        ],
+        "samples": [
+          0,
+          0,
+          0
+        ]
+      },
+      "username": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Display name sa leaderboard (kukunin mo from\nusers)"
+        ]
+      },
+      "totalExp": {
+        "types": [
+          "number"
+        ],
+        "samples": [
+          0
+        ]
+      },
+      "lastUpdated": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-06-03T16:00:00.693Z"
+        ]
+      },
+      "courseId": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "python_course"
+        ]
+      },
+      "weekStart": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-06-08T16:00:00.764Z"
+        ]
+      },
+      "weekEnd": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-06-08T16:00:00.987Z"
+        ]
+      }
+    },
+    "data": [
+      {
+        "id": "global",
+        "type": "global",
+        "period": "all_time",
+        "rankings": [
+          "{\n      userId: \"user123\",\n      username: \"jerico_dev\",\n      displayName: \"Jerico Jimenez\",\n      totalScore: 2850,\n      rank: 1,\n      coursesCompleted: 2,\n      streak: 21,\n      lastActivity: Timestamp\n    }",
+          "{\n      userId: \"user456\",\n      username: \"jane_doe\",\n      displayName: \"Jane Doe\", \n      totalScore: 2640,\n      rank: 2,\n      coursesCompleted: 1,\n      streak: 15,\n      lastActivity: Timestamp\n    }\n"
+        ],
+        "updatedAt": "2025-06-08T16:00:00.564Z",
+        "totalParticipants": 0
+      },
+      {
+        "id": "UID ng user (same sa Auth at users collection)",
+        "username": "Display name sa leaderboard (kukunin mo from\nusers)",
+        "totalExp": 0,
+        "lastUpdated": "2025-06-03T16:00:00.693Z"
+      },
+      {
+        "id": "python_course",
+        "type": "course",
+        "courseId": "python_course",
+        "period": "all_time",
+        "rankings": [
+          ""
+        ],
+        "updatedAt": "",
+        "totalParticipants": 0
+      },
+      {
+        "id": "weekly",
+        "type": "global",
+        "period": "weekly",
+        "weekStart": "2025-06-08T16:00:00.764Z",
+        "weekEnd": "2025-06-08T16:00:00.987Z",
+        "rankings": [
+          ""
+        ],
+        "updatedAt": "2025-06-08T16:00:00.391Z",
+        "totalParticipants": 0
+      }
+    ]
+  },
+  "achievements": {
+    "collectionName": "achievements",
+    "parentPath": "",
+    "documentCount": 3,
+    "schema": {
+      "id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "code_master",
+          "first_lesson",
+          "week_streak"
+        ]
+      },
+      "title": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Code Master",
+          "First Step",
+          "Week Warrior"
+        ]
+      },
+      "description": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Solve 50 coding exercises",
+          "Complete your first lesson",
+          "Study for 7 consecutive days"
+        ]
+      },
+      "icon": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "💻",
+          "🎯",
+          "🔥"
+        ]
+      },
+      "points": {
+        "types": [
+          "string",
+          "number"
+        ],
+        "samples": [
+          "500",
+          50,
+          "200"
+        ]
+      },
+      "category": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "skill",
+          "milestone",
+          "consistency"
+        ]
+      },
+      "rarity": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "rare",
+          "common",
+          "uncommon\""
+        ]
+      },
+      "requirements": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "{\n    type: \"exercise_completion\",\n    count: 50\n  }",
+          "{\n    type: \"lesson_completion\",\n    count: 1\n  }\n",
+          " {\n    type: \"daily_streak\",\n    count: 7\n  }\n"
+        ]
+      },
+      "isActive": {
+        "types": [
+          "boolean"
+        ],
+        "samples": [
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    "data": [
+      {
+        "id": "code_master",
+        "title": "Code Master",
+        "description": "Solve 50 coding exercises",
+        "icon": "💻",
+        "points": "500",
+        "category": "skill",
+        "rarity": "rare",
+        "requirements": "{\n    type: \"exercise_completion\",\n    count: 50\n  }",
+        "isActive": true
+      },
+      {
+        "id": "first_lesson",
+        "title": "First Step",
+        "description": "Complete your first lesson",
+        "icon": "🎯",
+        "points": 50,
+        "category": "milestone",
+        "rarity": "common",
+        "requirements": "{\n    type: \"lesson_completion\",\n    count: 1\n  }\n",
+        "isActive": true
+      },
+      {
+        "id": "week_streak",
+        "title": "Week Warrior",
+        "description": "Study for 7 consecutive days",
+        "icon": "🔥",
+        "points": "200",
+        "category": "consistency",
+        "rarity": "uncommon\"",
+        "requirements": " {\n    type: \"daily_streak\",\n    count: 7\n  }\n",
+        "isActive": true
+      }
+    ]
+  },
+  "course_flashcard": {
+    "collectionName": "course_flashcard",
+    "parentPath": "",
+    "documentCount": 3,
+    "schema": {
+      "id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "java_101",
+          "python_101",
+          "sql_101"
+        ]
+      }
+    },
+    "data": [
+      {
+        "id": "java_101"
+      },
+      {
+        "id": "python_101"
+      },
+      {
+        "id": "sql_101"
+      }
+    ]
+  },
+  "course_quiz": {
+    "collectionName": "course_quiz",
+    "parentPath": "",
+    "documentCount": 3,
+    "schema": {
+      "id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "java_quiz",
+          "python_quiz",
+          "sql_quiz"
+        ]
+      },
+      "created_at": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-09-25T16:00:00.758Z",
+          "2025-10-05T17:24:03.153Z"
+        ]
+      },
+      "course_id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "java_101",
+          "python_101",
+          "sql_101"
+        ]
+      },
+      "total_question": {
+        "types": [
+          "number"
+        ],
+        "samples": [
+          350,
+          250
+        ]
+      },
+      " created_at": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-09-22T07:10:40.022Z"
+        ]
+      },
+      "total_questions": {
+        "types": [
+          "number"
+        ],
+        "samples": [
+          250
+        ]
+      }
+    },
+    "data": [
+      {
+        "id": "java_quiz",
+        "created_at": "2025-09-25T16:00:00.758Z",
+        "course_id": "java_101",
+        "total_question": 350
+      },
+      {
+        "id": "python_quiz",
+        "course_id": "python_101",
+        "created_at": "2025-10-05T17:24:03.153Z",
+        "total_question": 250
+      },
+      {
+        "id": "sql_quiz",
+        " created_at": "2025-09-22T07:10:40.022Z",
+        "total_questions": 250,
+        "course_id": "sql_101"
+      }
+    ]
+  },
+  "courses": {
+    "collectionName": "courses",
+    "parentPath": "",
+    "documentCount": 4,
+    "schema": {
+      "id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "java_101",
+          "java_1761620644252",
+          "python_101"
+        ]
+      },
+      "description": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Learn Java from basics to advanced with practical examples and projects.",
+          "sdadasasd",
+          "Master Python programming with our comprehensive course. Learn at your own pace through interactive modules and practical examples."
+        ]
+      },
+      "title": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Java Programming Mastery",
+          "java_course",
+          "Python Course"
+        ]
+      },
+      "enrolledUsers": {
+        "types": [
+          "array"
+        ],
+        "samples": [
+          [
+            "FrYMQ9DiEVOc9nrRmMbs5riPxJF3"
+          ],
+          []
+        ]
+      },
+      "courseId": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "java_1761620644252"
+        ]
+      },
+      "courseName": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "java_1761620644252"
+        ]
+      },
+      "difficulty": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Intermediate"
+        ]
+      },
+      "language": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Java"
+        ]
+      },
+      "duration": {
+        "types": [
+          "number"
+        ],
+        "samples": [
+          200
+        ]
+      },
+      "thumbnail": {
+        "types": [
+          "null"
+        ],
+        "samples": [
+          null
+        ]
+      },
+      "enrolledStudents": {
+        "types": [
+          "number"
+        ],
+        "samples": [
+          0
+        ]
+      },
+      "rating": {
+        "types": [
+          "number"
+        ],
+        "samples": [
+          0
+        ]
+      },
+      "status": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "active"
+        ]
+      },
+      "createdAt": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-10-28T03:04:07.763Z"
+        ]
+      },
+      "updatedAt": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-10-28T03:04:07.763Z"
+        ]
+      }
+    },
+    "data": [
+      {
+        "id": "java_101",
+        "description": "Learn Java from basics to advanced with practical examples and projects.",
+        "title": "Java Programming Mastery",
+        "enrolledUsers": [
+          "FrYMQ9DiEVOc9nrRmMbs5riPxJF3"
+        ]
+      },
+      {
+        "id": "java_1761620644252",
+        "courseId": "java_1761620644252",
+        "title": "java_course",
+        "courseName": "java_1761620644252",
+        "description": "sdadasasd",
+        "difficulty": "Intermediate",
+        "language": "Java",
+        "duration": 200,
+        "thumbnail": null,
+        "enrolledUsers": [],
+        "enrolledStudents": 0,
+        "rating": 0,
+        "status": "active",
+        "createdAt": "2025-10-28T03:04:07.763Z",
+        "updatedAt": "2025-10-28T03:04:07.763Z"
+      },
+      {
+        "id": "python_101",
+        "description": "Master Python programming with our comprehensive course. Learn at your own pace through interactive modules and practical examples.",
+        "title": "Python Course"
+      },
+      {
+        "id": "sql_101",
+        "description": "Master SQL from basics to advanced queries with hands-on practice.",
+        "title": "SQL Fundamentals"
+      }
+    ]
+  },
+  "profile_photos": {
+    "collectionName": "profile_photos",
+    "parentPath": "",
+    "documentCount": 1,
+    "schema": {
+      "id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "5Oputi1onRQBrhrgdOxU"
+        ]
+      }
+    },
+    "data": [
+      {
+        "id": "5Oputi1onRQBrhrgdOxU"
+      }
+    ]
+  },
+  "technical_assesment": {
+    "collectionName": "technical_assesment",
+    "parentPath": "",
+    "documentCount": 20,
+    "schema": {
+      "id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "java_assess_1",
+          "java_assess_2",
+          "java_assess_3"
+        ]
+      },
+      "title": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Hello Java",
+          "Sum of Two Numbers",
+          "Even or Odd"
+        ]
+      },
+      "brokenCode": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "// Task: Print 'Hello Java' to the console\npublic class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello Java)\");\n  }\n}",
+          "// Task: Add two integers and print the sum\npublic class Main {\n  public static void main(String[] args) {\n    int a = 5, b = 3;\n    System.out.println(\"Sum: \" + a + b);\n  }\n}",
+          "// Task: Check if a number is even or odd\npublic class Main {\n  public static void main(String[] args) {\n    int num = 6;\n    if (num % 2 = 0) {\n      System.out.println(\"Even\");\n    } else {\n      System.out.println(\"Odd\");\n    }\n  }\n}"
+        ]
+      },
+      "correctOutput": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Hello Java",
+          "Sum: 8",
+          "Even"
+        ]
+      },
+      "courseId": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "java_101",
+          "java_101",
+          "java_101"
+        ]
+      },
+      "difficulty": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "easy",
+          "easy",
+          "medium"
+        ]
+      },
+      "hint": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Missing something to properly close the string.",
+          "Remember how Java concatenates strings and numbers — parentheses might help.",
+          "You can't assign values inside an if condition — use a comparison operator."
+        ]
+      },
+      "status": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "not_taken",
+          "not_taken",
+          "not_taken"
+        ]
+      },
+      "author": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Jerico Jimenez",
+          "Jerico Jimenez",
+          "Jerico Jimenez"
+        ]
+      },
+      "hints": {
+        "types": [
+          "array"
+        ],
+        "samples": [
+          [
+            "Use SELECT * to get all columns",
+            "Don't forget the FROM clause",
+            "End your query with a semicolon"
+          ],
+          [
+            "Use the WHERE clause to filter results",
+            "Use >= operator for greater than or equal to",
+            "Make sure to compare with the age column"
+          ],
+          [
+            "Specify the column name instead of using *",
+            "You only need to return the name column",
+            "Column names are case-sensitive in some databases"
+          ]
+        ]
+      },
+      "description": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Write an SQL query to display all students from the students table.",
+          "Write an SQL query to display students who are 21 years old or older.",
+          "Write an SQL query to display only the names of all students."
+        ]
+      },
+      "tags": {
+        "types": [
+          "array"
+        ],
+        "samples": [
+          [
+            "SELECT",
+            "basic",
+            "fundamentals"
+          ],
+          [
+            "WHERE",
+            "filtering",
+            "operators"
+          ],
+          [
+            "SELECT",
+            "columns",
+            "projection"
+          ]
+        ]
+      },
+      "createdAt": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-10-28T08:00:00Z",
+          "2025-10-28T08:05:00Z",
+          "2025-10-28T08:10:00Z"
+        ]
+      },
+      "sample_table": {
+        "types": [
+          "object"
+        ],
+        "samples": [
+          {
+            "columns": [
+              "id",
+              "name",
+              "age"
+            ],
+            "name": "students",
+            "rows": [
+              {
+                "id": 1,
+                "name": "Jerico",
+                "age": 20
+              },
+              {
+                "id": 2,
+                "name": "Maria",
+                "age": 21
+              },
+              {
+                "id": 3,
+                "name": "John",
+                "age": 22
+              }
+            ]
+          },
+          {
+            "columns": [
+              "id",
+              "name",
+              "age"
+            ],
+            "name": "students",
+            "rows": [
+              {
+                "id": 1,
+                "name": "Jerico",
+                "age": 20
+              },
+              {
+                "id": 2,
+                "name": "Maria",
+                "age": 21
+              },
+              {
+                "id": 3,
+                "name": "John",
+                "age": 22
+              }
+            ]
+          },
+          {
+            "columns": [
+              "id",
+              "name",
+              "age"
+            ],
+            "name": "students",
+            "rows": [
+              {
+                "id": 1,
+                "name": "Jerico",
+                "age": 20
+              },
+              {
+                "id": 2,
+                "name": "Maria",
+                "age": 21
+              },
+              {
+                "id": 3,
+                "name": "John",
+                "age": 22
+              }
+            ]
+          }
+        ]
+      },
+      "expected_query": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "SELECT * FROM students;",
+          "SELECT * FROM students WHERE age >= 21;",
+          "SELECT name FROM students;"
+        ]
+      },
+      "topic": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "SELECT Basics",
+          "WHERE Clause",
+          "SELECT Basics"
+        ]
+      },
+      "category": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "SQL",
+          "SQL",
+          "SQL"
+        ]
+      },
+      "order": {
+        "types": [
+          "number"
+        ],
+        "samples": [
+          1,
+          2,
+          3
+        ]
+      },
+      "updatedAt": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "2025-10-28T08:00:00Z",
+          "2025-10-28T08:05:00Z",
+          "2025-10-28T08:10:00Z"
+        ]
+      },
+      "expected_result": {
+        "types": [
+          "object"
+        ],
+        "samples": [
+          {
+            "columns": [
+              "id",
+              "name",
+              "age"
+            ],
+            "rows": [
+              {
+                "id": 1,
+                "name": "Jerico",
+                "age": 20
+              },
+              {
+                "id": 2,
+                "name": "Maria",
+                "age": 21
+              },
+              {
+                "id": 3,
+                "name": "John",
+                "age": 22
+              }
+            ]
+          },
+          {
+            "columns": [
+              "id",
+              "name",
+              "age"
+            ],
+            "rows": [
+              {
+                "id": 2,
+                "name": "Maria",
+                "age": 21
+              },
+              {
+                "id": 3,
+                "name": "John",
+                "age": 22
+              }
+            ]
+          },
+          {
+            "columns": [
+              "name"
+            ],
+            "rows": [
+              {
+                "name": "Jerico"
+              },
+              {
+                "name": "Maria"
+              },
+              {
+                "name": "John"
+              }
+            ]
+          }
+        ]
+      },
+      "additionalTables": {
+        "types": [
+          "array"
+        ],
+        "samples": [
+          [
+            {
+              "name": "enrollments",
+              "columns": [
+                "id",
+                "student_id",
+                "course_id"
+              ],
+              "rows": [
+                {
+                  "id": 1,
+                  "student_id": 1,
+                  "course_id": 1
+                },
+                {
+                  "id": 2,
+                  "student_id": 2,
+                  "course_id": 2
+                },
+                {
+                  "id": 3,
+                  "student_id": 3,
+                  "course_id": 1
+                }
+              ]
+            },
+            {
+              "name": "courses",
+              "columns": [
+                "id",
+                "course_name"
+              ],
+              "rows": [
+                {
+                  "id": 1,
+                  "course_name": "SQL Fundamentals"
+                },
+                {
+                  "id": 2,
+                  "course_name": "Python Basics"
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    },
+    "data": [
+      {
+        "id": "java_assess_1",
+        "title": "Hello Java",
+        "brokenCode": "// Task: Print 'Hello Java' to the console\npublic class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello Java)\");\n  }\n}",
+        "correctOutput": "Hello Java",
+        "courseId": "java_101",
+        "difficulty": "easy",
+        "hint": "Missing something to properly close the string.",
+        "status": "not_taken"
+      },
+      {
+        "id": "java_assess_2",
+        "title": "Sum of Two Numbers",
+        "brokenCode": "// Task: Add two integers and print the sum\npublic class Main {\n  public static void main(String[] args) {\n    int a = 5, b = 3;\n    System.out.println(\"Sum: \" + a + b);\n  }\n}",
+        "correctOutput": "Sum: 8",
+        "courseId": "java_101",
+        "difficulty": "easy",
+        "hint": "Remember how Java concatenates strings and numbers — parentheses might help.",
+        "status": "not_taken"
+      },
+      {
+        "id": "java_assess_3",
+        "title": "Even or Odd",
+        "brokenCode": "// Task: Check if a number is even or odd\npublic class Main {\n  public static void main(String[] args) {\n    int num = 6;\n    if (num % 2 = 0) {\n      System.out.println(\"Even\");\n    } else {\n      System.out.println(\"Odd\");\n    }\n  }\n}",
+        "correctOutput": "Even",
+        "courseId": "java_101",
+        "difficulty": "medium",
+        "hint": "You can't assign values inside an if condition — use a comparison operator.",
+        "status": "not_taken"
+      },
+      {
+        "id": "java_assess_4",
+        "title": "Loop Print Numbers",
+        "brokenCode": "// Task: Print numbers 1 to 5\npublic class Main {\n  public static void main(String[] args) {\n    for (int i = 1; i <= 5; i++)\n      System.out.println(i)\n  }\n}",
+        "correctOutput": "1\n2\n3\n4\n5",
+        "courseId": "java_101",
+        "difficulty": "medium",
+        "hint": "The loop is almost correct — check for missing syntax after println().",
+        "status": "not_taken"
+      },
+      {
+        "id": "java_assess_5",
+        "title": "Array Total",
+        "brokenCode": "// Task: Calculate total of all elements in an array\npublic class Main {\n  public static void main(String[] args) {\n    int[] nums = {2, 4, 6, 8};\n    int sum = 0;\n    for (int i = 0; i <= nums.length; i++) {\n      sum += nums[i];\n    }\n    System.out.println(sum);\n  }\n}",
+        "correctOutput": "20",
+        "courseId": "java_101",
+        "difficulty": "hard",
+        "hint": "Array indexing in Java starts at 0 — be careful with your loop condition.",
+        "status": "not_taken"
+      },
+      {
+        "id": "python_assess_1",
+        "title": "Simple Print Loop",
+        "brokenCode": "# Task: Print numbers from 1 to 5\n# Bug: Missing colon and wrong indentation\nfor i in range(1,6)\nprint(i)",
+        "correctOutput": "1\n2\n3\n4\n5",
+        "courseId": "python_101",
+        "difficulty": "easy",
+        "hint": "Check the loop syntax — something might be missing after the range.",
+        "status": "not_taken"
+      },
+      {
+        "id": "python_assess_2",
+        "title": "Greet the World",
+        "brokenCode": "# Task: Combine two strings properly\ngreeting = 'Hello'\nname = 'World'\nprint(greeting + name)",
+        "correctOutput": "Hello World",
+        "courseId": "python_101",
+        "difficulty": "easy",
+        "hint": "Mind the spacing between words when concatenating.",
+        "status": "not_taken"
+      },
+      {
+        "id": "python_assess_3",
+        "title": "Sum of Numbers",
+        "brokenCode": "# Task: Print total sum of numbers in the list\nnums = [2,4,6,8]\nprint(sum(nums) + )",
+        "correctOutput": "20",
+        "courseId": "python_101",
+        "difficulty": "medium",
+        "hint": "There’s an extra operator causing an error.",
+        "status": "not_taken"
+      },
+      {
+        "id": "python_assess_4",
+        "title": "Function Fix",
+        "brokenCode": "# Task: Define a function that adds two numbers\ndef add(a, b)\n    return a + b\n\nprint(add(5,3))",
+        "correctOutput": "8",
+        "courseId": "python_101",
+        "difficulty": "medium",
+        "hint": "Check the function definition syntax — something is missing after parameters.",
+        "status": "not_taken"
+      },
+      {
+        "id": "python_assess_5",
+        "title": "Even or Odd",
+        "brokenCode": "# Task: Print if number is even or odd\nnum = 4\nif num % 2 = 0:\n    print('Even')\nelse:\n    print('Odd')",
+        "correctOutput": "Even",
+        "courseId": "python_101",
+        "difficulty": "medium",
+        "hint": "Look closely at the comparison operator in the condition.",
+        "status": "not_taken"
+      },
+      {
+        "id": "sql_challenge_01_select_all",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "Use SELECT * to get all columns",
+          "Don't forget the FROM clause",
+          "End your query with a semicolon"
+        ],
+        "description": "Write an SQL query to display all students from the students table.",
+        "title": "Select All Students",
+        "tags": [
+          "SELECT",
+          "basic",
+          "fundamentals"
+        ],
+        "difficulty": "Easy",
+        "createdAt": "2025-10-28T08:00:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        "expected_query": "SELECT * FROM students;",
+        "topic": "SELECT Basics",
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 1,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:00:00Z",
+        "expected_result": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        }
+      },
+      {
+        "id": "sql_challenge_02_where_filter",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "Use the WHERE clause to filter results",
+          "Use >= operator for greater than or equal to",
+          "Make sure to compare with the age column"
+        ],
+        "description": "Write an SQL query to display students who are 21 years old or older.",
+        "title": "Filter Students by Age",
+        "tags": [
+          "WHERE",
+          "filtering",
+          "operators"
+        ],
+        "difficulty": "Easy",
+        "createdAt": "2025-10-28T08:05:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        "expected_query": "SELECT * FROM students WHERE age >= 21;",
+        "topic": "WHERE Clause",
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 2,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:05:00Z",
+        "expected_result": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "rows": [
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        }
+      },
+      {
+        "id": "sql_challenge_03_select_columns",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "Specify the column name instead of using *",
+          "You only need to return the name column",
+          "Column names are case-sensitive in some databases"
+        ],
+        "description": "Write an SQL query to display only the names of all students.",
+        "title": "Select Specific Columns",
+        "tags": [
+          "SELECT",
+          "columns",
+          "projection"
+        ],
+        "difficulty": "Easy",
+        "createdAt": "2025-10-28T08:10:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        "expected_query": "SELECT name FROM students;",
+        "topic": "SELECT Basics",
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 3,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:10:00Z",
+        "expected_result": {
+          "columns": [
+            "name"
+          ],
+          "rows": [
+            {
+              "name": "Jerico"
+            },
+            {
+              "name": "Maria"
+            },
+            {
+              "name": "John"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sql_challenge_04_order_by",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "Use ORDER BY clause to sort results",
+          "Use DESC for descending order",
+          "Place ORDER BY at the end of your query"
+        ],
+        "description": "Write an SQL query to display all students sorted by age in descending order (oldest first).",
+        "title": "Sort Students by Age",
+        "tags": [
+          "ORDER BY",
+          "sorting",
+          "DESC"
+        ],
+        "difficulty": "Easy",
+        "createdAt": "2025-10-28T08:15:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        "expected_query": "SELECT * FROM students ORDER BY age DESC;",
+        "topic": "ORDER BY",
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 4,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:15:00Z",
+        "expected_result": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "rows": [
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            }
+          ]
+        }
+      },
+      {
+        "id": "sql_challenge_05_count",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "Use the COUNT() aggregate function",
+          "COUNT(*) counts all rows",
+          "Use AS to name the result column 'count'"
+        ],
+        "description": "Write an SQL query to count the total number of students in the students table.",
+        "title": "Count Total Students",
+        "tags": [
+          "COUNT",
+          "aggregates",
+          "functions"
+        ],
+        "difficulty": "Easy",
+        "createdAt": "2025-10-28T08:20:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        "expected_query": "SELECT COUNT(*) AS count FROM students;",
+        "topic": "Aggregate Functions",
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 5,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:20:00Z",
+        "expected_result": {
+          "columns": [
+            "count"
+          ],
+          "rows": [
+            {
+              "count": 3
+            }
+          ]
+        }
+      },
+      {
+        "id": "sql_challenge_06_avg",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "Use the AVG() aggregate function",
+          "Pass the age column to AVG()",
+          "Use AS to name the result 'average_age'"
+        ],
+        "description": "Write an SQL query to calculate the average age of all students.",
+        "title": "Calculate Average Age",
+        "tags": [
+          "AVG",
+          "aggregates",
+          "average"
+        ],
+        "difficulty": "Easy",
+        "createdAt": "2025-10-28T08:25:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        "expected_query": "SELECT AVG(age) AS average_age FROM students;",
+        "topic": "Aggregate Functions",
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 6,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:25:00Z",
+        "expected_result": {
+          "columns": [
+            "average_age"
+          ],
+          "rows": [
+            {
+              "average_age": 21
+            }
+          ]
+        }
+      },
+      {
+        "id": "sql_challenge_07_inner_join",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "You need to join three tables: students, enrollments, and courses",
+          "Use INNER JOIN to connect related tables",
+          "Use table aliases (s, e, c) for cleaner code",
+          "Match student_id in enrollments with id in students"
+        ],
+        "description": "Write an SQL query to display student names along with their enrolled course names using INNER JOIN.",
+        "title": "Join Students and Courses",
+        "tags": [
+          "JOIN",
+          "INNER JOIN",
+          "multiple tables"
+        ],
+        "difficulty": "Medium",
+        "createdAt": "2025-10-28T08:30:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        "expected_query": "SELECT s.name, c.course_name FROM students s INNER JOIN enrollments e ON s.id = e.student_id INNER JOIN courses c ON e.course_id = c.id;",
+        "topic": "JOINS",
+        "additionalTables": [
+          {
+            "name": "enrollments",
+            "columns": [
+              "id",
+              "student_id",
+              "course_id"
+            ],
+            "rows": [
+              {
+                "id": 1,
+                "student_id": 1,
+                "course_id": 1
+              },
+              {
+                "id": 2,
+                "student_id": 2,
+                "course_id": 2
+              },
+              {
+                "id": 3,
+                "student_id": 3,
+                "course_id": 1
+              }
+            ]
+          },
+          {
+            "name": "courses",
+            "columns": [
+              "id",
+              "course_name"
+            ],
+            "rows": [
+              {
+                "id": 1,
+                "course_name": "SQL Fundamentals"
+              },
+              {
+                "id": 2,
+                "course_name": "Python Basics"
+              }
+            ]
+          }
+        ],
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 7,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:30:00Z",
+        "expected_result": {
+          "columns": [
+            "name",
+            "course_name"
+          ],
+          "rows": [
+            {
+              "name": "Jerico",
+              "course_name": "SQL Fundamentals"
+            },
+            {
+              "name": "Maria",
+              "course_name": "Python Basics"
+            },
+            {
+              "name": "John",
+              "course_name": "SQL Fundamentals"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sql_challenge_08_group_by",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "Use GROUP BY to group rows with the same age",
+          "Use COUNT(*) to count students in each group",
+          "SELECT both the age and the count"
+        ],
+        "description": "Write an SQL query to count how many students have each age, grouped by age.",
+        "title": "Group Students by Age",
+        "tags": [
+          "GROUP BY",
+          "aggregates",
+          "COUNT"
+        ],
+        "difficulty": "Medium",
+        "createdAt": "2025-10-28T08:35:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        "expected_query": "SELECT age, COUNT(*) AS count FROM students GROUP BY age;",
+        "topic": "GROUP BY",
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 8,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:35:00Z",
+        "expected_result": {
+          "columns": [
+            "age",
+            "count"
+          ],
+          "rows": [
+            {
+              "age": 20,
+              "count": 1
+            },
+            {
+              "age": 21,
+              "count": 1
+            },
+            {
+              "age": 22,
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "sql_challenge_09_having",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "Use GROUP BY course_id to group enrollments",
+          "Use HAVING to filter groups after grouping",
+          "HAVING is like WHERE but for aggregated data",
+          "Count must be greater than 1"
+        ],
+        "description": "Write an SQL query to show course IDs that have more than 1 enrolled student.",
+        "title": "Filter Groups with HAVING",
+        "tags": [
+          "HAVING",
+          "GROUP BY",
+          "filtering groups"
+        ],
+        "difficulty": "Medium",
+        "createdAt": "2025-10-28T08:40:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "student_id",
+            "course_id"
+          ],
+          "name": "enrollments",
+          "rows": [
+            {
+              "id": 1,
+              "student_id": 1,
+              "course_id": 1
+            },
+            {
+              "id": 2,
+              "student_id": 2,
+              "course_id": 2
+            },
+            {
+              "id": 3,
+              "student_id": 3,
+              "course_id": 1
+            }
+          ]
+        },
+        "expected_query": "SELECT course_id, COUNT(*) AS student_count FROM enrollments GROUP BY course_id HAVING COUNT(*) > 1;",
+        "topic": "GROUP BY",
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 9,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:40:00Z",
+        "expected_result": {
+          "columns": [
+            "course_id",
+            "student_count"
+          ],
+          "rows": [
+            {
+              "course_id": 1,
+              "student_count": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "sql_challenge_10_subquery",
+        "author": "Jerico Jimenez",
+        "hints": [
+          "Use a subquery to calculate AVG(age)",
+          "The subquery goes inside parentheses",
+          "Compare age in the outer query with the subquery result",
+          "Average age is 21, so students older than 21 should appear"
+        ],
+        "description": "Write an SQL query to find students whose age is greater than the average age of all students (using a subquery).",
+        "title": "Find Students Older Than Average",
+        "tags": [
+          "subquery",
+          "AVG",
+          "advanced"
+        ],
+        "difficulty": "Hard",
+        "createdAt": "2025-10-28T08:45:00Z",
+        "sample_table": {
+          "columns": [
+            "id",
+            "name",
+            "age"
+          ],
+          "name": "students",
+          "rows": [
+            {
+              "id": 1,
+              "name": "Jerico",
+              "age": 20
+            },
+            {
+              "id": 2,
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "id": 3,
+              "name": "John",
+              "age": 22
+            }
+          ]
+        },
+        "expected_query": "SELECT name, age FROM students WHERE age > (SELECT AVG(age) FROM students);",
+        "topic": "Subqueries",
+        "category": "SQL",
+        "courseId": "sql_fundamentals",
+        "order": 10,
+        "status": "active",
+        "updatedAt": "2025-10-28T08:45:00Z",
+        "expected_result": {
+          "columns": [
+            "name",
+            "age"
+          ],
+          "rows": [
+            {
+              "name": "Maria",
+              "age": 21
+            },
+            {
+              "name": "John",
+              "age": 22
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "user_progress": {
+    "collectionName": "user_progress",
+    "parentPath": "",
+    "documentCount": 1,
+    "schema": {
+      "id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "utOfg4eJtzD9aDNXXluG"
+        ]
+      }
+    },
+    "data": [
+      {
+        "id": "utOfg4eJtzD9aDNXXluG"
+      }
+    ]
+  },
+  "users": {
+    "collectionName": "users",
+    "parentPath": "",
+    "documentCount": 4,
+    "schema": {
+      "id": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "Axn8VK5m8NeAwRtnhW265gMR8ob2",
+          "BfdzJnwj2TAgsfRiQFDn",
+          "dn8pIv1XtffpT3615VmFvmDvA033"
+        ]
+      },
+      "courseTaken": {
+        "types": [
+          "array"
+        ],
+        "samples": [
+          [
+            {
+              "difficulty": "Beginner",
+              "courseName": "Java Programming Mastery",
+              "category": "General",
+              "courseId": "java_101",
+              "enrolledAt": 1761739974355
+            },
+            {
+              "difficulty": "Beginner",
+              "courseName": "Python Course",
+              "category": "General",
+              "courseId": "python_101",
+              "enrolledAt": 1761740035764
+            }
+          ],
+          [
+            {
+              "difficulty": "Beginner",
+              "courseName": "Java Programming Mastery",
+              "category": "General",
+              "courseId": "java_101",
+              "enrolledAt": 1761573249595
+            }
+          ],
+          [
+            {
+              "difficulty": "Beginner",
+              "courseName": "SQL Fundamentals",
+              "category": "General",
+              "courseId": "sql_101",
+              "enrolledAt": 1761576719527
+            },
+            {
+              "difficulty": "Beginner",
+              "courseName": "Python Course",
+              "category": "General",
+              "courseId": "python_101",
+              "enrolledAt": 1761587242489
+            },
+            {
+              "difficulty": "Beginner",
+              "courseName": "Java Programming Mastery",
+              "category": "General",
+              "courseId": "java_101",
+              "enrolledAt": 1761589205604
+            }
+          ]
+        ]
+      },
+      "isEnrolled": {
+        "types": [
+          "boolean"
+        ],
+        "samples": [
+          false,
+          false
+        ]
+      },
+      "email": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "user.2@gmail.com",
+          "lapuk@gmail.com"
+        ]
+      },
+      "username": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "rafael",
+          "lapuk"
+        ]
+      },
+      "profilePhotoBase64": {
+        "types": [
+          "string"
+        ],
+        "samples": [
+          "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\nCo1pL82QtaeqxusrSP5Sq/Af+z7pWlqrL4vylm5K6/ZantWn7N92dcxMPTNEx1VounUYkNu1FaW/\n4lTzPFfg3ScRzeXZqWY+1GNHm6/Nvojm+reNPFGfdKGi4OLp1Dfwrl8ye3zb9SEUyX79LOVKdOta\nzm5bjJ8lij7voc51/iOeI2rLVFL59SiapxXxlm1yeVqt3LLvFJJFTzac/Jnz5Fs7JP3fU2YtNHdl\nGXPPULbqfGFs+ZUT+j3K/la/mWb73SX4kPZh3R6/EY/It9Ys21pSGK17TLceqWSl8dkn+JkqzqnJ\neanJe25GTomvRmPyp79mT3iOkff2tWPdouQuW+VuPN9px+JJ/NGtk49MbJQ54S/lnW94zXuvn8iA\njTJ+nUzVVTrmoSk+SX6P3EX9vJru3pVcre0uno16o8qLa6M1/wB5vs3s09m/n6MywslFqUVtt6P9\nUSmyPHZsVyUejNyixJrszRtWzU4/dkt0eot90S3R23WDCyKYTXNCL9+hZqKNG1nEli59flxmtueP\np8yhVz2RvY2XKLS3ZKYi0bPK71neFa454GzOHrZZGM/temSe8b61vy/KS9CmnedO1acYOqTVlUlt\nKElupL22KrxRwNj5sJ5nD+1V3eeJLs/7n9DmZdPNPcN2PNFo9uYAyXVWUWzquhKFkHtKMls0zGZl\nwAAAAAAAAAAAAAG5gYFmZJqtPotzXoqd1qhFbtl64f09VVRXK3L5L1JVruKPk49uNY4XQcZL3MJP\ncYZf2jUnVHbkp+H8fUgSJIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/Um2klu2SmNoWdfs3U4RfrL+\ngexEyijNj412RLamuUvouhbdP4Xa2lKmVkv+/ovyJujQ7dtpbQj/ACxWx7t/ZsqWm6LjRmp6pbY4\nLq66Nt38t30RL4GQsSxrS8evHfZTXxWbf3v6bEzm6fRi4Fk1TK2UFvyr1JB6Xbi6Dpmp04XnQynt\naq49afbf3PeWOHvG09KvbVqmVa+eyx7vfmlJhaXJbK6ct38y81uhx5ZpKS+Rq5lNFzjy94+p7/1R\nvtEH/NPcobCwcfFip8u8306kRxDqU8axU1S5GpfE0vkWnIjXKlw7NdvqQWp6VXnT8ycoqxd2vUhy\ntkndKYrRj4b1K6+maunzRT6L0JZ2Rcm0lsaGFhRxqvLWyXrt3Zs8jivh3ZZXHeJV2tVsKMJR3exi\nnjxe+yPClNejM1Fj36l0bwq+M9NSzDW3Y1vsm77FiioTjv0PHkR3H5NnnDdAPH5fQ2sXEhkyUJvZ\nS6Jm9fUovbbueI0Ou+he80zyMiX42tLT/NnGXpKLg/7y7MwTwpJ7rvupbfoyy11J5E4+nmroY8iq\nKc9l0XT9SX5UfxwrirfkRr9Y7mFxkvQkseHPfb6KL2PVtcU99i6MiqcaMUtvQz1TM86FKO8EYHBx\n6bdSyt/aE02hu49ri+jJfFzZw2ab3K9XNr6m3RY9+pZyiVc1mEpxBoGFxLiucuWnUEvhu/m+Uvc5\nHq+mZWk5k8bNrcLI/k/mjr+Hkcu3XYya1peLr2B5OWkrF1rtXeJlzaeLe6r8Wbb1Zw8Enruj5WjZ\nkqMqPT+Ca7SXyIwwTGzX2AAAAAAAAAG5pmLLJvSS6I9iN/QmeGcBSmrZrr6Fu1C+Om6Zbatk4x6f\nNnnRsNQinKOyS2K/x7nbzqw4PpH4pE7fGOL2I/kqN1krbZ2Se8pPdngAreAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAADLi3PHyaropN1yUtn2ex9F8EQ0rjHTVdgTqhl1x/fY72Uo/ReqPm82tNz8vTMuvK0\n/Isx8it7xsrls0yvJTlHqVmPJwn3G8PrXRuDMLLrlNZVV0Yy2flST2+T9jNxDo2Bw/pk8qvSrtQ5\nGt6qn8W3ucQ4O8XcnTddqz9ZxvPm1yX2Y75Havecfut/Pozu+i+JvCWvRg8fU4UWvvXkfA1/kYrx\nkp37ba2x36R2pcFYmrabK7E5saeRTvCMl91tdNyk+HOu6pRxG+FdUx1OMHKG/L1hsu/0O1SyqLKX\nPDsryem8Y1zT3IfQ9Chp9mVnXQg9QzZuy6xLt7RT9kRjLH8lnCfpUeMuGKa4K7Bq2nJ/FsipV8O5\nli+Gqf5HbsimFle1my+ppX52m6fBK+/HrS95otpkrCu+O8uU4/BGbktc0Wk/c36fDe7kW89n9S7X\n8Y6PU+Sm7z5vtGitzb/I0bOMM2/ZaZomVYpb8s7tq49P1NVdVEdQzTpLT2hsXw1a6ztX5EjR4fYs\nU+eTb+htY+dxVlJc2PhY0X7ycmjLHA4hue89ZdT/AJa6YbfqmTjVX+oeTo6/ctOXAOGl3ZFZvh/G\nO7pkmvoWiinXcOe9ubDOq9YzhGEl9HHYlYXy5VvDZnsayYna0I20kRHxcq1Pg3Lw6HbSuZLvEr+n\n6fffqUKOSXxPbZo7tvCa2lFNP0NCOj4SzlkKpKxPfdErZInpCKTXtzzi3hWWnvT5UfFC2SjP5Mwa\njoFlPEmDjVreLg7JdOyR1rOx6cyEI3x5oxkpJfMi76lXbmZ/LvZ5Xk1r+n4s8rZOYciwYyuzpNJ8\nrv67L0W7NTI5lK1y+63/AJnUMbR6ca6uFdaTx6JLmX8Vs/8AEqHHGn42nV3zx5LlglTH3cturHLf\n0hMbQoWPc+exLvJtmzYuaHsQlOUo3S69G+hKK/niuVmqKzt6Zpt7bNEHFJrqjJbVGXXYwYeRtNQm\nnHfpv6G9b8E0t11E2mspREWaM6PVI/IQaN1vfufqUWuxZXKrtjKO3UkaZuMd0zShFGzX0LYvuq4b\nPWoYeLq+E8XNgnF/dl6xfujlPEnD+TomTy2Jzx5fctS6P/U6nc+p+TdOVTLHzK42UyWzUirLijJ7\njtZjvNPU9OJgumvcEX1OV2kP7RS+vl7/ABx/qVK/FyMexwvpsrmvSUWmYrVms7S0xMT0wAlNL0m3\nLtXMuWHq2eddqqx8xUUrpCK3fuyOyW3rdGgAPHqEXOaiu7Lbw7hbTW3UhNLxHJKck95dkX7QMPaK\nbXTv1LsddvlKMz9JCco4mHKcuijHmf4HJ9TypZudbfN7uUun0L3x3qDxtOWNB7Tt6P6HOiq07zus\nn1GwADxEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEvw/xFqehahVl6flWwnW9+XmezXs0d94P4\n+0riiuunN1rN03PeydU7doSfyZ81n6m0909mU5cFcva/BqL4Z9Psy3hKu+re3UMzIhJbp+e2mflP\nBujUSUnixnNfxS6tny7w5x/xJw/yxwNSu8mP/pWPnj+TOn6H49yahDXdLUvR2Y72/RmK2lyU/X26\nMa+l/wBo2djq07Fx5LyaIQ27bI2d4pdEioaR4l8Kaxyxp1GOPa/4MhOD/PsWmi6jKhzYt9V0X6wm\npL9Cub3p3CW8ZP1lkdmx5dx+WVyS7GGSa9BGolH8LM8joY5WxZq2NmNSexKM3JCMUtp3JSMsbyMe\n7kepWOK23LIyozib88jf4YvqYLboPlXeNb3S92R0rZJ9N/wClLfmk1u+yXZFsZUJxNqV8KISsk+s\nd5t+m/v+ByvxPza5YmPRU/31282n3UF/qdGvfmJQ5tobbyfyKhqHBs9b16NttrqonXvt329kvwJ1\nzRHaq2GZ6cRc5Qse/uTGm3qXqWbjjw9zdI57qV5mPv0mupQ6Jzxr1F9Nn2Orps1cjnZ8NqLao7NS\nj1Pefcoujl6DTrYX0x27o/MzCuzcyinHi3zPZ7ehZnxxaN4V4L7W2ltVKVkFKPVGRJr3Og6Nw5Rj\n4NUbFvLZb7oy5PCtF1cnX0m3v9DFG7bMQ57B9TNGWzJ7P4Wycdb1pyXsQV+NbRNxsi4te5Ot5hXa\nkS9TXMtzVk+uxnrnv0PM6t+qLovv0qmkR28V5EqZKSfU33rFd9Xl5lFV8dtlzxTf5kbKD22MXlN9\n0Ti9Z/ZCaT3VqZePGNznhxUYv+HfsVfXtAzr7JZdFLsT+8olvlVL0Mbja+ib2JXrjvDys3pPtzf9\nk5/ri2r6rY2cbR7VNPIWy3+6X2WHZN9t0bOJok7LFvW3+pR+Gke5lbztPUK9penynOPw7JFyoo8j\nH37JLqS+ncN21Vuy2KhBe5WeO879nabaqJNOW9afvuV5ckT8ar8OPb5Wc34p1D9oavbOL3rg+WH0\nREH63u92fhS8mdwAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1iajm4clLEy76ZL1r\nscf8DVAFw0zxI4r05KNOr3zj/LdtP/EtOm+OGuU7LPwsPLXq9nB/ocmBVbDjt3C2ubJXqX0bw/4y\naDqNsKdSxb8CybS5vvw3+v8AodPjTGyuNte0q5JOMl2aPi/R8d5Wq4lEe9lsY/qfY2kN4el4+PFv\nlrgkubqYNThrj24t2mzWvvyfttD5vYwWVbLqbU8+K38ytte8e55VtGRu657r2fRozQ09o6ey6dTC\noTcvZEpKEfSKZhsqez6bInFtji0LoLlcd38X3vmY7czynvvs99zNd03NC+HO+3QlM8oR22b1mvYt\nmHPFzYO2qa2fTfY474h8N048lqOk2edhye0mls4P2a9C/wCTgqc91uvxPEMGp1XUWR3x71yWL5e/\n1RbprzitEqs+KuSrjui5boyFzP12aLnCfI68nHbTXUp2vabZo2tX40+vLPpL3Xoyd0LNU6lVJ79D\n6bFeL1fN5azSzq2g6xHOxozk0rEkpImqsuL2SZy7TsieJkqSbUW9mi242Z0Uo9mY81OEtuG/5IWx\nXQnHZ7EfqWj42fB7xSl7kfXmb+puU5my3b6Fe8LZrKm61w/bgqVlacob+hV8jKdKceu/qdildXfB\n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\nAAAAAAAAAAAAAAAf/9k=\n",
+          "/9j/4AAQSkZJRgABAQAAAQABAAD/4gIYSUNDX1BST0ZJTEUAAQEAAAIIAAAAAAQwAABtbnRyUkdC\nIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAA\nAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlk\nZXNjAAAA8AAAAGRyWFlaAAABVAAAABRnWFlaAAABaAAAABRiWFlaAAABfAAAABR3dHB0AAABkAAA\nABRyVFJDAAABpAAAAChnVFJDAAABpAAAAChiVFJDAAABpAAAAChjcHJ0AAABzAAAADxtbHVjAAAA\nAAAAAAEAAAAMZW5VUwAAAEYAAAAcAEQAaQBzAHAAbABhAHkAIABQADMAIABHAGEAbQB1AHQAIAB3\nAGkAdABoACAAcwBSAEcAQgAgAFQAcgBhAG4AcwBmAGUAcgAAWFlaIAAAAAAAAIPdAAA9vv///7tY\nWVogAAAAAAAASr8AALE3AAAKuVhZWiAAAAAAAAAoOwAAEQsAAMjLWFlaIAAAAAAAAPbWAAEAAAAA\n0y1wYXJhAAAAAAAEAAAAAmZmAADypwAADVkAABPQAAAKWwAAAAAAAAAAbWx1YwAAAAAAAAABAAAA\nDGVuVVMAAAAgAAAAHABHAG8AbwBnAGwAZQAgAEkAbgBjAC4AIAAyADAAMQA2/9sAQwAGBAUGBQQG\nBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko\n/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo\nKCgoKCgoKCgoKCgo/8AAEQgBjQH/AwEiAAIRAQMRAf/EABwAAAICAwEBAAAAAAAAAAAAAAMEAQIA\nBQYHCP/EAEIQAAICAQMCBQIEBAMHAwIHAAECAAMRBAUhEjEGE0FRYSJxBxQygSNCUpFiobEVJDND\ncsHRFhc0U+ElJkRUY5Lw/8QAGwEAAQUBAQAAAAAAAAAAAAAAAAECAwQFBgf/xAAxEQACAgIBAwME\nAAYBBQEAAAAAAQIDBBEhBRIxE0FRBiIyYRQVQnGRoYEjMzRSsfD/2gAMAwEAAhEDEQA/ANJXXGa6\n5atIxXXNo1StdcYSuXrrh0SAFEr+IwlcuiQyVxAKIkOlcIlcOlcABJXDpXCpXDJXAASVw6VwqVwy\nVwEArXDLXDJXCqkAArXCrXChZYLAAYSXCy4WXCxNgDCywSFCywSAbBBJYJDBJYJFEAhJISMBJYJ8\nQAWCSwSMiuW8viAbFgnxJ6IwK5by4mwFuiT0Rjy5PR8Q2At0TOiM+XJ8uGwFeiZ0Rry5Hlw2At0S\nOiNeX8SPLi7AV6JBSNdEjohsBQpIKRopIKQAUKSCkaKSpSACpSVKxopKFIALFZUrGSkoVgKLlZQo\nDGSsoVgAs1cE1ccKyhWACDVwTVzYtXAtXADXPXANXNk9cC9cANa9cA9c2b1wD1wFNa9cA6fE2T1w\nD1wA1z1xd6/ibJ0gHSAGteuL2VzZOkA9cUDWWVxZ65s7K4u6QAbrrjNaSUSMIkAIrrh0SWRIwiRA\nKokOlcuiQ6VwAolcYSuXRIdK4CFErh0rl0rh0SAA0rhlTEuq4lwsAKhZYLLqsIFgAMLLhYQJLhIA\nDCy4SFVIRUibAEEl1SGVIQIfaHIjkBCSwSHVJcV/ETQABXLisQwQ57SwSIxQIrk+XDhTnGOJbp45\nibE2LiuT0RgLn0khfiL3C6FwkzojHRM6IncADomdEY6JnRDuAX6JnRGOiZ0Q7gFuiQUjPRM6IdwC\npSQUjXRI6IvcAoa5U1xspIKRdgJlJQpHSkqUigJFJUpHDXKGuAgmUlCkbZJQpFAUKShWNlJQpABQ\nrKFY0ySjJAUVKypWMFZQrABVq4F646VlCuYAa964B65sXrgXrgBrXrgHrmydIu6QA1r1wDpNi9cA\n6QFNa6QD1zYukXdIAa6xItZXNk6Rd0igNVpGUSYiRitIgEVpGUSSiRitIARWkYRJKJGESAhVEjCJ\nLIkMq4gBVUxCASVEIqw2BVVhAssqwirzACqpCqkuqwoWJsQGqQi1woQAZPA+YDUa/S6Zc2WDHxIr\nMiFS3N6HwrlPiKDLXCrXOc1fiZVONNUbPbETt3XcdQmUb8uP/wC0xsj6hxaeE9lyvp1z5fB2JatP\n1Mo+5g7NVp072L+xnCXm/Uj+PqXc/AxBro6lHPW33czJt+qefsiXIdLX9TO8O6aNBguIN9929O9n\nacV5NQGAhH7yy11j+WU5fVGQ/EUS/wArp99nZr4g23OPMhU3zQOfpsnFdKf0yPKr/pP94xfU+T7p\nCfyyn9nfJuOlfGHHPzGK9Rp34W1P7zzk0UHujZ/6pK6YIequx0P/AFGWIfVMv64EUumR/pZ6YoVh\n9BB+0sK8CefUazcKiPJ1f0j+XEfp8TaylsXUkr/VmaNP1LjWcS2itLptv9LTOy6ZnRNPo/Emj1GF\nc9LzcU31XD+G6sfbM2acuq5brlspWVWV8TWicTOmXAPqMGR649ZPsi2V6ZHTC9MzEXYbBdMjphSJ\nmIbF2B6ZBWGkYi7DYErIKQ+JBWL3C7FykqUjBWQVi9wCpSVKRorKFY5SAVKQbJHCsoVjkwEmSDZI\n6yQbJHAJssGUjjJBMkBBRkg2WNssGyxQFCsoyxplg2WAosRBskYZZQiACbpF3SbBlzAukBDXOkXd\nJsXSLukBTXWJFrK5srEi7pAU1zpFnSbGxIu6QAZrSM1pMrSM1pADK0jFaTK0jNaQEMrSHRJKJCgQ\nAwCXVZKrCKuYAQqwqrJVIZF9onngR8clUSGWuXRM+kU3LdNNt1ZNjdTf0ryf7SC/Irx13TY+uErX\nqKHOkKMsQB7mazcN70ukBVH6n9AozOf1246zXklSaqvQe/8A4itFNdCnoUBj3PvOTzvqZ8woX/Js\nY/TUluz/AAN6jeNfrAwOKa/TnJIiiooPU31se7EyG+ps+ssEPtOYyMq3IfdZLZrQqhWtRWgyWBf0\njH7SC5Y8mSlJPYEmN6fbbbf0oRKmtvgJThDlsVUOeeDCqrHvNzpditcfXlRNrp/D9S4626pbq6fk\nXfjEp251Ufc5AjHpJz24ndpsmkC/VWIVdl0I71LLa6FkvzorPqlfwcBk57SQfiegf7G0P/0RJGya\nL0pWO/kGS/dDf5rX8HnrKxxIKnHM76zYtIwwqYMR1HhpeTW+JXs6PlQ8R3/Ykh1Op+eDjssuPT7Q\nnnHGCczb6rY9RVk9GQPUTVXaZ6z9akH7TOnVOD1OLRchdXZ4YNiG7ouPvL6a+7Sv1aa4r/hgmrlD\nkcEYEWuyVb3B6ZL2qS0zo9u8U3VWhNehC9uoczqtHr9NrFBosU59M8zzethjGMiXoWyizr0j+U2c\n8es38P6iup+25dy/2Z2R06ufMftf+j1EjmRicptPiY1lateCCeA06qm1L0D1MGB9jOtxM+nLjutm\nHdj2UPU0TiZ0iE9JXuZc2QJlCsr0wkjEXYuynTIxCYkRdi7ByMQmJBWLsXYMrIKwhEiLsXYErKlY\nciVKxUx2xcrBssaKyhWPUgFGSDZI2ywbLHqQCbJBMkdZYJkjhBNlgmWNukEyxQFGWDZY06wTLAUW\nZZRhmMMIJlgAq6QFiR4iBsSAGusSL2JNjYkWsSAGusSLOk2NiRexICjNaRmtJWtI1WkBCa0jCJIr\nSGAgBIEuqzFEKqwAxVhUWYq4hUHMBreiVWFyqKWc4A9ZDslNZa1gFHqZyu6bpbr7Gq0xauheCR6/\naZfUupVYcNt8lvGxpXP9Du7b4VY0aTDP2J9pogcubb2Nlx/mPpKdAq4UDq9T7y6guOZ59mZ9uXLc\n3x8HRU40Kl9qCrYByx/tMI62yvMmvTlyAo4M3u07MXwXz0yjCDsl2wW2x1tsKVtmpo0dlrfShOZv\ntv2C2zDWDpWdJotDTp1AVQPmO+Yq8CdDjdCS1K+W/wBGLf1OcuK0azTbJp6QCFBYe8dTSoAPpCmW\nN3J55kF2bGJrwoor4jFGfKyyfMmWCdPt+8uq4PAg0DFvrPMMOD3lmPaRy2Z6895I6c8yD8SRgyRS\nGGED0l17SmRntJB9o9SEaLY9gMyelj3xKc+8nPvHJx9w0XKjseYvfoaLQeutYcMT6zM57mNshXNa\ncdgpSj4Zz24eHa3HVpzg+xnNa/bNRpyQ6ce89GlLqq7VxYoI+Zg5fQq7vupfa/8ARfo6jZXxLlHl\nnQyHtCLYoHtOr3bY1OX0/HwJyup01lVhVlM5XJxrMefZajcoyYXrgr5qMSGGQff1je3blqNtcGhy\n9WeUJ7D4mvII7cyUcKfeJTdZRLvqemSzqjNaa2j0bat3o3BB0MA/sZsf9Z5hSz1WC/TN0WLyF9DO\ny2DfU3CsV2fw9QvBVuJ2/SetQy16dvEv/pgZmC6vur8G9kSV7+8luZvmaUmSZOOIAVmYmTIopEgi\nWmQ2BQrKwmJBEXYuwZEqVhCJEcmOTAssGyxkiUKxyY4WZYJljbLBFY9SAUZIF0jrL7QTLzH7Q3b3\n4EmWBZY8yQDryYuxRNlg2WNssCyxQFWWDIjLLBMsBRV0i9iR5hmAsSAGvsSLWJNjYkVsSADNaxmt\nZWtYwoxAQlRiEUSFEKogKSqwqLIRYZV5iPyI/BKpkS1r16eovYQqj1PYSxZa0LsQFHvOP3jcG3W0\n1IWXTIeSPU/+JldV6lDEqfPJaw8WV0tvwZuW5Wbnca68rpUPLf1f/aLF8J0V/Tj1lGOAEQYQDsJa\npC3E84yMieRN2WM6auqMI6RVUL5OeZstDoXuxgcQ236A2OCwnR01rRUFUcyKuPqvXsV8jK7Ptj5I\n27ba6gCygn1m5rVK1AGAIor4A5xML5nQY1lGND7fJiWuVj3JjlluO0rk9IJi6OPWFV8/aWo56s8E\nTjoMpBHbMKM/aAD4Esr8d5PG9e5G0w54HJkrg+sB5np6S3WB6SRXxY3tDCTmAD+plvMzHRuQ3tCg\n88yciC6ucS2ZMrRNF8yYMtMDcxfUE0EzziYDB9XMsTxHKwNFs8ycynXM6xF70g0XdFAyYjrttq1S\nEsoB9451Zk9RxiMuqqyIuM0LGUoPcWcBum126RzgEr7zVOhX1npuqpS9ClgBzOP3raWoclBlZxvU\nemywn3LmJvYed3/bPyaSpyvfmFYklbKm6bh2Yd/tBOhAwRgyiMQeO4mYvPcjScU+TtfDm+LqEFGp\nOLRxzOkUzy6vPULKj02jkH/zO18ObwuupFdv03rwQfX5nb9E6sr4+ha/uXj9mBn4XZ/1K1x7m9Ik\nEy2eO0oRzOjRkoiZMmRRxkyZMgBkyZMigRIIlpmIbDYMiQRCEShEdscmDIlGWGIlSI5MXexDXvZT\npmepepx6YnJWbtvZfCaEdOeSTO8KgiCZR7CV76pW67ZaLFVsYeVs5PR74x1C0a+s0uff1m6IDLkc\ng9jEvFW3JqdCzqoFi/V1AciTsF41O2VkHPSACY2i6UbvQl8bHWQUoeogrriAdY7YsXdeZpIrCjrB\nMsadYJligKsINhkRhhBMICitixaxY+65i1iwEDosKBIUQqjmApKiFUSFEMiw8CbLVrDqoHf2lUWa\nvxJuX5LTeVVzdZ9IA9PmVMzKhjVOyRJRVK6ztRrPEG4vqbzpNK2EHDkek1eQqdCjGOPvK1p5KkZ+\ntvqY+pMIi5XJ7zzPNy5ZVrsl/wAHVUUqqPaiteW5m127TFuTFNHSXcY7CdBpkFaTMtn7IbkW9q0h\nnTIEUY4jqgFcxVBkdQYADvmEFhDMVIKSei9Vrta4MmabYXqy0suTBmwWN9A+qEVeP6T6sewi9/dL\n7eURtaCA4hFfAgRWP1eYCPU57yfL68FXXHtmWl60fxiRtIP5mRLIxIgVIQ9OQPkmXF2OCMD395NH\nI7f+49DHH4CK4zL9Yix1ALY6P2hFu/wY+8lqy4SelLgRxfwFD8YkhsQBsH1BmAB7cQ5Kr09ZH3lq\nmcpt68DXHRYPzLhx7xeyzCh0IZh7SEZA5XOXIzJf4lQl27G9nA11ZOJbOIrXYRjzP1GX6h14PYye\nvIjJb2NcQpaWVswJfBxJFnEer1vyJ2herntJBgQ/IzL9f94+Ny92I4hMzM+0p1CTmSqxPwJouXBP\n1cGUtqWxSLBkGZznmSPmLJKyPbZyC48HI77tpqcug+ic6cq89I1daXVlWGQZx25aH8vYxA4M4/Px\nP4Wz7fxZu4OV3Lsl5NYp6effmFrsemxdRp2w69/ke0EgBJzLdXS3A/aUozlCSlHyjQkk+D0HY9zT\ncNGtgP1diJsh3nnG1ax9t1qWq2NO/DD+n5nommsS6pbKz1Kwzmei9J6hHMpT/qXk5nOxvQnteGXM\niWMiapSREyTJPaApWZMmQAyZMkwAiYRJAkniAbBlZAHEs36e812u3jQ6Rit96q/tFckvI6KcvA8R\nKMs1mk37R6m0ILRk9ptTzyIldsbPxY6cJR4kjXbsP9wv/wCgznvAykbQc88zc+Jrvy+22n3BED4Z\n04p2mrHqoMgaTy0/hFxPWO/2xuxYtYsdcQDrNNFQTZYFxGnWBYRwgq4gmEZcQLCAouRBOsYYQbCA\nFlEMglFEKgiAERYdFlEWMVr/AGiOXatsT30U1Fq6bTPa/ZRmcO976vUPqruef4Y9hNp4r1ZvsTR1\ntx+psfE1OPoAX9I7zgfqDPd1vpRfCOg6djdkO9+WVz1WE+8ZqXK4xBBeQR2jVC/UJzU3waknpGx0\nFYQZPrHOvmL1Hp6RnvDVIXyMcyjLbZm2Pb2y/X/b2lNbrdLoNO9+stWuoc8mcv4r8X0bVeNFoUOq\n17ceWnPSYLYfAe4eIdYu4eMLX8o/UmmVsDH/APsTd6Z0S7MalLiJVtuhWuSut/ESm+46Tw/obNdq\nDwCvGP3lF034gbr0i5Rog3YdIOPvPVto2Hb9qqWvRaatQP5ukZ/vNstc7KjoeJTHTWzLnmT7vsPH\nv/b/AMW6rD3+JUVh/KK8YlX/AA18VKOqvxOuR6dE9lFYHaSUltYOMvEEMebd8ngm47L+IO09X5XW\njVog6ifLE12z/iD4jq1J024aJtU6fqVR0z6GupLIQCAff3nLeI/C+i3epuqjy9Qo4dOOZDkdIxr4\nPtjyTUZzctWcnCUfijpKz0anbL9Ow79WTHG/FDZ1AIrsdvbpP/iW01t2z6pdu3rTV2aZuK7yg4+8\n366PR5Fi6elscg9InI5dleFL05RNZehJbUf9nKf+6H5l2q0Gz3agnhAOMGM+Gtb4u129ebuFP5XR\nntWwB4nW1V6evHl6elT8KI0trEdxKsupVzjqJHKUIrUYhjcQysowB+oe0iy5KaXtb/hAZZvYQZcl\ngD2xFtzAbZNbWDy1TAf2kFE/Wse2V1BNpDmi1un19K2aV+qsdjmMeZ1A47ieafgtqG/KbjprWYmq\n3Aye09FVilj+qMcy3kKVOtsW6pQm4oOHyBLh+IurgnjtLdcWFuo92yFxDq/Mv5kVDe5ko3PMdHLY\n1wGeqT1nEXDSer3k0ctidox5hBlhYTFi5krZ6SSOa1LTYjgMOwYYEQ3DTLdUQR9UY65BbJ5j8pwy\nIaYsNwe0cTq6GpuI9IozEMZ1O+6PKF1E5SwfXgzm3Bwk4S9joMa1Wx2HrZWQo46ifSdL4Q3I0sdD\ne+cfpJnLV9xiHNhqvTU156q/aXOnZjw71NePcTJojdFwf/5nqJmYiWz6wa3RJaCM4j5npUJqcVKP\nhnJzi4S7WVMrLykeIjJkyZAUySO8iZACx9ZWw4UnGcDOPeTJHeAhyGr1+4brfbRoUNSLwWI/0jO2\n+GaalV9Y5ut7lm7mdKlaJkoiqT3wMSxEh9GLn3y5LDyWo9sFpHHeKtDRo6a9RSgV0YBcfJnRbezW\naGprOGKzQ+MC1+r0umr5+oEj7HM6alQtFa47KJXxlrIt144Jbpbphvycx40tHkVab+exgB/ebfbq\nPy+gqQ9wJTcdpr1uup1Fh5rHabBgAMDsJZrqaulY/cbKxOuMEKuIBxG3EA4l+LIhSxYBxHHWLuse\nIKuIFxGXEC4igLOIJhzGGECwgKXUQ1Yg1EPWOYCPjkMg4may4UaN3zjAl0HE0Pi+/wDgV6Ss/U5B\nOP8AOZ3Vb/QxnMnxKfUtSOfrdrrbL2/5hyufQQyKMjHb1g1BUdPoO0KmTPLrJOTcmdYlrwGKAEAd\noWjhpRMiEQYMrsjk+BxH+occf6TlPGPiXVfml2Tw3mzdb/pYj+Qfebzc9Ymg0Vuofsi5x7wn4c7D\nXRp7Nz1FAbXakk+Ye+O4E2/p7pscu/usX2oyuoW+hV3h/AHgWjZaBqdWfzO7N9T3OM4J9BPRa6hw\nRyQOIOivIDdviNovSJ6G9RXbFaRzSlKz7mYi4Xk5PvJkZkZjCRImTmQJhgKYTkYPaUdCRgHiWMsv\naLvQjRoN/wBpo3HRvp7lwh9cc5+84XbNTdtGuO0a/OCT5Fh9fieq3L1KSe3tOF8fbV+d25btOhGs\n0x61I7zM6t06ObQ//ZFvByHCfZPwGTHocww7d5p/D24Dcdsqv/m/Sw+RwZukITp6u88qsi65OLNa\nZjPhBKh1ZSjchuDKWMQcd8dpTOOeQT7QjOUXtCKJ594WsOx/iRr9FaejT6rqdfQGek9fQx6Tx8zg\nvxG2W9jpd50QJ1OkIJQeqg5m/wDDW+6LfNurtrvQ3/petjgqftNnL78mmM6+fkmtipJTR0C2nMsb\niT2ipPSMEkn2k9fSQMYJmRK2aXayDsQ15naEL8d4p6wgbAksLZa5GOAwHMsHIi3mTPMMlWQk/Ixw\nHGt4+ZQWGAL5MkvxJJ5Cm97E7BkWSRYSQMRUWGZ5hMkWWta2J2DGq/i1MvficduFHlXn2nWs3E0+\n8VdX1Ykd9ndJSLeHPslr5NKjLyJevgnPYwDDDE+kuMYyfSRtGq0dB4M1/kao6R89JP0zuMzy7S2/\nl7qtSvHQeZ6Vo7hfpq7Ac5E7j6cynbU6pf0nPdVp7bFYvcP6SMcSTIE6QyisySe8wCA4iTJI4mAQ\nE2RgyRxJkEQDZYStrBKy7dgMyRNL4s140W2NjmxuFX3kVs1XBzfsOrh3zUUana87r4it1QOaqj0g\nTrT8TT+FdCdLtys69LvyRNwZHiQcYd0vL5JsmSc9LwuCjYJzKGEYcSrCXERIC47wLiMNAsJJFjxd\nxF7BG3EA4kqAUcQDiNOIBxHCCziBYRhxAsIAXUQ9QgkEPWICMOn0qSewnFa+1tRu+oLHIrOF/edf\nrrBTorHb+kziNIetGsJ5ckzj/qjJajGle5s9Lq8zI583EOowYMDLZJ7dowBwJxMmbbYRBkQijgzK\nhLN9KMfUSFsgb50c74jX89q9Bt5J6L7cOR6Acz1HZ9OKa6aQ3S1agdI7YnmGh/j+M1Vu1aBv7z1v\nQ9OFPtPR/pyhVYff7s5rrlr9VVfBsUAAGIT0lUUdIlprsoLwiokGWHGZBgPMEmVIPpFd211O2bdq\nNbqmC1UoXYn2EVLb0gDazUppaDbYGKj0UZM4LcPxe8M7frm0mofUrapww8luJ2u0a1Nz22nWUlWq\nuUOhHsZ5J+OV2z7DRRqG0Gnu1eobpPUOQO5Mu4VFdtvpWpkVzlGG4no/h3xhsviKsHQauti3ZGYB\nj+02msqNqgADqOVz8T5Oqu0Gtb/aPhp7NFuGlAfy8/qPxPoL8LfFx8T+G0t1gVdZSSjqO/HrLud0\nr+Hh61T3Hx/YrV5Pqfa+GaLw8q7f4k3DbcYrRgyg+ue86gg5br59pze+K2n/ABJ07sMef/2E6lfq\ndp4p12lVZEkvdnUVy3XFv4AEEe2fc9pzO5eJLfzR0WwUfm9VnDuf0L+8J42116Pptr0ZxqNX6juF\n9Z0/hnZaNo0NdNVSmxgDYfUn3mj0HoTyX6tv4kOVlKmP7Od03hnft0qd9duVunrIwakwczWW/g6l\nIOp2/ctRTrh9aMBx1T1nTZQFWC9Pp7mNJ9QzyB7GdtXgY9Ee2EFooV9Qsfhnhi734m8L6kaXxNoH\n1Om//c1DqOPc4nUbN4h2rdlzo9XUf8LnpYftPSNRRVfWyXVo6MMEMJwHiD8Ldl3K436Lr27Uk58y\njjmYWd9OU3vvr4ZfrzYy4mtD5yPtMLcTiNTt3jfw31MBXumkQ4TrJ6yP2htL450alaN80uo0GqP9\nSfT+xnKZXQ8mh+NouLUluL2dgHl1cETX6LcNBrq1fR6upwfTq5jZQgjBGPiZLrlB/cgaQYvz6yS+\nRAZbPOB9pDWdPof2idzE7RgMM8d5bqH7xTrODjAaSHyQc8iOUkl4BwHFfI5i2sHXWw+JiPItOREd\njlwJGOpHP3phiJVvpTtmG1IHW0Fn6RLcXwa0Xwi9AD1OrdiOZ2XgzVebtwqds2J3nGVnpY/M3PhG\n78vu1qf/AFcTb6BkOrLUfaRRz6vUqf65O8HIkTF7STPQTmCM5kgSvH7SHsWtS1jALEbSW2LrYQyJ\nqtRv2joJBfrP+HmJf+rdCGx5dx+emU31DGjw5r/JLHGtfiLOixmSeO80+n8R6G7H1lP+riPVa/S3\nnFWoqZvYNJa8mmz8JJ/8jZU2Q/KLQwzAcngTiNZZbvPievToM0ac5Y+nxN74r3SvbNrstJ6nxhVH\nrAeC9A9GiOo1Ixfd9TQsffJQ9vcnqiq63a/PsdCq9KAKOAMSDxmXlTzJ0VU9lGEoe8IZQjmPQ5A2\nEGwhTKMI9D0LuIFxGGEC4ksWKK2CLuI3YIu4jxBZxAMIy4gHEUC6DiMVd4FBGKu8a+Q8Go8Y2FNo\nZVPJZR/nOdqrChV9MTceL7Oq/T6c9n5/tNaoyePQTzj6hv8AUymvg6TAXbSv2VwMrj04hhiVRSw4\n7y1wWpc2Hj4mA3vgut74D14IwJlxxSx9onRr9IXC+ZiOHpdGKEFJG4uL5InFxfJoNsPl+NrR/VSp\nE9a0mAigTyS7Gm8XbbcwIFx8sn04E9U0Nnd85U8T07oE1PAil7HK9bi/4juf6N6vYSTB1n6QISX2\nU4PaBnvJEsRKYxFJdkkZHBxPPvxxuuq8DakVdX1jobp9jwf8p6DnHzNT4r2mvfNj1mhs/wCdWyD4\nJHeWMSyNd0Zy8JjJpuLSPEtN4/3Hwh+G+2XaGqnUWMfLAsJwo5njXjDxbuni3cm1m6WAt2VF/So+\nJ6NoKatN+b8KeJgKUQnyL2GOfQicyfw416bxXWj13aMuCbUOQqZ7mbvUMGTl30cb5/umUce+W3Cw\n5bwjqLad+0nl85sHHvPdPwEbp8W+IEBPlioEKewOTGvGtPgrYfC9A23TaI7wEC1+SB1l8dz+83P4\nK+Gbto2XU7jrUK6vWd+r0XuMxFY4dOcZ+W9cjLIv112+Aviewv8AiBtoJyyk/wCgnWUn6xn17/E4\nuhX134ham6zDflMYI7czt1Uc49Z4t19qzLaXszrVxVBfo4XbK31v4k6qxyXWg4QH+XiejC+qjU11\nN1NqSpPQPX7Tg/BtgXxn4gZsYQ9XPwJpfBPjM6r8Rtzs3K4LpkLCoseEWeifT+JK3AUor8VsxOpy\nXqqLNx418beJtk1yjbdkW+knAd1MHtP4wigCvxJteq0tpOOpKz0D95ovx3/ErbbNlq23w9rhdqnc\nO91LcIo9M+88i2Hxnq/PWjdLDq9Haem1bz1YB7kfM3sOOLdH07o6kUp99P48n2Ts27aPedEmq265\nLqm9VOcR3AzPnDwNutvhTxpp9HprmbadxINS54HV2M+jQ2QCuD8yj1DCeJNJPafKLNFjsjstgeo4\nmq3fYNr3ZQNx0VN5HYuucTamVme0nwyeLa5R57uP4WbTfb5uhu1GhcdhQ2BmaHUeD/Gm33E7fude\np0y/pW884nsMzMqW4GPd+cS1DNth77PFL918YbS4Gu2WnVVjudOCTCHx9p6ExuG0blpn9eqkgCez\nqOeRF9Zt2j1gxqdPXYP8SzPs6Biz41om/mG390Ty3afGG0btqlo01pWw9g3E37YXIU8xrxF4J2nU\n6Kw7fpKNJrB9aW1qFYN95zOya221m0GtyNdpuHz/ADfInJ9Y6N/BNSr5iX6LYXR3Hg3qk+sljlYu\nGKNycg+kyyw447TA7eSbt5EdQPqMBjtCXnLQRPIEtx8F2Hgw98+kd0No0+66S3sDwYmpwuJTWEql\nbjuHX/WWMWx1XwmvZiTh3rtfuesVN1IrDsRmXxyYttj9ehpbPoBGp6jCXdFS+TjprUmgdrBK2dyA\no5M4be90t12pavTsVqTjI9Z1m+uV2y/H9Jnnujbp09ZPdhkzmPqTMsqiqYcJmt0ylPdj9g+k0iq+\nQoBPc+pm0q0iWDBZonTqBkRxL8cgzg5ylvkvWubK37Pp7B7n5mvfZLdOS+lbyW/qQzbDVDIweZp/\nEe82LSNHpD/Ht4yPSWMacnPSehKvWlLtXJqb9bqtdrkGfPTTHJ6+cmd1s/ijT3KtV6tS44+oYE0+\nwbfTo9Cq2YNrcu33htbttWpXqQCa1HWbcSz7XtCZKoufY1rXudtVYlidVbBlPqJaefabUa/aLAaX\n86j1VjyPtOu2netPr1wrBbP6T3nY4HWaMxJJ6l8GPfhzq+6PKNkZRpd+RKEZmwiqihlGhisG47xy\nY9MA4gXEO0C8liOF3EXcRp4vYJKAs4gHEYcQDxRC6RiruIFBxGKhzEl4YHI+J36950wH8gbMXrJ+\nrmRvL9fiC1f6RMQYHE8q6rLuyp7+TqsZaqiv0NVIpx1NiP16bT2jFhBnPX2OvYmE0mos6h9RmZKp\n/kmSzok1tM6T/YGjtrwiICe5mr1Xh2/T5bR2uVBz0sciO6LWsuOo8TcaXXAj6uRJq7YSfbPgz3Zf\nS/O0eYeJ7bhoxZYhTU6dupOO5+J6N4S3AazbKLxyAoBHrmTu+36Hc9OyWIOo/wB5y+yrZ4Y1Zq1L\nFtA5wrD0nUdB6jVjTdEpLTKXUorMq7orUl7HqFDjAXOT7xoczSaTVdQUIVZHAKtNnVaQMMQSJ2Mo\n75RzdU3XxMbMgyA+fWWGJF4LSfuVxIxL4kdobHbOV8YeB9p8VacJrqvLuXlbq+HH7zzTWfg3utb2\nJt28WppzwFds5Hz2nuhYCCe3AmhjdRyaF2wlx8Mr21QmtyPM/CP4UbXsli6vWk63W8f8XlVPxOt3\nncqtDtT3t0rSFKdK8AETYau3gMzFQvPB7zznxJqbPEu9rtmj/wDhJzeV7ASl1LqE4Vu657YuHW5z\n7UuBjwFp3fSXa7UD+LqHbn4zxOvpXOM+kDRp0oqrprQIqKAAIyq45nk1tkrr3Y/k3py40cBsBx4/\n3jS8L5uRz65E8y1GgbZ/Gm6bfrayF1XXXW7jjnsR+89P3lF2z8QNFrHby0uBJPuZu/HHgzT+LNCj\ngircFGa7BxievfR/U66aPTs/FrT/AF8MxetVOTU4nyT4g2nUbVuV2l1CEOjYz6H5HxOn/CjwJ/6y\n3l6Lb/JoqXqbBwx+07fcvD/iLbH8jctlr3amv6ReK8t9snmF2ynxSrLT4e8PHbzZ9Bt6ACvyZ0Fm\nFS5O6E1v+/Bn1XuWk0W8UbQm2fiJ4X2bRsXNBTkHJCg+v9p9HUJ0VqvsMTzr8O/w4Ox7hZu2+ak6\n/drP+a/PT8DM9Ix6mZXUMv1+2G99q1s0Ko9qf7MPeRJMiZpKZMmTIAWBlhzKiWERjWBuXkHC/E82\n/EXRtodVp940gxdUwFoX+ZPXM9LvYAe857xHUNbt2oqdOWQqDGX48ciqUJrfAtOQ6rEcxVqF1FFW\noTlXAYCY7nqJ9D6TVeGLOvQ26cnLaaw1fsJsnGCTmeTW1+nY4P2Osjpg3GTAWDkYjB7QTCLFk8WD\n/mEjUZahx7ESWHEk4NbA9o5PT2PPRPDLGzaaiTnmbbvNJ4Pbq2OrHabpRznmeoYUu7Hg38I4/JWr\npf3YpuVB1Gksq/qE818ttLddpLAQUb6M+onqjjIE5/xFsA1/8WghLhzmZvXOnvLqUoL7kXOn5caX\n2T8M4sMUPMILz74ldRXdprDXrqmTpOA57N9pUtWlZsLKVHPE4KymVcu2a0zoFqa2uSuu135TTlyc\nMe3zEdmoe3VPrdQDlv0g+kBVVZuutDOP93U8To0qCqFUfSITaqj2ry/JLY40x7F5fkaqu+rGfpjV\nd/0ewiKLiF6eJRaWzNnFMPcQy5E1d1LLaLtMTXavt2MeDY4mBAx57Ra5ut90WEH2G22HfBd06bW5\nW7Hf3nSgjE4HU6cOmEPRaOQw7za+Ht5bqGj1nFqjhj2M7zonXVkaovf3ezM7KxE07K/8HUHtBHvJ\nJz2PBkTrEZy4BMIF4w0A8liO9xd4vYIy8XskqFFngH4jDwDjmOELpGK4ukZq9I2Xhh7nB7qP/wAx\n6vB9pert3ld2HT4i1Of5pameU9T/APJn/dnW0/8Aaj/Yl6g3eWrpCHkYldVf5FJfpyewiKaTVa4B\n73KofQcSjFNrbekTxTcdt6Rta3Xq6Qw/vHKXKjg8zj9dtrabXUL51nlO2M9Rm0WnX6Feqt/Pqz29\nYTpi0tS8jbKItLUvJ0yXMPvJ1C06pTXemUx2M1u3a+u8dB+i0d1PebIggehMptOuRnzr7JaZq9Bq\n79k1a6a1i+icnpc8lZ2Gi1dTIehi6N2YGaOylLq/LvXqB/ymtTT63arDZoGOoq9aT3H7zt+h/UKU\nVRkePkxs3p8bX3w8noNVw6FC5wIQX+05HbvEmns4uPk3Huje83Sa9WUFukg+oM7GE67l3VtNGJON\ntf2tG5F3aYbZq11FC8h+kkdycyra6tQS9isB65xHenojVlnwPW3c8HEWs1HB5HE57cfFe36DLW2g\nseFwM5PtOee7e/E1/k6WttFomOWdu7j49pWvzaMZfc9v4J68S297lwg/iPf79wv/ANl7N/Fuf6TY\nO1fzNz4e2hNm0orq+q1ubXbkk+sY8P7FpNmpNVCZu7mxjkk/ebVV6lKuOficP1fPtzHpPXwvg2aq\n4UR7YAqEI/UcmHdfp4lkrAPAP7wpXK4mZRiv02glPk4X8RdubVbWl9AzdSwfB74BzxOl8J7lXuuy\n6XUq3TYFCsMw+opN1dlbKGDAqB8GcDsNx8N+Jb9BqnY6W5iU9l+J0H09lelY6peH/wDRuVD1qv2j\n1pOh1GQCO2D2hlRUH0KB9hNbp7TYnUzAKp4Aj9dgf0InYTTRlwa8FiJXpOcg8+svMPEZsm2VMrLG\nR6xRTJIEwCWxARszEw8SScCCd8CIlsT22C1Oekle4mp3It5JPHbJEe1loRAQeWIE53xRrq9LtepL\nP09CEq3ufaWILUdlBS77UkcP4SOdy3hucfmDN9YOSP3mi8GKTpLtQww17mw/vN6xyczyLOl35M5L\n5O9jFxSX6KuPpixOGxGGgGH1yCJNAg9uZUdn+0s8hf0v9o5D14O58D87DTnvFNdvmq0XiirSajC6\nWwHpOO8d8FDGxUe8V8c7W+q0qavTV9d9H1AD4npmNJwxIyit8I5a3UsmSfuzpVYMAZc4xOZ8MeIK\nNfo0FzivUJ9Lq3oZsdx37Q6CtjZapOMgA95Z9aHapN+SvKial2pB9zq0jaZn1gXoUZyfSeW6jav9\nu7hYm1PYmkGepgeGOfSbp7dy8X39AVtPtoOPYt/9p01i6PwxtGVUAqPpHufaZmdjVZLVk+FH3NPG\nunicRe5Pwvg4hK7Nk6dNrKvLp7LYexM2NFtdlea2DL7xbWafUb4w1O4ArV+pEPpENVoL9HZ5ujYs\noH6JwWVCmVrjW/8AJrx1avvepf6OgQAwnRggRLadYutQEfTYv6h7TY49VUkGZs04vTKticJdrBtX\nIKEdoYI2ckEzCMnkZ+3pG8jO4CAW79/SL63Tm1AyHotXlWHvHyrBue0owAbIz7RYTcZbXkVS5Nl4\nc3Q31eRqDi5eCPf5m8zxzOF1lLq41GmOLq/qwPUe06rZtwTcNIrqf4gGGX2M9G+n+q/xUPSsf3L/\nAGZ2XQovvh4Y60A8O/Gc+sDZOpiU0LvF7Iw8Xs7SZCi7wL94Z4F+8cIShjNR5iqH1jFXeNktpiM4\n3fk6N9BPHWDj5lKxyY54sXp3jRHHBVsxZOCZ5Z1ePZlTR1WNLdUf7FsDgMMiGT0CnpECDnEN6TJZ\nJIT3uk3aM2DlqvqGIztGpXUaVGHJxyfmF6QyENyMdpq9u/3DXtpn/RYepT945ffBx90OX31uPuja\n26Guy5LR9L55I9ZsagMD4i4/SDGKu8qzba5Kc5NrTLtkcgywYqM9/iZJUSLeiDYrrNFTq8ecgwPb\ng/3iabItWfylr1592Jm5Ky9YA7yavLtqe4SaEcuDTLs2rU8a4jPJyJYbCzf/ACNQbPsSJvMrgS4A\nPaXJdXybl2ym/wDJCtR5SRqNDsej0txtWoPYeCX+oY/ebytiqBEAVfTAxiVVIZVEZGdsuFIZOXd5\nJResDIII9c943WCxwcDHrAoMDiEGZfx6ux90itJ7CjJPPeE6eIFSYTJ95qUzjppkTQveOkgqMEev\ntOY8Y7Im5aU20/Ten1K3rmdVavUP9YuwDAjH0+sy7HKFj7SeqWuTlPA+/nWOdp12a9dV6seGndU2\ntnDMCV4xiefeK/Dr6mxdXtj+Rra/qVgO4HoY14V8XLqcaPc0/La2odL9XZvmdp0nq8MuCrtepIr5\nWIkvUqPQVszz6SxPUMiayrUjK9OCD2OY4lqg4LdTe023DRmwsknqYzjiZ0wXmDMnzB7xmmS+oggE\ngmDNnzB2XYEVRbGu1IK7HmJ2WYzzB3X/AMMsXx8eqzXarVhU5YBv6ycDEmhX7sqW3Tl9sAmru6j1\nDuOJ5j4117bxuVOz6RyURg9zD2GOI/4m8TvqrX2rZ823qfrccD55imz7YKc2MM3ucu3vOf651mFF\nbppe2zd6J0pr/rXo2u30LpqVRBhAuBGW4EyteMe0llODPOJS29s6NvbBE5lGHOZJ/VMbtHoeijD0\ng2OEYwjdwYLUDFB9ywH+cdHlpD0eh+FF6NnqE2r8qR6GI7FX5O21L78zYHvPUsSPbRBfpHIZD3bJ\n/s5rcPCuj1VzXVqarW79JI/0lNF4Q0lBVry1xByOpief3nUdpPBEdPHrnNWNcod/FWKPanwA01Vd\nC9NahR8CcZuhbevEwqGW0unHVj0LTtrh01sROL8NFV1uud/1mxpk9dvUIRrfiTJsVN91nuh/U1f8\nsDKgf2iz0AKT09ozdbm8lTyeMRTcdwo0lJa0/V6ATzi1d9zSZdr73pI57dKW2/VLq9Nwp/WPeMDx\nBVZUPylbWue6j0k6fadZv9ot1uadID9Kf1CdVt21aPb6+lK1/eaMcVyScl/yWrsiqMUp8yRyQt3z\nU/8Ax9OaFP8AVzLHR790g5GfX5nbPYvZQICxiRwY+dMILjkrrNl7RRqtJVaNOn5kfxAOZLD1/wAo\n6wJzmL2JiZVtfPA1T7ntihyqnHBMT0952ncUuTiiw/xPYH3mwtWK31edU9TcAiSYt8se1Ti/BOtS\nWn7nWixbKRYpyrDIMq/vNB4X1zgPotW38Sv9P29J0Fk9dwcqOVTGyPuZNtbrk4i794vZ6xh4vZNB\nEQu8A8M/eAc8xwhiRmoxRDGKzEYjNJ4zrC6dNRjlWAB+5mr6gSMe3M6LxNpzqdpdV/UOf7czmNEW\nahS3dhPOvqShV5Pcvc6PAn3Ur9DCjH2hs5gM/Vj2hVnNMuMKvxFd10pvoaykfxq+RGl4OfaFVlB6\nj2PGI1ScXtEak4vaFto1Y1FAVzi1f1CbSr1nNbtpzoLvzunyF7sBNvte417jQLaGHWByvtC2va9S\nPhhdVtepHw/9GzAzLqDBh8nnj4hFORKjKLC5l1APcQSjmGURIp+xFIt0LniFVQBxKcS6nEnWv6kR\nPZcAwig4gw3MIDLNSiuURsIpwIQEwIMIpEvxs3wRtBATMBMjP0zM8SeLURmiWJ9Ox7yoAHGODIDc\nTOqNc15F0CvQdPHJ9D7TmfEfh/T7mRYo8vUKPpdeCD7zp7DkRSzmZ+RN0y7oMs0ycTg9Nuu9eHnC\na+v85pl48wdwPtOp2TxbodcmK7ypPdX4xG7Kq7R/EQMPYzQbn4V2/WE2opqs/wAPE38D6psqj2W8\noLsWjI88M7OrX1WY6LEP2bMIdUO08vu8K7lQ2dFuuoT1AwJC6LxRphj8753/AFHE36/qfBmtvgoP\nosn+M0enPqwnBP8AaK6jcqaxl7kX4LTzezReJruH15qz/TzBp4X1+obq124X3DOSO2Ys/qfCgtx5\nHR6FL+qaOl37xpoNFb0oGs1J4AQdQP8Aaclqr96324tafyejJ/SDlmH/AGm82/w9pdG+aVKH1Hf/\nAFmyGnROwH3nP5/1RbkR9OpaRq4/TsehqXlmm27aq9JWEorCrjk+pm5rToqA7/ExiE7RTU6kqCBO\nalKVr2zT+6zhDKuFJOZjXKexmkfUMSeTLVOxIOTiP9HXJL/D+7Nl3biXK+8FU2cQ79uIx8ET4ehc\n8ZBk21m66ipe7MDj7TGA64/slYv3qgAZCS3g1etkQr+WJZPsi5fCO/0S9GmrHsoh5WvjAkmeoRio\npJHHye22QxkpnMgzBHAS46gV9DOE3BLdn3Oy0ofIsPcD1neRfWaenUUsL1DLj1lDqGDDMq7JeV4Z\nYxb/AEZaa2mcFqtwVF80HLHsBzKbTom12s/MawZUcrIOjov3e19OOnTp9PT7kd5uKgyVlahhfieY\nW9tFjguWjenZGENQ4bNut61qK1HHbI7CUtOWwTn594pSCEwWJHtiFS6isAWWqo9sy7HKneu2XBmO\nvT4DKq5wozLFRg4GIJdw0KvzqaQf+qMrdTeuabFcDv0mW4VRcfK2MfcvKFXB5gGEdZe8Ws4Mz76l\nHySQkKuvf2itq5IIHaPNyDFLM4IEzpx7XwWa2avXnyNRTrK+PKb+Jj+Ye07HT6hdTp0sQjkek5a9\nFetkbkNwZfwxqzptRbt9zZ6fqQn1B9J2H0vn+nP0JPh//QyqlOvuXlHSPF7IezkxeyehQe47MdvT\n0L2cEwDGGsMXcxyAhDD1GLIYes8xwjGbV8yh1+DOH0y+VqNVQ/etuPtO5rI9ZyW/af8AJ7r5gH03\ndz8+k5P6nxe+pWr2NXptmm4fIsrfUR6+sYBi+Prz6wqTgZG2+UHEKmOIEQiyJkTJ1VS6itkcDDDB\nE8v127anwnvYHJpLZI9xPVahzn2nI/iRsa7nthupX+MnOZe6dbCNnp2/iybGs03X7M3nhvxFo95p\nDVWgWnuCZ0Sg8cifMG367VbTqT5TspU8ieneGvxGUqlO4Lg9uqW+odFlD7qVtEdmL6nNfn4PVQDn\nkiEX7zT6Td9LrghosRiw45mwVyFKv+2Jz0qpw8oz51Si9SQ7nAGZIPHEUDnABOYet+Iql3PTIXHQ\nZcwqnMAG4l1biTRko8ETQUGEUkwAaEDYliExjQUkyc8cwXVM65P6uhvaX6pGfmULSMiRuwVIxyTK\nsvEqc5Bl84HMgc+9vY7WgbqGAJ4I9oF/mFdhBNg85leyuPlEkQLE575kMTjsIVhKNgCQNNEqYJz8\nAQbE4hmxBtjEVEiBkZGQcCDsUBMkZhXOFxBPyvMkRJEQvBwZqdRktzN5YmcxOzShjLVc0vJepsUf\nJpWU9fEZoRuOI8mlrU5xzC9KrwBJpW74RPK9PhFKhgDMJa2Bn0kcCVsOQRIvLIPLL14OSRN/4K0x\nfUX6ggdDfpM55HNdDHGW7ATvvDWlGj2utD3PM3/p3H9TJ9T2iZ3UbeypxXubXt9phkyMzvTnSskS\nJkBSwOIhv95o2jUWqSGVSRHprvECGzZ9Qq8npOBIcjfpS7fOmPpS9SO/k5bbB06MO/1M/wBRP3jT\namvT1F7bAgiOktFWhWx+AowV+YtotI+6asW6nP5dT9Kehnkri3c3I33WnuUvCCLqty3ZzXt9fTV2\n8xuDGaPB91v1azX2k/0idDp3ShAlSKMD+0u15ZMq2V9z3mzjwxlDc+WVJ5Nn41rSNZT4U2pFHmVe\nY49STHtLpdJt6FNMgQN3wZgYn9TGU6BnliY53wSXZEg3KX5MKzA5xFLgR3hScDiBtYsMmZ+RLvQ+\nC0wBJwRF7OOYRmxAWnImc2mtFqCF7OOB6mazWk0X1ayv9VJyceomwsMTsAcsjdiJPRN1TU4+UXIr\njk63S6hdTpksU5DCRZOe8L6s1PborTyvK59jN/aZ6507MjlURmjByauybQtYYBzC2HmAYzRICFMN\nWYsph6zEFG0PE1vibSNqtsLIP4ifUP2j6GGYCyplbseJT6hQr6HAfRY67FI4TSv5lSvzkjke0cr5\ni+o050G5XVP+i0l1+PiEqODknn0nlWTTKqbhLyjqVJSW0M9pIaDLH+bvLLKrQjQ3QwB5ldQq2Iys\nMqwxKp3Ge0sxyelf0yP32Q609ninjzYn2/Wtai4rY5zOMNvT6kH4n0X4g2qrdtDZW6gkD6TPn3xJ\ntl20616rVIOePtO06PmrIh6c/wAkWb7nKHqryvJfRb5q9GwNF7pj2M7PZvxH1dFIS/Np9yZ5cz4k\ni4zUv6dTevviUo9RfifJ9EbL+IG3avoTUP5dp9+BOv0e6aTUY8nUI2fQGfJq6l17MZstBv8ArNHY\nr0X2IR7GYeR9NQlzU9CuzHt88H1ijFhDIPTPM+ftm/EzcdOFW9ltH9jPQNj/ABK2/WdCapPKc+pm\nHd0bJpe2Nlhzkt18nooX5Esgz6/3ml0+86PXlfy96t+82QtLYA5x7ShJup6minOmcOJLQzj5kEwX\nm/tJVwe8PWjLhEfay/VMzIOJXMV7XlhoJ1Dp+ZRjkShMgyOVmxyiVkEGYW54lWaQD0jHJ95R+0l4\nNu0B6RVjiQWGJjHJlHOI5IkSIY8wTSxg2j0iSKKuYM/MljzKmSJEqRQ4B7SGwfTmS65lD9JzHolR\nLLxBEEmXZzIZuhS7egirYq2MbJV+c3augDK1nLfvPSUrCBVXsBic14L2800tqbFxY86cdp6F0LE/\nh8fua5kc91K/1LdR8IgyDxLSDzNwzysyZMgKZIsUPWyEZBEmYe0GC4POddpLKd0OiLZrJNhz7H0m\n30wFZCKcIILVnz/EFxI5Wsf6wlJPWRjtPJurahlTjHwmbzm5QSfwOICoIBJHuZYWZTOAPtANaioT\nY5VIOmxbVxXYCvpKkW1poh7G+RvqPUBnvMJ5I9RF3c9h3EuH4znkx0bG5aYnaXZiBBO+RzK2Wd4E\ntn1jp26fA+MCrnvAWHiEsPfmLWNgSultliEQbmKWAhw/tDO2YvY2MZ9ZYgiwuAFty6XX6fV8hQcN\nideLBZWrA8EZnE6xPP0z1D9XcTofDepOp2ipnP1jIP7TtvpbIcXKllDOrXapD1pi7GFtMAxnboyC\nqGFQxdTCqYCjaHtDofeJqYdGi640xP2a/wAUbe2r0oupwLaznPxNBU/nVKy8Fe/xO3UhlKsMgzjt\n40p2rcDYOdLcefhjOJ+pOnPu/iII2On5G16bKB+pue8Yr7ZivThwQeDzGUOFnGSNeXgKrHOB2hVb\nBP8ATF1PMKpkTRFJBKj0DBGROM/Ejw0u76E36ZM6hBn7zsecE+kv+lM4BU+klx75Y9qsj5Q1PTPk\n3X0vp7WSwEMDjEVyRPZvxM8HC1X3DQ1893UCeP30tUxVhyJ6N0/Mry61KPkx83GlVLuj4YIOfQwi\nufeBMlTL0looxmxyqzHczYae88BTNMDGKbCpkFlezTxcpwaOo0O76vQuGouZR7Azttg/EXU0Mq6n\nLL6nM8zqtBQGXDBj6j7TLvwKbvzibyvU193K/Z9G7N4x2/c+kLYqO3uZ0tbq4yjhh7ifJ1eotoJe\nqw8dueZ1+wePNdoBWr2F1Hox5mDlfT+k5UlWeNVY/sfa/wBn0KGwcEy/7zhdi8daHciq2MEsPoZ2\nNFy2J1VOGB7YnOW411L1NFO3HnV+SDuxBxIJ+ZVs457yhPpKxEkWLfIlCZDSp7RR6RJbMq2cTJVz\n9MVIckQcgylhz2klveVJj0h6RUkwRMsTKMZIkSJFCeZEw95DHEekSJEk5MDbwYRTkmUtXMVD48MG\nhJYccesc27Strt0SkD+GOWinV5VaqB1WOcKPczufC21f7P0Ktaeq1/qJPzNno+A8u7b/ABRWzclU\nQbXl+DcU1LTUtaDgDEsTJJzKz0VLS0cxvfLLSueJJ7SsUDJkyZAUyWHAlZYZgBxdw8nxLej93rGP\n7wrVkOfSX8YUNpNTTuNSluk4cD+mFperVVLZWwORniebdew3HIk0a8J7hGaEtQPNqaqwfSfbvOf1\nVdm02121OxqJwQTOlvTpbE0fiFQ2ibHJDAzEpk+7tfgvY0tyUfZm3SzK9R9QDLFsARPSWB9PWw7E\nQpfiRSWpEcoaei7NmCZvYypfiCZ45LY6MSbGJzzFnfjmWd8AxS2ySwiTxiS749YvY+QM9hIaziAu\nfAliMR6QPzSGJzzHvCN7LqtXQT9CkFR95pXtw8c8PP0b1Z/jAm70aTryo/siyobrZ19hzAMYSwwL\nGelI5z3KqYRTzFq2hgYoDKmFQxZTCqYeRBtG4lNfpU1ulal8cjjiQjcQyN6dvYyG+qN0HCXgdCTh\nLuRxCB9NqX02p4dP0Z/mEYWzsO03u+7SuurFtfGoTswnOUOSTXcOm5TjpPr8zzPqvTpYlj0vtZ0e\nPkK6O/cdA5l1OIBGKnBMKrAzGaJ2FD8Eehlx2AHaAzLBuIxoa0FsRXVkdepWGCDPFPxO8JfkLzrN\nChOnc5YD+Uz2lDnOe0FrNLXq9LZRcodHBGDLvT82eHb3rx7jJRUouEvDPk2xCrESApnonjHwXZt2\nsNlH1UtyAO4iW2eGxdT1M6KfYjmegU51d0FKD2VK+hX2y+3x8nFciSHxO113hZkQtX0t9uJzup2u\nyokFTx8SVXxl5G39HycfnW0J12HHeOUnPBMAlDA/UCIxWvSY2bT8BjwnH8ickHAlwvV+oSD055OJ\nKKXOEy0Y+FsuxW3ovU9tTBq3YEH3na+HPHGv0NiI5axRx35nNbds2s3GwJRWzDPpPT/C/wCHiVLX\ndr+W79MyOo5GLGGruS5WvTW7OI/s6bbvGC31q12nsXP802te/wCgf9V3SfbEPRo9PRWtVdCYXjkT\nLNBpm5sqQfYTipyoctqLRUk8eT4i0Cbe9vzg6gf2lV3vR2P0V25/aXO2aUEN5akenEKml06nNdSg\n/aMfo+yY1+ivGw4fqAI7GY3aQeMSrNxItEOjDBnnjMwtBFucx6RJGJduPWCz6S7nIggvrHIfFFsZ\nME55xCHOOJQVkfU3aOQ9Fc9Jz7yXcBCXGAJZU4Oe3cRrZtvfddQDj/dkbk/1ESzjY88qxV1rkbOy\nMF3S8Ic8K7UdTf8AnNQD0D9Cn0nbrwPiD01CaepUrwFAxCduJ6VgYUMOpVx8+5zWVkPIn3PwZIzM\nMiXSuWJlZkyApkyZMgBksOZWTACmq06amlq7ACrDBzON1W067aHazSfxqic9A9J2hJEg/UCCMyhm\n9NpzVqzz8k9F8qeF4ODbeqjldSjVMO4Imv12sGrqarSVNc7DgDiehvpKHJ6qEz9pCaWis/TUgJ9c\nTn19KpT7u/gvwz64cqPJ53strjRGu1SLE7j2jxtBGMwniXSNtuuGsqXNFn/Fx/lFqVFqhl/SeROX\nz8SWLdKE0aMbI3L1F7mPbgcQZtz940NOc8iJ6ulkb6RKkdPgfFx8ArbcA5ijWd5lqsM5zErGPzLc\nIInikw1loEBY5KwDtzKM2VxnEnUBzjoHYcnMd2Y//jtXP8sRrXLEHtH/AAwnnbrqrCOK8AGavTIO\nWTBL2K2VJKtnXOYFjJc8wLtPSF4OZfkHW0ZRszX1tGa3igOKYRTF0bIhFMBRpWhUPzxFVaFRoCNb\n4Hq24xNLv21ef/vOmAGoUf3HtNmjQyMGHPb2lPOxIZVThJEuPdKmW0cPTd5hYWDpuThlMPW2eccT\nbb3s/nn8zpB/vCc49GHsZptNaLepXBS9f1qfSea9R6bZhS1JcfJ0VORC2O0Mg5OIRV+YqTg8H6Ya\nt/eZTRM1xwM14B9xIdwis/oPSUD4lbyGrdfcRiXIxR55FNdRTuWlKuoyR/aecbzt+o2vUsGUhP5S\nPUT0DS2ml8Yyp4Ma1ujp19BqtUMvo3tNHGypYstf0mni5csSWnzFnk1Wuft1fcGL6ta9RwVAadBv\nfhHV6V2s0g6qzzxOZfSa6uz6qmyPidPRmwsjxJG2sqqyPC3s0mt0/S7Y9Ih0szYUEmdlovDuu3Ny\nBWy59SJ23h/wDp9IFs1uLX749oXdUpx1y9v4MDLorU9t6R5psvhjW7kQyVMR7kcT0TYPw/oqrWzW\nnLf0Tu9NpKtJV0adAqewEZRAQP6pzmX1q67iPCKjyIwWqlr9+4vtu1aPb6wtFKrj1xNmjADgQJz6\n95OSBMWcpWPcnspzbm9yewljdXcSMgDtB9XExm4jdDdFiR3lc8cmULSpfiO0OUS5YSjNKFpHVHJD\n1EzJPpIK+0svtGK6PWDegclEVVST2hkpY8x5NNzwIRqwiw58vgid3shHyPpyf3gryOn/AAjvDXXr\n1HkAQWg0d+8agpUhTTA82Hjq+JLi41uTNQrW2L3dq7p8IFt+kt3S8V1AijOGb3E9A0Okr0lCVVKA\nqjGZTbdBVoqQlSgEDvHMYnpHSumxwa+fyfkxszLd70vCMI4lZJMjM1ikiJkyZAUyZMmQAyZMmZig\nZMkEyvVDQui5xKlpUmVJipCpFy0G+DILGDZ49RF7UU1VSampq7QGQjtOH3HQ27JaXpRn0hOffonc\ndUFd02IVdQynuDKHUemV51fbJc/JaoyHS9Lwc3tuq0+srD1OCPb1jN1AfJK8RDdPD7K7X7Y/lWd+\ngdjNem+6rb8VbjUwYeoGRONs6Q8XcLI8fJeUlPmDNldo0bPE1+o25e4Eeq3jTaqvqV1GfTMHbq9M\n3Ibn3lOzHhFfaOjOxGmu0SD05iV+kAOMce82+o12mrU9dgzNLfrTqn6NHWzO3Ab0kNdFsnqPJPG2\nS5YlqHFCFgCSeFHqZ03h/R/lNCpcfxX5YxXadmZLBqdcQ1vovoJunbAnadE6ZKl+rYuShl5Smu2J\nSxuYB2lrGi1jzqDO1yBreM1vNdW8ZreApsa3h1OYhW8YR4CDatiEVoupzLqYCjStDIwBz6xRWhUa\nJoRocRsdprN52hNYpto+i8c5EdV4VLBniVcvFhlQdc0S1WSqfcmcOz2VX+TqE6GHZvQw+SMY5BnW\na7Q0a+sreik+jTmNboNVtXU2DdpvU92nBdS6Hbi/dDlG7j5sLePchWJMKv1EkwOnsrsXqRh9j6Qw\nJxk9pzslp6LbexK+o1MSB9JlKNQav0nKeoMesC2DB7RG3TNz5Q4kkWmtSJ4SUlqQ9Xr6mGG/tK2f\nlGGSif2mu8t1Hbt6S1dbOeEIMX00uUw9KK5TNimroqGAoC/aMaTUeYCejC+819Gky38XsJsFxgKg\nwokNij7EFkYeEMBg3I4MuH55i6sMcSermQ6K/aG8wdpjMPSByPbmSDmGg7QnUMd5JYGB6WJ7QyUs\nfSI0I0kCYwZJzwJsa9GT3EOmi/wx3PwNd0YmqFbt2BjFOjd/QzcU6LtxH6dKF9Jexun3X8vhFazM\nS8Gpo27BGRH00IUZIjdhqoGbGGRNPrt56crUR95csx8XEX38yK8ZW3PUQ+qtSheCMzR6zXZ5zgf6\nwDam3VagJWrWu3Y+g+5nQbR4awRfuLeZZ3C+i/aRYvTr+o2bitR/0Wn6eKt2eTV7VtGo3O3quUpp\nu/T7zt9Jpa9NQtVShVXtC1qtaAKoX4EnOD3nd9O6bXgw1Hz8mTk5U738L4JHEgnMyRNIq6MBkTJk\nBTJkzMiKBMzMqSJBaGhdFiZUtK5mZi6FSMzIJkFpQtHJDki5aDLSrNBs0eoi+C7NBM0qzQbNHqIF\nmeDZ4NngmeP0IFawZiupqqvUraoYH3Exmg2aMlXGS00OUmvBqdR4d0D5NaCtj6iI2eGge2tsC+2J\n0DPBs8pT6XjTe5QRMsm1e5pa/D2kr/4n8Q+7R2jTU6ZemlAoh2aBdpNVhU1P7I6GzvsmuWY7Rex5\nLtF7HltceCIix4tY8mx4tY8AF63jNbzXVvGa3gKbGt4zW81tbxmt4CGxreHVszXo8YR4ANhoRWi6\ntmEBxABlWhVbPeKK0IrQEe/A9W2O0LlXGGGREVeFR42UFLyCfb4Nbufh+q5vN0pNT+oXgMfmaO4a\nrQ/TrKSyf1VjP952gYkjmWdUuXpsUMJz/Ueg1ZW5QWmaFHUZQXbPlHFV3I4yjAiGVyJuNb4d097d\nenZqn/w8CanUbbrtFnqHnr8d5yOV0PKx/wCnaNWrLqsXkjAfnHMuOPWL1atQem6m2k+7jAh/Mqc/\nS4b/AKZjTrnB6ktE+9kg44MLWQO2YLn0IMspI7yNiNBhgywAgTYQOJdLDG6Yxph1pJ59IzTpcwVF\n6cBjNjRqKVHJEKlGUtTekVrZTXsVq0YxyI7TpBjjEq26aatfQxd95r56UmvXHEo+7u2VGrp+EbVN\nOvbHMJ5daD6iB8+k5y7ebSPowqxKzc+o/wDFJP8ATmWJdWguK69gsO2Xk6nUa2jTj9QYj25mq1W+\nPj+EoH/VNNWdTqH6aNPZk+rDibXS+GL9QA2ttKg84UxFXn9QeoR0v8Eno0U82s1d+42XP0gtYx9F\n5jmh8PavXkPqT5VWc8HmdVt+0aTRKPLrUt7kTYdWBxgTbwfpuFb78h7ZBb1Ht+2haFdv2vS6BMU1\ngH1OI3/pM6gfWQe86WuqNce2C0jLlKU3uT5L54lJGSJORiP0IkZMlMyCY7Qui+ZGRKE4GYOy6upu\nmxm68Z6VUkj74iPSB6XkN1SCZRXV1VkbqUnHbHPtMZsdX+Hv8RVpirTLSMwYfqYKobJAODJ/59Vb\n5Ac4zF4F2ixaULSlTNcgZFJBmVq1q2Mv8gyY7aQvckSWgy0H5gKoQGyxI+DMtD1jLqQO2Y9aDuRL\nNBs0myu1VZmQgL3+IEpYa+sKenGc/HvHpoO5GM8EzyoJd1ReWY4A9zK3V21oHsQhTxmLteA2irNB\ns0vZTctXmGtunGf2karT2UaOrUP+izPaHcl7idyAM8GzRyjRm+/UgLZ5dCkkZAY/EQJDUoyLZ1M5\nUA8jj/vBTT4BSTIZ4NmhbtLfX09dTDqOBx6+0HqdPfQqmysgMcA/MO5fIvcgLNiAseP63b7NLqdL\nXflhcAfo78+k19env1LP+XrZlU4yYKcWIpJgLHi1jxkaTU2vYiUuXrIDjH6c+8Xu0eqXVDTml/OI\nyFx6e8XuQu0K2PF3eG11F2lcLehQkZHzEHeKhQCPGK3mursjCPAU2Nbxmt5ra3jCPADZI8YR5ra3\njCWQENijw6vma9Hh0eADwMurRVHhVbMAGVaEVoqDCBoBobV4VHiatCK8BB1XhVs4xEFeEV/mI4qX\nkFwHt02nvB8ytTn3E1up8M6O45qZ6T//AB/TH1shVslO7p+Pd+cUTQybIeGaGzw1ZWv+63uT/jbM\nWbad4qGSaHX4BnWLZ8y/mfMy7fpzEm9paLK6hZ7s4W6jdEJB03Vj+kSAu4gYOkf9hO9Wzj0MItgP\noJSn9K0+0iddUaXMUefhdwH/AOjsz9pZU3Nu2kf+09BDj2EsLBGL6Vp95B/NH/6I4Wnbt0v/AE1I\np/xAx2nw7uTn+M9QH+GdcLZIsz7yxD6ZxY/lyQS6jY/x0jnKvCFbENdqrvsGm40mxaDTgYqDN/U3\neOCz5k9c0KelY1P4wRBPJun5kFRErACKAPgS3WYDrmdcvKCXgr635DdXtIJg+uZ1xe0O0IDg8S3X\nAdczqh2h2hi0rmC65nVF0GgvVI6oLrkF4vaLote/TUT7RPVWhHuzaauqzzA/SSGWHchgQexiZqur\nyKLiq+xAP+sbKtvwRzjvwTbqa7Vs/LOztY4s/SR04z/5hdTqA1JNdil78FgDyvuDIrDDJtYM59cA\nf6Sq11oxZVAJ7wVQKHglr1azyvMVevTKobq4De2fSRp7E01mkpsuVj5vUT1AhR8mUeqtlIKjB5lB\nTUoICjmO9ER1k6ayta9NZ11npc9fXZjoH2zkzCy2anWotqjzAQh68A/vBWUUsclB/aVauvpC9IwO\n0X0ud7D0+dhadTXSmiDuMLY/VznHbBgHP5PSajzNQtjWkBQHDfv8TDUpDEJn34gBTUpyFEX09h6Y\n094O66+w35rat1X6uD2xiUpbzKlOpsqKLVhbEsw32K5/7RcomAOkYEC1Shw6YDg5BxD0fgPT+BzR\n2dGu0jselBYCWbgARXSajy9JrDdb1FnRgrN35OcSr3auxSlt/VWeCOkf+IJkTjIHEc4d3LFcd+R8\nstevv17apG0zKcKLAScjt0xC9vN2nTMto/hMwZS/IzjHECaKw2ekZkNWhbq6RmNVQKvRsNReh3Le\nGW4dLoQpD8Nx6QOg1dOmo242uMJqXLc5KjA5xEiiADgcQVioSSQOYvpcaDs40PppxTqFbVbggqst\nB+m0MT8/EjcraxsWop66FuF4YItvWxX3zkzTtVWM/SIA11q2QozE9LnyJ6fJu3tU7ps+qOoQ0/Qp\nJsGVIJzkZ4ilh/2jta0aXU11XVah2cNaE6gcYOSee01LqnPA5i9qI3cCL6Qvpm/3Tca20u7JRqV8\nzopr6lbBchjnHvA16tyNrNOp07XjSFHW58BuW+knPBnPsqDGAOItYqHPHeHpcB6fBud/Smo6fy3A\ntZM2VLb5ioc+hyZo3eU4TPT6wL2SSK7VofFaWhet4xXZNZXZGUsjhxsq3h0ea5HjCPEA2KWQ6WTX\nI8OlkANklkYSyaxLIwlkANilkOlk1yWQ6WQENir5lwYilkMlkAGw0uGiyvmEBgAwGhA8VDS4aADS\nvCK8TDQitE0gHFeEDxIPLh4aE0Oh+JcPEg8uHhyKOB5YPExZLiyJpgNh5YOIoLPmWFkNCaQ11yeu\nKh5PXDtQDPXM64t1yfM+YnaKM9czri3XM8yHaAz1zOuLeZM8yHaAz1yOuL+Z8yPMi9oDBeQXixsk\nGyGgGC8qXi5slS8XQDVboWfzGKqiFyQPbH/mCTUVXsq6Uu5PuMQNGo8q69wyhvIYL1diciD0Wps/\nPaV72RAG5IAUdpE3JNkbbTY75VxJAQwSrZYWCoSVOD8RINZrdHpwmp6bK2Y2A2dJ5Iwfn1k67Viy\njXLTdgmysZU4LYzkiN9SQ3vY29VwVia2AXvxBVK91q11jqZjgCUXU53VWbUZT8sFOW4z/wCZm1bg\nmh1KXXZKdiR6Z9Y9Tk0+BVJtG92+ldCNYNaFKKgZsc4E1aroLtd0JqG8lv0tj19pfUavRaLR6iuv\nVNqrdVwM+gmn0vlU31FuEVsn4jIJvchsU3tm71Og0terbTrdYzqpLALnEFq9psHlflupwydbFiAB\n+8vTueiTe9RqjaPKdCobHcwl2/aO2uvQtZil6ulrADlW9o3vmtCd00L7foNHqdPa9moZXpXqsAHa\nAXaLtSrW6Ug0n/hlyAX+0Htup02jp3Gu2wdVqdKn+ow1G47dfTpLLtXZpn0YwagOGxHSlNN6HNyT\n4K17Q9u2ecgc6nzvL8v0mo1lb6W5qrekOO+CD/pOgr8WaajRPaoy9mo6jXjkIfWczvLULqrG0l3n\nUv8AUp/7R1cpN6kLCUm+Sy6fUW0m2upmT3x3+0Cml1N1RsrpdkHrjv8AaF1Xmaz8rqNJrEpprpCs\nptC9DDOcjPPpJ621Wp27VabWJXp6VUWA2hekg88Z5ieqxO9idWk1OpTqppdlyVyPcekX1Gk1NWnN\n9lLrWDgkjtGdbuSvpNMdLqPLU6+1yqtg9OEwT8d4LW64Pd4i6tT1Vun8MF8gnHpD1JC98gFu264L\n1HTWYyB294pqNHqqtQlD0P5rjKrjvNrqNzY7vvhGs/hHTla8Pxnp4x8y+1bnQmh29L7a7NQ+nsrU\n2WYwxHAJzkQ9WS9g9SRoNTodXTfVTZSwstOEH9R9gYLVbbraKlttodUZukEjsfn2m6q11mn12zUa\npNJRWNYrkrf5hUZGSSScCaincHt0PiIajVFy7I1YZ+5Dn9P+XaL6kmCmwfiDaNRs5035nH8evrGD\n/lNG7zc+KdQdRXt2pW8W1Npwg+vJVgTnI9O4nN2WSSDbW2SRba5Fq7IxXZNajGM1sY8cbKuyMJZN\najGHRjADZJZDo81yMYwjGAGwSyHSya5GMMjmIBsUsh0smuRzDoxgBsUshksmuRzDI5gIbFbIVbJr\n1cwquYAbBXzLhokrmFVzABoNLB4urGXBhoBgNLh4sDLBogDIeWDxYEywYxQGRZLCyKhpYMYCaGhZ\nLCyKBjLBjABoWfMkWGKhjLBjDQDPXM64t1GT1GGgGeuZ1xfqMjqMAGeuZ1xbqMnqMAD9cjrgOoyO\nqAB+uR1wHUZBYwAOXlS8D1GVLGABLOl8dQBxIfpZcMMiDLGV6oAZZTW55USPLrGMKOJhYypaAaMN\naYx0iY3SV6SOPaVLSpMBdFUqStsqOfkyzHIIPaVJlGYwAhqk8sIR9IlGSvpIxwTmQzmCZzAQvZ0t\n0556e0Balbt1MOZDuYFnMBSzhOrqxzjEECEXpXtKO5gXcwAixKyxJAzAWV1k56RLOxgHcw0BjhBn\ngQDhMfpEl3MA7GApjhMYwMQFioc5UHMl2MXdjACGCAHjvAWdPt2kuxi7sYuhDCQucesA9kixjFnY\nwFP/2Q==\n"
+        ]
+      }
+    },
+    "data": [
+      {
+        "id": "Axn8VK5m8NeAwRtnhW265gMR8ob2",
+        "courseTaken": [
+          {
+            "difficulty": "Beginner",
+            "courseName": "Java Programming Mastery",
+            "category": "General",
+            "courseId": "java_101",
+            "enrolledAt": 1761739974355
+          },
+          {
+            "difficulty": "Beginner",
+            "courseName": "Python Course",
+            "category": "General",
+            "courseId": "python_101",
+            "enrolledAt": 1761740035764
+          }
+        ]
+      },
+      {
+        "id": "BfdzJnwj2TAgsfRiQFDn"
+      },
+      {
+        "id": "dn8pIv1XtffpT3615VmFvmDvA033",
+        "isEnrolled": false,
+        "email": "user.2@gmail.com",
+        "username": "rafael",
+        "courseTaken": [
+          {
+            "difficulty": "Beginner",
+            "courseName": "Java Programming Mastery",
+            "category": "General",
+            "courseId": "java_101",
+            "enrolledAt": 1761573249595
+          }
+        ],
+        "profilePhotoBase64": "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\nCo1pL82QtaeqxusrSP5Sq/Af+z7pWlqrL4vylm5K6/ZantWn7N92dcxMPTNEx1VounUYkNu1FaW/\n4lTzPFfg3ScRzeXZqWY+1GNHm6/Nvojm+reNPFGfdKGi4OLp1Dfwrl8ye3zb9SEUyX79LOVKdOta\nzm5bjJ8lij7voc51/iOeI2rLVFL59SiapxXxlm1yeVqt3LLvFJJFTzac/Jnz5Fs7JP3fU2YtNHdl\nGXPPULbqfGFs+ZUT+j3K/la/mWb73SX4kPZh3R6/EY/It9Ys21pSGK17TLceqWSl8dkn+JkqzqnJ\neanJe25GTomvRmPyp79mT3iOkff2tWPdouQuW+VuPN9px+JJ/NGtk49MbJQ54S/lnW94zXuvn8iA\njTJ+nUzVVTrmoSk+SX6P3EX9vJru3pVcre0uno16o8qLa6M1/wB5vs3s09m/n6MywslFqUVtt6P9\nUSmyPHZsVyUejNyixJrszRtWzU4/dkt0eot90S3R23WDCyKYTXNCL9+hZqKNG1nEli59flxmtueP\np8yhVz2RvY2XKLS3ZKYi0bPK71neFa454GzOHrZZGM/temSe8b61vy/KS9CmnedO1acYOqTVlUlt\nKElupL22KrxRwNj5sJ5nD+1V3eeJLs/7n9DmZdPNPcN2PNFo9uYAyXVWUWzquhKFkHtKMls0zGZl\nwAAAAAAAAAAAAAG5gYFmZJqtPotzXoqd1qhFbtl64f09VVRXK3L5L1JVruKPk49uNY4XQcZL3MJP\ncYZf2jUnVHbkp+H8fUgSJIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/Um2klu2SmNoWdfs3U4RfrL+\ngexEyijNj412RLamuUvouhbdP4Xa2lKmVkv+/ovyJujQ7dtpbQj/ACxWx7t/ZsqWm6LjRmp6pbY4\nLq66Nt38t30RL4GQsSxrS8evHfZTXxWbf3v6bEzm6fRi4Fk1TK2UFvyr1JB6Xbi6Dpmp04XnQynt\naq49afbf3PeWOHvG09KvbVqmVa+eyx7vfmlJhaXJbK6ct38y81uhx5ZpKS+Rq5lNFzjy94+p7/1R\nvtEH/NPcobCwcfFip8u8306kRxDqU8axU1S5GpfE0vkWnIjXKlw7NdvqQWp6VXnT8ycoqxd2vUhy\ntkndKYrRj4b1K6+maunzRT6L0JZ2Rcm0lsaGFhRxqvLWyXrt3Zs8jivh3ZZXHeJV2tVsKMJR3exi\nnjxe+yPClNejM1Fj36l0bwq+M9NSzDW3Y1vsm77FiioTjv0PHkR3H5NnnDdAPH5fQ2sXEhkyUJvZ\nS6Jm9fUovbbueI0Ou+he80zyMiX42tLT/NnGXpKLg/7y7MwTwpJ7rvupbfoyy11J5E4+nmroY8iq\nKc9l0XT9SX5UfxwrirfkRr9Y7mFxkvQkseHPfb6KL2PVtcU99i6MiqcaMUtvQz1TM86FKO8EYHBx\n6bdSyt/aE02hu49ri+jJfFzZw2ab3K9XNr6m3RY9+pZyiVc1mEpxBoGFxLiucuWnUEvhu/m+Uvc5\nHq+mZWk5k8bNrcLI/k/mjr+Hkcu3XYya1peLr2B5OWkrF1rtXeJlzaeLe6r8Wbb1Zw8Enruj5WjZ\nkqMqPT+Ca7SXyIwwTGzX2AAAAAAAAAG5pmLLJvSS6I9iN/QmeGcBSmrZrr6Fu1C+Om6Zbatk4x6f\nNnnRsNQinKOyS2K/x7nbzqw4PpH4pE7fGOL2I/kqN1krbZ2Se8pPdngAreAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAADLi3PHyaropN1yUtn2ex9F8EQ0rjHTVdgTqhl1x/fY72Uo/ReqPm82tNz8vTMuvK0\n/Isx8it7xsrls0yvJTlHqVmPJwn3G8PrXRuDMLLrlNZVV0Yy2flST2+T9jNxDo2Bw/pk8qvSrtQ5\nGt6qn8W3ucQ4O8XcnTddqz9ZxvPm1yX2Y75Havecfut/Pozu+i+JvCWvRg8fU4UWvvXkfA1/kYrx\nkp37ba2x36R2pcFYmrabK7E5saeRTvCMl91tdNyk+HOu6pRxG+FdUx1OMHKG/L1hsu/0O1SyqLKX\nPDsryem8Y1zT3IfQ9Chp9mVnXQg9QzZuy6xLt7RT9kRjLH8lnCfpUeMuGKa4K7Bq2nJ/FsipV8O5\nli+Gqf5HbsimFle1my+ppX52m6fBK+/HrS95otpkrCu+O8uU4/BGbktc0Wk/c36fDe7kW89n9S7X\n8Y6PU+Sm7z5vtGitzb/I0bOMM2/ZaZomVYpb8s7tq49P1NVdVEdQzTpLT2hsXw1a6ztX5EjR4fYs\nU+eTb+htY+dxVlJc2PhY0X7ycmjLHA4hue89ZdT/AJa6YbfqmTjVX+oeTo6/ctOXAOGl3ZFZvh/G\nO7pkmvoWiinXcOe9ubDOq9YzhGEl9HHYlYXy5VvDZnsayYna0I20kRHxcq1Pg3Lw6HbSuZLvEr+n\n6fffqUKOSXxPbZo7tvCa2lFNP0NCOj4SzlkKpKxPfdErZInpCKTXtzzi3hWWnvT5UfFC2SjP5Mwa\njoFlPEmDjVreLg7JdOyR1rOx6cyEI3x5oxkpJfMi76lXbmZ/LvZ5Xk1r+n4s8rZOYciwYyuzpNJ8\nrv67L0W7NTI5lK1y+63/AJnUMbR6ca6uFdaTx6JLmX8Vs/8AEqHHGn42nV3zx5LlglTH3cturHLf\n0hMbQoWPc+exLvJtmzYuaHsQlOUo3S69G+hKK/niuVmqKzt6Zpt7bNEHFJrqjJbVGXXYwYeRtNQm\nnHfpv6G9b8E0t11E2mspREWaM6PVI/IQaN1vfufqUWuxZXKrtjKO3UkaZuMd0zShFGzX0LYvuq4b\nPWoYeLq+E8XNgnF/dl6xfujlPEnD+TomTy2Jzx5fctS6P/U6nc+p+TdOVTLHzK42UyWzUirLijJ7\njtZjvNPU9OJgumvcEX1OV2kP7RS+vl7/ABx/qVK/FyMexwvpsrmvSUWmYrVms7S0xMT0wAlNL0m3\nLtXMuWHq2eddqqx8xUUrpCK3fuyOyW3rdGgAPHqEXOaiu7Lbw7hbTW3UhNLxHJKck95dkX7QMPaK\nbXTv1LsddvlKMz9JCco4mHKcuijHmf4HJ9TypZudbfN7uUun0L3x3qDxtOWNB7Tt6P6HOiq07zus\nn1GwADxEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEvw/xFqehahVl6flWwnW9+XmezXs0d94P4\n+0riiuunN1rN03PeydU7doSfyZ81n6m0909mU5cFcva/BqL4Z9Psy3hKu+re3UMzIhJbp+e2mflP\nBujUSUnixnNfxS6tny7w5x/xJw/yxwNSu8mP/pWPnj+TOn6H49yahDXdLUvR2Y72/RmK2lyU/X26\nMa+l/wBo2djq07Fx5LyaIQ27bI2d4pdEioaR4l8Kaxyxp1GOPa/4MhOD/PsWmi6jKhzYt9V0X6wm\npL9Cub3p3CW8ZP1lkdmx5dx+WVyS7GGSa9BGolH8LM8joY5WxZq2NmNSexKM3JCMUtp3JSMsbyMe\n7kepWOK23LIyozib88jf4YvqYLboPlXeNb3S92R0rZJ9N/wClLfmk1u+yXZFsZUJxNqV8KISsk+s\nd5t+m/v+ByvxPza5YmPRU/31282n3UF/qdGvfmJQ5tobbyfyKhqHBs9b16NttrqonXvt329kvwJ1\nzRHaq2GZ6cRc5Qse/uTGm3qXqWbjjw9zdI57qV5mPv0mupQ6Jzxr1F9Nn2Orps1cjnZ8NqLao7NS\nj1Pefcoujl6DTrYX0x27o/MzCuzcyinHi3zPZ7ehZnxxaN4V4L7W2ltVKVkFKPVGRJr3Og6Nw5Rj\n4NUbFvLZb7oy5PCtF1cnX0m3v9DFG7bMQ57B9TNGWzJ7P4Wycdb1pyXsQV+NbRNxsi4te5Ot5hXa\nkS9TXMtzVk+uxnrnv0PM6t+qLovv0qmkR28V5EqZKSfU33rFd9Xl5lFV8dtlzxTf5kbKD22MXlN9\n0Ti9Z/ZCaT3VqZePGNznhxUYv+HfsVfXtAzr7JZdFLsT+8olvlVL0Mbja+ib2JXrjvDys3pPtzf9\nk5/ri2r6rY2cbR7VNPIWy3+6X2WHZN9t0bOJok7LFvW3+pR+Gke5lbztPUK9penynOPw7JFyoo8j\nH37JLqS+ncN21Vuy2KhBe5WeO879nabaqJNOW9afvuV5ckT8ar8OPb5Wc34p1D9oavbOL3rg+WH0\nREH63u92fhS8mdwAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1iajm4clLEy76ZL1r\nscf8DVAFw0zxI4r05KNOr3zj/LdtP/EtOm+OGuU7LPwsPLXq9nB/ocmBVbDjt3C2ubJXqX0bw/4y\naDqNsKdSxb8CybS5vvw3+v8AodPjTGyuNte0q5JOMl2aPi/R8d5Wq4lEe9lsY/qfY2kN4el4+PFv\nlrgkubqYNThrj24t2mzWvvyfttD5vYwWVbLqbU8+K38ytte8e55VtGRu657r2fRozQ09o6ey6dTC\noTcvZEpKEfSKZhsqez6bInFtji0LoLlcd38X3vmY7czynvvs99zNd03NC+HO+3QlM8oR22b1mvYt\nmHPFzYO2qa2fTfY474h8N048lqOk2edhye0mls4P2a9C/wCTgqc91uvxPEMGp1XUWR3x71yWL5e/\n1RbprzitEqs+KuSrjui5boyFzP12aLnCfI68nHbTXUp2vabZo2tX40+vLPpL3Xoyd0LNU6lVJ79D\n6bFeL1fN5azSzq2g6xHOxozk0rEkpImqsuL2SZy7TsieJkqSbUW9mi242Z0Uo9mY81OEtuG/5IWx\nXQnHZ7EfqWj42fB7xSl7kfXmb+puU5my3b6Fe8LZrKm61w/bgqVlacob+hV8jKdKceu/qdildXfB\n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\nAAAAAAAAAAAAAAAf/9k=\n"
+      },
+      {
+        "id": "sNhQtL7dHSM3McSzF9BvtDJ9GtF3",
+        "isEnrolled": false,
+        "email": "lapuk@gmail.com",
+        "username": "lapuk",
+        "profilePhotoBase64": "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\nwFP/2Q==\n",
+        "courseTaken": [
+          {
+            "difficulty": "Beginner",
+            "courseName": "SQL Fundamentals",
+            "category": "General",
+            "courseId": "sql_101",
+            "enrolledAt": 1761576719527
+          },
+          {
+            "difficulty": "Beginner",
+            "courseName": "Python Course",
+            "category": "General",
+            "courseId": "python_101",
+            "enrolledAt": 1761587242489
+          },
+          {
+            "difficulty": "Beginner",
+            "courseName": "Java Programming Mastery",
+            "category": "General",
+            "courseId": "java_101",
+            "enrolledAt": 1761589205604
+          }
+        ]
+      }
+    ]
+  }
+}

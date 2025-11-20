@@ -1,14 +1,7 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# TechLaunch CMS Admin Dashboard
+# https://github.com/5H13LD2/admin-cms
 
 User-agent: *
+Disallow: /api/
+Disallow: /admin/
 Allow: /

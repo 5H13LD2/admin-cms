@@ -1,0 +1,189 @@
+{
+  "collectionName": "modules",
+  "parentPath": "courses/python_101",
+  "documentCount": 9,
+  "schema": {
+    "id": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "module_2",
+        "module_3",
+        "module_4"
+      ]
+    },
+    "description": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Master conditionals, loops, and flow control in Python",
+        "Defining and calling functions",
+        "Explore lists, tuples, dictionaries, and sets"
+      ]
+    },
+    "title": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "Module 2: Control Flow",
+        "Module 3: Functions & Recursion",
+        "Module 4: Data Structures"
+      ]
+    },
+    "updated_at": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "2025-09-20T16:32:21.863Z",
+        "2025-09-20T16:32:22.090Z",
+        "2025-09-20T16:32:22.139Z"
+      ]
+    },
+    "quiz_prefix": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "python_2",
+        "python_3",
+        "python_4"
+      ]
+    },
+    "quiz_collection": {
+      "types": [
+        "string"
+      ],
+      "samples": [
+        "course_quiz/python_quiz/questions",
+        "course_quiz/python_quiz/questions",
+        "course_quiz/python_quiz/questions"
+      ]
+    },
+    "has_quiz": {
+      "types": [
+        "boolean"
+      ],
+      "samples": [
+        true,
+        true,
+        true
+      ]
+    },
+    "quiz_count": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        40,
+        40,
+        40
+      ]
+    },
+    "order": {
+      "types": [
+        "number"
+      ],
+      "samples": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "module_2",
+      "description": "Master conditionals, loops, and flow control in Python",
+      "title": "Module 2: Control Flow",
+      "updated_at": "2025-09-20T16:32:21.863Z",
+      "quiz_prefix": "python_2",
+      "quiz_collection": "course_quiz/python_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "module_3",
+      "description": "Defining and calling functions",
+      "title": "Module 3: Functions & Recursion",
+      "updated_at": "2025-09-20T16:32:22.090Z",
+      "quiz_prefix": "python_3",
+      "quiz_collection": "course_quiz/python_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "module_4",
+      "description": "Explore lists, tuples, dictionaries, and sets",
+      "title": "Module 4: Data Structures",
+      "updated_at": "2025-09-20T16:32:22.139Z",
+      "quiz_prefix": "python_4",
+      "quiz_collection": "course_quiz/python_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "module_5",
+      "description": "Read/write files and handle errors",
+      "title": "Module 5: File Handling & Exceptions",
+      "updated_at": "2025-09-20T16:32:22.188Z",
+      "quiz_prefix": "python_5",
+      "quiz_collection": "course_quiz/python_quiz/questions",
+      "has_quiz": true,
+      "quiz_count": 40
+    },
+    {
+      "id": "python_module_1",
+      "description": "Learn the fundamentals of Python programming including syntax, variables, and data types.",
+      "has_quiz": true,
+      "order": 1,
+      "quiz_collection": "course_quiz/python_quiz/questions",
+      "quiz_count": 45,
+      "quiz_prefix": "python_1",
+      "title": "Module 1: Introduction to Python"
+    },
+    {
+      "id": "python_module_2",
+      "description": "Master conditionals, loops, and flow control in Python",
+      "has_quiz": true,
+      "quiz_collection": "course_quiz/python_quiz/questions",
+      "quiz_count": 40,
+      "quiz_prefix": "python_2",
+      "title": "Module 2: Control Flow",
+      "order": 2
+    },
+    {
+      "id": "python_module_3",
+      "description": "Defining and calling functions",
+      "has_quiz": true,
+      "quiz_collection": "course_quiz/python_quiz/questions",
+      "quiz_count": 40,
+      "quiz_prefix": "python_3",
+      "title": "Module 3: Functions & Recursion",
+      "order": 3
+    },
+    {
+      "id": "python_module_4",
+      "description": "Explore lists, tuples, dictionaries, and sets",
+      "has_quiz": true,
+      "quiz_collection": "course_quiz/python_quiz/questions",
+      "quiz_count": 40,
+      "quiz_prefix": "python_4",
+      "title": "Module 4: Data Structures",
+      "order": 4
+    },
+    {
+      "id": "python_module_5",
+      "description": "Read/write files and handle errors",
+      "has_quiz": true,
+      "quiz_collection": "course_quiz/python_quiz/questions",
+      "quiz_count": 40,
+      "quiz_prefix": "python_5",
+      "title": "Module 5: File Handling & Exceptions",
+      "order": 5
+    }
+  ]
+}
