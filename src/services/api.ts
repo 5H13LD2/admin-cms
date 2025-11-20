@@ -80,20 +80,23 @@ export interface Module {
 export interface CreateCourseData {
   title: string;
   description: string;
-  difficulty?: string;
-  language?: string;
-  duration?: number;
-  thumbnail?: string;
-  status?: string;
+  status?: 'draft' | 'published';
 }
 
-export interface UpdateCourseData extends Partial<CreateCourseData> {}
+export interface UpdateCourseData extends Partial<CreateCourseData> {
+  status?: 'draft' | 'published';
+}
 
 // Course API Service
 export const courseAPI = {
-  // Get all courses
+  // Get all courses (Admin - includes drafts and published)
   getAllCourses: async (): Promise<{ success: boolean; data: Course[]; count: number }> => {
     return fetchAPI('/courses');
+  },
+
+  // Get only published courses (For student app)
+  getPublishedCourses: async (): Promise<{ success: boolean; data: Course[]; count: number }> => {
+    return fetchAPI('/courses?status=published');
   },
 
   // Get course by ID

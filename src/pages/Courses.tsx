@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
-import { courseAPI, type Course, type Module, type CreateCourseData } from '../services/api';
+import { courseAPI, type Course, type Module } from '../services/api';
 import '../styles/global.css';
+
+interface CourseFormData {
+  title: string;
+  description: string;
+  status?: 'draft' | 'published';
+}
 
 export default function Courses() {
   const [courses, setCourses] = useState<Course[]>([]);
@@ -13,54 +19,52 @@ export default function Courses() {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [courseModules, setCourseModules] = useState<Module[]>([]);
   const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const [statusFilter, setStatusFilter] = useState<'all' | 'draft' | 'published'>('all');
 
   // Form state for create
-  const [newCourse, setNewCourse] = useState<CreateCourseData>({
+  const [newCourse, setNewCourse] = useState<CourseFormData>({
     title: '',
     description: '',
-    difficulty: 'Beginner',
-    language: 'Python',
-    duration: 0,
-    thumbnail: '',
-    status: 'active',
+    status: 'draft',
   });
 
   // Form state for edit
-  const [editCourseData, setEditCourseData] = useState<CreateCourseData>({
+  const [editCourseData, setEditCourseData] = useState<CourseFormData>({
     title: '',
     description: '',
-    difficulty: 'Beginner',
-    language: 'Python',
-    duration: 0,
-    thumbnail: '',
+    status: 'draft',
   });
 
   // Statistics
   const totalCourses = courses.length;
-  const totalEnrollments = courses.reduce((acc, course) => acc + (course.enrolledStudents || 0), 0);
-  const activeCourses = courses.filter(course => course.status === 'active').length;
-  const avgRating = courses.length > 0
-    ? (courses.reduce((acc, course) => acc + (course.rating || 0), 0) / courses.length).toFixed(1)
-    : '0.0';
+  const totalEnrollments = courses.reduce((acc, course) => acc + (course.enrolledUsers?.length || 0), 0);
+  const publishedCourses = courses.filter(course => course.status === 'published').length;
+  const draftCourses = courses.filter(course => course.status === 'draft').length;
 
   // Load courses on mount
   useEffect(() => {
     loadCourses();
   }, []);
 
-  // Filter courses when search term changes
+  // Filter courses when search term or status filter changes
   useEffect(() => {
-    if (searchTerm.trim() === '') {
-      setFilteredCourses(courses);
-    } else {
-      const filtered = courses.filter(course =>
-        course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        course.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        course.language.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredCourses(filtered);
+    let filtered = courses;
+
+    // Filter by status
+    if (statusFilter !== 'all') {
+      filtered = filtered.filter(course => course.status === statusFilter);
     }
-  }, [searchTerm, courses]);
+
+    // Filter by search term
+    if (searchTerm.trim() !== '') {
+      filtered = filtered.filter(course =>
+        course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        course.description.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    setFilteredCourses(filtered);
+  }, [searchTerm, statusFilter, courses]);
 
   const loadCourses = async () => {
     setLoading(true);
@@ -69,13 +73,13 @@ export default function Courses() {
       setCourses(response.data);
       setFilteredCourses(response.data);
     } catch (error: any) {
-      showAlert('error', error.message || 'Failed to load courses');
+      showAlertMessage('error', error.message || 'Failed to load courses');
     } finally {
       setLoading(false);
     }
   };
 
-  const showAlert = (type: 'success' | 'error', message: string) => {
+  const showAlertMessage = (type: 'success' | 'error', message: string) => {
     setAlert({ type, message });
     setTimeout(() => setAlert(null), 5000);
   };
@@ -85,20 +89,16 @@ export default function Courses() {
     setLoading(true);
     try {
       await courseAPI.createCourse(newCourse);
-      showAlert('success', 'Course created successfully!');
+      showAlertMessage('success', 'Course created successfully!');
       setShowAddModal(false);
       setNewCourse({
         title: '',
         description: '',
-        difficulty: 'Beginner',
-        language: 'Python',
-        duration: 0,
-        thumbnail: '',
-        status: 'active',
+        status: 'draft',
       });
       await loadCourses();
     } catch (error: any) {
-      showAlert('error', error.message || 'Failed to create course');
+      showAlertMessage('error', error.message || 'Failed to create course');
     } finally {
       setLoading(false);
     }
@@ -111,12 +111,12 @@ export default function Courses() {
     setLoading(true);
     try {
       await courseAPI.updateCourse(selectedCourse.id, editCourseData);
-      showAlert('success', 'Course updated successfully!');
+      showAlertMessage('success', 'Course updated successfully!');
       setShowEditModal(false);
       setSelectedCourse(null);
       await loadCourses();
     } catch (error: any) {
-      showAlert('error', error.message || 'Failed to update course');
+      showAlertMessage('error', error.message || 'Failed to update course');
     } finally {
       setLoading(false);
     }
@@ -128,10 +128,10 @@ export default function Courses() {
     setLoading(true);
     try {
       await courseAPI.deleteCourse(id);
-      showAlert('success', 'Course deleted successfully!');
+      showAlertMessage('success', 'Course deleted successfully!');
       await loadCourses();
     } catch (error: any) {
-      showAlert('error', error.message || 'Failed to delete course');
+      showAlertMessage('error', error.message || 'Failed to delete course');
     } finally {
       setLoading(false);
     }
@@ -142,12 +142,23 @@ export default function Courses() {
     setEditCourseData({
       title: course.title,
       description: course.description,
-      difficulty: course.difficulty,
-      language: course.language,
-      duration: course.duration,
-      thumbnail: course.thumbnail || '',
+      status: (course.status as 'draft' | 'published') || 'draft',
     });
     setShowEditModal(true);
+  };
+
+  const handlePublishToggle = async (course: Course) => {
+    const newStatus = course.status === 'published' ? 'draft' : 'published';
+    setLoading(true);
+    try {
+      await courseAPI.updateCourse(course.id, { status: newStatus });
+      showAlertMessage('success', `Course ${newStatus === 'published' ? 'published' : 'moved to draft'} successfully!`);
+      await loadCourses();
+    } catch (error: any) {
+      showAlertMessage('error', error.message || 'Failed to update course status');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const openModulesModal = async (course: Course) => {
@@ -157,17 +168,8 @@ export default function Courses() {
       const response = await courseAPI.getCourseModules(course.id);
       setCourseModules(response.data);
     } catch (error: any) {
-      showAlert('error', error.message || 'Failed to load modules');
+      showAlertMessage('error', error.message || 'Failed to load modules');
       setCourseModules([]);
-    }
-  };
-
-  const getDifficultyBadgeClass = (difficulty: string) => {
-    switch (difficulty.toLowerCase()) {
-      case 'beginner': return 'badge-success';
-      case 'intermediate': return 'badge-warning';
-      case 'advanced': return 'badge-danger';
-      default: return 'badge-primary';
     }
   };
 
@@ -193,6 +195,16 @@ export default function Courses() {
         <div className="flex justify-between items-center mb-4">
           <h1 className="page-title">Course Management</h1>
           <div className="flex gap-2">
+            <select
+              className="form-select"
+              value={statusFilter}
+              onChange={(e) => setStatusFilter(e.target.value as 'all' | 'draft' | 'published')}
+              style={{ minWidth: '150px' }}
+            >
+              <option value="all">All Courses</option>
+              <option value="published">Published</option>
+              <option value="draft">Drafts</option>
+            </select>
             <div className="search-container">
               <input
                 type="text"
@@ -221,24 +233,24 @@ export default function Courses() {
             </div>
           </div>
           <div className="stats-card">
+            <i className="fas fa-check-circle stats-icon" style={{ color: '#10b981' }}></i>
+            <div className="stats-content">
+              <h3>{publishedCourses}</h3>
+              <p>Published</p>
+            </div>
+          </div>
+          <div className="stats-card">
+            <i className="fas fa-file-alt stats-icon" style={{ color: '#f59e0b' }}></i>
+            <div className="stats-content">
+              <h3>{draftCourses}</h3>
+              <p>Drafts</p>
+            </div>
+          </div>
+          <div className="stats-card">
             <i className="fas fa-users stats-icon"></i>
             <div className="stats-content">
               <h3>{totalEnrollments}</h3>
               <p>Total Enrollments</p>
-            </div>
-          </div>
-          <div className="stats-card">
-            <i className="fas fa-chart-line stats-icon"></i>
-            <div className="stats-content">
-              <h3>{activeCourses}</h3>
-              <p>Active Courses</p>
-            </div>
-          </div>
-          <div className="stats-card">
-            <i className="fas fa-star stats-icon"></i>
-            <div className="stats-content">
-              <h3>{avgRating}</h3>
-              <p>Average Rating</p>
             </div>
           </div>
         </div>
@@ -249,8 +261,24 @@ export default function Courses() {
             {filteredCourses.map((course) => (
               <div key={course.id} className="card">
                 <div className="card-header">
-                  <h3 className="card-title">{course.title}</h3>
+                  <div style={{ flex: 1 }}>
+                    <h3 className="card-title">{course.title}</h3>
+                    <span
+                      className={`badge ${course.status === 'published' ? 'badge-success' : 'badge-warning'}`}
+                      style={{ marginTop: '0.5rem' }}
+                    >
+                      {course.status === 'published' ? 'Published' : 'Draft'}
+                    </span>
+                  </div>
                   <div className="card-actions">
+                    <button
+                      className="action-btn"
+                      onClick={() => handlePublishToggle(course)}
+                      title={course.status === 'published' ? 'Move to draft' : 'Publish course'}
+                      style={{ color: course.status === 'published' ? '#10b981' : '#f59e0b' }}
+                    >
+                      <i className={`fas ${course.status === 'published' ? 'fa-eye-slash' : 'fa-rocket'}`}></i>
+                    </button>
                     <button
                       className="action-btn edit"
                       onClick={() => openEditModal(course)}
@@ -268,23 +296,13 @@ export default function Courses() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 mb-2">
-                  <span className={`badge ${getDifficultyBadgeClass(course.difficulty)}`}>
-                    {course.difficulty}
-                  </span>
-                  <span className="text-sm" style={{ color: '#6b7280' }}>
-                    <i className="fas fa-code" style={{ color: 'var(--primary-color)' }}></i> {course.language}
-                  </span>
-                </div>
-
                 <p className="text-sm mb-3" style={{ color: '#6b7280', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                   {course.description}
                 </p>
 
                 <div className="flex justify-between items-center" style={{ paddingTop: '1rem', borderTop: '1px solid #e5e7eb' }}>
                   <div className="flex items-center gap-3 text-sm" style={{ color: '#6b7280' }}>
-                    <span><i className="fas fa-users"></i> {course.enrolledStudents || 0}</span>
-                    <span><i className="fas fa-clock"></i> {course.duration}h</span>
+                    <span><i className="fas fa-users"></i> {course.enrolledUsers?.length || 0} enrolled</span>
                   </div>
                   <button
                     className="btn-primary"
@@ -329,6 +347,7 @@ export default function Courses() {
                     value={newCourse.title}
                     onChange={(e) => setNewCourse({ ...newCourse, title: e.target.value })}
                     required
+                    placeholder="e.g., Java Programming Mastery"
                   />
                 </div>
                 <div className="form-group">
@@ -338,60 +357,26 @@ export default function Courses() {
                     value={newCourse.description}
                     onChange={(e) => setNewCourse({ ...newCourse, description: e.target.value })}
                     required
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="form-group">
-                    <label className="form-label">Difficulty</label>
-                    <select
-                      className="form-select"
-                      value={newCourse.difficulty}
-                      onChange={(e) => setNewCourse({ ...newCourse, difficulty: e.target.value })}
-                    >
-                      <option value="Beginner">Beginner</option>
-                      <option value="Intermediate">Intermediate</option>
-                      <option value="Advanced">Advanced</option>
-                    </select>
-                  </div>
-                  <div className="form-group">
-                    <label className="form-label">Language</label>
-                    <select
-                      className="form-select"
-                      value={newCourse.language}
-                      onChange={(e) => setNewCourse({ ...newCourse, language: e.target.value })}
-                    >
-                      <option value="Python">Python</option>
-                      <option value="Java">Java</option>
-                      <option value="JavaScript">JavaScript</option>
-                      <option value="SQL">SQL</option>
-                      <option value="C++">C++</option>
-                      <option value="React">React</option>
-                      <option value="Node.js">Node.js</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Duration (hours)</label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    value={newCourse.duration}
-                    onChange={(e) => setNewCourse({ ...newCourse, duration: parseInt(e.target.value) || 0 })}
-                    min="0"
+                    placeholder="Describe what students will learn in this course..."
+                    rows={4}
                   />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Thumbnail URL (optional)</label>
-                  <input
-                    type="url"
-                    className="form-control"
-                    value={newCourse.thumbnail}
-                    onChange={(e) => setNewCourse({ ...newCourse, thumbnail: e.target.value })}
-                  />
+                  <label className="form-label">Status</label>
+                  <select
+                    className="form-select"
+                    value={newCourse.status}
+                    onChange={(e) => setNewCourse({ ...newCourse, status: e.target.value as 'draft' | 'published' })}
+                  >
+                    <option value="draft">Draft (Not visible to students)</option>
+                    <option value="published">Published (Visible to students)</option>
+                  </select>
                 </div>
                 <div className="modal-footer">
                   <button type="button" className="btn-secondary" onClick={() => setShowAddModal(false)}>Cancel</button>
-                  <button type="submit" className="btn-primary">Create Course</button>
+                  <button type="submit" className="btn-primary">
+                    {newCourse.status === 'published' ? 'Create & Publish' : 'Save as Draft'}
+                  </button>
                 </div>
               </form>
             </div>
@@ -426,56 +411,19 @@ export default function Courses() {
                     value={editCourseData.description}
                     onChange={(e) => setEditCourseData({ ...editCourseData, description: e.target.value })}
                     required
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="form-group">
-                    <label className="form-label">Difficulty</label>
-                    <select
-                      className="form-select"
-                      value={editCourseData.difficulty}
-                      onChange={(e) => setEditCourseData({ ...editCourseData, difficulty: e.target.value })}
-                    >
-                      <option value="Beginner">Beginner</option>
-                      <option value="Intermediate">Intermediate</option>
-                      <option value="Advanced">Advanced</option>
-                    </select>
-                  </div>
-                  <div className="form-group">
-                    <label className="form-label">Language</label>
-                    <select
-                      className="form-select"
-                      value={editCourseData.language}
-                      onChange={(e) => setEditCourseData({ ...editCourseData, language: e.target.value })}
-                    >
-                      <option value="Python">Python</option>
-                      <option value="Java">Java</option>
-                      <option value="JavaScript">JavaScript</option>
-                      <option value="SQL">SQL</option>
-                      <option value="C++">C++</option>
-                      <option value="React">React</option>
-                      <option value="Node.js">Node.js</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Duration (hours)</label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    value={editCourseData.duration}
-                    onChange={(e) => setEditCourseData({ ...editCourseData, duration: parseInt(e.target.value) || 0 })}
-                    min="0"
+                    rows={4}
                   />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Thumbnail URL (optional)</label>
-                  <input
-                    type="url"
-                    className="form-control"
-                    value={editCourseData.thumbnail}
-                    onChange={(e) => setEditCourseData({ ...editCourseData, thumbnail: e.target.value })}
-                  />
+                  <label className="form-label">Status</label>
+                  <select
+                    className="form-select"
+                    value={editCourseData.status}
+                    onChange={(e) => setEditCourseData({ ...editCourseData, status: e.target.value as 'draft' | 'published' })}
+                  >
+                    <option value="draft">Draft (Not visible to students)</option>
+                    <option value="published">Published (Visible to students)</option>
+                  </select>
                 </div>
                 <div className="modal-footer">
                   <button type="button" className="btn-secondary" onClick={() => setShowEditModal(false)}>Cancel</button>
