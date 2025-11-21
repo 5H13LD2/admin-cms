@@ -1,13 +1,12 @@
-const { initializeFirebase, admin } = require('../../config/firebase-config');
+const { getFirestore } = require('../../config/firebase-admin');
+const admin = require('firebase-admin');
 const logger = require('../../utils/logger');
-
-// Initialize Firebase and get db instance
-const db = initializeFirebase();
 
 class CoursesService {
   // Get all courses
   static async getAllCourses() {
     try {
+      const db = getFirestore();
       const coursesSnapshot = await db.collection('courses').get();
       const courses = [];
       

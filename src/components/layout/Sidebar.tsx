@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, BookOpen, FileText, Award, GraduationCap, Users } from "lucide-react";
+import { LayoutDashboard, BookOpen, FileText, Award, GraduationCap, Users, Code } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -9,6 +9,7 @@ const navItems = [
   { to: "/modules", icon: BookOpen, label: "Modules" },
   { to: "/lessons", icon: FileText, label: "My Lessons" },
   { to: "/quizzes", icon: Award, label: "Quizzes" },
+  { to: "/assessments", icon: Code, label: "Assessments" },
 ];
 
 export function Sidebar() {

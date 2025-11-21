@@ -627,3 +627,217 @@ export const userQuizPerformance: Record<string, QuizPerformance[]> = {
     },
   ],
 };
+
+// Technical Assessment Data Types
+export type AssessmentDifficulty = "Easy" | "Medium" | "Hard";
+export type AssessmentStatus = "active" | "inactive" | "draft";
+export type AssessmentType = "code_fix" | "sql_query";
+
+export interface TechnicalAssessment {
+  id: string;
+  type: AssessmentType;
+  courseId: string;
+  category: string;
+  title: string;
+  description?: string;
+  topic?: string;
+  difficulty: AssessmentDifficulty;
+  status: AssessmentStatus;
+  author?: string;
+  order?: number;
+  tags?: string[];
+  createdAt: string;
+  updatedAt?: string;
+
+  // For code_fix type
+  brokenCode?: string;
+  correctOutput?: string;
+  hint?: string;
+  testCases?: string[];
+  explanation?: string;
+
+  // For sql_query type
+  expected_query?: string;
+  expected_result?: {
+    columns: string[];
+    rows: Array<Record<string, any>>;
+  };
+  sample_table?: {
+    name: string;
+    columns: string[];
+    rows: Array<Record<string, any>>;
+  };
+  hints?: string[];
+}
+
+// Sample Technical Assessments Data
+export const technicalAssessments: TechnicalAssessment[] = [
+  {
+    id: "python_assess_1",
+    type: "code_fix",
+    courseId: "python_101",
+    category: "Python",
+    title: "Simple Print Loop",
+    description: "Fix the broken Python loop code to print numbers from 1 to 5",
+    topic: "Loops",
+    difficulty: "Easy",
+    status: "active",
+    author: "Admin",
+    order: 1,
+    tags: ["Python", "Loops", "Syntax"],
+    brokenCode: "# Task: Print numbers from 1 to 5\n# Bug: Missing colon and wrong indentation\nfor i in range(1,6)\nprint(i)",
+    correctOutput: "1 2 3 4 5",
+    hint: "Check the loop syntax — something might be missing after the range.",
+    createdAt: "2024-01-15T10:00:00Z",
+    updatedAt: "2024-01-15T10:00:00Z",
+    testCases: ["Input: range(1, 6)", "Expected: 1 2 3 4 5"],
+    explanation: "The for loop is missing a colon (:) after the range() statement, and print(i) needs proper indentation.",
+  },
+  {
+    id: "sql_challenge_05_count",
+    type: "sql_query",
+    courseId: "sql_fundamentals",
+    category: "SQL",
+    title: "Count Total Students",
+    description: "Write an SQL query to count the total number of students in the students table.",
+    topic: "Aggregate Functions",
+    difficulty: "Easy",
+    status: "active",
+    author: "Jerico Jimenez",
+    order: 5,
+    tags: ["COUNT", "aggregates", "functions"],
+    expected_query: "SELECT COUNT(*) AS count FROM students;",
+    expected_result: {
+      columns: ["count"],
+      rows: [{ count: 3 }],
+    },
+    sample_table: {
+      name: "students",
+      columns: ["id", "name", "age"],
+      rows: [
+        { id: 1, name: "Jerico", age: 20 },
+        { id: 2, name: "Maria", age: 21 },
+        { id: 3, name: "John", age: 22 },
+      ],
+    },
+    hints: [
+      "Use the COUNT() aggregate function",
+      "COUNT(*) counts all rows",
+      "Use AS to name the result column 'count'",
+    ],
+    createdAt: "2025-10-28T08:20:00Z",
+    updatedAt: "2025-10-28T08:20:00Z",
+  },
+  {
+    id: "js_assess_1",
+    type: "code_fix",
+    courseId: "javascript_101",
+    category: "JavaScript",
+    title: "Fix Variable Declaration",
+    brokenCode: "// Task: Create a variable and assign your name\n// Bug: Missing keyword\nname = 'John';\nconsole.log(name);",
+    correctOutput: "John",
+    difficulty: "Easy",
+    hint: "Variables should be declared using 'let', 'const', or 'var'.",
+    status: "active",
+    createdAt: "2024-01-16T10:00:00Z",
+    explanation: "The variable 'name' should be declared with 'let' or 'const' keyword.",
+  },
+  {
+    id: "python_assess_2",
+    courseId: "python_101",
+    title: "Fix Function Definition",
+    brokenCode: "# Task: Create a function that adds two numbers\n# Bug: Missing parentheses\ndef add_numbers a, b\n    return a + b\n\nprint(add_numbers(5, 3))",
+    correctOutput: "8",
+    difficulty: "Easy",
+    hint: "Function parameters should be enclosed in parentheses.",
+    status: "active",
+    createdAt: "2024-01-17T10:00:00Z",
+    testCases: ["Input: add_numbers(5, 3)", "Expected: 8"],
+    explanation: "Function parameters must be enclosed in parentheses and the function definition needs a colon.",
+  },
+  {
+    id: "react_assess_1",
+    courseId: "react_fundamentals",
+    title: "Fix useState Hook",
+    brokenCode: "// Task: Create a counter component\n// Bug: Incorrect useState syntax\nimport React from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState;\n  return (\n    <button onClick={() => setCount(count + 1)}>\n      Count: {count}\n    </button>\n  );\n}",
+    correctOutput: "Component renders with initial count: 0",
+    difficulty: "Medium",
+    hint: "useState needs to be called as a function with an initial value.",
+    status: "active",
+    createdAt: "2024-01-18T10:00:00Z",
+    explanation: "useState must be called as a function: useState(0) to initialize the state.",
+  },
+  {
+    id: "python_assess_3",
+    courseId: "python_101",
+    title: "List Iteration Bug",
+    brokenCode: "# Task: Print each item in a list\n# Bug: Incorrect variable name\nfruits = ['apple', 'banana', 'orange']\nfor fruit in fruits:\n    print(fruits)",
+    correctOutput: "apple\nbanana\norange",
+    difficulty: "Easy",
+    hint: "Check what you're printing inside the loop.",
+    status: "active",
+    createdAt: "2024-01-19T10:00:00Z",
+    testCases: ["Input: ['apple', 'banana', 'orange']", "Expected: Print each item"],
+    explanation: "Should print 'fruit' (singular) not 'fruits' (the entire list).",
+  },
+  {
+    id: "js_assess_2",
+    courseId: "javascript_101",
+    title: "Array Method Bug",
+    brokenCode: "// Task: Get the first element of an array\n// Bug: Incorrect array method\nconst numbers = [10, 20, 30, 40];\nconst first = numbers.get(0);\nconsole.log(first);",
+    correctOutput: "10",
+    difficulty: "Medium",
+    hint: "Arrays don't have a 'get' method. Use bracket notation instead.",
+    status: "active",
+    createdAt: "2024-01-20T10:00:00Z",
+    explanation: "Use numbers[0] or numbers.at(0) to access array elements, not .get(0).",
+  },
+  {
+    id: "sql_assess_1",
+    courseId: "sql_basics",
+    title: "SELECT Query Bug",
+    brokenCode: "-- Task: Select all users older than 25\n-- Bug: Missing WHERE keyword\nSELECT * FROM users\nage > 25;",
+    correctOutput: "All users with age > 25",
+    difficulty: "Easy",
+    hint: "SQL conditions need a specific keyword before them.",
+    status: "active",
+    createdAt: "2024-01-21T10:00:00Z",
+    explanation: "The WHERE keyword is missing before the condition 'age > 25'.",
+  },
+  {
+    id: "python_assess_4",
+    courseId: "python_201",
+    title: "Dictionary Access Error",
+    brokenCode: "# Task: Get the value for key 'name'\n# Bug: Using list syntax\nperson = {'name': 'Alice', 'age': 30}\nprint(person[0])",
+    correctOutput: "Alice",
+    difficulty: "Medium",
+    hint: "Dictionaries use keys, not numeric indexes.",
+    status: "active",
+    createdAt: "2024-01-22T10:00:00Z",
+    explanation: "Use person['name'] to access dictionary values by key.",
+  },
+  {
+    id: "react_assess_2",
+    courseId: "react_fundamentals",
+    title: "Props Destructuring",
+    brokenCode: "// Task: Display user name from props\n// Bug: Incorrect destructuring\nfunction UserCard(props) {\n  const { user.name } = props;\n  return <div>{name}</div>;\n}",
+    correctOutput: "Displays user name correctly",
+    difficulty: "Hard",
+    hint: "You can't use dot notation in destructuring. Destructure the object first.",
+    status: "active",
+    createdAt: "2024-01-23T10:00:00Z",
+    explanation: "Should be: const { user } = props; then access user.name",
+  },
+  {
+    id: "js_assess_3",
+    courseId: "javascript_201",
+    title: "Async/Await Error",
+    brokenCode: "// Task: Fetch data from API\n// Bug: Missing await keyword\nasync function fetchData() {\n  const response = fetch('https://api.example.com/data');\n  const data = response.json();\n  return data;\n}",
+    correctOutput: "Returns parsed JSON data",
+    difficulty: "Hard",
+    hint: "Asynchronous operations need the 'await' keyword.",
+    status: "active",
+    createdAt: "2024-01-24T10:00:00Z",
+    explanation: "Both fetch() and response.json() return promises and need 'await'.",
+  },
+];

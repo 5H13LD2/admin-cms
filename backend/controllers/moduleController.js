@@ -2,7 +2,7 @@
 // controllers/quizController.js
 // ================================
 
-const quizService = require('../services/firestore/quizServices');
+const quizService = require('../services/firestore/quizService');
 const logger = require('../utils/logger');
 
 // 📚 Get all quizzes for a course (with optional module filter)
