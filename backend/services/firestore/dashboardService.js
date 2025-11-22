@@ -5,6 +5,7 @@ const logger = require('../../utils/logger');
 const userService = require('./userService');
 const courseService = require('./courseService');
 const enrollmentService = require('./enrollmentService');
+const technicalAssessmentService = require('./technicalAssessmentService');
 
 class DashboardServiceEnhanced {
     constructor() {
@@ -26,27 +27,64 @@ class DashboardServiceEnhanced {
     async getDashboardStats() {
         try {
             // Fetch all data in parallel
-            const [users, courses, enrollments] = await Promise.all([
+            const [users, courses, enrollments, technicalAssessments] = await Promise.all([
                 userService.getAllUsers(),
                 courseService.getAllCourses(),
-                enrollmentService.getAllEnrollments()
+                enrollmentService.getAllEnrollments(),
+                technicalAssessmentService.getAllTechnicalAssessments()
             ]);
 
-            // Get all modules
+            // Get all modules and lessons from nested structure
             const db = this.db();
-            const modulesSnapshot = await db.collection('modules').get();
+            const coursesSnapshot = await db.collection('courses').get();
             const modules = [];
-            modulesSnapshot.forEach(doc => modules.push({ id: doc.id, ...doc.data() }));
-
-            // Get all lessons
-            const lessonsSnapshot = await db.collection('lessons').get();
             const allLessons = [];
-            lessonsSnapshot.forEach(doc => allLessons.push({ id: doc.id, ...doc.data() }));
 
-            // Get all quizzes
-            const quizzesSnapshot = await db.collection('quizzes').get();
+            // Iterate through courses to get nested modules and lessons
+            for (const courseDoc of coursesSnapshot.docs) {
+                const courseId = courseDoc.id;
+
+                // Get modules for this course
+                const modulesSnapshot = await courseDoc.ref.collection('modules').get();
+
+                for (const moduleDoc of modulesSnapshot.docs) {
+                    const moduleData = moduleDoc.data();
+                    modules.push({
+                        id: moduleDoc.id,
+                        courseId: courseId,
+                        ...moduleData
+                    });
+
+                    // Get lessons for this module
+                    const lessonsSnapshot = await moduleDoc.ref.collection('lessons').get();
+                    lessonsSnapshot.forEach(lessonDoc => {
+                        allLessons.push({
+                            id: lessonDoc.id,
+                            courseId: courseId,
+                            moduleId: moduleDoc.id,
+                            ...lessonDoc.data()
+                        });
+                    });
+                }
+            }
+
+            // Get all quizzes from nested structure: /course_quiz/{courseQuizId}/questions/{questionId}
+            const courseQuizSnapshot = await db.collection('course_quiz').get();
             const allQuizzes = [];
-            quizzesSnapshot.forEach(doc => allQuizzes.push({ id: doc.id, ...doc.data() }));
+
+            for (const courseQuizDoc of courseQuizSnapshot.docs) {
+                const courseQuizId = courseQuizDoc.id;
+
+                // Get questions for this course quiz
+                const questionsSnapshot = await courseQuizDoc.ref.collection('questions').get();
+                questionsSnapshot.forEach(questionDoc => {
+                    allQuizzes.push({
+                        id: questionDoc.id,
+                        courseQuizId: courseQuizId,
+                        ...questionDoc.data()
+                    });
+                });
+            }
 
             // Calculate stats
             const stats = {
@@ -74,6 +112,12 @@ class DashboardServiceEnhanced {
                 quizzes: {
                     total: allQuizzes.length,
                     active: allQuizzes.filter(q => q.isActive !== false).length
+                },
+                technicalAssessments: {
+                    total: technicalAssessments.length,
+                    active: technicalAssessments.filter(ta => ta.isActive === true).length,
+                    codeFixType: technicalAssessments.filter(ta => ta.type === 'code_fix').length,
+                    sqlQueryType: technicalAssessments.filter(ta => ta.type === 'sql_query').length
                 }
             };
 
@@ -257,31 +301,34 @@ class DashboardServiceEnhanced {
 
             for (const course of courses.slice(0, 10)) { // Limit to 10 courses
                 try {
-                    // Get quizzes for this course by checking lessons that belong to this course
-                    const modulesSnapshot = await db.collection('modules')
-                        .where('courseId', '==', course.id)
-                        .get();
+                    // Get course reference
+                    const courseRef = db.collection('courses').doc(course.id);
 
-                    const moduleIds = [];
-                    modulesSnapshot.forEach(doc => moduleIds.push(doc.id));
+                    // Get modules for this course from nested structure
+                    const modulesSnapshot = await courseRef.collection('modules').get();
 
-                    if (moduleIds.length === 0) continue;
-
-                    const lessonsSnapshot = await db.collection('lessons')
-                        .where('moduleId', 'in', moduleIds.slice(0, 10))
-                        .get();
+                    if (modulesSnapshot.empty) continue;
 
                     const lessonIds = [];
-                    lessonsSnapshot.forEach(doc => lessonIds.push(doc.id));
+
+                    // Get lessons from nested structure
+                    for (const moduleDoc of modulesSnapshot.docs) {
+                        const lessonsSnapshot = await moduleDoc.ref.collection('lessons').get();
+                        lessonsSnapshot.forEach(doc => lessonIds.push(doc.id));
+                    }
 
                     if (lessonIds.length === 0) continue;
 
-                    const quizzesSnapshot = await db.collection('quizzes')
-                        .where('lessonId', 'in', lessonIds.slice(0, 10))
-                        .get();
+                    // Get quizzes from nested structure: /course_quiz/{courseQuizId}/questions/{questionId}
+                    // For now, we'll get all course_quiz documents and count their questions
+                    const courseQuizRef = db.collection('course_quiz').doc(course.id);
+                    const courseQuizDoc = await courseQuizRef.get();
 
+                    if (!courseQuizDoc.exists) continue;
+
+                    const questionsSnapshot = await courseQuizRef.collection('questions').get();
                     const quizzes = [];
-                    quizzesSnapshot.forEach(doc => quizzes.push({ id: doc.id, ...doc.data() }));
+                    questionsSnapshot.forEach(doc => quizzes.push({ id: doc.id, ...doc.data() }));
 
                     if (quizzes && quizzes.length > 0) {
                         // Calculate average pass rate for the course

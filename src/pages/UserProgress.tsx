@@ -9,16 +9,22 @@ import {
   TrendingUp,
   FileDown,
 } from "lucide-react";
-import { usersProgress, userCodingChallenges, userQuizPerformance } from "@/data/dummyData";
-import type { UserProgress } from "@/data/dummyData";
+import { useAllUsers, useUserDashboard } from "@/hooks/useUserProgressData";
+import type { UserProgress as UserProgressType } from "@/hooks/useUserProgressData";
 import { UserCard } from "@/components/cards/UserCard";
 import { UserDashboard } from "@/components/dashboard/UserDashboard";
 
 export default function UserProgressPage() {
-  const [users] = useState<UserProgress[]>(usersProgress);
+  const { users, loading: usersLoading, error: usersError } = useAllUsers();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedUserId, setSelectedUserId] = useState<string | null>(null);
   const [userSearchInput, setUserSearchInput] = useState("");
+
+  const {
+    dashboard,
+    loading: dashboardLoading,
+    error: dashboardError
+  } = useUserDashboard(selectedUserId);
 
   // Filter users for the user list
   const filteredUsers = users.filter((user) => {
@@ -53,17 +59,9 @@ export default function UserProgressPage() {
     setSelectedUserId(null);
   };
 
-  const selectedUser = selectedUserId
-    ? users.find((u) => u.userId === selectedUserId)
-    : null;
-
-  const selectedUserChallenges = selectedUserId
-    ? userCodingChallenges[selectedUserId] || []
-    : [];
-
-  const selectedUserQuizzes = selectedUserId
-    ? userQuizPerformance[selectedUserId] || []
-    : [];
+  const selectedUser = dashboard?.user || null;
+  const selectedUserChallenges = dashboard?.codingChallenges?.data || [];
+  const selectedUserQuizzes = dashboard?.quizPerformance?.data || [];
 
   return (
     <div className="space-y-6">
@@ -105,8 +103,26 @@ export default function UserProgressPage() {
             </div>
           </div>
 
-          {/* Users Grid */}
-          {filteredUsers.length === 0 ? (
+          {/* Loading State */}
+          {usersLoading ? (
+            <div className="flex items-center justify-center h-96">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                <p className="text-muted-foreground">Loading users...</p>
+              </div>
+            </div>
+          ) : usersError ? (
+            <div className="rounded-lg border-2 border-dashed border-destructive p-12 text-center">
+              <div className="mx-auto max-w-md">
+                <h3 className="text-xl font-semibold text-destructive mb-2">
+                  Error loading users
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {usersError}
+                </p>
+              </div>
+            </div>
+          ) : filteredUsers.length === 0 ? (
             <div className="rounded-lg border-2 border-dashed p-12 text-center">
               <div className="mx-auto max-w-md">
                 <h3 className="text-xl font-semibold text-muted-foreground mb-2">
@@ -172,7 +188,25 @@ export default function UserProgressPage() {
           </div>
 
           {/* User Dashboard Display */}
-          {selectedUser ? (
+          {dashboardLoading ? (
+            <div className="flex items-center justify-center h-96">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                <p className="text-muted-foreground">Loading user dashboard...</p>
+              </div>
+            </div>
+          ) : dashboardError ? (
+            <div className="rounded-lg border-2 border-dashed border-destructive p-12 text-center">
+              <div className="mx-auto max-w-md">
+                <h3 className="text-xl font-semibold text-destructive mb-2">
+                  Error loading dashboard
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {dashboardError}
+                </p>
+              </div>
+            </div>
+          ) : selectedUser ? (
             <UserDashboard
               user={selectedUser}
               codingChallenges={selectedUserChallenges}

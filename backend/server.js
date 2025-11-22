@@ -8,13 +8,13 @@ const logger = require('./utils/logger');
 
 // Import routes
 const dashboardRoutes = require('./routes/dashboardRoutes');
+const userRoutes = require('./routes/userRoutes');
+const courseRoutes = require('./routes/courseRoutes');
+const moduleRoutes = require('./routes/moduleRoutes');
+const lessonRoutes = require('./routes/lessonRoutes');
+const quizzesRoutes = require('./routes/quizzesRoutes');
 // Temporarily disable other routes to fix dashboard
 // const authRoutes = require('./routes/authRoutes');
-// const userRoutes = require('./routes/userRoutes');
-// const courseRoutes = require('./routes/courseRoutes');
-// const moduleRoutes = require('./routes/moduleRoutes');
-// const lessonRoutes = require('./routes/lessonRoutes');
-// const quizzesRoutes = require('./routes/quizzesRoutes');
 // const enrollmentRoutes = require('./routes/enrollmentRoutes');
 
 // Initialize Express app
@@ -71,13 +71,13 @@ app.get('/health', (req, res) => {
 
 // API routes
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/courses', courseRoutes);
+app.use('/api/modules', moduleRoutes);
+app.use('/api/lessons', lessonRoutes);
+app.use('/api/quizzes', quizzesRoutes);
 // Temporarily disable other routes
 // app.use('/api/auth', authRoutes);
-// app.use('/api/users', userRoutes);
-// app.use('/api/courses', courseRoutes);
-// app.use('/api/modules', moduleRoutes);
-// app.use('/api/lessons', lessonRoutes);
-// app.use('/api/quizzes', quizzesRoutes);
 // app.use('/api/enrollments', enrollmentRoutes);
 
 // Root endpoint

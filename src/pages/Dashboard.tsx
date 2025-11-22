@@ -1,12 +1,61 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { BookOpen, Users, Award, TrendingUp, GraduationCap } from "lucide-react";
+import { BookOpen, Users, Award, TrendingUp, GraduationCap, RefreshCw, Database } from "lucide-react";
 import { useDashboardStats, useAllChartsData } from "@/hooks/useDashboardData";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Dashboard() {
-  const { stats, loading: statsLoading } = useDashboardStats();
-  const { chartsData, loading: chartsLoading } = useAllChartsData();
+  const {
+    stats,
+    loading: statsLoading,
+    forceRefresh: forceRefreshStats,
+    lastUpdated: statsLastUpdated,
+    usingCache: statsUsingCache
+  } = useDashboardStats();
+
+  const {
+    chartsData,
+    loading: chartsLoading,
+    forceRefresh: forceRefreshCharts,
+    lastUpdated: chartsLastUpdated,
+    usingCache: chartsUsingCache
+  } = useAllChartsData();
+
+  const { toast } = useToast();
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  // Helper to format time remaining until next refresh
+  const getTimeUntilRefresh = (lastUpdated: Date | null) => {
+    if (!lastUpdated) return "N/A";
+    const now = new Date();
+    const timeDiff = 12 * 60 * 60 * 1000 - (now.getTime() - lastUpdated.getTime());
+    if (timeDiff <= 0) return "Ready to refresh";
+
+    const hoursLeft = Math.floor(timeDiff / (60 * 60 * 1000));
+    const minutesLeft = Math.floor((timeDiff % (60 * 60 * 1000)) / (60 * 1000));
+    return `${hoursLeft}h ${minutesLeft}m`;
+  };
+
+  const handleManualRefresh = async () => {
+    setIsRefreshing(true);
+    try {
+      await Promise.all([forceRefreshStats(), forceRefreshCharts()]);
+      toast({
+        title: "Dashboard Refreshed",
+        description: "Data has been fetched from Firebase and cached for 12 hours",
+      });
+    } catch (error) {
+      toast({
+        title: "Refresh Failed",
+        description: "Failed to refresh dashboard data",
+        variant: "destructive",
+      });
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
 
   // Transform chart data for recharts format
   const usersCreatedData = useMemo(() => {
@@ -65,8 +114,8 @@ export default function Dashboard() {
       bgColor: "bg-blue-100",
     },
     {
-      title: "Active Enrollments",
-      value: stats?.enrollments.active || 0,
+      title: "Active Technical Assessments",
+      value: stats?.technicalAssessments?.active || 0,
       icon: TrendingUp,
       color: "text-green-600",
       bgColor: "bg-green-100",
@@ -102,11 +151,42 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold">Dashboard</h1>
-        <p className="mt-1 text-muted-foreground">
-          Welcome back! Here's an overview of your platform.
-        </p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold">Dashboard</h1>
+          <p className="mt-1 text-muted-foreground">
+            Welcome back! Here's an overview of your platform.
+          </p>
+        </div>
+        <div className="flex items-center gap-4">
+          <div className="text-sm text-muted-foreground text-right">
+            <div className="flex items-center gap-2">
+              <Database className="h-4 w-4" />
+              <span>
+                {statsUsingCache || chartsUsingCache ? "Using cached data" : "Live data"}
+              </span>
+            </div>
+            {statsLastUpdated && (
+              <div className="text-xs">
+                Last updated: {statsLastUpdated.toLocaleString()}
+              </div>
+            )}
+            {(statsUsingCache || chartsUsingCache) && statsLastUpdated && (
+              <div className="text-xs">
+                Next refresh: {getTimeUntilRefresh(statsLastUpdated)}
+              </div>
+            )}
+          </div>
+          <Button
+            onClick={handleManualRefresh}
+            disabled={isRefreshing}
+            variant="outline"
+            size="sm"
+          >
+            <RefreshCw className={`h-4 w-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
+            Refresh Now
+          </Button>
+        </div>
       </div>
 
       {/* Stat Cards */}

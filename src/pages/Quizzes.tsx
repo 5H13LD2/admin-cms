@@ -1,5 +1,4 @@
 import { useState, useMemo } from "react";
-import { QuizCard } from "@/components/cards/QuizCard";
 import { DetailedQuizCard } from "@/components/cards/DetailedQuizCard";
 import { AddQuizDialog } from "@/components/dialogs/AddQuizDialog";
 import { EditQuizDialog } from "@/components/dialogs/EditQuizDialog";
@@ -11,43 +10,84 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Plus } from "lucide-react";
-import { detailedQuizzes, modules } from "@/data/dummyData";
-import type { DetailedQuiz } from "@/data/dummyData";
+import { Plus, RefreshCcw } from "lucide-react";
+import { useQuizzesPage } from "@/hooks/useQuizData";
+import type { Quiz } from "@/hooks/useQuizData";
+import type { DetailedQuiz, DifficultyLevel } from "@/data/dummyData";
+
+// Helper function to convert Firebase Quiz to DetailedQuiz
+const convertToDetailedQuiz = (quiz: Quiz): DetailedQuiz => {
+  return {
+    id: quiz.id,
+    moduleId: quiz.module_id || quiz.moduleId || '',
+    question: quiz.question,
+    options: [
+      quiz.options[0] || '',
+      quiz.options[1] || '',
+      quiz.options[2] || '',
+      quiz.options[3] || '',
+    ] as [string, string, string, string],
+    correctOptionIndex: quiz.correctOptionIndex as 0 | 1 | 2 | 3,
+    difficulty: (quiz.difficulty || 'NORMAL') as DifficultyLevel,
+    explanation: quiz.explanation,
+    createdAt: quiz.createdAt || new Date().toISOString(),
+  };
+};
 
 export default function Quizzes() {
-  const [quizzes, setQuizzes] = useState<DetailedQuiz[]>(detailedQuizzes);
-  const [selectedModule, setSelectedModule] = useState<string>("all");
+  const {
+    courses,
+    coursesLoading,
+    modules,
+    modulesLoading,
+    quizzes: firebaseQuizzes,
+    quizzesLoading,
+    quizzesError,
+    refetch,
+    selectedCourseId,
+    setSelectedCourseId,
+    selectedModuleId,
+    setSelectedModuleId,
+    totalQuizzes,
+    easyQuizzes,
+    normalQuizzes,
+    hardQuizzes,
+  } = useQuizzesPage();
+
+  // Convert Firebase quizzes to DetailedQuiz format
+  const quizzes = useMemo(
+    () => firebaseQuizzes.map(convertToDetailedQuiz),
+    [firebaseQuizzes]
+  );
+
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [editingQuiz, setEditingQuiz] = useState<DetailedQuiz | null>(null);
 
-  // Filter quizzes by selected module
-  const filteredQuizzes = useMemo(() => {
-    if (selectedModule === "all") {
-      return quizzes;
-    }
-    return quizzes.filter((quiz) => quiz.moduleId === selectedModule);
-  }, [quizzes, selectedModule]);
+  const loading = coursesLoading || modulesLoading || quizzesLoading;
+
+  const handleCourseChange = (value: string) => {
+    setSelectedCourseId(value);
+    setSelectedModuleId('all'); // Reset module when course changes
+  };
 
   const handleAddQuiz = (newQuiz: Omit<DetailedQuiz, "id" | "createdAt">) => {
+    // TODO: Implement with Firebase
     const quiz: DetailedQuiz = {
       ...newQuiz,
       id: String(Date.now()),
       createdAt: new Date().toISOString(),
     };
-    setQuizzes([...quizzes, quiz]);
+    // Will be handled by Firebase in future implementation
   };
 
   const handleEditQuiz = (updatedQuiz: DetailedQuiz) => {
-    setQuizzes(
-      quizzes.map((quiz) => (quiz.id === updatedQuiz.id ? updatedQuiz : quiz))
-    );
+    // TODO: Implement with Firebase
     setEditingQuiz(null);
   };
 
   const handleDeleteQuiz = (id: string) => {
     if (confirm("Are you sure you want to delete this question?")) {
-      setQuizzes(quizzes.filter((quiz) => quiz.id !== id));
+      // TODO: Implement with Firebase
     }
   };
 
@@ -64,7 +104,20 @@ export default function Quizzes() {
 
         {/* Header Controls */}
         <div className="flex flex-wrap gap-3 items-center">
-          <Select value={selectedModule} onValueChange={setSelectedModule}>
+          <Select value={selectedCourseId} onValueChange={handleCourseChange} disabled={coursesLoading}>
+            <SelectTrigger className="w-[200px]">
+              <SelectValue placeholder="Select Course" />
+            </SelectTrigger>
+            <SelectContent>
+              {courses.map((course) => (
+                <SelectItem key={course.id} value={course.id}>
+                  {course.title || course.courseName}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          <Select value={selectedModuleId} onValueChange={setSelectedModuleId} disabled={!selectedCourseId || modulesLoading}>
             <SelectTrigger className="w-[200px]">
               <SelectValue placeholder="All Modules" />
             </SelectTrigger>
@@ -78,30 +131,68 @@ export default function Quizzes() {
             </SelectContent>
           </Select>
 
-          <Button onClick={() => setIsAddDialogOpen(true)}>
+          <Button
+            variant="outline"
+            onClick={() => refetch && selectedCourseId && refetch(selectedCourseId, selectedModuleId)}
+            disabled={!selectedCourseId}
+          >
+            <RefreshCcw className="h-4 w-4 mr-2" />
+            Refresh
+          </Button>
+
+          <Button onClick={() => setIsAddDialogOpen(true)} disabled={!selectedCourseId}>
             <Plus className="mr-2 h-4 w-4" />
             Add Question
           </Button>
         </div>
       </div>
 
-      {/* Quiz Cards Grid */}
-      {filteredQuizzes.length === 0 ? (
+      {/* Loading State */}
+      {loading && (
+        <div className="flex items-center justify-center h-96">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading quizzes...</p>
+          </div>
+        </div>
+      )}
+
+      {/* Error State */}
+      {quizzesError && !loading && (
+        <div className="rounded-lg border-2 border-dashed border-destructive p-12 text-center">
+          <div className="mx-auto max-w-md">
+            <h3 className="text-xl font-semibold text-destructive mb-2">
+              Error loading quizzes
+            </h3>
+            <p className="text-sm text-muted-foreground">{quizzesError}</p>
+          </div>
+        </div>
+      )}
+
+      {/* Empty State */}
+      {!loading && !quizzesError && quizzes.length === 0 && (
         <div className="rounded-lg border-2 border-dashed p-12 text-center">
           <div className="mx-auto max-w-md">
             <h3 className="text-xl font-semibold text-muted-foreground mb-2">
-              No quiz questions found
+              {!selectedCourseId
+                ? 'Select a course'
+                : 'No quiz questions found'}
             </h3>
             <p className="text-sm text-muted-foreground">
-              {selectedModule === "all"
-                ? "Start by adding your first quiz question"
-                : "No questions found for this module"}
+              {!selectedCourseId
+                ? 'Please select a course to view quizzes'
+                : selectedModuleId !== 'all'
+                ? 'No questions found for this module'
+                : 'Start by adding your first quiz question'}
             </p>
           </div>
         </div>
-      ) : (
+      )}
+
+      {/* Quiz Cards Grid */}
+      {!loading && !quizzesError && quizzes.length > 0 && (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredQuizzes.map((quiz) => (
+          {quizzes.map((quiz) => (
             <DetailedQuizCard
               key={quiz.id}
               quiz={quiz}

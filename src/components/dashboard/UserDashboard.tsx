@@ -19,7 +19,7 @@ import {
   CheckCircle,
   XCircle,
 } from "lucide-react";
-import type { UserProgress, CodingChallenge, QuizPerformance } from "@/data/dummyData";
+import type { UserProgress, CodingChallenge, QuizPerformance } from "@/hooks/useUserProgressData";
 
 interface UserDashboardProps {
   user: UserProgress;
@@ -32,8 +32,19 @@ export function UserDashboard({
   codingChallenges,
   quizPerformance,
 }: UserDashboardProps) {
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
+  const formatDate = (timestamp: any) => {
+    if (!timestamp) return "N/A";
+
+    let date: Date;
+    if (timestamp._seconds) {
+      date = new Date(timestamp._seconds * 1000);
+    } else if (timestamp.toDate) {
+      date = timestamp.toDate();
+    } else {
+      date = new Date(timestamp);
+    }
+
+    return date.toLocaleDateString("en-US", {
       year: "numeric",
       month: "short",
       day: "numeric",

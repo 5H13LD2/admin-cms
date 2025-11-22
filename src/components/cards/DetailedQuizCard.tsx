@@ -24,7 +24,9 @@ const difficultyBorderColors = {
 };
 
 export function DetailedQuizCard({ quiz, onEdit, onDelete }: DetailedQuizCardProps) {
-  const module = modules.find((m) => m.id === quiz.moduleId);
+  // Handle both moduleId and module_id fields
+  const moduleId = (quiz as any).module_id || quiz.moduleId;
+  const module = modules.find((m) => m.id === moduleId);
   const correctOption = String.fromCharCode(65 + quiz.correctOptionIndex);
 
   return (

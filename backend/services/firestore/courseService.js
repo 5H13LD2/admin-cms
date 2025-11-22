@@ -3,13 +3,14 @@ const admin = require('firebase-admin');
 const logger = require('../../utils/logger');
 
 class CoursesService {
-  // Get all courses
+  // Get all courses (limited to reduce Firebase quota usage)
   static async getAllCourses() {
     try {
       const db = getFirestore();
-      const coursesSnapshot = await db.collection('courses').get();
+      // Limit to 20 courses to reduce Firebase reads
+      const coursesSnapshot = await db.collection('courses').limit(20).get();
       const courses = [];
-      
+
       coursesSnapshot.forEach(doc => {
         const courseData = doc.data();
         courses.push({
@@ -30,7 +31,8 @@ class CoursesService {
           updatedAt: courseData.updatedAt || null
         });
       });
-      
+
+      logger.info(`Retrieved ${courses.length} courses (limited to 20)`);
       return courses;
     } catch (error) {
       logger.error('❌ Failed to retrieve courses:', error);

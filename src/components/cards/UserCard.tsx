@@ -8,25 +8,44 @@ import {
   Activity,
   TrendingUp,
 } from "lucide-react";
-import type { UserProgress } from "@/data/dummyData";
+import type { UserProgress } from "@/hooks/useUserProgressData";
 
 interface UserCardProps {
   user: UserProgress;
 }
 
 export function UserCard({ user }: UserCardProps) {
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
+  const formatDate = (timestamp: any) => {
+    if (!timestamp) return "N/A";
+
+    let date: Date;
+    if (timestamp._seconds) {
+      date = new Date(timestamp._seconds * 1000);
+    } else if (timestamp.toDate) {
+      date = timestamp.toDate();
+    } else {
+      date = new Date(timestamp);
+    }
+
+    return date.toLocaleDateString("en-US", {
       year: "numeric",
       month: "short",
       day: "numeric",
     });
   };
 
-  const getLastLoginText = (lastLogin?: string) => {
+  const getLastLoginText = (lastLogin?: any) => {
     if (!lastLogin) return "Never";
 
-    const lastLoginDate = new Date(lastLogin);
+    let lastLoginDate: Date;
+    if (lastLogin._seconds) {
+      lastLoginDate = new Date(lastLogin._seconds * 1000);
+    } else if (lastLogin.toDate) {
+      lastLoginDate = lastLogin.toDate();
+    } else {
+      lastLoginDate = new Date(lastLogin);
+    }
+
     const now = new Date();
     const diffMs = now.getTime() - lastLoginDate.getTime();
     const diffMinutes = Math.floor(diffMs / 60000);
@@ -86,7 +105,9 @@ export function UserCard({ user }: UserCardProps) {
               <BookOpen className="h-3 w-3 text-primary" />
               <span className="text-xs text-muted-foreground">Courses</span>
             </div>
-            <div className="text-lg font-bold">{user.coursesEnrolled}</div>
+            <div className="text-lg font-bold">
+              {user.coursesEnrolled || user.coursesTaken?.length || 0}
+            </div>
           </div>
 
           <div className="text-center p-2 bg-muted/50 rounded-md">

@@ -1,25 +1,31 @@
 import { useState, useEffect } from 'react';
-import { courseAPI, type Course, type Module } from '../services/api';
+import { useCoursesPage, useCourseModules, type Course, type Module, type CourseFormData } from '../hooks/useCourseData';
 import '../styles/global.css';
 
-interface CourseFormData {
-  title: string;
-  description: string;
-  status?: 'draft' | 'published';
-}
-
 export default function Courses() {
-  const [courses, setCourses] = useState<Course[]>([]);
+  const {
+    courses,
+    coursesLoading,
+    coursesError,
+    handleCreateCourse,
+    createLoading,
+    handleUpdateCourse,
+    updateLoading,
+    handleDeleteCourse,
+    deleteLoading,
+  } = useCoursesPage();
+
   const [filteredCourses, setFilteredCourses] = useState<Course[]>([]);
-  const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
   const [showModulesModal, setShowModulesModal] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
-  const [courseModules, setCourseModules] = useState<Module[]>([]);
   const [alert, setAlert] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
-  const [statusFilter, setStatusFilter] = useState<'all' | 'draft' | 'published'>('all');
+
+  const { modules: courseModules, loading: modulesLoading } = useCourseModules(showModulesModal ? selectedCourse?.id || null : null);
+
+  const loading = coursesLoading || createLoading || updateLoading || deleteLoading;
 
   // Form state for create
   const [newCourse, setNewCourse] = useState<CourseFormData>({
@@ -35,60 +41,51 @@ export default function Courses() {
     status: 'draft',
   });
 
-  // Statistics
+  // Statistics (matching techlaunch)
   const totalCourses = courses.length;
-  const totalEnrollments = courses.reduce((acc, course) => acc + (course.enrolledUsers?.length || 0), 0);
-  const publishedCourses = courses.filter(course => course.status === 'published').length;
-  const draftCourses = courses.filter(course => course.status === 'draft').length;
+  const totalEnrollments = courses.reduce((acc, course) =>
+    acc + (course.enrolledStudents || course.enrolledUsers?.length || 0), 0);
+  const activeCourses = courses.filter(course =>
+    course.status === 'active' || course.status === 'published').length;
+  const avgRating = courses.length > 0
+    ? (courses.reduce((sum, course) => sum + (course.rating || 0), 0) / courses.length).toFixed(1)
+    : '0.0';
 
-  // Load courses on mount
+  // Filter courses when search term changes (matching techlaunch)
   useEffect(() => {
-    loadCourses();
-  }, []);
+    if (searchTerm.trim() === '') {
+      setFilteredCourses(courses);
+    } else {
+      const searchLower = searchTerm.toLowerCase();
+      const filtered = courses.filter(course => {
+        const title = course.title || course.courseName || '';
+        return (
+          title.toLowerCase().includes(searchLower) ||
+          course.description.toLowerCase().includes(searchLower) ||
+          (course.language && course.language.toLowerCase().includes(searchLower)) ||
+          (course.difficulty && course.difficulty.toLowerCase().includes(searchLower))
+        );
+      });
+      setFilteredCourses(filtered);
+    }
+  }, [searchTerm, courses]);
 
-  // Filter courses when search term or status filter changes
+  // Show error from coursesError
   useEffect(() => {
-    let filtered = courses;
-
-    // Filter by status
-    if (statusFilter !== 'all') {
-      filtered = filtered.filter(course => course.status === statusFilter);
+    if (coursesError) {
+      showAlertMessage('error', coursesError);
     }
-
-    // Filter by search term
-    if (searchTerm.trim() !== '') {
-      filtered = filtered.filter(course =>
-        course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        course.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    setFilteredCourses(filtered);
-  }, [searchTerm, statusFilter, courses]);
-
-  const loadCourses = async () => {
-    setLoading(true);
-    try {
-      const response = await courseAPI.getAllCourses();
-      setCourses(response.data);
-      setFilteredCourses(response.data);
-    } catch (error: any) {
-      showAlertMessage('error', error.message || 'Failed to load courses');
-    } finally {
-      setLoading(false);
-    }
-  };
+  }, [coursesError]);
 
   const showAlertMessage = (type: 'success' | 'error', message: string) => {
     setAlert({ type, message });
     setTimeout(() => setAlert(null), 5000);
   };
 
-  const handleCreateCourse = async (e: React.FormEvent) => {
+  const handleSubmitCreateCourse = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    try {
-      await courseAPI.createCourse(newCourse);
+    const result = await handleCreateCourse(newCourse);
+    if (result) {
       showAlertMessage('success', 'Course created successfully!');
       setShowAddModal(false);
       setNewCourse({
@@ -96,51 +93,40 @@ export default function Courses() {
         description: '',
         status: 'draft',
       });
-      await loadCourses();
-    } catch (error: any) {
-      showAlertMessage('error', error.message || 'Failed to create course');
-    } finally {
-      setLoading(false);
+    } else {
+      showAlertMessage('error', 'Failed to create course');
     }
   };
 
-  const handleUpdateCourse = async (e: React.FormEvent) => {
+  const handleSubmitUpdateCourse = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedCourse) return;
 
-    setLoading(true);
-    try {
-      await courseAPI.updateCourse(selectedCourse.id, editCourseData);
+    const result = await handleUpdateCourse(selectedCourse.id, editCourseData);
+    if (result) {
       showAlertMessage('success', 'Course updated successfully!');
       setShowEditModal(false);
       setSelectedCourse(null);
-      await loadCourses();
-    } catch (error: any) {
-      showAlertMessage('error', error.message || 'Failed to update course');
-    } finally {
-      setLoading(false);
+    } else {
+      showAlertMessage('error', 'Failed to update course');
     }
   };
 
-  const handleDeleteCourse = async (id: string) => {
+  const handleSubmitDeleteCourse = async (id: string) => {
     if (!confirm('Are you sure you want to delete this course?')) return;
 
-    setLoading(true);
-    try {
-      await courseAPI.deleteCourse(id);
+    const result = await handleDeleteCourse(id);
+    if (result) {
       showAlertMessage('success', 'Course deleted successfully!');
-      await loadCourses();
-    } catch (error: any) {
-      showAlertMessage('error', error.message || 'Failed to delete course');
-    } finally {
-      setLoading(false);
+    } else {
+      showAlertMessage('error', 'Failed to delete course');
     }
   };
 
   const openEditModal = (course: Course) => {
     setSelectedCourse(course);
     setEditCourseData({
-      title: course.title,
+      title: course.title || course.courseName || '',
       description: course.description,
       status: (course.status as 'draft' | 'published') || 'draft',
     });
@@ -149,28 +135,17 @@ export default function Courses() {
 
   const handlePublishToggle = async (course: Course) => {
     const newStatus = course.status === 'published' ? 'draft' : 'published';
-    setLoading(true);
-    try {
-      await courseAPI.updateCourse(course.id, { status: newStatus });
+    const result = await handleUpdateCourse(course.id, { status: newStatus });
+    if (result) {
       showAlertMessage('success', `Course ${newStatus === 'published' ? 'published' : 'moved to draft'} successfully!`);
-      await loadCourses();
-    } catch (error: any) {
-      showAlertMessage('error', error.message || 'Failed to update course status');
-    } finally {
-      setLoading(false);
+    } else {
+      showAlertMessage('error', 'Failed to update course status');
     }
   };
 
   const openModulesModal = async (course: Course) => {
     setSelectedCourse(course);
     setShowModulesModal(true);
-    try {
-      const response = await courseAPI.getCourseModules(course.id);
-      setCourseModules(response.data);
-    } catch (error: any) {
-      showAlertMessage('error', error.message || 'Failed to load modules');
-      setCourseModules([]);
-    }
   };
 
   return (
@@ -191,28 +166,36 @@ export default function Courses() {
       )}
 
       <div className="p-4">
-        {/* Header */}
+        {/* Header (matching techlaunch) */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="page-title">Course Management</h1>
           <div className="flex gap-2">
-            <select
-              className="form-select"
-              value={statusFilter}
-              onChange={(e) => setStatusFilter(e.target.value as 'all' | 'draft' | 'published')}
-              style={{ minWidth: '150px' }}
-            >
-              <option value="all">All Courses</option>
-              <option value="published">Published</option>
-              <option value="draft">Drafts</option>
-            </select>
-            <div className="search-container">
+            <div className="search-container" style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
               <input
                 type="text"
                 className="form-control"
                 placeholder="Search courses..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+                style={{ paddingRight: '2.5rem' }}
               />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm('')}
+                  style={{
+                    position: 'absolute',
+                    right: '0.5rem',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: '0.25rem',
+                    color: '#6b7280'
+                  }}
+                  title="Clear search"
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+              )}
             </div>
             <button
               className="btn-primary"
@@ -223,7 +206,7 @@ export default function Courses() {
           </div>
         </div>
 
-        {/* Statistics */}
+        {/* Statistics (matching techlaunch) */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
           <div className="stats-card">
             <i className="fas fa-book stats-icon"></i>
@@ -233,24 +216,24 @@ export default function Courses() {
             </div>
           </div>
           <div className="stats-card">
-            <i className="fas fa-check-circle stats-icon" style={{ color: '#10b981' }}></i>
-            <div className="stats-content">
-              <h3>{publishedCourses}</h3>
-              <p>Published</p>
-            </div>
-          </div>
-          <div className="stats-card">
-            <i className="fas fa-file-alt stats-icon" style={{ color: '#f59e0b' }}></i>
-            <div className="stats-content">
-              <h3>{draftCourses}</h3>
-              <p>Drafts</p>
-            </div>
-          </div>
-          <div className="stats-card">
             <i className="fas fa-users stats-icon"></i>
             <div className="stats-content">
               <h3>{totalEnrollments}</h3>
               <p>Total Enrollments</p>
+            </div>
+          </div>
+          <div className="stats-card">
+            <i className="fas fa-chart-line stats-icon" style={{ color: '#10b981' }}></i>
+            <div className="stats-content">
+              <h3>{activeCourses}</h3>
+              <p>Active Courses</p>
+            </div>
+          </div>
+          <div className="stats-card">
+            <i className="fas fa-star stats-icon" style={{ color: '#f59e0b' }}></i>
+            <div className="stats-content">
+              <h3>{avgRating}</h3>
+              <p>Average Rating</p>
             </div>
           </div>
         </div>
@@ -262,7 +245,7 @@ export default function Courses() {
               <div key={course.id} className="card">
                 <div className="card-header">
                   <div style={{ flex: 1 }}>
-                    <h3 className="card-title">{course.title}</h3>
+                    <h3 className="card-title">{course.title || course.courseName}</h3>
                     <span
                       className={`badge ${course.status === 'published' ? 'badge-success' : 'badge-warning'}`}
                       style={{ marginTop: '0.5rem' }}
@@ -288,7 +271,7 @@ export default function Courses() {
                     </button>
                     <button
                       className="action-btn delete"
-                      onClick={() => handleDeleteCourse(course.id)}
+                      onClick={() => handleSubmitDeleteCourse(course.id)}
                       title="Delete course"
                     >
                       <i className="fas fa-trash"></i>
@@ -338,13 +321,13 @@ export default function Courses() {
               <button onClick={() => setShowAddModal(false)} style={{ background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer' }}>×</button>
             </div>
             <div className="modal-body">
-              <form onSubmit={handleCreateCourse}>
+              <form onSubmit={handleSubmitCreateCourse}>
                 <div className="form-group">
                   <label className="form-label">Course Title</label>
                   <input
                     type="text"
                     className="form-control"
-                    value={newCourse.title}
+                    value={newCourse.title || ''}
                     onChange={(e) => setNewCourse({ ...newCourse, title: e.target.value })}
                     required
                     placeholder="e.g., Java Programming Mastery"
@@ -393,13 +376,13 @@ export default function Courses() {
               <button onClick={() => setShowEditModal(false)} style={{ background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer' }}>×</button>
             </div>
             <div className="modal-body">
-              <form onSubmit={handleUpdateCourse}>
+              <form onSubmit={handleSubmitUpdateCourse}>
                 <div className="form-group">
                   <label className="form-label">Course Title</label>
                   <input
                     type="text"
                     className="form-control"
-                    value={editCourseData.title}
+                    value={editCourseData.title || ''}
                     onChange={(e) => setEditCourseData({ ...editCourseData, title: e.target.value })}
                     required
                   />
@@ -440,7 +423,7 @@ export default function Courses() {
         <div className="modal-overlay" onClick={() => setShowModulesModal(false)}>
           <div className="modal-content" style={{ width: '800px' }} onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
-              <h2 style={{ margin: 0 }}><i className="fas fa-cubes"></i> {selectedCourse.title} - Modules</h2>
+              <h2 style={{ margin: 0 }}><i className="fas fa-cubes"></i> {selectedCourse.title || selectedCourse.courseName} - Modules</h2>
               <button onClick={() => setShowModulesModal(false)} style={{ background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer' }}>×</button>
             </div>
             <div className="modal-body">
