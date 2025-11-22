@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Plus, RefreshCcw } from "lucide-react";
+import { Plus, ChevronLeft, ChevronRight } from "lucide-react";
 import { useQuizzesPage } from "@/hooks/useQuizData";
 import type { Quiz } from "@/hooks/useQuizData";
 import type { DetailedQuiz, DifficultyLevel } from "@/data/dummyData";
@@ -41,13 +41,15 @@ export default function Quizzes() {
     modules,
     modulesLoading,
     quizzes: firebaseQuizzes,
+    pagination,
     quizzesLoading,
     quizzesError,
-    refetch,
     selectedCourseId,
     setSelectedCourseId,
     selectedModuleId,
     setSelectedModuleId,
+    currentPage,
+    setCurrentPage,
     totalQuizzes,
     easyQuizzes,
     normalQuizzes,
@@ -131,15 +133,6 @@ export default function Quizzes() {
             </SelectContent>
           </Select>
 
-          <Button
-            variant="outline"
-            onClick={() => refetch && selectedCourseId && refetch(selectedCourseId, selectedModuleId)}
-            disabled={!selectedCourseId}
-          >
-            <RefreshCcw className="h-4 w-4 mr-2" />
-            Refresh
-          </Button>
-
           <Button onClick={() => setIsAddDialogOpen(true)} disabled={!selectedCourseId}>
             <Plus className="mr-2 h-4 w-4" />
             Add Question
@@ -191,16 +184,52 @@ export default function Quizzes() {
 
       {/* Quiz Cards Grid */}
       {!loading && !quizzesError && quizzes.length > 0 && (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {quizzes.map((quiz) => (
-            <DetailedQuizCard
-              key={quiz.id}
-              quiz={quiz}
-              onEdit={() => setEditingQuiz(quiz)}
-              onDelete={() => handleDeleteQuiz(quiz.id)}
-            />
-          ))}
-        </div>
+        <>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {quizzes.map((quiz) => (
+              <DetailedQuizCard
+                key={quiz.id}
+                quiz={quiz}
+                onEdit={() => setEditingQuiz(quiz)}
+                onDelete={() => handleDeleteQuiz(quiz.id)}
+              />
+            ))}
+          </div>
+
+          {/* Pagination Controls */}
+          {pagination && pagination.totalPages > 1 && (
+            <div className="flex items-center justify-center gap-4 mt-6">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setCurrentPage(currentPage - 1)}
+                disabled={!pagination.hasPreviousPage}
+              >
+                <ChevronLeft className="h-4 w-4 mr-1" />
+                Previous
+              </Button>
+
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground">
+                  Page {pagination.currentPage} of {pagination.totalPages}
+                </span>
+                <span className="text-sm text-muted-foreground">
+                  ({pagination.totalCount} total quizzes)
+                </span>
+              </div>
+
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setCurrentPage(currentPage + 1)}
+                disabled={!pagination.hasNextPage}
+              >
+                Next
+                <ChevronRight className="h-4 w-4 ml-1" />
+              </Button>
+            </div>
+          )}
+        </>
       )}
 
       {/* Dialogs */}

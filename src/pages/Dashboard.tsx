@@ -120,13 +120,14 @@ export default function Dashboard() {
       color: "text-green-600",
       bgColor: "bg-green-100",
     },
-    {
-      title: "Active Quizzes",
-      value: stats?.quizzes.active || 0,
-      icon: Award,
-      color: "text-purple-600",
-      bgColor: "bg-purple-100",
-    },
+    // Commented out to save Firebase reads
+    // {
+    //   title: "Active Quizzes",
+    //   value: stats?.quizzes.active || 0,
+    //   icon: Award,
+    //   color: "text-purple-600",
+    //   bgColor: "bg-purple-100",
+    // },
     {
       title: "Total Lessons",
       value: stats?.lessons.total || 0,
@@ -190,7 +191,7 @@ export default function Dashboard() {
       </div>
 
       {/* Stat Cards */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {statCards.map((stat) => (
           <Card key={stat.title}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

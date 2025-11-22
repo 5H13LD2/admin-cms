@@ -5,11 +5,11 @@
 const quizService = require('../services/firestore/quizServices');
 const logger = require('../utils/logger');
 
-// 📚 Get all quizzes for a course (with optional module filter)
+// 📚 Get all quizzes for a course (with optional module filter and pagination)
 exports.getQuizzes = async (req, res) => {
   try {
     const { courseId } = req.params;
-    const { module } = req.query; // Optional module filter from query params
+    const { module, limit = 10, page = 1 } = req.query; // Optional filters and pagination
 
     if (!courseId) {
       return res.status(400).json({
@@ -18,13 +18,16 @@ exports.getQuizzes = async (req, res) => {
       });
     }
 
-    const quizzes = await quizService.getQuizzes(courseId, module);
+    const limitNum = parseInt(limit, 10);
+    const pageNum = parseInt(page, 10);
+
+    const result = await quizService.getQuizzes(courseId, module, limitNum, pageNum);
 
     res.status(200).json({
       success: true,
       message: "Quizzes retrieved successfully",
-      data: quizzes,
-      count: quizzes.length
+      data: result.quizzes,
+      pagination: result.pagination
     });
   } catch (error) {
     logger.error('Error in getQuizzes controller:', error);

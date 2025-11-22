@@ -7,12 +7,14 @@ const QUESTIONS_SUBCOLLECTION = 'questions';
 
 const quizServices = {
   /**
-   * Get all quizzes for a course (with optional module filter)
+   * Get all quizzes for a course (with optional module filter and pagination)
    * @param {string} courseId - The course ID
    * @param {string} moduleId - Optional module ID to filter by
-   * @returns {Promise<Array>} Array of quiz questions
+   * @param {number} limit - Number of quizzes per page (default: 10)
+   * @param {number} page - Page number (1-indexed, default: 1)
+   * @returns {Promise<Object>} Object with quizzes array and pagination info
    */
-  getQuizzes: async (courseId, moduleId = null) => {
+  getQuizzes: async (courseId, moduleId = null, limit = 10, page = 1) => {
     try {
       const db = getFirestore();
 
@@ -29,6 +31,14 @@ const quizServices = {
         query = query.where('module_id', '==', moduleId);
       }
 
+      // Get total count first (for pagination info)
+      const totalSnapshot = await query.get();
+      const totalCount = totalSnapshot.size;
+
+      // Apply pagination
+      const offset = (page - 1) * limit;
+      query = query.limit(limit).offset(offset);
+
       const snapshot = await query.get();
 
       const quizzes = [];
@@ -39,8 +49,21 @@ const quizServices = {
         });
       });
 
-      logger.info(`Retrieved ${quizzes.length} quizzes for course ${courseId}${moduleId ? ` and module ${moduleId}` : ''}`);
-      return quizzes;
+      const totalPages = Math.ceil(totalCount / limit);
+
+      logger.info(`Retrieved ${quizzes.length} quizzes (page ${page}/${totalPages}) for course ${courseId}${moduleId ? ` and module ${moduleId}` : ''}`);
+
+      return {
+        quizzes,
+        pagination: {
+          currentPage: page,
+          totalPages,
+          totalCount,
+          limit,
+          hasNextPage: page < totalPages,
+          hasPreviousPage: page > 1,
+        },
+      };
     } catch (error) {
       logger.error('Error getting quizzes:', error);
       throw error;

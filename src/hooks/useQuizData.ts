@@ -91,34 +91,53 @@ export function useModulesByCourse(courseId: string | null) {
   return { modules, loading, error, refetch: fetchModules };
 }
 
-// Hook for fetching quizzes by course ID (with optional module filter)
-export function useQuizzesByCourse(courseId: string | null, moduleId: string | null) {
+// Pagination info type
+export interface PaginationInfo {
+  currentPage: number;
+  totalPages: number;
+  totalCount: number;
+  limit: number;
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+}
+
+// Hook for fetching quizzes by course ID (with optional module filter and pagination)
+export function useQuizzesByCourse(courseId: string | null, moduleId: string | null, limit: number = 10, page: number = 1) {
   const [quizzes, setQuizzes] = useState<Quiz[]>([]);
+  const [pagination, setPagination] = useState<PaginationInfo | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchQuizzes = useCallback(async (cId: string, mId: string | null = null) => {
+  const fetchQuizzes = useCallback(async (cId: string, mId: string | null = null, lmt: number = 10, pg: number = 1) => {
     try {
       setLoading(true);
       setError(null);
 
-      // Build URL with optional module filter
-      const url = mId && mId !== 'all'
-        ? `${API_BASE_URL}/courses/${cId}/quizzes?module=${mId}`
-        : `${API_BASE_URL}/courses/${cId}/quizzes`;
+      // Build URL with optional module filter and pagination
+      const params = new URLSearchParams();
+      if (mId && mId !== 'all') {
+        params.append('module', mId);
+      }
+      params.append('limit', String(lmt));
+      params.append('page', String(pg));
+
+      const url = `${API_BASE_URL}/courses/${cId}/quizzes?${params.toString()}`;
 
       const response = await fetch(url);
       const result = await response.json();
 
       if (result.success) {
         setQuizzes(result.data || []);
+        setPagination(result.pagination || null);
       } else {
         setError(result.message || 'Failed to fetch quizzes');
         setQuizzes([]);
+        setPagination(null);
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
       setQuizzes([]);
+      setPagination(null);
     } finally {
       setLoading(false);
     }
@@ -126,14 +145,15 @@ export function useQuizzesByCourse(courseId: string | null, moduleId: string | n
 
   useEffect(() => {
     if (courseId) {
-      fetchQuizzes(courseId, moduleId);
+      fetchQuizzes(courseId, moduleId, limit, page);
     } else {
       setQuizzes([]);
+      setPagination(null);
       setError(null);
     }
-  }, [courseId, moduleId, fetchQuizzes]);
+  }, [courseId, moduleId, limit, page, fetchQuizzes]);
 
-  return { quizzes, loading, error, refetch: fetchQuizzes };
+  return { quizzes, pagination, loading, error, refetch: fetchQuizzes };
 }
 
 // Hook for creating a quiz
@@ -246,31 +266,34 @@ export function useDeleteQuiz() {
   return { deleteQuiz, loading, error };
 }
 
-// Combined hook for quizzes page with filters
+// Combined hook for quizzes page with filters and pagination
 export function useQuizzesPage() {
   const [selectedCourseId, setSelectedCourseId] = useState<string>('');
   const [selectedModuleId, setSelectedModuleId] = useState<string>('all');
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [pageLimit] = useState<number>(10); // Fixed at 10 per page
 
   const { courses, loading: coursesLoading, error: coursesError } = useCourses();
   const { modules, loading: modulesLoading, error: modulesError } = useModulesByCourse(
     selectedCourseId || null
   );
-  const { quizzes, loading: quizzesLoading, error: quizzesError, refetch } = useQuizzesByCourse(
+  const { quizzes, pagination, loading: quizzesLoading, error: quizzesError, refetch } = useQuizzesByCourse(
     selectedCourseId || null,
-    selectedModuleId
+    selectedModuleId,
+    pageLimit,
+    currentPage
   );
 
-  // Filter quizzes by module (client-side filtering as fallback)
-  const filteredQuizzes = quizzes.filter((quiz) => {
-    if (!selectedModuleId || selectedModuleId === 'all') return true;
-    return quiz.module_id === selectedModuleId || quiz.moduleId === selectedModuleId;
-  });
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCourseId, selectedModuleId]);
 
-  // Calculate statistics
-  const totalQuizzes = filteredQuizzes.length;
-  const easyQuizzes = filteredQuizzes.filter((q) => q.difficulty === 'EASY').length;
-  const normalQuizzes = filteredQuizzes.filter((q) => q.difficulty === 'NORMAL').length;
-  const hardQuizzes = filteredQuizzes.filter((q) => q.difficulty === 'HARD').length;
+  // Calculate statistics from current page (since we're paginating on server)
+  const totalQuizzes = pagination?.totalCount || quizzes.length;
+  const easyQuizzes = quizzes.filter((q) => q.difficulty === 'EASY').length;
+  const normalQuizzes = quizzes.filter((q) => q.difficulty === 'NORMAL').length;
+  const hardQuizzes = quizzes.filter((q) => q.difficulty === 'HARD').length;
 
   return {
     courses,
@@ -279,8 +302,8 @@ export function useQuizzesPage() {
     modules,
     modulesLoading,
     modulesError,
-    quizzes: filteredQuizzes,
-    allQuizzes: quizzes,
+    quizzes,
+    pagination,
     quizzesLoading,
     quizzesError,
     refetch,
@@ -288,6 +311,8 @@ export function useQuizzesPage() {
     setSelectedCourseId,
     selectedModuleId,
     setSelectedModuleId,
+    currentPage,
+    setCurrentPage,
     totalQuizzes,
     easyQuizzes,
     normalQuizzes,
